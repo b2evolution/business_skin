@@ -1,3 +1,160 @@
+// ========================================================================
+// Variable
+// ======================================================================== /
+@font_body: "Source Sans Pro", sans-serif;
+@font_title: "PT Serif", sans-serif;
+
+// Color Variable
+// ======================================================================== /
+@bg_primary: #f7f7f7;
+
+@primary: #1dc6df;
+@w: #FFFFFF;
+
+@b: #333333;
+@c4: #444444;
+@c7: #777777;
+@e: #EEEEEE;
+
+@facebook: #00aced;
+@twitter: #3b5998;
+@google: #dd4b39;
+@linkedin: #007bb6;
+@github: #333333;
+@flicker: #ff0084;
+@youtube: #b00;
+@dig: #356aa0;
+@stumbleupon: #eb4924;
+@pinterest: #cb2027;
+
+
+/* ----------------------------------------------------------------------------
+ * Font Include
+ * -------------------------------------------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,700italic);
+@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+
+/* ----------------------------------------------------------------------------
+ * Globall Style
+ * -------------------------------------------------------------------------- */
+html{
+   font-size: 10px;
+}
+
+body{
+   font: normal 1.5rem/1.5 @font_body;
+   color: @b;
+   background-color: @bg_primary;
+}
+
+/* ----------------------------------------------------------------------------
+ * Header Style
+ * -------------------------------------------------------------------------- */
+#header-top, #main-header{
+   background-color: @w;
+}
+
+#header-top{
+   margin-top: -15px;
+   border-bottom: 1px solid @e;
+
+   .header-contact-info {
+      font-size: 1.4rem;
+      margin: 15px 0px 10px;
+   }
+
+   /* Widget Page Top
+      ========================================================================== */
+   .widget_core_user_links {
+      margin: 0;
+
+      .ufld_icon_links {
+         text-align: right;
+
+         a {
+            background-color: transparent;
+            color: @c7;
+            width: 55px;
+            height: 50px;
+            border-radius: 0;
+            margin: 0;
+            border-right: 1px solid @e;
+
+            &:first-child{
+               border-left: 1px solid @e;
+            }
+
+            &:hover span {
+               color: @w;
+            }
+
+            span{
+               line-height: 50px;
+            }
+
+            &.ufld_twitter:hover{
+               background-color: @facebook;
+            }
+
+            &.ufld_facebook:hover{
+               background-color: @twitter;
+            }
+
+            &.ufld_googleplus:hover{
+               background-color: @google;
+            }
+
+            &.ufld_linkedin:hover{
+               background-color: @linkedin;
+            }
+
+            &.ufld_github:hover{
+               background-color: @github;
+            }
+
+            &.ufld_flickr:hover{
+               background-color: @flicker;
+            }
+
+            &.ufld_youtube:hover{
+               background-color: @youtube;
+            }
+
+            &.ufld_digg:hover{
+               background-color: @dig;
+            }
+
+            &.ufld_stumbleupon:hover{
+               background-color: @stumbleupon;
+            }
+
+            &.ufld_pinterest:hover{
+               background-color: @pinterest;
+            }
+
+         }
+      }
+   }
+
+}
+
+// Main Header
+// ======================================================================== /
+#main-header {
+   box-shadow: 0 3px 5px rgba(0,0,0,.1);
+}
+
+/* ----------------------------------------------------------------------------
+ * Main Content Style
+ * -------------------------------------------------------------------------- */
+#main-content{
+   margin-top: 60px;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Skin Starter
+ * -------------------------------------------------------------------------- */
 // Header
 .evo_container__header {
 	margin-bottom: 20px;
@@ -14,7 +171,7 @@
 
 // Intro post - Featured post background images sample
 //.well {
-//	background: url(images/7T0W8MYRN0.jpg) no-repeat center center; 
+//	background: url(images/7T0W8MYRN0.jpg) no-repeat center center;
 //	-webkit-background-size: cover;
 //	-moz-background-size: cover;
 //	-o-background-size: cover;

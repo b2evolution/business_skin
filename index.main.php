@@ -37,18 +37,18 @@ siteskin_include( '_site_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
-<header id="header-top">
+<header id="header-top" class="clearfix">
    <div class="container">
       <div class="row">
 
       	<div class="coll-xs-12 coll-sm-12 col-md-6">
-      		<div class="evo_container evo_container__page_top">
-      		<p>Contact us on 0800 123 4567 or info@dante.com</p>
+      		<div class="evo_container">
+      		   <p class="header-contact-info">Contact us on 0800 123 4567 or info@dante.com</p>
       		</div>
       	</div><!-- .col -->
 
       	<div class="coll-xs-12 col-sm-12 col-md-6">
-      		<div class="evo_container evo_container__header">
+      		<div class="evo_container">
                <?php
          			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
          			// Display container and contents:
@@ -126,7 +126,7 @@ siteskin_include( '_site_body_header.inc.php' );
 </header><!-- .row -->
 
 
-<main class="main-content">
+<main id="main-content">
    <div class="container">
       <div class="row">
 
