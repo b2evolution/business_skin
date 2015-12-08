@@ -15,7 +15,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  *
  * ATTENTION: if you make a new skin you have to change the class name below accordingly
  */
-class starter_Skin extends Skin
+class business_Skin extends Skin
 {
 	var $version = '1.0';
 	/**
@@ -31,7 +31,7 @@ class starter_Skin extends Skin
 	 */
 	function get_default_name()
 	{
-		return 'Starter';
+		return 'Business Skin';
 	}
 
 
