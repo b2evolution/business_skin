@@ -28,8 +28,9 @@ body {
       ========================================================================== */
 }
 #header-top .header-contact-info {
-  font-size: 1.4rem;
-  margin: 15px 0px 10px;
+  font-size: 1.3rem;
+  color: #777777;
+  margin: 12px 0px 10px;
 }
 #header-top .widget_core_user_links {
   margin: 0;
@@ -40,8 +41,8 @@ body {
 #header-top .widget_core_user_links .ufld_icon_links a {
   background-color: transparent;
   color: #777777;
-  width: 55px;
-  height: 50px;
+  width: 48px;
+  height: 45px;
   border-radius: 0;
   margin: 0;
   border-right: 1px solid #eeeeee;
@@ -53,7 +54,8 @@ body {
   color: #ffffff;
 }
 #header-top .widget_core_user_links .ufld_icon_links a span {
-  line-height: 50px;
+  font-size: 1.6rem;
+  line-height: 45px;
 }
 #header-top .widget_core_user_links .ufld_icon_links a.ufld_twitter:hover {
   background-color: #00aced;
@@ -86,7 +88,59 @@ body {
   background-color: #cb2027;
 }
 #main-header {
+  padding: 20px 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+#main-header .widget_core_coll_title h1 {
+  margin: 0;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#main-header .widget_core_coll_title h1 a {
+  color: #444444;
+}
+#main-header .widget_core_coll_title h1 a:hover {
+  text-decoration: none;
+}
+#main-header .primary-nav .nav {
+  margin: 0;
+  border: none;
+  float: right;
+}
+#main-header .primary-nav .nav li {
+  padding: 10px;
+}
+#main-header .primary-nav .nav > li.active a {
+  border: 0;
+  background-color: transparent;
+  color: #1dc6df;
+  font-weight: normal;
+}
+#main-header .primary-nav .nav a {
+  position: relative;
+  border: 0;
+  color: #333;
+  font-size: 1.4rem;
+  padding: 0;
+}
+#main-header .primary-nav .nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #1dc6df;
+  opacity: 0;
+}
+#main-header .primary-nav .nav a:hover {
+  background-color: transparent;
+  border: 0;
+  color: #1dc6df;
+}
+#main-header .primary-nav .nav a:hover::after {
+  opacity: 1;
 }
 /* ----------------------------------------------------------------------------
  * Main Content Style
