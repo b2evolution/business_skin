@@ -49,12 +49,26 @@ module.exports = function(grunt) {
 			},
 		},
 
+      // Autoprefixer CSS Browser Old Support
+      // https://toster.ru/q/119641
+      autoprefixer: {
+         options: {
+            browsers: ['last 2 versions', 'ie 8', 'ie 9', '> 1%'],
+            cascade: false
+         },
+         files: {
+            // Target-specific file lists and/or options go here.
+            src: '*.css'
+         },
+      },
+
+
 		// Configuration for the watch tasks:
 		watch: {
 			less: {
 				// Which files to watch (all .less files recursively in the whole blogs directory)
 				files: ['*.less'],
-				tasks: ['less','cssmin'],
+				tasks: ['less','cssmin', 'autoprefixer'],
 				options: {
 					nospawn: true,
 				}
@@ -85,11 +99,12 @@ module.exports = function(grunt) {
 
 	// Load the plugin that provides the tasks ( "uglify", "less", "sass", etc. ):
 	grunt.loadNpmTasks('grunt-contrib-less');
+   grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
    grunt.loadNpmTasks('grunt-browser-sync');
 
 	// Default task(s):
-	grunt.registerTask( 'default', [ 'browserSync', 'less','cssmin', 'watch'] );
+	grunt.registerTask( 'default', [ 'browserSync', 'less','cssmin', 'autoprefixer', 'watch'] );
 
 };
