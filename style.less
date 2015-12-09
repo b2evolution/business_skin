@@ -245,6 +245,7 @@ a{
    .evo_content_block{
       position: relative;
       z-index: 1;
+
    }
 
    // Intro Post
@@ -255,6 +256,7 @@ a{
       border: none;
       box-shadow: @bx_post;
       padding: 10px 30px 20px;
+      margin-bottom: 40px;
 
       .evo_post__full_text{
          font-size: 1.4rem;
@@ -293,7 +295,7 @@ a{
    // Article Post Styling
    // ======================================================================== /
    .evo_post {
-   	margin-bottom: 4em;
+   	margin-bottom: 3.5em;
       background-color: @w;
       box-shadow: @bx_post;
       border-radius: 5px;
@@ -335,13 +337,41 @@ a{
       // ======================================================================== /
       .evo_post__full_text {
          font-size: 1.4rem;
-         padding: 15px 30px 20px;
+         padding: 5px 30px;
+
+         .evo_post_more_link{
+            display: inline-block;
+            padding: 12px 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: 1px solid @e;
+            border-radius: 2px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+
+            &:hover {
+               background: @primary;
+               border-color: transparent;
+
+               a{
+                  color: @w;
+               }
+            }
+
+            a{
+               color: @c7;
+
+               &:hover {
+                  text-decoration: none;
+               }
+            }
+         }
       }
 
       // Footer Post
       // ======================================================================== /
       footer {
-         padding: 0 30px 10px;
+         padding: 0 30px 20px;
       }
 
    }
@@ -405,16 +435,6 @@ a{
 	margin-top: 0;
 }
 
-// Intro post - Featured post background images sample
-//.well {
-//	background: url(images/7T0W8MYRN0.jpg) no-repeat center center;
-//	-webkit-background-size: cover;
-//	-moz-background-size: cover;
-//	-o-background-size: cover;
-//	background-size: cover;
-//	width: 100%;
-//	height: auto;
-//}
 
 // Login widget form
 .widget_core_user_login {
@@ -690,7 +710,7 @@ div.bSideItem {
  * -------------------------------------------------------------------------- */
 .pagination {
    display: block;
-	margin: 30px 0 30px;
+	margin: 20px 0 30px;
 
    .active{
       span, span:hover{

@@ -167,6 +167,7 @@ a {
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   padding: 10px 30px 20px;
+  margin-bottom: 40px;
 }
 #main-content .evo_intro_post .evo_post__full_text {
   font-size: 1.4rem;
@@ -202,7 +203,7 @@ a {
   vertical-align: middle;
 }
 #main-content .evo_post {
-  margin-bottom: 4em;
+  margin-bottom: 3.5em;
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -228,10 +229,33 @@ a {
 }
 #main-content .evo_post .evo_post__full_text {
   font-size: 1.4rem;
-  padding: 15px 30px 20px;
+  padding: 5px 30px;
+}
+#main-content .evo_post .evo_post__full_text .evo_post_more_link {
+  display: inline-block;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px solid #eeeeee;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+#main-content .evo_post .evo_post__full_text .evo_post_more_link:hover {
+  background: #1dc6df;
+  border-color: transparent;
+}
+#main-content .evo_post .evo_post__full_text .evo_post_more_link:hover a {
+  color: #ffffff;
+}
+#main-content .evo_post .evo_post__full_text .evo_post_more_link a {
+  color: #777777;
+}
+#main-content .evo_post .evo_post__full_text .evo_post_more_link a:hover {
+  text-decoration: none;
 }
 #main-content .evo_post footer {
-  padding: 0 30px 10px;
+  padding: 0 30px 20px;
 }
 #main-content .posts_date {
   position: relative;
@@ -514,7 +538,7 @@ div.bSideItem h4 {
  * -------------------------------------------------------------------------- */
 .pagination {
   display: block;
-  margin: 30px 0 30px;
+  margin: 20px 0 30px;
 }
 .pagination .active span,
 .pagination .active span:hover {
