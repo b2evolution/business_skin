@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,700italic);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
 /* ----------------------------------------------------------------------------
  * Font Include
  * -------------------------------------------------------------------------- */
@@ -11,8 +11,11 @@ html {
 }
 body {
   font: normal 1.5rem/1.5 "Source Sans Pro", sans-serif;
-  color: #333333;
+  color: #444444;
   background-color: #f7f7f7;
+}
+a {
+  color: #1dc6df;
 }
 /* ----------------------------------------------------------------------------
  * Header Style
@@ -93,14 +96,17 @@ body {
 }
 #main-header .widget_core_coll_title h1 {
   margin: 0;
-  font-size: 4rem;
+  font-size: 3.6rem;
   text-transform: uppercase;
   font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 #main-header .widget_core_coll_title h1 a {
-  color: #444444;
+  color: #333333;
 }
-#main-header .widget_core_coll_title h1 a:hover {
+#main-header .widget_core_coll_title h1 a:hover,
+#main-header .widget_core_coll_title h1 a:active,
+#main-header .widget_core_coll_title h1 a:focus {
   text-decoration: none;
 }
 #main-header .primary-nav .nav {
@@ -116,6 +122,9 @@ body {
   background-color: transparent;
   color: #1dc6df;
   font-weight: normal;
+}
+#main-header .primary-nav .nav > li.active a::after {
+  opacity: 1;
 }
 #main-header .primary-nav .nav a {
   position: relative;
@@ -147,6 +156,39 @@ body {
  * -------------------------------------------------------------------------- */
 #main-content {
   margin-top: 60px;
+}
+#main-content .evo_intro_post {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px 20px;
+}
+#main-content .evo_post_title h2 {
+  font-family: "Roboto Slab", serif;
+  font-size: 3.2rem;
+}
+#main-content .evo_post_title h2 a {
+  color: #333333;
+}
+#main-content .evo_post_title h2 a:hover,
+#main-content .evo_post_title h2 a:active,
+#main-content .evo_post_title h2 a:focus {
+  text-decoration: none;
+  color: #1dc6df;
+}
+#main-content .evo_post {
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+#main-content .evo_post header {
+  padding: 10px 30px 10px;
+}
+#main-content .evo_post .evo_post_images img {
+  border-radius: 0;
+}
+#main-content .evo_post .evo_post__full_text {
+  padding: 15px 30px 20px;
 }
 /* ----------------------------------------------------------------------------
  * Skin Starter
@@ -406,8 +448,39 @@ div.bSideItem h4 {
 .form_footer_notes {
   margin-top: 0;
 }
+/* ----------------------------------------------------------------------------
+ * Pagination
+ * -------------------------------------------------------------------------- */
 .pagination {
-  margin: 0;
+  display: block;
+  margin: 30px 0 30px;
+}
+.pagination .active span,
+.pagination .active span:hover {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+  color: #ffffff;
+}
+.pagination li a,
+.pagination li span {
+  float: none;
+  font-size: 1.6rem;
+  padding: 8px 16px;
+  margin: 1px;
+  border-radius: 2px !important;
+  border-color: transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.pagination li a:hover,
+.pagination li span:hover,
+.pagination li a:focus,
+.pagination li span:focus {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+  color: #ffffff;
+}
+.pagination li a {
+  color: #1dc6df;
 }
 div.action_messages,
 div.log_container {

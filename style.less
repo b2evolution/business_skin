@@ -2,7 +2,7 @@
 // Variable
 // ======================================================================== /
 @font_body: "Source Sans Pro", sans-serif;
-@font_title: "PT Serif", sans-serif;
+@font_title: "Roboto Slab", serif;;
 
 // Color Variable
 // ======================================================================== /
@@ -10,12 +10,17 @@
 
 @primary: #1dc6df;
 @w: #FFFFFF;
+@bx_post: 0 1px 2px rgba( 0, 0, 0, .1);
 
 @b: #333333;
 @c4: #444444;
 @c7: #777777;
 @e: #EEEEEE;
 
+
+
+// Color Social Media
+// ======================================================================== /
 @facebook: #00aced;
 @twitter: #3b5998;
 @google: #dd4b39;
@@ -32,7 +37,7 @@
  * Font Include
  * -------------------------------------------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,700italic);
-@import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
 
 /* ----------------------------------------------------------------------------
  * Globall Style
@@ -43,8 +48,12 @@ html{
 
 body{
    font: normal 1.5rem/1.5 @font_body;
-   color: @b;
+   color: @c4;
    background-color: @bg_primary;
+}
+
+a{
+   color: @primary;
 }
 
 /* ----------------------------------------------------------------------------
@@ -152,14 +161,15 @@ body{
 
       h1{
          margin: 0;
-         font-size: 4rem;
+         font-size: 3.6rem;
          text-transform: uppercase;
          font-weight: 700;
+         text-shadow: @bx_post;
 
          a{
-            color: @c4;
+            color: @b;
 
-            &:hover{
+            &:hover, &:active, &:focus{
                text-decoration: none;
             }
          }
@@ -184,6 +194,10 @@ body{
             background-color: transparent;
             color: @primary;
             font-weight: normal;
+
+            &::after{
+               opacity: 1;
+            }
          }
 
          a{
@@ -225,6 +239,65 @@ body{
  * -------------------------------------------------------------------------- */
 #main-content{
    margin-top: 60px;
+
+   // Intro Post
+   // ======================================================================== /
+   .evo_intro_post{
+      background-color: @w;
+      border: none;
+      box-shadow: @bx_post;
+      padding: 10px 30px 20px;
+   }
+
+   .evo_post_title {
+
+      h2 {
+         font-family: @font_title;
+         font-size: 3.2rem;
+
+         a {
+            color: @b;
+
+            &:hover, &:active, &:focus{
+               text-decoration: none;
+               color: @primary;
+            }
+         }
+
+      }
+   }
+
+   // Article Post Styling
+   // ======================================================================== /
+   .evo_post {
+      background-color: @w;
+      box-shadow: @bx_post;
+      border-radius: 5px;
+
+      // header
+      // ======================================================================== /
+      header {
+         padding: 10px 30px 10px;
+      }
+
+      // Post Image
+      // ======================================================================== /
+      .evo_post_images {
+
+         img{
+            border-radius: 0;
+         }
+      }
+
+      // Full Text
+      // ======================================================================== /
+      .evo_post__full_text {
+         padding: 15px 30px 20px;
+      }
+
+
+   }
+
 }
 
 
@@ -539,9 +612,45 @@ div.bSideItem {
 	margin-top: 0;
 }
 
-// Pagination
+/* ----------------------------------------------------------------------------
+ * Pagination
+ * -------------------------------------------------------------------------- */
 .pagination {
-	margin: 0;
+   display: block;
+	margin: 30px 0 30px;
+
+   .active{
+      span, span:hover{
+         background-color: @primary;
+         border-color: @primary;
+         color: @w;
+      }
+   }
+
+   li{
+
+      a, span {
+         float: none;
+         font-size: 1.6rem;
+         padding: 8px 16px;
+         margin: 1px;
+         border-radius: 2px !important;
+         border-color: transparent;
+         box-shadow: @bx_post;
+
+         &:hover, &:focus {
+            background-color: @primary;
+            border-color: @primary;
+            color: @w;
+         }
+      }
+
+      a {
+         color: @primary;
+      }
+
+   }
+
 }
 
 // Messages

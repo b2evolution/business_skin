@@ -94,6 +94,27 @@ class business_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
 
+            /**
+             * ============================================================================
+             * Section Header Top
+             * ============================================================================
+             */
+            'section_header_top_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Header Top Settings')
+				),
+               'ht_contact_info' => array(
+                  'label'        => T_('Header Top Contact Info'),
+                  'defaultvalue' => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
+                  'note'         => T_('Add your contact Info'),
+                  'type'         => 'text',
+                  'size'         => '60'
+               ),
+				'section_header_top_end' => array(
+					'layout' => 'end_fieldset',
+				),
+            // End Section Header Top
+
 				'section_colorbox_start' => array(
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Colorbox Image Zoom')
@@ -598,12 +619,12 @@ class business_Skin extends Skin
 
 			case 'left_sidebar':
 				// Left Sidebar
-				return 'col-md-9 pull-right';
+				return 'col-md-8 pull-right';
 
 			case 'right_sidebar':
 				// Right Sidebar
 			default:
-				return 'col-md-9';
+				return 'col-md-8';
 		}
 	}
 }
