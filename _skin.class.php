@@ -268,7 +268,7 @@ class business_Skin extends Skin
 					'header_start' => '',
 						'header_text' => '<div class="center"><ul class="pagination">'
 								.'$prev$$first$$list_prev$$list$$list_next$$last$$next$'
-							.'</ul></div>',
+							   .'</ul></div>',
 						'header_text_single' => '',
 					'header_end' => '',
 					'head_title' => '<div class="panel-heading fieldset_title"><span class="pull-right">$global_icons$</span><h3 class="panel-title">$title$</h3></div>'."\n",

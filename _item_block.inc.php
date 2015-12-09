@@ -25,13 +25,13 @@ $params = array_merge( array(
 		// Controlling the title:
 		'disp_title'                 => true,
 		'item_title_line_before'     => '<div class="evo_post_title">',	// Note: we use an extra class because it facilitates styling
-			'item_title_before'          => '<h2>',	
-			'item_title_after'           => '</h2>',
+			'item_title_before'          => '<h3>',
+			'item_title_after'           => '</h3>',
 			'item_title_single_before'   => '<h1>',	// This replaces the above in case of disp=single or disp=page
 			'item_title_single_after'    => '</h1>',
 		'item_title_line_after'      => '</div>',
 		// Controlling the content:
-		'content_mode'               => 'auto',		// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
+		'content_mode'               => 'excerpt',		// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
 		'image_class'                => 'img-responsive',
 		'image_size'                 => 'fit-1280x720',
 		'author_link_text'           => 'preferredname',
@@ -40,6 +40,31 @@ $params = array_merge( array(
 
 echo '<div class="evo_content_block">'; // Beginning of post display
 ?>
+
+<div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
+<?php
+   if( $Item->status != 'published' )
+   {
+      $Item->format_status( array(
+            'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
+         ) );
+   }
+   // Permalink:
+   $Item->permanent_link( array(
+      // 'text' => '#icon#',
+      'text' => '', // without icon
+   ) );
+
+   // We want to display the post time:
+   $Item->issue_time( array(
+         'before'      => '',
+         'after'       => '',
+         'time_format' => 'l j, Y',
+      ) );
+?>
+</div>
+
+<div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
@@ -97,21 +122,16 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 					'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
 				) );
 		}
-		// Permalink:
-		$Item->permanent_link( array(
-				'text' => '#icon#',
-			) );
 
-		// We want to display the post time:
-		$Item->issue_time( array(
-				'before'      => ' '.T_('posted on').' ',
-				'after'       => ' ',
-				'time_format' => 'M j, Y',
-			) );
+      // Permalink:
+      $Item->permanent_link( array(
+         // 'text' => '#icon#',
+         'text' => '', // without icon
+      ) );
 
 		// Author
 		$Item->author( array(
-			'before'    => ' '.T_('by').' ',
+			'before'    => ' '.T_('By').' ',
 			'after'     => ' ',
 			'link_text' => $params['author_link_text'],
 		) );

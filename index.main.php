@@ -35,6 +35,8 @@ skin_include( '_html_header.inc.php', array() );
 // If site headers are enabled, they will be included here:
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
+
+
 ?>
 
 
@@ -182,6 +184,7 @@ skin_include( '_body_header.inc.php' );
       			// copying the matching php file into your skin directory.
       			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
       		?>
+
       		</main>
 
       	</div><!-- .col -->

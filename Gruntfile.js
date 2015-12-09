@@ -81,7 +81,6 @@ module.exports = function(grunt) {
            bsFiles: {
              src: [
                "images",
-               // "*.less",
                "*.css",
                "**/*.php",
              ]
