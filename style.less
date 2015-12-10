@@ -1,3 +1,14 @@
+/**
+ * Thanks to use Business Blog Skin
+ *
+ * Author: Ariflaw
+ * Autor URI: http://www.ariflaw.com
+ * Author Contact: hello@ariflaw.com
+ *
+ * @support By B2evolution
+ */
+
+
 // ========================================================================
 // Variable
 // ======================================================================== /
@@ -33,9 +44,9 @@
 @pinterest: #cb2027;
 
 
-/* ----------------------------------------------------------------------------
- * Font Include
- * -------------------------------------------------------------------------- */
+// ========================================================================
+// Font Include
+// ======================================================================== /
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,700italic);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
 
@@ -73,8 +84,8 @@ a{
       margin: 12px 0px 10px;
    }
 
-   /* Widget Page Top
-      ========================================================================== */
+   // Widget Page Top
+   // ======================================================================== /
    .widget_core_user_links {
       margin: 0;
 
@@ -84,63 +95,10 @@ a{
          a {
             background-color: transparent;
             color: @c7;
-            width: 48px;
-            height: 45px;
-            border-radius: 0;
-            margin: 0;
             border-right: 1px solid @e;
 
             &:first-child{
                border-left: 1px solid @e;
-            }
-
-            &:hover span {
-               color: @w;
-            }
-
-            span{
-               font-size: 1.6rem;
-               line-height: 45px;
-            }
-
-            &.ufld_twitter:hover{
-               background-color: @facebook;
-            }
-
-            &.ufld_facebook:hover{
-               background-color: @twitter;
-            }
-
-            &.ufld_googleplus:hover{
-               background-color: @google;
-            }
-
-            &.ufld_linkedin:hover{
-               background-color: @linkedin;
-            }
-
-            &.ufld_github:hover{
-               background-color: @github;
-            }
-
-            &.ufld_flickr:hover{
-               background-color: @flicker;
-            }
-
-            &.ufld_youtube:hover{
-               background-color: @youtube;
-            }
-
-            &.ufld_digg:hover{
-               background-color: @dig;
-            }
-
-            &.ufld_stumbleupon:hover{
-               background-color: @stumbleupon;
-            }
-
-            &.ufld_pinterest:hover{
-               background-color: @pinterest;
             }
 
          }
@@ -157,7 +115,7 @@ a{
 
    // WIdget Site Title
    // ======================================================================== /
-   .widget_core_coll_title{
+   .widget_core_coll_title, .widget_core_coll_logo{
 
       h1{
          margin: 0;
@@ -174,6 +132,21 @@ a{
             }
          }
       }
+
+      img{
+         max-width: 160px;
+      }
+
+   }
+
+   .widget_core_coll_logo {
+      h1{
+         margin: -3px 0 0;
+      }
+   }
+
+   .widget_core_coll_tagline {
+      margin-top: -3px;
    }
 
    // Primary Nav
@@ -203,7 +176,7 @@ a{
          a{
             position: relative;
             border: 0;
-            color: #333;
+            color: @b;
             font-size: 1.4rem;
             padding: 0;
 
@@ -245,7 +218,6 @@ a{
    .evo_content_block{
       position: relative;
       z-index: 1;
-
    }
 
    // Intro Post
@@ -259,6 +231,7 @@ a{
       margin-bottom: 40px;
 
       .evo_post__full_text{
+         margin-top: 15px;
          font-size: 1.4rem;
       }
    }
@@ -298,7 +271,7 @@ a{
    	margin-bottom: 3.5em;
       background-color: @w;
       box-shadow: @bx_post;
-      border-radius: 5px;
+      border-radius: 3px;
 
    	.small.text-muted {
    		margin: 5px 0 15px;
@@ -333,6 +306,21 @@ a{
          }
       }
 
+      // Post Gallery
+      // ======================================================================== /
+      .evo_post_gallery {
+         padding: 0 30px;
+
+         .evo_post_gallery__image{
+            margin: 0 0.5em 1em 0;
+         }
+
+         img{
+            border-radius: 2px;
+         }
+
+      }
+
       // Full Text
       // ======================================================================== /
       .evo_post__full_text {
@@ -340,29 +328,23 @@ a{
          padding: 5px 30px;
 
          .evo_post_more_link{
-            display: inline-block;
-            padding: 12px 18px;
-            text-transform: uppercase;
-            font-weight: 700;
-            border: 1px solid @e;
-            border-radius: 2px;
-            letter-spacing: 1px;
-            margin-top: 10px;
-
-            &:hover {
-               background: @primary;
-               border-color: transparent;
-
-               a{
-                  color: @w;
-               }
-            }
 
             a{
+               display: inline-block;
+               text-transform: uppercase;
+               font-weight: 700;
+               padding: 12px 18px;
                color: @c7;
+               border: 1px solid #dddddd;
+               border-radius: 2px;
+               letter-spacing: 1px;
+               margin-top: 10px;
 
                &:hover {
                   text-decoration: none;
+                  background: @primary;
+                  color: @w;
+                  border-color: transparent;
                }
             }
          }
@@ -372,6 +354,15 @@ a{
       // ======================================================================== /
       footer {
          padding: 0 30px 20px;
+
+         .post_tags{
+            a{
+               padding: 3px 10px;
+               border-radius: 2px;
+               color: @c4;
+            }
+         }
+
       }
 
    }
@@ -419,6 +410,307 @@ a{
 
 
 /* ----------------------------------------------------------------------------
+ * Main Widget Style
+ * -------------------------------------------------------------------------- */
+.widget_core_user_links {
+
+   .ufld_icon_links {
+
+      a {
+         width: 48px;
+         height: 45px;
+         border-radius: 0;
+         margin: 0;
+
+         &:hover span {
+            color: @w;
+         }
+
+         span{
+            font-size: 1.6rem;
+            line-height: 45px;
+         }
+
+         &.ufld_twitter:hover{
+            background-color: @facebook !important;
+         }
+
+         &.ufld_facebook:hover{
+            background-color: @twitter !important;
+         }
+
+         &.ufld_googleplus:hover{
+            background-color: @google !important;
+         }
+
+         &.ufld_linkedin:hover{
+            background-color: @linkedin !important;
+         }
+
+         &.ufld_github:hover{
+            background-color: @github !important;
+         }
+
+         &.ufld_flickr:hover{
+            background-color: @flicker !important;
+         }
+
+         &.ufld_youtube:hover{
+            background-color: @youtube !important;
+         }
+
+         &.ufld_digg:hover{
+            background-color: @dig !important;
+         }
+
+         &.ufld_stumbleupon:hover{
+            background-color: @stumbleupon !important;
+         }
+
+         &.ufld_pinterest:hover{
+            background-color: @pinterest !important;
+         }
+
+      }
+   }
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Main Sidebar
+ * -------------------------------------------------------------------------- */
+#main-sidebar {
+
+   &.col-md-4 {
+      padding-left: 20px;
+
+      &.pull-left {
+         padding-left: 15px;
+         padding-right: 20px;
+      }
+
+   }
+
+   // ========================================================================
+   // Widget Styling
+   // ======================================================================== /
+   .evo_widget {
+      border: 0;
+      box-shadow: none;
+      background-color: transparent;
+      margin-bottom: 25px;
+      color: @b;
+
+      a{
+         color: @b;
+
+         &:hover, &:active, &:focus {
+            color: @primary;
+         }
+      }
+
+      ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+
+   }
+
+   .panel-body, .panel-heading{
+      padding: 15px 0;
+   }
+
+   // Panel Heading
+   // ======================================================================== /
+   .panel-heading {
+      position: relative;
+      overflow: hidden;
+      background-color: transparent;
+      border: 0;
+
+      .panel-title {
+         display: inline-block;
+         font-family: @font_title;
+         font-size: 1.6rem;
+         color: #222;
+         padding-right: 20px;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         width: 100%;
+         height: 1px;
+         background-color: #e4e4e4;
+      }
+   }
+
+   // Panel Body
+   // ======================================================================== /
+   .panel-body {
+      font-size: 1.4rem;
+      padding-top: 5px;
+   }
+
+   // Styling Image
+   // ======================================================================== /
+   .widget_core_image {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+   }
+
+   // Widget Image Avatar
+   // ======================================================================== /
+   .widget_core_coll_avatar {
+
+      img{
+         border-radius: 100%;
+      }
+   }
+
+   // User Links
+   // ======================================================================== /
+   .widget_core_user_links {
+      .ufld_icon_links {
+
+         a{
+            margin: 1px;
+            color: @c4;
+            background-color: #eee;
+         }
+      }
+   }
+
+   // Profile Menu Link
+   // ======================================================================== /
+   .widget_core_profile_menu_link {
+
+      a{
+         font-family: @font_title;
+      }
+
+      img{
+         border-radius: 100%;
+         vertical-align: middle;
+         margin-right: 5px;
+      }
+   }
+
+   // Search Form
+   // ======================================================================== /
+   .widget_core_coll_search_form {
+      .compact_search_form{
+
+         .search_field, .search_submit {
+            box-shadow: none;
+            border-radius: 0;
+            background-color: @w;
+         }
+
+         .form-control, .btn {
+            padding: 15px 20px;
+            height: 45px;
+         }
+
+         .search_field {
+            border-color: #e4e4e4;
+
+            &:focus {
+               border-color: @primary;
+            }
+         }
+
+         .search_submit{
+            background-color: @primary;
+            border-color: @primary;
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            &:focus, &:hover, &:active {
+               outline: 0;
+            }
+         }
+
+      }
+   }
+
+   // Widget List Style
+   // ======================================================================== /
+   .widget_core_coll_category_list,
+   .widget_core_content_hierarchy,
+   .widget_core_coll_common_links,
+   .widget_core_coll_post_list,
+   .widget_core_coll_page_list,
+   .widget_core_coll_related_post_list,
+   .widget_core_linkblog,
+   .widget_core_coll_item_list.evo_noexcerpt,
+   .widget_core_coll_comment_list,
+   .widget_core_coll_xml_feeds,
+   .widget_core_colls_list_public,
+   .widget_core_user_tools {
+
+      ul {
+
+         & > li {
+            position: relative;
+            padding: 10px 0;
+            border-bottom: 1px solid #e4e4e4;
+
+            a{
+
+               &::after {
+                  position: absolute;
+                  right: 0;
+                  // bottom: 10px;
+                  vertical-align: middle;
+                  display: inline-block;
+                  content: "\f105";
+                  font-family: FontAwesome;
+                  font-weight: normal;
+                  font-style: normal;
+               }
+            }
+
+         }
+      }
+
+      .panel-body > ul > li:last-child {
+         border-bottom: 0;
+      }
+   }
+
+   .widget_core_coll_tag_cloud {
+
+      .tag_cloud {
+         a{
+            display: inline-block;
+            float: left;
+            padding: 3px 12px;
+            margin: 1px;
+            background-color: #fff;
+            border: 1px solid @e;
+            border-radius: 2px;
+
+            &:hover {
+               text-decoration: none;
+               background-color: @primary;
+               color: @w;
+               border-color: @primary;
+            }
+         }
+      }
+   }
+
+}
+
+
+/* ----------------------------------------------------------------------------
  * Skin Starter
  * -------------------------------------------------------------------------- */
 // Header
@@ -427,9 +719,6 @@ a{
 }
 .evo_container__page_top {
 	margin-top: 20px;
-	.ufld_icon_links {
-		text-align: right;
-	}
 }
 .nav.nav-tabs {
 	margin-top: 0;

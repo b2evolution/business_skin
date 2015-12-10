@@ -29,6 +29,7 @@ module.exports = function(grunt) {
 		less: {
 			style: {
 				options: {
+               expanded: true,
 					compress: false,
 					//yuicompress: true,
 					//optimization: 2
