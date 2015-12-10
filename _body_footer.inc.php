@@ -11,6 +11,8 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 ?>
+
+
 <footer id="main-footer">
 
 	<!-- =================================== START OF FOOTER =================================== -->
@@ -78,7 +80,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 					'img_height'  => 32,
 				) );
 		?>
-	</div><!-- .col -->
+	</div><!-- .container -->
 
 </footer><!-- #main-footer -->
 

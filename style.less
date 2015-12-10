@@ -306,6 +306,53 @@ a{
          }
       }
 
+      // Image Hover
+      // ======================================================================== /
+      .evo_image_block, .evo_post_gallery__image {
+         position: relative;
+         overflow: hidden;
+
+         a {
+
+            &::before, &::after {
+               position: absolute;
+               left: 0;
+               opacity: 0;
+               transition: all 0.32s ease;
+            }
+
+            &::before {
+               content: '';
+               bottom: 0;
+               width: 100%;
+               height: 100%;
+               background-color: rgba(29, 198, 223, 0.8);
+            }
+
+            &::after {
+               content: "\f002";
+               right: 0;
+               bottom: 50%;;
+               margin: auto;
+               text-align: center;
+               display: block;
+               color: @w;
+               font-family: FontAwesome;
+               font-weight: normal;
+               font-style: normal;
+               text-rendering: auto;
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+            }
+
+         }
+
+         &:hover a::before, &:hover a::after {
+            opacity: 1;
+         }
+
+      }
+
       // Post Gallery
       // ======================================================================== /
       .evo_post_gallery {
@@ -313,6 +360,10 @@ a{
 
          .evo_post_gallery__image{
             margin: 0 0.5em 1em 0;
+
+            a::after {
+               bottom: 35%;
+            }
          }
 
          img{
@@ -325,6 +376,7 @@ a{
       // ======================================================================== /
       .evo_post__full_text, .evo_post__excerpt_text {
          font-size: 1.4rem;
+         line-height: 1.6;
          padding: 5px 30px;
 
          .evo_post_more_link{
@@ -731,6 +783,7 @@ a{
             float: left;
             padding: 5px 12px;
             margin: 2px;
+            font-family: @font_title;
             background-color: #fff;
             border: 1px solid @e;
             border-radius: 2px;
@@ -745,6 +798,8 @@ a{
       }
    }
 
+   // Calender widget style
+   // ======================================================================== /
    .widget_plugin_evo_Calr {
 
       .bCalendarTable {
@@ -772,7 +827,7 @@ a{
                   content: '';
                   position: absolute;
                   left: 0;
-                  bottom: 50%;
+                  bottom: 45%;
                   width: 100%;
                   height: 1px;
                   background-color: #ccc;
@@ -825,6 +880,67 @@ a{
             border-radius: 0;
          }
 
+      }
+   }
+
+   // Media Index
+   // ======================================================================== /
+   .widget_core_coll_media_index {
+
+      img {
+         border-radius: 2px;
+      }
+
+      .widget_flow_blocks {
+         & > div {
+            position: relative;
+            overflow: hidden;
+
+            a {
+
+               &::before, &::after {
+                  position: absolute;
+                  left: 0;
+                  opacity: 0;
+                  transition: all 0.32s ease;
+               }
+
+               &::before {
+                  content: '';
+                  bottom: -100%;
+                  width: 100%;
+                  height: 100%;
+                  background-color: rgba(29, 198, 223, 0.8);
+               }
+
+               &::after {
+                  content: "\f002";
+                  right: 0;
+                  bottom: -100%;
+                  margin: auto;
+                  text-align: center;
+                  display: block;
+                  color: @w;
+                  font-family: FontAwesome;
+                  font-weight: normal;
+                  font-style: normal;
+                  text-rendering: auto;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+               }
+
+            }
+
+            &:hover a::before {
+               opacity: 1;
+               bottom: 0;
+            }
+
+            &:hover a::after {
+               opacity: 1;
+               bottom: 35%;
+            }
+         }
       }
    }
 
