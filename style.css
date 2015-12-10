@@ -215,11 +215,13 @@ a {
 #main-content .evo_post .evo_post_gallery img {
   border-radius: 2px;
 }
-#main-content .evo_post .evo_post__full_text {
+#main-content .evo_post .evo_post__full_text,
+#main-content .evo_post .evo_post__excerpt_text {
   font-size: 1.4rem;
   padding: 5px 30px;
 }
-#main-content .evo_post .evo_post__full_text .evo_post_more_link a {
+#main-content .evo_post .evo_post__full_text .evo_post_more_link a,
+#main-content .evo_post .evo_post__excerpt_text .evo_post_more_link a {
   display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
@@ -230,7 +232,8 @@ a {
   letter-spacing: 1px;
   margin-top: 10px;
 }
-#main-content .evo_post .evo_post__full_text .evo_post_more_link a:hover {
+#main-content .evo_post .evo_post__full_text .evo_post_more_link a:hover,
+#main-content .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover {
   text-decoration: none;
   background: #1dc6df;
   color: #ffffff;
@@ -322,11 +325,11 @@ a {
  * Main Sidebar
  * -------------------------------------------------------------------------- */
 #main-sidebar.col-md-4 {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 #main-sidebar.col-md-4.pull-left {
   padding-left: 15px;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 #main-sidebar .evo_widget {
   border: 0;
@@ -348,9 +351,144 @@ a {
   margin: 0;
   padding: 0;
 }
+#main-sidebar .evo_widget ul li strong a {
+  color: #555555;
+}
 #main-sidebar .panel-body,
 #main-sidebar .panel-heading {
   padding: 15px 0;
+}
+#main-sidebar .widget_core_coll_category_list ul > li,
+#main-sidebar .widget_core_content_hierarchy ul > li,
+#main-sidebar .widget_core_coll_common_links ul > li,
+#main-sidebar .widget_core_coll_post_list ul > li,
+#main-sidebar .widget_core_coll_page_list ul > li,
+#main-sidebar .widget_core_coll_related_post_list ul > li,
+#main-sidebar .widget_plugin_evo_Arch ul > li,
+#main-sidebar .widget_core_linkblog ul > li,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li,
+#main-sidebar .widget_core_coll_comment_list ul > li,
+#main-sidebar .widget_core_coll_xml_feeds ul > li,
+#main-sidebar .widget_core_colls_list_public ul > li,
+#main-sidebar .widget_core_user_tools ul > li {
+  position: relative;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 10px 0;
+}
+#main-sidebar .widget_core_coll_category_list ul > li a,
+#main-sidebar .widget_core_content_hierarchy ul > li a,
+#main-sidebar .widget_core_coll_common_links ul > li a,
+#main-sidebar .widget_core_coll_post_list ul > li a,
+#main-sidebar .widget_core_coll_page_list ul > li a,
+#main-sidebar .widget_core_coll_related_post_list ul > li a,
+#main-sidebar .widget_plugin_evo_Arch ul > li a,
+#main-sidebar .widget_core_linkblog ul > li a,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li a,
+#main-sidebar .widget_core_coll_comment_list ul > li a,
+#main-sidebar .widget_core_coll_xml_feeds ul > li a,
+#main-sidebar .widget_core_colls_list_public ul > li a,
+#main-sidebar .widget_core_user_tools ul > li a {
+  padding: 10px 0;
+}
+#main-sidebar .widget_core_coll_category_list ul > li a::after,
+#main-sidebar .widget_core_content_hierarchy ul > li a::after,
+#main-sidebar .widget_core_coll_common_links ul > li a::after,
+#main-sidebar .widget_core_coll_post_list ul > li a::after,
+#main-sidebar .widget_core_coll_page_list ul > li a::after,
+#main-sidebar .widget_core_coll_related_post_list ul > li a::after,
+#main-sidebar .widget_plugin_evo_Arch ul > li a::after,
+#main-sidebar .widget_core_linkblog ul > li a::after,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li a::after,
+#main-sidebar .widget_core_coll_comment_list ul > li a::after,
+#main-sidebar .widget_core_coll_xml_feeds ul > li a::after,
+#main-sidebar .widget_core_colls_list_public ul > li a::after,
+#main-sidebar .widget_core_user_tools ul > li a::after {
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+  display: inline-block;
+  content: "\f105";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+}
+#main-sidebar .widget_core_coll_category_list ul > li a:hover,
+#main-sidebar .widget_core_content_hierarchy ul > li a:hover,
+#main-sidebar .widget_core_coll_common_links ul > li a:hover,
+#main-sidebar .widget_core_coll_post_list ul > li a:hover,
+#main-sidebar .widget_core_coll_page_list ul > li a:hover,
+#main-sidebar .widget_core_coll_related_post_list ul > li a:hover,
+#main-sidebar .widget_plugin_evo_Arch ul > li a:hover,
+#main-sidebar .widget_core_linkblog ul > li a:hover,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li a:hover,
+#main-sidebar .widget_core_coll_comment_list ul > li a:hover,
+#main-sidebar .widget_core_coll_xml_feeds ul > li a:hover,
+#main-sidebar .widget_core_colls_list_public ul > li a:hover,
+#main-sidebar .widget_core_user_tools ul > li a:hover,
+#main-sidebar .widget_core_coll_category_list ul > li a:active,
+#main-sidebar .widget_core_content_hierarchy ul > li a:active,
+#main-sidebar .widget_core_coll_common_links ul > li a:active,
+#main-sidebar .widget_core_coll_post_list ul > li a:active,
+#main-sidebar .widget_core_coll_page_list ul > li a:active,
+#main-sidebar .widget_core_coll_related_post_list ul > li a:active,
+#main-sidebar .widget_plugin_evo_Arch ul > li a:active,
+#main-sidebar .widget_core_linkblog ul > li a:active,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li a:active,
+#main-sidebar .widget_core_coll_comment_list ul > li a:active,
+#main-sidebar .widget_core_coll_xml_feeds ul > li a:active,
+#main-sidebar .widget_core_colls_list_public ul > li a:active,
+#main-sidebar .widget_core_user_tools ul > li a:active,
+#main-sidebar .widget_core_coll_category_list ul > li a:focus,
+#main-sidebar .widget_core_content_hierarchy ul > li a:focus,
+#main-sidebar .widget_core_coll_common_links ul > li a:focus,
+#main-sidebar .widget_core_coll_post_list ul > li a:focus,
+#main-sidebar .widget_core_coll_page_list ul > li a:focus,
+#main-sidebar .widget_core_coll_related_post_list ul > li a:focus,
+#main-sidebar .widget_plugin_evo_Arch ul > li a:focus,
+#main-sidebar .widget_core_linkblog ul > li a:focus,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li a:focus,
+#main-sidebar .widget_core_coll_comment_list ul > li a:focus,
+#main-sidebar .widget_core_coll_xml_feeds ul > li a:focus,
+#main-sidebar .widget_core_colls_list_public ul > li a:focus,
+#main-sidebar .widget_core_user_tools ul > li a:focus {
+  text-decoration: none;
+}
+#main-sidebar .widget_core_coll_category_list .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_content_hierarchy .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_common_links .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_post_list .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_page_list .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_related_post_list .panel-body > ul > li:last-child,
+#main-sidebar .widget_plugin_evo_Arch .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_linkblog .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_item_list.evo_noexcerpt .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_comment_list .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_coll_xml_feeds .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_colls_list_public .panel-body > ul > li:last-child,
+#main-sidebar .widget_core_user_tools .panel-body > ul > li:last-child {
+  border-bottom: 0;
+}
+#main-sidebar .widget_core_coll_category_list ul > li,
+#main-sidebar .widget_core_content_hierarchy ul > li,
+#main-sidebar .widget_core_coll_common_links ul > li,
+#main-sidebar .widget_core_coll_post_list.evo_nogroup.evo_noexcerpt ul > li,
+#main-sidebar .widget_core_coll_related_post_list.evo_nogroup.evo_noexcerpt ul > li,
+#main-sidebar .widget_core_linkblog.evo_withgroup.evo_noexcerpt ul > li,
+#main-sidebar .widget_core_coll_item_list.evo_nogroup.evo_noexcerpt ul > li,
+#main-sidebar .widget_core_colls_list_public ul > li,
+#main-sidebar .widget_core_user_tools ul > li {
+  padding: 0;
+}
+#main-sidebar .widget_core_coll_category_list a,
+#main-sidebar .widget_core_content_hierarchy a,
+#main-sidebar .widget_core_coll_common_links a,
+#main-sidebar .widget_core_coll_post_list.evo_nogroup.evo_noexcerpt a,
+#main-sidebar .widget_core_coll_related_post_list.evo_nogroup.evo_noexcerpt a,
+#main-sidebar .widget_core_linkblog.evo_withgroup.evo_noexcerpt a,
+#main-sidebar .widget_core_coll_item_list.evo_nogroup.evo_noexcerpt a,
+#main-sidebar .widget_core_colls_list_public a,
+#main-sidebar .widget_core_user_tools a {
+  display: block;
 }
 #main-sidebar .panel-heading {
   position: relative;
@@ -362,7 +500,7 @@ a {
   display: inline-block;
   font-family: "Roboto Slab", serif;
   font-size: 1.6rem;
-  color: #222;
+  color: #000000;
   padding-right: 20px;
 }
 #main-sidebar .panel-heading::after {
@@ -411,6 +549,7 @@ a {
 }
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_field {
   border-color: #e4e4e4;
+  border-right-color: #1dc6df;
 }
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_field:focus {
   border-color: #1dc6df;
@@ -429,62 +568,11 @@ a {
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit:active {
   outline: 0;
 }
-#main-sidebar .widget_core_coll_category_list ul > li,
-#main-sidebar .widget_core_content_hierarchy ul > li,
-#main-sidebar .widget_core_coll_common_links ul > li,
-#main-sidebar .widget_core_coll_post_list ul > li,
-#main-sidebar .widget_core_coll_page_list ul > li,
-#main-sidebar .widget_core_coll_related_post_list ul > li,
-#main-sidebar .widget_core_linkblog ul > li,
-#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li,
-#main-sidebar .widget_core_coll_comment_list ul > li,
-#main-sidebar .widget_core_coll_xml_feeds ul > li,
-#main-sidebar .widget_core_colls_list_public ul > li,
-#main-sidebar .widget_core_user_tools ul > li {
-  position: relative;
-  padding: 10px 0;
-  border-bottom: 1px solid #e4e4e4;
-}
-#main-sidebar .widget_core_coll_category_list ul > li a::after,
-#main-sidebar .widget_core_content_hierarchy ul > li a::after,
-#main-sidebar .widget_core_coll_common_links ul > li a::after,
-#main-sidebar .widget_core_coll_post_list ul > li a::after,
-#main-sidebar .widget_core_coll_page_list ul > li a::after,
-#main-sidebar .widget_core_coll_related_post_list ul > li a::after,
-#main-sidebar .widget_core_linkblog ul > li a::after,
-#main-sidebar .widget_core_coll_item_list.evo_noexcerpt ul > li a::after,
-#main-sidebar .widget_core_coll_comment_list ul > li a::after,
-#main-sidebar .widget_core_coll_xml_feeds ul > li a::after,
-#main-sidebar .widget_core_colls_list_public ul > li a::after,
-#main-sidebar .widget_core_user_tools ul > li a::after {
-  position: absolute;
-  right: 0;
-  vertical-align: middle;
-  display: inline-block;
-  content: "\f105";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-}
-#main-sidebar .widget_core_coll_category_list .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_content_hierarchy .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_common_links .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_post_list .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_page_list .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_related_post_list .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_linkblog .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_item_list.evo_noexcerpt .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_comment_list .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_coll_xml_feeds .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_colls_list_public .panel-body > ul > li:last-child,
-#main-sidebar .widget_core_user_tools .panel-body > ul > li:last-child {
-  border-bottom: 0;
-}
 #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a {
   display: inline-block;
   float: left;
-  padding: 3px 12px;
-  margin: 1px;
+  padding: 5px 12px;
+  margin: 2px;
   background-color: #fff;
   border: 1px solid #eeeeee;
   border-radius: 2px;
@@ -494,6 +582,70 @@ a {
   background-color: #1dc6df;
   color: #ffffff;
   border-color: #1dc6df;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable {
+  font-size: 100%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption {
+  position: relative;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
+  z-index: 0;
+  padding: 0 15px;
+  background-color: #f7f7f7;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a:hover {
+  text-decoration: none;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  z-index: -1;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable th,
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable td {
+  border-right: 1px solid rgba(228, 228, 228, 0.3);
+  border-bottom: 1px solid rgba(228, 228, 228, 0.3);
+  background-color: #ffffff;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable tr:last-child {
+  border: 0;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable th {
+  width: 10ex;
+  padding: 10px;
+  text-align: center;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable td {
+  padding: 8px 0;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable td:last-child {
+  border-right: 0;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a {
+  padding: 10px 20px;
+  font-size: 1.6rem;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable tfoot tr td {
+  border-bottom: 0;
+}
+#main-sidebar .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday {
+  border: 0;
+  font-weight: 700;
+  background-color: #1dc6df;
+  color: #ffffff;
+  border-radius: 0;
 }
 /* ----------------------------------------------------------------------------
  * Skin Starter

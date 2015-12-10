@@ -59,7 +59,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
    $Item->issue_time( array(
          'before'      => '',
          'after'       => '',
-         'time_format' => 'l j, Y',
+         'time_format' => 'F j, Y',
       ) );
 ?>
 </div>
