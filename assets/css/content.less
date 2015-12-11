@@ -1,0 +1,268 @@
+/* ----------------------------------------------------------------------------
+ * Main Content Style
+ * -------------------------------------------------------------------------- */
+#main-content{
+   margin-top: 60px;
+
+   // Block Content
+   // ======================================================================== /
+   .evo_content_block{
+      position: relative;
+      z-index: 1;
+   }
+
+   // Intro Post
+   // ======================================================================== /
+   .evo_intro_post{
+      background-color: @w;
+      color: @b;
+      border: none;
+      box-shadow: @bx_post;
+      padding: 10px 30px 20px;
+      margin-bottom: 40px;
+
+      .evo_post__full_text{
+         margin-top: 15px;
+         font-size: 1.4rem;
+      }
+   }
+
+   .evo_post_title {
+      display: table;
+
+      h2, h3 {
+         font-family: @font_title;
+         font-size: 3.2rem;
+         line-height: 3.2rem;
+         display: table-cell;
+         margin: 0;
+         padding: 20px 0 0;
+
+         a {
+            color: @b;
+
+            &:hover, &:active, &:focus{
+               text-decoration: none;
+               color: @primary;
+            }
+         }
+      }
+
+      .btn-group {
+         display: table-cell;
+         padding: 20px 0 10px 30px;
+         vertical-align: middle;
+      }
+
+   }
+
+   // Article Post Styling
+   // ======================================================================== /
+   .evo_post {
+   	margin-bottom: 3.5em;
+      background-color: @w;
+      box-shadow: @bx_post;
+      border-radius: 3px;
+
+   	.small.text-muted {
+   		margin: 5px 0 15px;
+         color: #999999;
+         font-size: 1.4rem;
+
+         .user{
+            // font-weight: normal;
+         }
+
+   		a, a .glyphicon {
+   			color: inherit;
+
+            &:hover{
+               color: @primary;
+            }
+   		}
+      }
+
+      // header
+      // ======================================================================== /
+      header {
+         padding: 0 30px;
+      }
+
+      // Post Image
+      // ======================================================================== /
+      .evo_post_images {
+         position: relative;
+
+         .evo_image_block{
+
+            a::after {
+               content: "\f105";
+               bottom: 45%;
+               font-size: 3rem;
+               width: 45px;
+               height: 45px;
+               border-radius: 50%;
+               background: @bg_primary;
+               color: @b;
+            }
+         }
+
+         img{
+            border-radius: 0;
+         }
+      }
+
+      // Image Hover
+      // ======================================================================== /
+      .evo_image_block, .evo_post_gallery__image {
+         position: relative;
+         overflow: hidden;
+
+         a {
+
+            &::before, &::after {
+               position: absolute;
+               left: 0;
+               opacity: 0;
+               transition: all 0.32s ease;
+            }
+
+            &::before {
+               content: '';
+               bottom: 0;
+               width: 100%;
+               height: 100%;
+               background-color: rgba(29, 198, 223, 0.8);
+            }
+
+            &::after {
+               content: "\f002";
+               right: 0;
+               bottom: 50%;;
+               margin: auto;
+               text-align: center;
+               display: block;
+               color: @w;
+               font-family: FontAwesome;
+               font-weight: normal;
+               font-style: normal;
+               text-rendering: auto;
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+            }
+
+         }
+
+         &:hover a::before, &:hover a::after {
+            opacity: 1;
+         }
+
+      }
+
+      // Post Gallery
+      // ======================================================================== /
+      .evo_post_gallery {
+         padding: 0 30px;
+
+         .evo_post_gallery__image{
+            margin: 0 0.5em 1em 0;
+
+            a::after {
+               bottom: 35%;
+               font-size: 1.5rem;
+            }
+         }
+
+         img{
+            border-radius: 2px;
+         }
+
+      }
+
+      // Full Text
+      // ======================================================================== /
+      .evo_post__full_text, .evo_post__excerpt_text {
+         font-size: 1.4rem;
+         line-height: 1.6;
+         padding: 5px 30px;
+
+         .evo_post_more_link{
+
+            a{
+               display: inline-block;
+               text-transform: uppercase;
+               font-weight: 700;
+               padding: 12px 18px;
+               color: @c7;
+               border: 1px solid #dddddd;
+               border-radius: 2px;
+               letter-spacing: 1px;
+               margin-top: 10px;
+
+               &:hover {
+                  text-decoration: none;
+                  background: @primary;
+                  color: @w;
+                  border-color: transparent;
+               }
+            }
+         }
+      }
+
+      // Footer Post
+      // ======================================================================== /
+      footer {
+         padding: 0 30px 20px;
+
+         .post_tags{
+            a{
+               padding: 3px 10px;
+               border-radius: 2px;
+               color: @c4;
+            }
+         }
+
+      }
+
+   }// end .evo_post
+
+   // Post Date
+   // ======================================================================== /
+   .posts_date{
+      position: relative;
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: @primary;
+      color: @w;
+      box-shadow: @bx_post;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 3px;
+      // margin-top: 30px;
+      margin-bottom: 30px;
+      z-index: 1;
+
+      &.evo_intro_post{
+         display: none;
+      }
+
+   }
+
+   // Timeline Style
+   // ======================================================================== /
+   .timeline{
+      position: absolute;
+      left: 30px;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background-color: @primary;
+      // box-shadow: @bx_post;
+      z-index: 0;
+
+      &.evo_intro_post{
+         display: none;
+      }
+   }
+
+}

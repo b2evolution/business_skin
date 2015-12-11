@@ -1,0 +1,235 @@
+/* ----------------------------------------------------------------------------
+ * Main Widget Style
+ * -------------------------------------------------------------------------- */
+.evo_widget {
+   border: 0;
+   box-shadow: none;
+   margin-bottom: 25px;
+
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   a {
+      transition: all 0.2s ease;
+
+      &:hover, &:active, &:focus {
+         color: @primary;
+      }
+   }
+
+}
+
+// List Styling
+// ======================================================================== /
+.widget_core_coll_category_list,
+.widget_core_content_hierarchy,
+.widget_core_coll_common_links,
+.widget_core_coll_post_list,
+.widget_core_coll_page_list,
+.widget_core_coll_related_post_list,
+.widget_plugin_evo_Arch,
+.widget_core_linkblog,
+.widget_core_coll_item_list.evo_noexcerpt,
+.widget_core_coll_comment_list,
+.widget_core_coll_xml_feeds,
+.widget_core_colls_list_public,
+.widget_core_user_tools {
+
+  ul {
+
+      & > li {
+         position: relative;
+         border-bottom: 1px solid #e4e4e4;
+         padding: 10px 0;
+
+         a{
+            padding: 10px 0;
+
+            &::after {
+               position: absolute;
+               right: 0;
+               // bottom: 10px;
+               vertical-align: middle;
+               display: inline-block;
+               content: "\f105";
+               font-family: FontAwesome;
+               font-weight: normal;
+               font-style: normal;
+            }
+
+            &:hover, &:active, &:focus {
+               text-decoration: none;
+            }
+         }
+      }
+   }
+
+    .panel-body > ul > li:last-child {
+       border-bottom: 0;
+    }
+
+}
+
+.widget_core_coll_category_list,
+.widget_core_content_hierarchy,
+.widget_core_coll_common_links,
+.widget_core_coll_post_list.evo_nogroup.evo_noexcerpt,
+.widget_core_coll_related_post_list.evo_nogroup.evo_noexcerpt,
+.widget_core_linkblog.evo_withgroup.evo_noexcerpt,
+.widget_core_coll_item_list.evo_nogroup.evo_noexcerpt,
+.widget_core_colls_list_public,
+.widget_core_user_tools {
+
+   & ul > li {
+      padding: 0;
+   }
+
+   a {
+      display: block;
+   }
+
+}
+
+
+// Styling User Links
+// ======================================================================== /
+.widget_core_user_links {
+
+   .ufld_icon_links {
+
+      a {
+         width: 48px;
+         height: 45px;
+         border-radius: 0;
+         margin: 0;
+
+         &:hover span {
+            color: @w;
+         }
+
+         span{
+            font-size: 1.6rem;
+            line-height: 45px;
+         }
+
+         &.ufld_twitter:hover{
+            background-color: @facebook !important;
+         }
+
+         &.ufld_facebook:hover{
+            background-color: @twitter !important;
+         }
+
+         &.ufld_googleplus:hover{
+            background-color: @google !important;
+         }
+
+         &.ufld_linkedin:hover{
+            background-color: @linkedin !important;
+         }
+
+         &.ufld_github:hover{
+            background-color: @github !important;
+         }
+
+         &.ufld_flickr:hover{
+            background-color: @flicker !important;
+         }
+
+         &.ufld_youtube:hover{
+            background-color: @youtube !important;
+         }
+
+         &.ufld_digg:hover{
+            background-color: @dig !important;
+         }
+
+         &.ufld_stumbleupon:hover{
+            background-color: @stumbleupon !important;
+         }
+
+         &.ufld_pinterest:hover{
+            background-color: @pinterest !important;
+         }
+
+      }
+   }
+}
+
+.ufld_icon_links {
+
+   a {
+
+      &.ufld_twitter:hover{
+         background-color: @facebook !important;
+      }
+
+      &.ufld_facebook:hover{
+         background-color: @twitter !important;
+      }
+
+      &.ufld_googleplus:hover{
+         background-color: @google !important;
+      }
+
+      &.ufld_linkedin:hover{
+         background-color: @linkedin !important;
+      }
+
+      &.ufld_github:hover{
+         background-color: @github !important;
+      }
+
+      &.ufld_flickr:hover{
+         background-color: @flicker !important;
+      }
+
+      &.ufld_youtube:hover{
+         background-color: @youtube !important;
+      }
+
+      &.ufld_digg:hover{
+         background-color: @dig !important;
+      }
+
+      &.ufld_stumbleupon:hover{
+         background-color: @stumbleupon !important;
+      }
+
+      &.ufld_pinterest:hover{
+         background-color: @pinterest !important;
+      }
+
+   }
+}
+
+
+// Widget Member
+// ======================================================================== /
+.widget_core_org_members {
+
+   div.col-lg-4 {
+      width: 100%;
+      float: none;
+      padding-bottom: 20px;
+
+      img {
+         width: 140px;
+      }
+
+   }
+
+   .ufld_icon_links {
+      margin-bottom: 10px;
+
+      a {
+         &:hover, &:active, &:focus {
+            color: @w;
+         }
+      }
+   }
+
+}

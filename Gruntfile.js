@@ -31,6 +31,7 @@ module.exports = function(grunt) {
 				options: {
                expanded: true,
 					compress: false,
+               // paths: ["/"],
 					//yuicompress: true,
 					//optimization: 2
 				},
@@ -68,7 +69,7 @@ module.exports = function(grunt) {
 		watch: {
 			less: {
 				// Which files to watch (all .less files recursively in the whole blogs directory)
-				files: ['*.less'],
+				files: ['assets/css/*.less', '*.less'],
 				tasks: ['less','cssmin', 'autoprefixer'],
 				options: {
 					nospawn: true,

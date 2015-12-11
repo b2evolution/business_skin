@@ -1,0 +1,138 @@
+/* ----------------------------------------------------------------------------
+ * Header Style
+ * -------------------------------------------------------------------------- */
+#header-top, #main-header{
+   background-color: @w;
+}
+
+#header-top{
+   margin-top: -15px;
+   border-bottom: 1px solid @e;
+
+   .header-contact-info {
+      font-size: 1.3rem;
+      color: @c7;
+      margin: 12px 0px 10px;
+   }
+
+   // Widget Page Top
+   // ======================================================================== /
+   .widget_core_user_links {
+      margin: 0;
+
+      .ufld_icon_links {
+         text-align: right;
+
+         a {
+            background-color: transparent;
+            color: @c7;
+            border-right: 1px solid @e;
+
+            &:first-child{
+               border-left: 1px solid @e;
+            }
+
+         }
+      }
+   }
+}
+// end header-top
+
+// Main Header
+// ======================================================================== /
+#main-header {
+   padding: 20px 0;
+   box-shadow: 0 3px 5px rgba(0,0,0,.1);
+
+   // WIdget Site Title
+   // ======================================================================== /
+   .widget_core_coll_title, .widget_core_coll_logo{
+
+      h1{
+         margin: 0;
+         font-size: 3.6rem;
+         text-transform: uppercase;
+         font-weight: 700;
+         text-shadow: @bx_post;
+
+         a{
+            color: @b;
+
+            &:hover, &:active, &:focus{
+               text-decoration: none;
+            }
+         }
+      }
+
+      img{
+         max-width: 160px;
+      }
+
+   }
+
+   .widget_core_coll_logo {
+      h1{
+         margin: -3px 0 0;
+      }
+   }
+
+   .widget_core_coll_tagline {
+      margin-top: -3px;
+   }
+
+   // Primary Nav
+   // ======================================================================== /
+   .primary-nav{
+
+      .nav{
+         margin: 0;
+         border: none;
+         float: right;
+
+         li{
+            padding: 10px;
+         }
+
+         & > li.active a{
+            border: 0;
+            background-color: transparent;
+            color: @primary;
+            font-weight: normal;
+
+            &::after{
+               opacity: 1;
+            }
+         }
+
+         a{
+            position: relative;
+            border: 0;
+            color: @b;
+            font-size: 1.4rem;
+            padding: 0;
+
+            &::after{
+               content: '';
+               position: absolute;
+               bottom: -8px;
+               left: 0;
+               width: 100%;
+               height: 1px;
+               background-color: @primary;
+               opacity: 0;
+            }
+
+            &:hover{
+               background-color: transparent;
+               border: 0;
+               color: @primary;
+
+               &::after{
+                  opacity: 1;
+               }
+            }
+         }
+      }
+   }
+
+}
