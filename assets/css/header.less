@@ -41,8 +41,9 @@
 // Main Header
 // ======================================================================== /
 #main-header {
-   padding: 20px 0;
+   padding: 20px 0 10px;
    box-shadow: 0 3px 5px rgba(0,0,0,.1);
+   z-index: 9999;
 
    // WIdget Site Title
    // ======================================================================== /
@@ -135,4 +136,12 @@
       }
    }
 
+}
+
+
+// Sticky Header
+// ======================================================================== /
+#main-header-sticky-wrapper.is-sticky #main-header {
+   padding: 15px 0 5px;
+   transition: all 0.3s ease-in-out;
 }

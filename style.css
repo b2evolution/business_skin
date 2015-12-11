@@ -54,8 +54,9 @@ a {
   border-left: 1px solid #eeeeee;
 }
 #main-header {
-  padding: 20px 0;
+  padding: 20px 0 10px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
 }
 #main-header .widget_core_coll_title h1,
 #main-header .widget_core_coll_logo h1 {
@@ -128,6 +129,11 @@ a {
 }
 #main-header .primary-nav .nav a:hover::after {
   opacity: 1;
+}
+#main-header-sticky-wrapper.is-sticky #main-header {
+  padding: 15px 0 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /* ----------------------------------------------------------------------------
  * Main Content Style

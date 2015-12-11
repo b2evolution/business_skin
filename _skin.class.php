@@ -241,6 +241,14 @@ class business_Skin extends Skin
 				'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
 			) );
 
+      //Include script and styles for hamburger responsive menu
+		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
+		add_js_headline("
+			jQuery(function(){
+            $('#main-header').sticky({topSpacing:0});
+			});
+		");
+
 		// Skin specific initializations:
 
 		// Limit images by max height:
