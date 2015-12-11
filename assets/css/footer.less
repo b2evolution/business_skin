@@ -41,6 +41,21 @@
 
       }
 
+      // Pannel and Form
+      // ======================================================================== /
+      .panel.panel-default {
+         background-color: transparent;
+      }
+
+      input {
+         border-radius: 2px;
+         border: 0;
+
+         &:focus {
+            box-shadow: none;
+         }
+      }
+
       // List Styling
       // ======================================================================== /
       .widget_core_coll_category_list,
@@ -192,7 +207,6 @@
          }
       }
 
-
       // Widget Member
       // ======================================================================== /
       .widget_core_org_members {
@@ -210,6 +224,10 @@
 
             a {
                background-color: @b;
+
+               .fa {
+                  font-size: 1.5rem;
+               }
 
                &:hover, &:active, &:focus {
                   color: @w;
