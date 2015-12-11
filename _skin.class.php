@@ -243,11 +243,7 @@ class business_Skin extends Skin
 
       //Include script and styles for hamburger responsive menu
 		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
-		add_js_headline("
-			jQuery(function(){
-            $('#main-header').sticky({topSpacing:0});
-			});
-		");
+      require_js( $this->get_url().'assets/js/scripts.js' );
 
 		// Skin specific initializations:
 
