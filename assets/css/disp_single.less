@@ -1,0 +1,75 @@
+// ========================================================================
+// Disp Single Style
+// ======================================================================== /
+body.disp_single {
+   background-color: @w;
+
+
+   // Main Content
+   // ======================================================================== /
+   #main-content{
+
+
+      // Pagination
+      // ======================================================================== /
+      .pager {
+         border: 1px solid @c7;
+
+         .previous, .next {
+            a{
+               border-radius: 0;
+               border: 0;
+               margin: 0;
+               padding: 12px 15px;
+            }
+         }
+      }
+
+
+      // Posts
+      // ======================================================================== /
+      .evo_post {
+         box-shadow: none;
+
+        & > header {
+           border-bottom: 1px solid @e;
+           padding-bottom: 10px;
+           margin-bottom: 20px;
+
+           .cat-links {
+             display: inline-block;
+
+             a{
+                color: @b;
+                border-bottom: 1px dotted @primary;
+
+                &:hover, &:active, &:focus {
+                   text-decoration: none;
+                }
+
+             }
+          }
+        }
+
+         // Image Hover
+         // ======================================================================== /
+         .evo_image_block, .evo_post_gallery__image {
+
+            a {
+
+               &::before {
+                  background-color: rgba(29, 198, 223, 0.6);
+               }
+
+               &::after {
+                  content: "\f002";
+                  color: @w;
+                  background-color: transparent;
+               }
+            }
+         }
+
+      }
+   }
+
+}// end disp_singe

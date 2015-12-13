@@ -22,6 +22,8 @@ body {
 }
 a {
   color: #1dc6df;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 /* ----------------------------------------------------------------------------
  * Header Style
@@ -130,36 +132,24 @@ a {
 #main-header .primary-nav .nav a:hover::after {
   opacity: 1;
 }
+body.loggedin #main-header {
+  top: 25px !important;
+}
 #main-header-sticky-wrapper.is-sticky #main-header {
   padding: 15px 0 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 /* ----------------------------------------------------------------------------
- * Main Content Style
- * -------------------------------------------------------------------------- */
+* Main Content Style
+* -------------------------------------------------------------------------- */
 #main-content {
   margin-top: 60px;
-}
-#main-content .evo_content_block {
-  position: relative;
-  z-index: 1;
-}
-#main-content .evo_intro_post {
-  background-color: #ffffff;
-  color: #333333;
-  border: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 10px 30px 20px;
-  margin-bottom: 40px;
-}
-#main-content .evo_intro_post .evo_post__full_text {
-  margin-top: 15px;
-  font-size: 1.4rem;
 }
 #main-content .evo_post_title {
   display: table;
 }
+#main-content .evo_post_title h1,
 #main-content .evo_post_title h2,
 #main-content .evo_post_title h3 {
   font-family: "Roboto Slab", serif;
@@ -169,14 +159,18 @@ a {
   margin: 0;
   padding: 20px 0 0;
 }
+#main-content .evo_post_title h1 a,
 #main-content .evo_post_title h2 a,
 #main-content .evo_post_title h3 a {
   color: #333333;
 }
+#main-content .evo_post_title h1 a:hover,
 #main-content .evo_post_title h2 a:hover,
 #main-content .evo_post_title h3 a:hover,
+#main-content .evo_post_title h1 a:active,
 #main-content .evo_post_title h2 a:active,
 #main-content .evo_post_title h3 a:active,
+#main-content .evo_post_title h1 a:focus,
 #main-content .evo_post_title h2 a:focus,
 #main-content .evo_post_title h3 a:focus {
   text-decoration: none;
@@ -186,12 +180,6 @@ a {
   display: table-cell;
   padding: 20px 0 10px 30px;
   vertical-align: middle;
-}
-#main-content .evo_post {
-  margin-bottom: 3.5em;
-  background-color: #ffffff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
 }
 #main-content .evo_post .small.text-muted {
   margin: 5px 0 15px;
@@ -205,9 +193,6 @@ a {
 #main-content .evo_post .small.text-muted a:hover,
 #main-content .evo_post .small.text-muted a .glyphicon:hover {
   color: #1dc6df;
-}
-#main-content .evo_post header {
-  padding: 0 30px;
 }
 #main-content .evo_post .evo_post_images {
   position: relative;
@@ -270,9 +255,6 @@ a {
 #main-content .evo_post .evo_post_gallery__image:hover a::after {
   opacity: 1;
 }
-#main-content .evo_post .evo_post_gallery {
-  padding: 0 30px;
-}
 #main-content .evo_post .evo_post_gallery .evo_post_gallery__image {
   margin: 0 0.5em 1em 0;
 }
@@ -287,7 +269,6 @@ a {
 #main-content .evo_post .evo_post__excerpt_text {
   font-size: 1.4rem;
   line-height: 1.6;
-  padding: 5px 30px;
 }
 #main-content .evo_post .evo_post__full_text .evo_post_more_link a,
 #main-content .evo_post .evo_post__excerpt_text .evo_post_more_link a {
@@ -308,15 +289,52 @@ a {
   color: #ffffff;
   border-color: transparent;
 }
-#main-content .evo_post footer {
+.disp_posts {
+  /* ----------------------------------------------------------------------------
+    * Main Content Style
+    * -------------------------------------------------------------------------- */
+}
+.disp_posts #main-content .evo_content_block {
+  position: relative;
+  z-index: 1;
+}
+.disp_posts #main-content .evo_intro_post {
+  background-color: #ffffff;
+  color: #333333;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px 20px;
+  margin-bottom: 40px;
+}
+.disp_posts #main-content .evo_intro_post .evo_post__full_text {
+  margin-top: 15px;
+  font-size: 1.4rem;
+}
+.disp_posts #main-content .evo_post {
+  margin-bottom: 3.5em;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.disp_posts #main-content .evo_post header {
+  padding: 0 30px;
+}
+.disp_posts #main-content .evo_post .evo_post_gallery {
+  padding: 0 30px;
+}
+.disp_posts #main-content .evo_post .evo_post__full_text,
+.disp_posts #main-content .evo_post .evo_post__excerpt_text {
+  padding: 10px 30px;
+}
+.disp_posts #main-content .evo_post footer {
   padding: 0 30px 20px;
 }
-#main-content .evo_post footer .post_tags a {
+.disp_posts #main-content .evo_post footer .post_tags a {
   padding: 3px 10px;
   border-radius: 2px;
   color: #444444;
 }
-#main-content .posts_date {
+.disp_posts #main-content .posts_date {
   position: relative;
   display: inline-block;
   padding: 8px 12px;
@@ -329,10 +347,10 @@ a {
   margin-bottom: 30px;
   z-index: 1;
 }
-#main-content .posts_date.evo_intro_post {
+.disp_posts #main-content .posts_date.evo_intro_post {
   display: none;
 }
-#main-content .timeline {
+.disp_posts #main-content .timeline {
   position: absolute;
   left: 30px;
   top: 0;
@@ -341,8 +359,51 @@ a {
   background-color: #1dc6df;
   z-index: 0;
 }
-#main-content .timeline.evo_intro_post {
+.disp_posts #main-content .timeline.evo_intro_post {
   display: none;
+}
+body.disp_single {
+  background-color: #ffffff;
+}
+body.disp_single #main-content .pager {
+  border: 1px solid #777777;
+}
+body.disp_single #main-content .pager .previous a,
+body.disp_single #main-content .pager .next a {
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  padding: 12px 15px;
+}
+body.disp_single #main-content .evo_post {
+  box-shadow: none;
+}
+body.disp_single #main-content .evo_post > header {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+body.disp_single #main-content .evo_post > header .cat-links {
+  display: inline-block;
+}
+body.disp_single #main-content .evo_post > header .cat-links a {
+  color: #333333;
+  border-bottom: 1px dotted #1dc6df;
+}
+body.disp_single #main-content .evo_post > header .cat-links a:hover,
+body.disp_single #main-content .evo_post > header .cat-links a:active,
+body.disp_single #main-content .evo_post > header .cat-links a:focus {
+  text-decoration: none;
+}
+body.disp_single #main-content .evo_post .evo_image_block a::before,
+body.disp_single #main-content .evo_post .evo_post_gallery__image a::before {
+  background-color: rgba(29, 198, 223, 0.6);
+}
+body.disp_single #main-content .evo_post .evo_image_block a::after,
+body.disp_single #main-content .evo_post .evo_post_gallery__image a::after {
+  content: "\f002";
+  color: #ffffff;
+  background-color: transparent;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar

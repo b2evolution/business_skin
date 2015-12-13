@@ -41,6 +41,7 @@ $params = array_merge( array(
 echo '<div class="evo_content_block">'; // Beginning of post display
 ?>
 
+<?php if( $disp == 'posts' ) : ?>
 <div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
 <?php
    if( $Item->status != 'published' )
@@ -65,6 +66,8 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 </div>
 
 <div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
+
+<?php endif; ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
@@ -116,8 +119,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 	?>
 	<div class="small text-muted">
 	<?php
-		if( $Item->status != 'published' )
-		{
+		if( $Item->status != 'published' ) {
 			$Item->format_status( array(
 					'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
 				) );
@@ -129,28 +131,47 @@ echo '<div class="evo_content_block">'; // Beginning of post display
          'text' => '', // without icon
       ) );
 
-		// Author
-		$Item->author( array(
-			'before'    => ' '.T_('By').' ',
-			'after'     => ' ',
-			'link_text' => $params['author_link_text'],
-		) );
+      // Show Author If on disp posts
+      if ( $disp == 'posts' ) {
+   		// Author
+   		$Item->author( array(
+   			'before'    => ' '.T_('By').' ',
+   			'after'     => ' ',
+   			'link_text' => $params['author_link_text'],
+   		) );
+      } else if ( $disp == 'single' ) {
 
-		// Categories
-		$Item->categories( array(
-			'before'          => T_('in').' ',
-			'after'           => ' ',
-			'include_main'    => true,
-			'include_other'   => true,
-			'include_external'=> true,
-			'link_categories' => true,
-		) );
+   		// Author
+   		$Item->author( array(
+   			'before'    => ' '.T_('Posted by').' ',
+   			'after'     => ' ',
+   			'link_text' => $params['author_link_text'],
+   		) );
+
+         // We want to display the post time:
+         $Item->issue_time( array(
+               'before'      => ' '.T_('on').' ',
+               'after'       => ' ',
+               'time_format' => 'F j, Y',
+            ) );
+      }
+
+      // Categories
+      $Item->categories( array(
+         'before'          => T_(' in ').'<div class="cat-links"> ',
+         'after'           => ' </div>',
+         'include_main'    => true,
+         'include_other'   => true,
+         'include_external'=> true,
+         'link_categories' => true,
+      ) );
 
 		// Link for editing
 		$Item->edit_link( array(
 			'before'    => ' &bull; ',
 			'after'     => '',
 		) );
+
 	?>
 	</div>
 	<?php

@@ -1,0 +1,118 @@
+// ========================================================================
+// Disp Posts Style
+// ======================================================================== /
+.disp_posts {
+
+   /* ----------------------------------------------------------------------------
+    * Main Content Style
+    * -------------------------------------------------------------------------- */
+   #main-content{
+
+      // Block Content
+      // ======================================================================== /
+      .evo_content_block{
+         position: relative;
+         z-index: 1;
+      }
+
+      // Intro Post
+      // ======================================================================== /
+      .evo_intro_post{
+         background-color: @w;
+         color: @b;
+         border: none;
+         box-shadow: @bx_post;
+         padding: 10px 30px 20px;
+         margin-bottom: 40px;
+
+         .evo_post__full_text{
+            margin-top: 15px;
+            font-size: 1.4rem;
+         }
+      }
+
+      // Article Post Styling
+      // ======================================================================== /
+      .evo_post {
+      	margin-bottom: 3.5em;
+         background-color: @w;
+         box-shadow: @bx_post;
+         border-radius: 3px;
+
+         // header
+         // ======================================================================== /
+         header {
+            padding: 0 30px;
+         }
+
+         // Post Gallery
+         // ======================================================================== /
+         .evo_post_gallery {
+            padding: 0 30px;
+         }
+
+         // Full Text
+         // ======================================================================== /
+         .evo_post__full_text, .evo_post__excerpt_text {
+            padding: 10px 30px;
+         }
+
+         // Footer Post
+         // ======================================================================== /
+         footer {
+            padding: 0 30px 20px;
+
+            .post_tags{
+               a{
+                  padding: 3px 10px;
+                  border-radius: 2px;
+                  color: @c4;
+               }
+            }
+
+         }
+
+      }// end .evo_post
+
+      // Post Date
+      // ======================================================================== /
+      .posts_date{
+         position: relative;
+         display: inline-block;
+         padding: 8px 12px;
+         background-color: @primary;
+         color: @w;
+         box-shadow: @bx_post;
+         font-size: 1.3rem;
+         font-weight: 600;
+         border-radius: 3px;
+         // margin-top: 30px;
+         margin-bottom: 30px;
+         z-index: 1;
+
+         &.evo_intro_post{
+            display: none;
+         }
+
+      }
+
+      // Timeline Style
+      // ======================================================================== /
+      .timeline{
+         position: absolute;
+         left: 30px;
+         top: 0;
+         width: 2px;
+         height: 100%;
+         background-color: @primary;
+         // box-shadow: @bx_post;
+         z-index: 0;
+
+         &.evo_intro_post{
+            display: none;
+         }
+      }
+
+   }
+
+}
