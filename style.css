@@ -194,6 +194,9 @@ body.loggedin #main-header {
 #main-content .evo_post .small.text-muted a .glyphicon:hover {
   color: #1dc6df;
 }
+#main-content .evo_post .small.text-muted .cat-links {
+  display: inline-block;
+}
 #main-content .evo_post .evo_post_images {
   position: relative;
 }
@@ -319,6 +322,9 @@ body.loggedin #main-header {
 .disp_posts #main-content .evo_post header {
   padding: 0 30px;
 }
+.disp_posts #main-content .evo_post header .small.text-muted {
+  margin: 5px 0 25px;
+}
 .disp_posts #main-content .evo_post .evo_post_gallery {
   padding: 0 30px;
 }
@@ -404,6 +410,9 @@ body.disp_single #main-content .evo_post .evo_post_gallery__image a::after {
   content: "\f002";
   color: #ffffff;
   background-color: transparent;
+}
+body.disp_single #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
+  background-color: #ffffff;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar
