@@ -4,16 +4,22 @@
 body.disp_single {
    background-color: @w;
 
+   // Evo Cover Image Style
+   // ======================================================================== /
+   .evo_cover_image {
+      margin-bottom: 40px;
+   }
+
 
    // Main Content
    // ======================================================================== /
    #main-content{
 
-
       // Pagination
       // ======================================================================== /
       .pager {
          border: 1px solid @e;
+         margin-top: 0;
 
          .previous, .next {
             a{
@@ -22,7 +28,7 @@ body.disp_single {
                border-radius: 0;
                border: 0;
                margin: 0;
-               padding: 12px 15px;
+               padding: 10px 12px;
 
                &:hover, &:active, &:focus {
                   background-color: transparent;
@@ -38,6 +44,7 @@ body.disp_single {
       // ======================================================================== /
       .evo_post {
          box-shadow: none;
+         overflow: hidden;
 
         & > header {
            border-bottom: 1px solid @e;
@@ -57,6 +64,39 @@ body.disp_single {
 
              }
           }
+        }
+
+         // Full Text
+         // ======================================================================== /
+        .evo_post__full_text {
+
+            h1, h2, h3, h4, h5, h6 {
+               font-family: @font_title;
+               font-weight: 700;
+               margin: 1.5em 0 0.5em;
+            }
+
+            p, pre {
+               margin-bottom: 18px;
+            }
+
+            blockquote {
+               border-left: 2px solid @primary;
+               padding: 8px 20px;
+               font-style: italic;
+               font-size: 1.5rem;
+               line-height: 1.4;
+               letter-spacing: 0.2px;
+               color: @c7;
+
+               p{
+                  margin-bottom: 0;
+               }
+            }
+
+            address {
+               font-style: italic;
+            }
         }
 
          // Image Hover
@@ -101,6 +141,9 @@ body.disp_single {
          #feedbacks {
             padding-top: 30px;
 
+            overflow: hidden;
+
+
             .evo_comment__list_title {
                font-family: @font_title;
             }
@@ -113,6 +156,71 @@ body.disp_single {
                      border-color: @primary;
                   }
                }
+            }
+
+            // Evo_comment
+            // ======================================================================== /
+            .evo_comment {
+               position: relative;
+
+               .panel-heading {
+                  margin: 0;
+                  overflow: inherit;
+
+                  .evo_comment_title{
+                     font-size: 1.5rem;
+                     a{
+                        color: @primary;
+
+                        &:hover, &:focus, &:active {
+                           background-color: transparent;
+                        }
+                     }
+                  }
+
+               }
+
+               .evo_comment_avatar {
+                  position: absolute;
+                  left: 20px;
+                  margin-right: 10px;
+
+                  img {
+                     float: none;
+                  }
+               }
+
+               .evo_comment_rating, .evo_comment_text {
+                  margin-left: 80px;
+               }
+
+               .evo_comment_rating {
+                  margin-bottom: 10px;
+               }
+
+               .evo_comment_text {
+                  display: block;
+                  font-size: 1.4rem;
+               }
+
+               .evo_comment_footer {
+                  margin-top: 15px;
+                  display: block;
+
+                  .permalink_right {
+                     background-color: @primary;
+                     padding: 2px 6px;
+                     color: @w;
+                     border-radius: 2px;
+                     margin-left: 0.5rem;
+                     font-size: 1.2rem;
+
+                     &:hover, &:active, &:focus {
+                        text-decoration: none;
+                     }
+                  }
+               }
+
             }
 
          }
@@ -129,6 +237,7 @@ body.disp_single {
                padding-left: 0;
                padding-right: 0;
                overflow: hidden;
+               margin-bottom: 10px;
 
                &::after {
                   content: '';
@@ -142,9 +251,15 @@ body.disp_single {
                .panel-title {
                   display: inline-block;
                   font-family: @font_title;
+                  font-size: 1.8rem;
                   background: @w;
                   padding-right: 10px;
                }
+            }
+
+            & > .panel-body {
+               border: 1px solid @e;
+               padding: 20px;
             }
 
          }
@@ -156,6 +271,13 @@ body.disp_single {
             .form-group {
                label {
                   font-family: @font_title;
+               }
+            }
+
+            .fieldset_wrapper {
+               .panel-body {
+                  padding: 10px 0;
+                  border: 0;
                }
             }
 

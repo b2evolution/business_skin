@@ -631,6 +631,37 @@ class business_Skin extends Skin
 				return 'col-md-8';
 		}
 	}
+
+   function get_column_cover_image() {
+      switch( $this->get_setting( 'layout' ) )
+		{
+			case 'single_column':
+				// Single Column Large
+				return 'col-md-12';
+
+			case 'single_column_normal':
+				// Single Column
+				return 'col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1';
+
+			case 'single_column_narrow':
+				// Single Column Narrow
+				return 'col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2';
+
+			case 'single_column_extra_narrow':
+				// Single Column Extra Narrow
+				return 'col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3';
+
+			case 'left_sidebar':
+				// Left Sidebar
+				return 'col-md-12';
+
+			case 'right_sidebar':
+				// Right Sidebar
+			default:
+				return 'col-md-12';
+		}
+   }
+
 }
 
 ?>
