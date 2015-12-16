@@ -4,7 +4,7 @@
 .disp_posts {
 
    /* ----------------------------------------------------------------------------
-    * Main Content Style
+    * Main Content Style Regular Layout
     * -------------------------------------------------------------------------- */
    #main-content{
 
@@ -115,6 +115,70 @@
          &.evo_intro_post{
             display: none;
          }
+      }
+
+   }
+
+}
+
+
+// ========================================================================
+// Mini Blog Style
+// ======================================================================== /
+.posts_mini_layout {
+   background-color: @w;
+
+   #mini-blog {
+
+      // Evo Post Style
+      // ======================================================================== /
+      .evo_post {
+         margin-bottom: 2rem;
+         padding-bottom: 3rem;
+         border-bottom: 1px solid @e;
+
+         // Post Image
+         // ======================================================================== /
+         .evo_post_images {
+            float: left;
+            width: 48%;
+            margin-right: 15px;
+
+            .evo_image_block {
+               margin-top: 0;
+            }
+         }
+
+         // Text Excerpt
+         // ======================================================================== /
+         .evo_post__excerpt_text {
+
+            .evo_post__excerpt_more_link {
+               display: block;
+               margin-top: 20px;
+
+               a{
+                  display: inline-block;
+                  padding: 12px 20px;
+                  text-transform: uppercase;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  letter-spacing: 1px;
+                  color: @c4;
+                  border: 1px solid @d;
+                  border-radius: 2px;
+
+                  &:hover, &:active, &:focus {
+                     text-decoration: none;
+                     background-color: @primary;
+                     color: @w;
+                     border-color: @primary;
+                  }
+               }
+            }
+
+         }
+
       }
 
    }

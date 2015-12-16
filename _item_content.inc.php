@@ -17,6 +17,17 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 global $disp_detail;
 global $more;
 
+$clear_mini_blog = '';
+$more_excerpt_mini_blog = 'more';
+$icon_mexpt_mb = ' &raquo;';
+
+if ( $Skin->get_setting( 'layout_posts' ) === 'mini_blog' ) {
+   $clear_mini_blog = 'clearfix';
+   $more_excerpt_mini_blog = 'Read More';
+   $icon_mexpt_mb = '';
+}
+
+
 // Default params:
 $params = array_merge( array(
 		'content_mode'             => 'auto', // Can be 'excerpt', 'normal' or 'full'. 'auto' will auto select depending on backoffice SEO settings for $disp-detail
@@ -26,7 +37,7 @@ $params = array_merge( array(
 		'content_display_full'     => true, // Do we want to display all post content? false to display only images/attachments
 
 		// Wrap images and text:
-		'content_start_excerpt'    => '<section class="evo_post__excerpt">',		// In case of compact display
+		'content_start_excerpt'    => '<section class="evo_post__excerpt '. $clear_mini_blog .'">',		// In case of compact display
 		'content_end_excerpt'      => '</section>',
 		'content_start_full'       => '<section class="evo_post__full">',			// In case of full display
 		'content_end_full'         => '</section>',
@@ -37,7 +48,7 @@ $params = array_merge( array(
 
 		'excerpt_before_more'      => ' <span class="evo_post__excerpt_more_link">',
 		'excerpt_after_more'       => '</span>',
-		'excerpt_more_text'        => T_('more').' &raquo;',
+		'excerpt_more_text'        => T_( $more_excerpt_mini_blog ). $icon_mexpt_mb,
 
 		// In case we display a full version of the post:
 		'content_start_full_text'  => '<div class="evo_post__full_text">',
@@ -166,6 +177,15 @@ else
 { // Don't include the cover images
 	$teaser_image_positions = 'teaser,teaserperm,teaserlink';
 }
+
+/**
+ * ============================================================================
+ * Content Mode on Mini Blog Layout
+ * ============================================================================
+ */
+ if ( $Skin->get_setting( 'layout_posts' ) == 'mini_blog' ) {
+    $content_mode = 'excerpt';
+ }
 
 switch( $content_mode )
 {
@@ -304,7 +324,7 @@ switch( $content_mode )
 
 			// Display images that are linked "after more" to this post:
 			if( ! empty($params['image_size']) && $more && $Item->has_content_parts($params) /* only if not displayed all images already */ )
-			{	
+			{
 				$Item->images( array(
 						'before'              => $params['before_images'],
 						'before_image'        => $params['before_image'],

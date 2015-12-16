@@ -18,6 +18,7 @@ siteskin_include( '_site_body_header.inc.php' );
 
 ?>
 
+<?php if ( $Skin->get_setting( 'ht_show' ) == true ) { ?>
 <header id="header-top" class="clearfix">
    <div class="container">
       <div class="row">
@@ -58,6 +59,7 @@ siteskin_include( '_site_body_header.inc.php' );
       </div><!-- .row -->
    </div><!-- .container -->
 </header><!-- .row -->
+<?php } ?>
 
 <header id="main-header">
    <div class="container">

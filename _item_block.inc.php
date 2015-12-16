@@ -41,7 +41,7 @@ $params = array_merge( array(
 echo '<div class="evo_content_block">'; // Beginning of post display
 ?>
 
-<?php if( $disp == 'posts' ) : ?>
+<?php if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'regular' ) : ?>
 <div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
 <?php
    if( $Item->status != 'published' )
@@ -111,10 +111,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		}
 	?>
 
-	<?php
-	if( ! $Item->is_intro() )
-	{ // Don't display the following for intro posts
-	?>
+	<?php	if( ! $Item->is_intro() ){ // Don't display the following for intro posts ?>
 	<div class="small text-muted">
 	<?php
 		if( $Item->status != 'published' ) {
@@ -137,8 +134,8 @@ echo '<div class="evo_content_block">'; // Beginning of post display
    			'after'     => ' ',
    			'link_text' => $params['author_link_text'],
    		) );
-      } else if ( $disp == 'single' ) {
 
+      } else if ( $disp == 'single' ) {
    		// Author
    		$Item->author( array(
    			'before'    => ' '.T_('Posted by').' ',
@@ -152,6 +149,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
                'after'       => ' ',
                'time_format' => 'F j, Y',
             ) );
+
       }
 
       // Categories
@@ -172,9 +170,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 
 	?>
 	</div>
-	<?php
-	}
-	?>
+	<?php } ?>
 	</header>
 
 	<?php

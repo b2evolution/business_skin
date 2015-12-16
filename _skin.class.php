@@ -90,6 +90,16 @@ class business_Skin extends Skin
 						'type' => 'integer',
 						'allow_empty' => true,
 					),
+               'layout_posts' => array(
+						'label' => T_('Layout Posts'),
+						'note' => T_('Select Layout for Posts'),
+						'defaultvalue' => 'standard',
+						'options' => array(
+								'regular'      => T_('Regular Layout'),
+								'mini_blog'     => T_('Mini Blog Layout'),
+                     ),
+						'type' => 'select',
+					),
 				'section_layout_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -103,6 +113,12 @@ class business_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Header Top Settings')
 				),
+               'ht_show' => array(
+                  'label'        => T_('Display Header Top'),
+                  'note'         => T_('Check to display header top'),
+                  'defaultvalue' => 1,
+                  'type'         => 'checkbox',
+               ),
                'ht_contact_info' => array(
                   'label'        => T_('Header Top Contact Info'),
                   'defaultvalue' => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
@@ -241,7 +257,7 @@ class business_Skin extends Skin
 				'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
 			) );
 
-      //Include script and styles for hamburger responsive menu
+      //Include script and styles for Sticky Menu
 		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
       require_js( $this->get_url().'assets/js/scripts.js' );
 
@@ -660,6 +676,21 @@ class business_Skin extends Skin
 			default:
 				return 'col-md-12';
 		}
+   }
+
+   /**
+    * ============================================================================
+    * Layout Post Setting
+    * ============================================================================
+    */
+   function layout_posts_setting() {
+
+      if ( $this->get_setting('layout_posts') == 'mini_blog' ) {
+         echo "mini-blog";
+      } else {
+         echo "main-content";
+      }
+
    }
 
 }

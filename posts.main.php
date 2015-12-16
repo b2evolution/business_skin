@@ -27,7 +27,9 @@ skin_init( $disp );
 
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
-skin_include( '_html_header.inc.php', array() );
+skin_include( '_html_header.inc.php', array(
+   'body_class' => $Skin->get_setting( 'layout_posts' ) == 'mini_blog' ? 'posts_mini_layout' : NULL,
+) );
 // -------------------------------- END OF HEADER --------------------------------
 
 
@@ -36,10 +38,9 @@ skin_include( '_html_header.inc.php', array() );
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
-
 ?>
 
-<main id="main-content">
+<main id="<?php $Skin->layout_posts_setting(); ?>">
    <div class="container">
       <div class="row">
 
@@ -276,8 +277,6 @@ skin_include( '_body_header.inc.php' );
       </div><!-- .row -->
    </div><!-- .container -->
 </main><!-- #main-content -->
-
-
 
 
 <?php
