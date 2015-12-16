@@ -13,14 +13,22 @@ body.disp_single {
       // Pagination
       // ======================================================================== /
       .pager {
-         border: 1px solid @c7;
+         border: 1px solid @e;
 
          .previous, .next {
             a{
+               color: @c7;
+               font-size: 1.4rem;
                border-radius: 0;
                border: 0;
                margin: 0;
                padding: 12px 15px;
+
+               &:hover, &:active, &:focus {
+                  background-color: transparent;
+                  color: @primary;
+               }
+
             }
          }
       }
@@ -69,7 +77,131 @@ body.disp_single {
             }
          }
 
+         // Tags Style
+         // ======================================================================== /
+         .single_tags {
+            padding: 15px 0 0;
+            color: @c7;
+
+            a{
+               font-size: 1.4rem;
+               color: @c4;
+               padding-left: 3px;
+               border-bottom: 1px dotted @primary;
+
+               &:hover, &:active, &:focus {
+                  color: @primary;
+                  text-decoration: none;
+               }
+            }
+         }
+
+         // Feedback Stling
+         // ======================================================================== /
+         #feedbacks {
+            padding-top: 30px;
+
+            .evo_comment__list_title {
+               font-family: @font_title;
+            }
+
+            .evo_comment__meta_info {
+               a{
+                  &:hover, &:focus, &:active {
+                     background: @primary;
+                     color: @w;
+                     border-color: @primary;
+                  }
+               }
+            }
+
+         }
+
+         // Panel
+         // ======================================================================== /
+         .panel {
+            border: 0;
+
+            .panel-heading {
+               position: relative;
+               background-color: transparent;
+               border: 0;
+               padding-left: 0;
+               padding-right: 0;
+               overflow: hidden;
+
+               &::after {
+                  content: '';
+                  position: absolute;
+                  top: 50%;
+                  width: 100%;
+                  height: 1px;
+                  background-color: @e;
+               }
+
+               .panel-title {
+                  display: inline-block;
+                  font-family: @font_title;
+                  background: @w;
+                  padding-right: 10px;
+               }
+            }
+
+         }
+
+         // Form Single
+         // ======================================================================== /
+         .evo_form {
+
+            .form-group {
+               label {
+                  font-family: @font_title;
+               }
+            }
+
+            .preview, .submit {
+               border-radius: 2px;
+               font-weight: 700;
+               text-transform: uppercase;
+               // letter-spacing: 1px;
+               padding: 10px 18px;
+               font-size: 1.3rem;
+               box-shadow: none;
+               transition: all 0.32s ease-in-out;
+
+               &:hover, &:focus, &:active {
+                  outline: 0;
+                  box-shadow: @bx_post;
+               }
+            }
+
+            .preview {
+               background-color: @e;
+               border-color: @e;
+               color: @c9;
+               margin-right: 3px;
+            }
+
+            .submit {
+               background-color: @primary;
+               border-color: @primary;
+
+               &:hover, &:focus, &:active {
+                  outline: 0;
+                  background-color: #09C1DC;
+                  border-color: #09C1DC;
+               }
+            }
+         }
+
+         // Comment Notification
+         // ======================================================================== /
+         .evo_post_comment_notification, .evo_post_feedback_feed_msg {
+            font-size: 1.4rem;
+         }
+
       }
+
    }
 
    // ========================================================================
@@ -87,7 +219,7 @@ body.disp_single {
 
          }
       }
-         
+
    }
 
 

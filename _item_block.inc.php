@@ -64,9 +64,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
       ) );
 ?>
 </div>
-
 <div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
-
 <?php endif; ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
@@ -192,14 +190,20 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 	<footer>
 
 		<?php
-			if( ! $Item->is_intro() )
+			if( ! $Item->is_intro() && $disp == 'posts' )
 			{ // List all tags attached to this post:
 				$Item->tags( array(
 						'before'    => '<nav class="small post_tags">',
 						'after'     => '</nav>',
 						'separator' => ' ',
 					) );
-			}
+			} else if ( $disp == 'single' ) {
+            $Item->tags( array(
+						'before'    => '<div class="single_tags">'. T_('Tags: '),
+						'after'     => '</div>',
+						'separator' => ', ',
+					) );
+         }
 		?>
 
 		<nav class="post_comments_link">

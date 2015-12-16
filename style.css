@@ -372,14 +372,25 @@ body.disp_single {
   background-color: #ffffff;
 }
 body.disp_single #main-content .pager {
-  border: 1px solid #777777;
+  border: 1px solid #eeeeee;
 }
 body.disp_single #main-content .pager .previous a,
 body.disp_single #main-content .pager .next a {
+  color: #777777;
+  font-size: 1.4rem;
   border-radius: 0;
   border: 0;
   margin: 0;
   padding: 12px 15px;
+}
+body.disp_single #main-content .pager .previous a:hover,
+body.disp_single #main-content .pager .next a:hover,
+body.disp_single #main-content .pager .previous a:active,
+body.disp_single #main-content .pager .next a:active,
+body.disp_single #main-content .pager .previous a:focus,
+body.disp_single #main-content .pager .next a:focus {
+  background-color: transparent;
+  color: #1dc6df;
 }
 body.disp_single #main-content .evo_post {
   box-shadow: none;
@@ -410,6 +421,104 @@ body.disp_single #main-content .evo_post .evo_post_gallery__image a::after {
   content: "\f002";
   color: #ffffff;
   background-color: transparent;
+}
+body.disp_single #main-content .evo_post .single_tags {
+  padding: 15px 0 0;
+  color: #777777;
+}
+body.disp_single #main-content .evo_post .single_tags a {
+  font-size: 1.4rem;
+  color: #444444;
+  padding-left: 3px;
+  border-bottom: 1px dotted #1dc6df;
+}
+body.disp_single #main-content .evo_post .single_tags a:hover,
+body.disp_single #main-content .evo_post .single_tags a:active,
+body.disp_single #main-content .evo_post .single_tags a:focus {
+  color: #1dc6df;
+  text-decoration: none;
+}
+body.disp_single #main-content .evo_post #feedbacks {
+  padding-top: 30px;
+}
+body.disp_single #main-content .evo_post #feedbacks .evo_comment__list_title {
+  font-family: "Roboto Slab", serif;
+}
+body.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover,
+body.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus,
+body.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active {
+  background: #1dc6df;
+  color: #ffffff;
+  border-color: #1dc6df;
+}
+body.disp_single #main-content .evo_post .panel {
+  border: 0;
+}
+body.disp_single #main-content .evo_post .panel .panel-heading {
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+body.disp_single #main-content .evo_post .panel .panel-heading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: #eeeeee;
+}
+body.disp_single #main-content .evo_post .panel .panel-heading .panel-title {
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  background: #ffffff;
+  padding-right: 10px;
+}
+body.disp_single #main-content .evo_post .evo_form .form-group label {
+  font-family: "Roboto Slab", serif;
+}
+body.disp_single #main-content .evo_post .evo_form .preview,
+body.disp_single #main-content .evo_post .evo_form .submit {
+  border-radius: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  font-size: 1.3rem;
+  box-shadow: none;
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+body.disp_single #main-content .evo_post .evo_form .preview:hover,
+body.disp_single #main-content .evo_post .evo_form .submit:hover,
+body.disp_single #main-content .evo_post .evo_form .preview:focus,
+body.disp_single #main-content .evo_post .evo_form .submit:focus,
+body.disp_single #main-content .evo_post .evo_form .preview:active,
+body.disp_single #main-content .evo_post .evo_form .submit:active {
+  outline: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+body.disp_single #main-content .evo_post .evo_form .preview {
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  color: #999999;
+  margin-right: 3px;
+}
+body.disp_single #main-content .evo_post .evo_form .submit {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+}
+body.disp_single #main-content .evo_post .evo_form .submit:hover,
+body.disp_single #main-content .evo_post .evo_form .submit:focus,
+body.disp_single #main-content .evo_post .evo_form .submit:active {
+  outline: 0;
+  background-color: #09C1DC;
+  border-color: #09C1DC;
+}
+body.disp_single #main-content .evo_post .evo_post_comment_notification,
+body.disp_single #main-content .evo_post .evo_post_feedback_feed_msg {
+  font-size: 1.4rem;
 }
 body.disp_single #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
