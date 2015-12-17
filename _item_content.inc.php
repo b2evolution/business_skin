@@ -43,7 +43,7 @@ $params = array_merge( array(
 		'content_end_full'         => '</section>',
 
 		// In case we display a compact version of the post:
-		'excerpt_before_text'      => '<div class="evo_post__excerpt_text">',
+		'excerpt_before_text'      => '<div class="evo_post__excerpt_text '. $Skin->have_posts_image() .'">',
 		'excerpt_after_text'       => '</div>',
 
 		'excerpt_before_more'      => ' <span class="evo_post__excerpt_more_link">',
@@ -75,7 +75,7 @@ $params = array_merge( array(
 		'excerpt_image_link_to'    => 'single',
 		'include_cover_images'     => false, // Set to true if you want cover images to appear with teaser images.
 
-		'before_gallery'           => '<div class="evo_post_gallery">',
+		'before_gallery'           => '<div class="evo_post_gallery '. $Skin->have_posts_image() .'">',
 		'after_gallery'            => '</div>',
 		'gallery_table_start'      => '',
 		'gallery_table_end'        => '',
@@ -183,9 +183,13 @@ else
  * Content Mode on Mini Blog Layout
  * ============================================================================
  */
- if ( $Skin->get_setting( 'layout_posts' ) == 'mini_blog' ) {
-    $content_mode = 'excerpt';
- }
+if ( $Skin->get_setting( 'layout_posts' ) == 'mini_blog' && $disp == 'posts' ) {
+   $content_mode = 'excerpt';
+
+   if( $Item->is_intro() ) {
+      $content_mode = 'full';
+   }
+}
 
 switch( $content_mode )
 {

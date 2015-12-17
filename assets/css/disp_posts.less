@@ -3,6 +3,29 @@
 // ======================================================================== /
 .disp_posts {
 
+   // Intro Post
+   // ======================================================================== /
+   .evo_intro_post{
+      color: @w;
+      background-color: @primary;
+      border: none;
+      padding: 10px 30px 20px;
+      margin-bottom: 40px;
+      box-shadow: @bx_post;
+      border-radius: 2px;
+
+      .btn-group {
+         a {
+            border-color: @w;
+         }
+      }
+
+      .evo_post__full_text{
+         margin-top: 15px;
+         font-size: 1.4rem;
+      }
+   }
+
    /* ----------------------------------------------------------------------------
     * Main Content Style Regular Layout
     * -------------------------------------------------------------------------- */
@@ -22,13 +45,6 @@
          color: @b;
          border: none;
          box-shadow: @bx_post;
-         padding: 10px 30px 20px;
-         margin-bottom: 40px;
-
-         .evo_post__full_text{
-            margin-top: 15px;
-            font-size: 1.4rem;
-         }
       }
 
       // Article Post Styling
@@ -130,23 +146,64 @@
 
    #mini-blog {
 
+      .pagination {
+         li{
+            a,span {
+               border-color: @primary;
+            }
+         }
+      }
+
       // Evo Post Style
       // ======================================================================== /
       .evo_post {
-         margin-bottom: 2rem;
-         padding-bottom: 3rem;
-         border-bottom: 1px solid @e;
+         // margin-top: 3rem;
+         margin-bottom: 2.5rem;
+         padding-top: 5rem;
+         padding-bottom: 2.5rem;
+         border-top: 1px solid @e;
+
+         // Header Post Style
+         // ======================================================================== /
+         & > header {
+            margin-bottom: 20px;
+
+            .evo_post_title {
+
+               h3 {
+                  font-size: 2.6rem;
+                  line-height: 1.2;
+                  padding-top: 0;
+               }
+            }
+
+            .small.text-muted {
+               margin-top: 0;
+            }
+         }
 
          // Post Image
          // ======================================================================== /
          .evo_post_images {
-            float: left;
-            width: 48%;
-            margin-right: 15px;
 
             .evo_image_block {
                margin-top: 0;
             }
+         }
+
+         @media screen and ( min-width: 768px ){
+            .evo_post_images {
+               float: left;
+               width: 50%;
+               padding-right: 20px;
+               min-height: 170px;
+            }
+         }
+
+         // Gallery Post Image
+         // ======================================================================== /
+         .evo_post_gallery {
+
          }
 
          // Text Excerpt
@@ -155,7 +212,7 @@
 
             .evo_post__excerpt_more_link {
                display: block;
-               margin-top: 20px;
+               margin-top: 15px;
 
                a{
                   display: inline-block;
@@ -176,9 +233,40 @@
                   }
                }
             }
+         }
+
+         // Footer Content
+         // ======================================================================== /
+         & > footer {
+            margin-top: 20px;
+
+            .post_tags {
+               margin-top: 0;
+            }
 
          }
 
+      }
+
+   }
+
+   #main-sidebar {
+
+      .widget_core_coll_tag_cloud {
+
+         .tag_cloud {
+            a {
+               font-family: @font_body;
+               background-color: @bg_primary;
+               border-color: @bdr_bg;
+            }
+         }
+      }
+
+      .widget_plugin_evo_Calr {
+         .bCalendarTable caption a {
+            background-color: @w;
+         }
       }
 
    }

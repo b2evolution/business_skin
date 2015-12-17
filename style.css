@@ -229,7 +229,8 @@ body.loggedin #main-header {
 #mini-blog .evo_post .evo_post_images .evo_image_block a::after {
   content: "\f105";
   bottom: 45%;
-  font-size: 3rem;
+  font-size: 2rem;
+  line-height: 45px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -347,6 +348,22 @@ body.loggedin #main-header {
     * Main Content Style Regular Layout
     * -------------------------------------------------------------------------- */
 }
+.disp_posts .evo_intro_post {
+  color: #ffffff;
+  background-color: #1dc6df;
+  border: none;
+  padding: 10px 30px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.disp_posts .evo_intro_post .btn-group a {
+  border-color: #ffffff;
+}
+.disp_posts .evo_intro_post .evo_post__full_text {
+  margin-top: 15px;
+  font-size: 1.4rem;
+}
 .disp_posts #main-content .evo_content_block {
   position: relative;
   z-index: 1;
@@ -356,12 +373,6 @@ body.loggedin #main-header {
   color: #333333;
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding: 10px 30px 20px;
-  margin-bottom: 40px;
-}
-.disp_posts #main-content .evo_intro_post .evo_post__full_text {
-  margin-top: 15px;
-  font-size: 1.4rem;
 }
 .disp_posts #main-content .evo_post {
   margin-bottom: 3.5em;
@@ -421,22 +432,41 @@ body.loggedin #main-header {
 .posts_mini_layout {
   background-color: #ffffff;
 }
-.posts_mini_layout #mini-blog .evo_post {
-  margin-bottom: 2rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid #eeeeee;
+.posts_mini_layout #mini-blog .pagination li a,
+.posts_mini_layout #mini-blog .pagination li span {
+  border-color: #1dc6df;
 }
-.posts_mini_layout #mini-blog .evo_post .evo_post_images {
-  float: left;
-  width: 48%;
-  margin-right: 15px;
+.posts_mini_layout #mini-blog .evo_post {
+  margin-bottom: 2.5rem;
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid #eeeeee;
+}
+.posts_mini_layout #mini-blog .evo_post > header {
+  margin-bottom: 20px;
+}
+.posts_mini_layout #mini-blog .evo_post > header .evo_post_title h3 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+  padding-top: 0;
+}
+.posts_mini_layout #mini-blog .evo_post > header .small.text-muted {
+  margin-top: 0;
 }
 .posts_mini_layout #mini-blog .evo_post .evo_post_images .evo_image_block {
   margin-top: 0;
 }
+@media screen and (min-width: 768px) {
+  .posts_mini_layout #mini-blog .evo_post .evo_post_images {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+    min-height: 170px;
+  }
+}
 .posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link {
   display: block;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a {
   display: inline-block;
@@ -457,18 +487,37 @@ body.loggedin #main-header {
   color: #ffffff;
   border-color: #1dc6df;
 }
-body.disp_single {
+.posts_mini_layout #mini-blog .evo_post > footer {
+  margin-top: 20px;
+}
+.posts_mini_layout #mini-blog .evo_post > footer .post_tags {
+  margin-top: 0;
+}
+.posts_mini_layout #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #f7f7f7;
+  border-color: #e4e4e4;
+}
+.posts_mini_layout #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
 }
-body.disp_single .evo_cover_image {
+.disp_single,
+.disp_page {
+  background-color: #ffffff;
+}
+.disp_single .evo_cover_image,
+.disp_page .evo_cover_image {
   margin-bottom: 40px;
 }
-body.disp_single #main-content .pager {
+.disp_single #main-content .pager,
+.disp_page #main-content .pager {
   border: 1px solid #eeeeee;
   margin-top: 0;
 }
-body.disp_single #main-content .pager .previous a,
-body.disp_single #main-content .pager .next a {
+.disp_single #main-content .pager .previous a,
+.disp_page #main-content .pager .previous a,
+.disp_single #main-content .pager .next a,
+.disp_page #main-content .pager .next a {
   color: #777777;
   font-size: 1.4rem;
   border-radius: 0;
@@ -476,51 +525,73 @@ body.disp_single #main-content .pager .next a {
   margin: 0;
   padding: 10px 12px;
 }
-body.disp_single #main-content .pager .previous a:hover,
-body.disp_single #main-content .pager .next a:hover,
-body.disp_single #main-content .pager .previous a:active,
-body.disp_single #main-content .pager .next a:active,
-body.disp_single #main-content .pager .previous a:focus,
-body.disp_single #main-content .pager .next a:focus {
+.disp_single #main-content .pager .previous a:hover,
+.disp_page #main-content .pager .previous a:hover,
+.disp_single #main-content .pager .next a:hover,
+.disp_page #main-content .pager .next a:hover,
+.disp_single #main-content .pager .previous a:active,
+.disp_page #main-content .pager .previous a:active,
+.disp_single #main-content .pager .next a:active,
+.disp_page #main-content .pager .next a:active,
+.disp_single #main-content .pager .previous a:focus,
+.disp_page #main-content .pager .previous a:focus,
+.disp_single #main-content .pager .next a:focus,
+.disp_page #main-content .pager .next a:focus {
   background-color: transparent;
   color: #1dc6df;
 }
-body.disp_single #main-content .evo_post {
+.disp_single #main-content .evo_post,
+.disp_page #main-content .evo_post {
   box-shadow: none;
   overflow: hidden;
 }
-body.disp_single #main-content .evo_post > header {
+.disp_single #main-content .evo_post > header,
+.disp_page #main-content .evo_post > header {
   border-bottom: 1px solid #eeeeee;
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-body.disp_single #main-content .evo_post > header .cat-links {
+.disp_single #main-content .evo_post > header .cat-links,
+.disp_page #main-content .evo_post > header .cat-links {
   display: inline-block;
 }
-body.disp_single #main-content .evo_post > header .cat-links a {
+.disp_single #main-content .evo_post > header .cat-links a,
+.disp_page #main-content .evo_post > header .cat-links a {
   color: #333333;
   border-bottom: 1px dotted #1dc6df;
 }
-body.disp_single #main-content .evo_post > header .cat-links a:hover,
-body.disp_single #main-content .evo_post > header .cat-links a:active,
-body.disp_single #main-content .evo_post > header .cat-links a:focus {
+.disp_single #main-content .evo_post > header .cat-links a:hover,
+.disp_page #main-content .evo_post > header .cat-links a:hover,
+.disp_single #main-content .evo_post > header .cat-links a:active,
+.disp_page #main-content .evo_post > header .cat-links a:active,
+.disp_single #main-content .evo_post > header .cat-links a:focus,
+.disp_page #main-content .evo_post > header .cat-links a:focus {
   text-decoration: none;
 }
-body.disp_single #main-content .evo_post .evo_post__full_text h1,
-body.disp_single #main-content .evo_post .evo_post__full_text h2,
-body.disp_single #main-content .evo_post .evo_post__full_text h3,
-body.disp_single #main-content .evo_post .evo_post__full_text h4,
-body.disp_single #main-content .evo_post .evo_post__full_text h5,
-body.disp_single #main-content .evo_post .evo_post__full_text h6 {
+.disp_single #main-content .evo_post .evo_post__full_text h1,
+.disp_page #main-content .evo_post .evo_post__full_text h1,
+.disp_single #main-content .evo_post .evo_post__full_text h2,
+.disp_page #main-content .evo_post .evo_post__full_text h2,
+.disp_single #main-content .evo_post .evo_post__full_text h3,
+.disp_page #main-content .evo_post .evo_post__full_text h3,
+.disp_single #main-content .evo_post .evo_post__full_text h4,
+.disp_page #main-content .evo_post .evo_post__full_text h4,
+.disp_single #main-content .evo_post .evo_post__full_text h5,
+.disp_page #main-content .evo_post .evo_post__full_text h5,
+.disp_single #main-content .evo_post .evo_post__full_text h6,
+.disp_page #main-content .evo_post .evo_post__full_text h6 {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   margin: 1.5em 0 0.5em;
 }
-body.disp_single #main-content .evo_post .evo_post__full_text p,
-body.disp_single #main-content .evo_post .evo_post__full_text pre {
+.disp_single #main-content .evo_post .evo_post__full_text p,
+.disp_page #main-content .evo_post .evo_post__full_text p,
+.disp_single #main-content .evo_post .evo_post__full_text pre,
+.disp_page #main-content .evo_post .evo_post__full_text pre {
   margin-bottom: 18px;
 }
-body.disp_single #main-content .evo_post .evo_post__full_text blockquote {
+.disp_single #main-content .evo_post .evo_post__full_text blockquote,
+.disp_page #main-content .evo_post .evo_post__full_text blockquote {
   border-left: 2px solid #1dc6df;
   padding: 8px 20px;
   font-style: italic;
@@ -529,94 +600,125 @@ body.disp_single #main-content .evo_post .evo_post__full_text blockquote {
   letter-spacing: 0.2px;
   color: #777777;
 }
-body.disp_single #main-content .evo_post .evo_post__full_text blockquote p {
+.disp_single #main-content .evo_post .evo_post__full_text blockquote p,
+.disp_page #main-content .evo_post .evo_post__full_text blockquote p {
   margin-bottom: 0;
 }
-body.disp_single #main-content .evo_post .evo_post__full_text address {
+.disp_single #main-content .evo_post .evo_post__full_text address,
+.disp_page #main-content .evo_post .evo_post__full_text address {
   font-style: italic;
 }
-body.disp_single #main-content .evo_post .evo_image_block a::before,
-body.disp_single #main-content .evo_post .evo_post_gallery__image a::before {
+.disp_single #main-content .evo_post .evo_image_block a::before,
+.disp_page #main-content .evo_post .evo_image_block a::before,
+.disp_single #main-content .evo_post .evo_post_gallery__image a::before,
+.disp_page #main-content .evo_post .evo_post_gallery__image a::before {
   background-color: rgba(29, 198, 223, 0.6);
 }
-body.disp_single #main-content .evo_post .evo_image_block a::after,
-body.disp_single #main-content .evo_post .evo_post_gallery__image a::after {
+.disp_single #main-content .evo_post .evo_image_block a::after,
+.disp_page #main-content .evo_post .evo_image_block a::after,
+.disp_single #main-content .evo_post .evo_post_gallery__image a::after,
+.disp_page #main-content .evo_post .evo_post_gallery__image a::after {
   content: "\f002";
   color: #ffffff;
   background-color: transparent;
 }
-body.disp_single #main-content .evo_post .single_tags {
+.disp_single #main-content .evo_post .single_tags,
+.disp_page #main-content .evo_post .single_tags {
   padding: 15px 0 0;
   color: #777777;
 }
-body.disp_single #main-content .evo_post .single_tags a {
+.disp_single #main-content .evo_post .single_tags a,
+.disp_page #main-content .evo_post .single_tags a {
   font-size: 1.4rem;
   color: #444444;
   padding-left: 3px;
   border-bottom: 1px dotted #1dc6df;
 }
-body.disp_single #main-content .evo_post .single_tags a:hover,
-body.disp_single #main-content .evo_post .single_tags a:active,
-body.disp_single #main-content .evo_post .single_tags a:focus {
+.disp_single #main-content .evo_post .single_tags a:hover,
+.disp_page #main-content .evo_post .single_tags a:hover,
+.disp_single #main-content .evo_post .single_tags a:active,
+.disp_page #main-content .evo_post .single_tags a:active,
+.disp_single #main-content .evo_post .single_tags a:focus,
+.disp_page #main-content .evo_post .single_tags a:focus {
   color: #1dc6df;
   text-decoration: none;
 }
-body.disp_single #main-content .evo_post #feedbacks {
+.disp_single #main-content .evo_post #feedbacks,
+.disp_page #main-content .evo_post #feedbacks {
   padding-top: 30px;
   overflow: hidden;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment__list_title {
+.disp_single #main-content .evo_post #feedbacks .evo_comment__list_title,
+.disp_page #main-content .evo_post #feedbacks .evo_comment__list_title {
   font-family: "Roboto Slab", serif;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active {
+.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover,
+.disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover,
+.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus,
+.disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus,
+.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
+.disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active {
   background: #1dc6df;
   color: #ffffff;
   border-color: #1dc6df;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment {
+.disp_single #main-content .evo_post #feedbacks .evo_comment,
+.disp_page #main-content .evo_post #feedbacks .evo_comment {
   position: relative;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading {
   margin: 0;
   overflow: inherit;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title {
   font-size: 1.5rem;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a {
   color: #1dc6df;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:hover,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:focus,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:active {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:hover,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:hover,
+.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:focus,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:focus,
+.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:active,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a:active {
   background-color: transparent;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_avatar {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_avatar,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_avatar {
   position: absolute;
   left: 20px;
   margin-right: 10px;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_avatar img {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_avatar img,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_avatar img {
   float: none;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_rating,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_rating,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_rating,
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text {
   margin-left: 80px;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_rating {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_rating,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_rating {
   margin-bottom: 10px;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text {
   display: block;
   font-size: 1.4rem;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer {
   margin-top: 15px;
   display: block;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right {
   background-color: #1dc6df;
   padding: 2px 6px;
   color: #ffffff;
@@ -624,15 +726,20 @@ body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_fo
   margin-left: 0.5rem;
   font-size: 1.2rem;
 }
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:hover,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:active,
-body.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:focus {
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:hover,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:hover,
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:active,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:active,
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:focus,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right:focus {
   text-decoration: none;
 }
-body.disp_single #main-content .evo_post .panel {
+.disp_single #main-content .evo_post .panel,
+.disp_page #main-content .evo_post .panel {
   border: 0;
 }
-body.disp_single #main-content .evo_post .panel .panel-heading {
+.disp_single #main-content .evo_post .panel .panel-heading,
+.disp_page #main-content .evo_post .panel .panel-heading {
   position: relative;
   background-color: transparent;
   border: 0;
@@ -641,7 +748,8 @@ body.disp_single #main-content .evo_post .panel .panel-heading {
   overflow: hidden;
   margin-bottom: 10px;
 }
-body.disp_single #main-content .evo_post .panel .panel-heading::after {
+.disp_single #main-content .evo_post .panel .panel-heading::after,
+.disp_page #main-content .evo_post .panel .panel-heading::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -649,26 +757,32 @@ body.disp_single #main-content .evo_post .panel .panel-heading::after {
   height: 1px;
   background-color: #eeeeee;
 }
-body.disp_single #main-content .evo_post .panel .panel-heading .panel-title {
+.disp_single #main-content .evo_post .panel .panel-heading .panel-title,
+.disp_page #main-content .evo_post .panel .panel-heading .panel-title {
   display: inline-block;
   font-family: "Roboto Slab", serif;
   font-size: 1.8rem;
   background: #ffffff;
   padding-right: 10px;
 }
-body.disp_single #main-content .evo_post .panel > .panel-body {
+.disp_single #main-content .evo_post .panel > .panel-body,
+.disp_page #main-content .evo_post .panel > .panel-body {
   border: 1px solid #eeeeee;
   padding: 20px;
 }
-body.disp_single #main-content .evo_post .evo_form .form-group label {
+.disp_single #main-content .evo_post .evo_form .form-group label,
+.disp_page #main-content .evo_post .evo_form .form-group label {
   font-family: "Roboto Slab", serif;
 }
-body.disp_single #main-content .evo_post .evo_form .fieldset_wrapper .panel-body {
+.disp_single #main-content .evo_post .evo_form .fieldset_wrapper .panel-body,
+.disp_page #main-content .evo_post .evo_form .fieldset_wrapper .panel-body {
   padding: 10px 0;
   border: 0;
 }
-body.disp_single #main-content .evo_post .evo_form .preview,
-body.disp_single #main-content .evo_post .evo_form .submit {
+.disp_single #main-content .evo_post .evo_form .preview,
+.disp_page #main-content .evo_post .evo_form .preview,
+.disp_single #main-content .evo_post .evo_form .submit,
+.disp_page #main-content .evo_post .evo_form .submit {
   border-radius: 2px;
   font-weight: 700;
   text-transform: uppercase;
@@ -678,37 +792,51 @@ body.disp_single #main-content .evo_post .evo_form .submit {
   -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
-body.disp_single #main-content .evo_post .evo_form .preview:hover,
-body.disp_single #main-content .evo_post .evo_form .submit:hover,
-body.disp_single #main-content .evo_post .evo_form .preview:focus,
-body.disp_single #main-content .evo_post .evo_form .submit:focus,
-body.disp_single #main-content .evo_post .evo_form .preview:active,
-body.disp_single #main-content .evo_post .evo_form .submit:active {
+.disp_single #main-content .evo_post .evo_form .preview:hover,
+.disp_page #main-content .evo_post .evo_form .preview:hover,
+.disp_single #main-content .evo_post .evo_form .submit:hover,
+.disp_page #main-content .evo_post .evo_form .submit:hover,
+.disp_single #main-content .evo_post .evo_form .preview:focus,
+.disp_page #main-content .evo_post .evo_form .preview:focus,
+.disp_single #main-content .evo_post .evo_form .submit:focus,
+.disp_page #main-content .evo_post .evo_form .submit:focus,
+.disp_single #main-content .evo_post .evo_form .preview:active,
+.disp_page #main-content .evo_post .evo_form .preview:active,
+.disp_single #main-content .evo_post .evo_form .submit:active,
+.disp_page #main-content .evo_post .evo_form .submit:active {
   outline: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-body.disp_single #main-content .evo_post .evo_form .preview {
+.disp_single #main-content .evo_post .evo_form .preview,
+.disp_page #main-content .evo_post .evo_form .preview {
   background-color: #eeeeee;
   border-color: #eeeeee;
   color: #999999;
   margin-right: 3px;
 }
-body.disp_single #main-content .evo_post .evo_form .submit {
+.disp_single #main-content .evo_post .evo_form .submit,
+.disp_page #main-content .evo_post .evo_form .submit {
   background-color: #1dc6df;
   border-color: #1dc6df;
 }
-body.disp_single #main-content .evo_post .evo_form .submit:hover,
-body.disp_single #main-content .evo_post .evo_form .submit:focus,
-body.disp_single #main-content .evo_post .evo_form .submit:active {
+.disp_single #main-content .evo_post .evo_form .submit:hover,
+.disp_page #main-content .evo_post .evo_form .submit:hover,
+.disp_single #main-content .evo_post .evo_form .submit:focus,
+.disp_page #main-content .evo_post .evo_form .submit:focus,
+.disp_single #main-content .evo_post .evo_form .submit:active,
+.disp_page #main-content .evo_post .evo_form .submit:active {
   outline: 0;
   background-color: #09C1DC;
   border-color: #09C1DC;
 }
-body.disp_single #main-content .evo_post .evo_post_comment_notification,
-body.disp_single #main-content .evo_post .evo_post_feedback_feed_msg {
+.disp_single #main-content .evo_post .evo_post_comment_notification,
+.disp_page #main-content .evo_post .evo_post_comment_notification,
+.disp_single #main-content .evo_post .evo_post_feedback_feed_msg,
+.disp_page #main-content .evo_post .evo_post_feedback_feed_msg {
   font-size: 1.4rem;
 }
-body.disp_single #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
+.disp_single #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a,
+.disp_page #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
 }
 /* ----------------------------------------------------------------------------
@@ -864,12 +992,13 @@ body.disp_single #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a
   float: left;
   padding: 5px 12px;
   margin: 2px;
-  font-family: "Roboto Slab", serif;
   background-color: #fff;
   border: 1px solid #eeeeee;
   border-radius: 2px;
 }
-#main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover {
+#main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover,
+#main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active,
+#main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus {
   text-decoration: none;
   background-color: #1dc6df;
   color: #ffffff;
@@ -1701,7 +1830,6 @@ div.bSideItem h4 {
  * Pagination
  * -------------------------------------------------------------------------- */
 .pagination {
-  display: inline-block;
   margin: 0 0 30px;
 }
 .pagination .active span,

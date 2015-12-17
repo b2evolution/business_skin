@@ -15,6 +15,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 global $Item, $Skin;
 
+
 // Default params:
 $params = array_merge( array(
 		'feature_block'              => false,			// fp>yura: what is this for??
@@ -31,14 +32,14 @@ $params = array_merge( array(
 			'item_title_single_after'    => '</h1>',
 		'item_title_line_after'      => '</div>',
 		// Controlling the content:
-		'content_mode'               => 'excerpt',		// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
+		'content_mode'               => 'excerpt',// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
 		'image_class'                => 'img-responsive',
 		'image_size'                 => 'fit-1280x720',
 		'author_link_text'           => 'preferredname',
 	), $params );
 
-
 echo '<div class="evo_content_block">'; // Beginning of post display
+
 ?>
 
 <?php if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'regular' ) : ?>
@@ -70,105 +71,105 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
 	<header>
-	<?php
-		$Item->locale_temp_switch(); // Temporarily switch to post locale (useful for multilingual blogs)
+   	<?php
+   		$Item->locale_temp_switch(); // Temporarily switch to post locale (useful for multilingual blogs)
 
-		// ------- Title -------
-		if( $params['disp_title'] )
-		{
-			echo $params['item_title_line_before'];
+   		// ------- Title -------
+   		if( $params['disp_title'] )
+   		{
+   			echo $params['item_title_line_before'];
 
-			if( $disp == 'single' || $disp == 'page' )
-			{
-				$title_before = $params['item_title_single_before'];
-				$title_after = $params['item_title_single_after'];
-			}
-			else
-			{
-				$title_before = $params['item_title_before'];
-				$title_after = $params['item_title_after'];
-			}
+   			if( $disp == 'single' || $disp == 'page' )
+   			{
+   				$title_before = $params['item_title_single_before'];
+   				$title_after = $params['item_title_single_after'];
+   			}
+   			else
+   			{
+   				$title_before = $params['item_title_before'];
+   				$title_after = $params['item_title_after'];
+   			}
 
-			// POST TITLE:
-			$Item->title( array(
-					'before'    => $title_before,
-					'after'     => $title_after,
-					'link_type' => '#'
-				) );
+   			// POST TITLE:
+   			$Item->title( array(
+   					'before'    => $title_before,
+   					'after'     => $title_after,
+   					'link_type' => '#'
+   				) );
 
-			// EDIT LINK:
-			if( $Item->is_intro() )
-			{ // Display edit link only for intro posts, because for all other posts the link is displayed on the info line.
-				$Item->edit_link( array(
-							'before' => '<div class="'.button_class( 'group' ).'">',
-							'after'  => '</div>',
-							'text'   => $Item->is_intro() ? get_icon( 'edit' ).' '.T_('Edit Intro') : '#',
-							'class'  => button_class( 'text' ),
-						) );
-			}
+   			// EDIT LINK:
+   			if( $Item->is_intro() )
+   			{ // Display edit link only for intro posts, because for all other posts the link is displayed on the info line.
+   				$Item->edit_link( array(
+   							'before' => '<div class="'.button_class( 'group' ).'">',
+   							'after'  => '</div>',
+   							'text'   => $Item->is_intro() ? get_icon( 'edit' ).' '.T_('Edit Intro') : '#',
+   							'class'  => button_class( 'text' ),
+   						) );
+   			}
 
-			echo $params['item_title_line_after'];
-		}
-	?>
+   			echo $params['item_title_line_after'];
+   		}
+   	?>
 
-	<?php	if( ! $Item->is_intro() ){ // Don't display the following for intro posts ?>
-	<div class="small text-muted">
-	<?php
-		if( $Item->status != 'published' ) {
-			$Item->format_status( array(
-					'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
-				) );
-		}
+   	<?php	if( ! $Item->is_intro() ){ // Don't display the following for intro posts ?>
+   	<div class="small text-muted">
+   	<?php
+   		if( $Item->status != 'published' ) {
+   			$Item->format_status( array(
+   					'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
+   				) );
+   		}
 
-      // Permalink:
-      $Item->permanent_link( array(
-         // 'text' => '#icon#',
-         'text' => '', // without icon
-      ) );
+         // Permalink:
+         $Item->permanent_link( array(
+            // 'text' => '#icon#',
+            'text' => '', // without icon
+         ) );
 
-      // Show Author If on disp posts
-      if ( $disp == 'posts' ) {
-   		// Author
-   		$Item->author( array(
-   			'before'    => ' '.T_('By').' ',
-   			'after'     => ' ',
-   			'link_text' => $params['author_link_text'],
+         // Show Author If on disp posts
+         if ( $disp == 'posts' ) {
+      		// Author
+      		$Item->author( array(
+      			'before'    => ' '.T_('By').' ',
+      			'after'     => ' ',
+      			'link_text' => $params['author_link_text'],
+      		) );
+
+         } else if ( $disp == 'single' ) {
+      		// Author
+      		$Item->author( array(
+      			'before'    => ' '.T_('Posted by').' ',
+      			'after'     => ' ',
+      			'link_text' => $params['author_link_text'],
+      		) );
+
+            // We want to display the post time:
+            $Item->issue_time( array(
+                  'before'      => ' '.T_('on').' ',
+                  'after'       => ' ',
+                  'time_format' => 'F j, Y',
+               ) );
+
+         }
+
+         // Categories
+         $Item->categories( array(
+            'before'          => T_(' in ').'<div class="cat-links"> ',
+            'after'           => ' </div>',
+            'include_main'    => true,
+            'include_other'   => true,
+            'include_external'=> true,
+            'link_categories' => true,
+         ) );
+
+   		// Link for editing
+   		$Item->edit_link( array(
+   			'before'    => ' &bull; ',
+   			'after'     => '',
    		) );
 
-      } else if ( $disp == 'single' ) {
-   		// Author
-   		$Item->author( array(
-   			'before'    => ' '.T_('Posted by').' ',
-   			'after'     => ' ',
-   			'link_text' => $params['author_link_text'],
-   		) );
-
-         // We want to display the post time:
-         $Item->issue_time( array(
-               'before'      => ' '.T_('on').' ',
-               'after'       => ' ',
-               'time_format' => 'F j, Y',
-            ) );
-
-      }
-
-      // Categories
-      $Item->categories( array(
-         'before'          => T_(' in ').'<div class="cat-links"> ',
-         'after'           => ' </div>',
-         'include_main'    => true,
-         'include_other'   => true,
-         'include_external'=> true,
-         'link_categories' => true,
-      ) );
-
-		// Link for editing
-		$Item->edit_link( array(
-			'before'    => ' &bull; ',
-			'after'     => '',
-		) );
-
-	?>
+   	?>
 	</div>
 	<?php } ?>
 	</header>

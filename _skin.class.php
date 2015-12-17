@@ -693,6 +693,28 @@ class business_Skin extends Skin
 
    }
 
+   /**
+    * ============================================================================
+    * Check if post have a Images and Attachment
+    * ============================================================================
+    */
+   function have_posts_image() {
+      global $Item;
+
+      $have_image = '';
+
+      $item_first_image = $Item->get_images( array(
+         'restrict_to_image_position' => 'teaser,aftermore,inline',
+         'get_rendered_attachments'   => false,
+      ) );
+
+      if ( ! empty( $item_first_image ) ) {
+         $have_image = 'have_image';
+      }
+
+      return $have_image;
+   }
+
 }
 
 ?>
