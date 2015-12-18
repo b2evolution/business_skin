@@ -64,6 +64,10 @@ class business_Skin extends Skin
 	 */
 	function get_param_definitions( $params )
 	{
+
+      // Load to use function get_available_thumb_sizes()
+		load_funcs( 'files/model/_image.funcs.php' );
+
 		$r = array_merge( array(
 				'section_general_start' => array(
 					'layout' => 'begin_fieldset',
@@ -150,6 +154,27 @@ class business_Skin extends Skin
                   'size'         => '60'
                ),
 				'section_header_top_end' => array(
+					'layout' => 'end_fieldset',
+				),
+            // End Section Header Top
+
+            /**
+             * ============================================================================
+             * Photo Index Options
+             * ============================================================================
+             */
+            'section_mediaidx_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Media Post Settings')
+				),
+               'mediaidx_thumb_size' => array(
+   					'label' => T_('Thumbnail size for media index'),
+   					'note' => '',
+   					'defaultvalue' => 'fit-640x480',
+   					'options' => get_available_thumb_sizes(),
+   					'type' => 'select',
+   				),
+				'section_mediaidx_end' => array(
 					'layout' => 'end_fieldset',
 				),
             // End Section Header Top

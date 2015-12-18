@@ -143,6 +143,31 @@
 .post_regular {
    background: @bg_post_regular;
 
+   // Main Content
+   // ======================================================================== /
+   #main-content{
+
+      // ========================================================================
+      // Title Post Category | Archive } Search | Tag
+      // ======================================================================== /
+      .title_main_content {
+         margin: 20px 0 30px;
+         padding: 20px;
+         font-family: @font_title;
+         font-weight: 700;
+         color: @c7;
+         background-color: @w;
+         box-shadow: @bx_post;
+      }
+
+      .msg_nothing {
+         padding: 30px;
+         text-align: center;
+         box-shadow: @bx_post;
+      }
+
+   }
+
 
    #main-sidebar {
       // Calender widget style
@@ -162,22 +187,6 @@
    }
 
 
-   // ========================================================================
-   // Title Post Category | Archive } Search | Tag
-   // ======================================================================== /
-   & {
-
-      .title_main_content {
-         margin: 20px 0 30px;
-         padding: 20px;
-         font-weight: 700;
-         color: @c7;
-         background-color: @w;
-         box-shadow: @bx_post;
-      }
-   }
-
-
 }
 
 
@@ -189,6 +198,13 @@
 
    #mini-blog {
 
+      .title_main_content {
+         font-weight: 700;
+         font-family: @font_title;
+      }
+
+      // Pagination Style
+      // ======================================================================== /
       .pagination {
          li{
             a,span {

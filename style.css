@@ -432,6 +432,20 @@ body.loggedin #main-header {
 .post_regular {
   background: #f7f7f7;
 }
+.post_regular #main-content .title_main_content {
+  margin: 20px 0 30px;
+  padding: 20px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  color: #777777;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.post_regular #main-content .msg_nothing {
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
 .post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable {
   border: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -439,16 +453,12 @@ body.loggedin #main-header {
 .post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #f7f7f7;
 }
-.post_regular .title_main_content {
-  margin: 20px 0 30px;
-  padding: 20px;
-  font-weight: 700;
-  color: #777777;
-  background-color: #ffffff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
 .posts_mini_layout {
   background-color: #ffffff;
+}
+.posts_mini_layout #mini-blog .title_main_content {
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
 }
 .posts_mini_layout #mini-blog .pagination li a,
 .posts_mini_layout #mini-blog .pagination li span {
@@ -860,6 +870,18 @@ body.loggedin #main-header {
 .disp_single #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a,
 .disp_page #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index {
+  clear: both;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index {
+  margin: 0 auto;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  text-align: center;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar
