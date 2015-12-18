@@ -133,8 +133,8 @@ skin_include( '_body_header.inc.php' );
       						'page_item_after'       => '</li>',
       						'page_item_current_before' => '<li class="active">',
       						'page_item_current_after'  => '</li>',
-      						'prev_text'             => '<i class="fa fa-angle-double-left"></i>',
-      						'next_text'             => '<i class="fa fa-angle-double-right"></i>',
+      						'prev_text'             => '<i class="fa fa-angle-left"></i>',
+      						'next_text'             => '<i class="fa fa-angle-right"></i>',
       					),
       					// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
       					'skin_form_before'      => '<div class="panel panel-default skin-form">'

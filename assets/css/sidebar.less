@@ -241,9 +241,10 @@
             display: inline-block;
             float: left;
             padding: 5px 12px;
+            font-size: 1.4rem !important;
             margin: 2px;
-            background-color: #fff;
-            border: 1px solid @e;
+            background-color: @bg_post_regular;
+            border: 1px solid @bdr_bg;
             border-radius: 2px;
 
             &:hover, &:active, &:focus {
@@ -262,7 +263,7 @@
 
       .bCalendarTable {
          font-size: 100%;
-         box-shadow: @bx_post;
+         border: 1px solid @e;
          border-radius: 3px;
 
          caption {
@@ -275,7 +276,7 @@
             a{
                z-index: 0;
                padding: 0 15px;
-               background-color: @bg_primary;
+               background-color: @w;
 
                &:hover {
                   text-decoration: none;

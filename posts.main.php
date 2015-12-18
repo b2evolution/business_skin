@@ -28,7 +28,7 @@ skin_init( $disp );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
-   'body_class' => $Skin->get_setting( 'layout_posts' ) == 'mini_blog' ? 'posts_mini_layout' : NULL,
+   'body_class' => $Skin->get_setting( 'layout_posts' ) == 'mini_blog' ? 'posts_mini_layout' : 'post_regular',
 ) );
 // -------------------------------- END OF HEADER --------------------------------
 
@@ -78,7 +78,7 @@ skin_include( '_body_header.inc.php' );
       		<?php
       			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
       			request_title( array(
-      					'title_before'      => '<h2>',
+      					'title_before'      => '<h2 class="title_main_content">',
       					'title_after'       => '</h2>',
       					'title_none'        => '',
       					'glue'              => ' - ',

@@ -18,7 +18,7 @@ html {
 body {
   font: normal 1.5rem/1.3 "Source Sans Pro", sans-serif;
   color: #444444;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
 }
 a {
   color: #1dc6df;
@@ -228,13 +228,13 @@ body.loggedin #main-header {
 #main-content .evo_post .evo_post_images .evo_image_block a::after,
 #mini-blog .evo_post .evo_post_images .evo_image_block a::after {
   content: "\f105";
-  bottom: 45%;
+  bottom: 40%;
   font-size: 2rem;
   line-height: 45px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #f7f7f7;
+  background: #ffffff;
   color: #333333;
 }
 #main-content .evo_post .evo_post_images img,
@@ -429,6 +429,24 @@ body.loggedin #main-header {
 .disp_posts #main-content .timeline.evo_intro_post {
   display: none;
 }
+.post_regular {
+  background: #f7f7f7;
+}
+.post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable {
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
+  background-color: #f7f7f7;
+}
+.post_regular .title_main_content {
+  margin: 20px 0 30px;
+  padding: 20px;
+  font-weight: 700;
+  color: #777777;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
 .posts_mini_layout {
   background-color: #ffffff;
 }
@@ -494,12 +512,14 @@ body.loggedin #main-header {
   margin-top: 0;
 }
 .posts_mini_layout #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a {
-  font-family: "Source Sans Pro", sans-serif;
-  background-color: #f7f7f7;
   border-color: #e4e4e4;
 }
 .posts_mini_layout #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
+}
+.posts_mini_layout .pagination_bottom {
+  border-top: 1px solid #e4e4e4;
+  padding-top: 30px;
 }
 .disp_single,
 .disp_page {
@@ -646,6 +666,8 @@ body.loggedin #main-header {
 .disp_single #main-content .evo_post #feedbacks,
 .disp_page #main-content .evo_post #feedbacks {
   padding-top: 30px;
+  margin-top: 50px;
+  border-top: 1px solid #e4e4e4;
   overflow: hidden;
 }
 .disp_single #main-content .evo_post #feedbacks .evo_comment__list_title,
@@ -991,9 +1013,10 @@ body.loggedin #main-header {
   display: inline-block;
   float: left;
   padding: 5px 12px;
+  font-size: 1.4rem !important;
   margin: 2px;
-  background-color: #fff;
-  border: 1px solid #eeeeee;
+  background-color: #f7f7f7;
+  border: 1px solid #e4e4e4;
   border-radius: 2px;
 }
 #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover,
@@ -1006,7 +1029,7 @@ body.loggedin #main-header {
 }
 #main-sidebar .widget_plugin_evo_Calr .bCalendarTable {
   font-size: 100%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eeeeee;
   border-radius: 3px;
 }
 #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption {
@@ -1019,7 +1042,7 @@ body.loggedin #main-header {
 #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   z-index: 0;
   padding: 0 15px;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
 }
 #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a:hover {
   text-decoration: none;
@@ -1830,7 +1853,9 @@ div.bSideItem h4 {
  * Pagination
  * -------------------------------------------------------------------------- */
 .pagination {
+  display: block;
   margin: 0 0 30px;
+  border-radius: 0;
 }
 .pagination .active span,
 .pagination .active span:hover {
@@ -1842,6 +1867,7 @@ div.bSideItem h4 {
 .pagination li span {
   float: none;
   font-size: 1.6rem;
+  font-weight: 600;
   padding: 8px 16px;
   margin: 1px;
   border-radius: 2px !important;

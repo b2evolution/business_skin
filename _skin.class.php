@@ -65,9 +65,9 @@ class business_Skin extends Skin
 	function get_param_definitions( $params )
 	{
 		$r = array_merge( array(
-				'section_layout_start' => array(
+				'section_general_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Layout Settings')
+					'label'  => T_('General Settings')
 				),
 					'layout' => array(
 						'label' => T_('Layout'),
@@ -96,11 +96,34 @@ class business_Skin extends Skin
 						'defaultvalue' => 'standard',
 						'options' => array(
 								'regular'      => T_('Regular Layout'),
-								'mini_blog'     => T_('Mini Blog Layout'),
+								'mini_blog'    => T_('Mini Blog Layout'),
                      ),
 						'type' => 'select',
 					),
-				'section_layout_end' => array(
+               'pagination_top_show' => array(
+                  'label'        => T_('Show Pagination Top'),
+                  'note'         => T_('Check to display Pagination top'),
+                  'defaultvalue' => 0,
+                  'type'         => 'checkbox',
+               ),
+               'pagination_bottom_show' => array(
+                  'label'        => T_('Show Pagination Bottom'),
+                  'note'         => T_('Check to display Pagination Bottom'),
+                  'defaultvalue' => 1,
+                  'type'         => 'checkbox',
+               ),
+               'pagination_align' => array(
+                  'label'        => T_('Show Align Pagination'),
+                  'note'         => T_('Select Align Pagination'),
+                  'defaultvalue' => 'center',
+                  'type'         => 'select',
+                  'options' => array(
+							'left'     => T_('Left'),
+							'center'   => T_('Center'),
+                     'right'    => T_('Right'),
+                  ),
+               ),
+				'section_general_end' => array(
 					'layout' => 'end_fieldset',
 				),
 

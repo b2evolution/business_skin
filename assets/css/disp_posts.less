@@ -2,7 +2,6 @@
 // Disp Posts Style
 // ======================================================================== /
 .disp_posts {
-
    // Intro Post
    // ======================================================================== /
    .evo_intro_post{
@@ -139,6 +138,50 @@
 
 
 // ========================================================================
+// Regular Blog Style
+// ======================================================================== /
+.post_regular {
+   background: @bg_post_regular;
+
+
+   #main-sidebar {
+      // Calender widget style
+      // ======================================================================== /
+      .widget_plugin_evo_Calr {
+
+         .bCalendarTable {
+            border: 0;
+            box-shadow: @bx_post;
+
+            caption a {
+               background-color: @bg_post_regular;
+            }
+
+         }
+      }
+   }
+
+
+   // ========================================================================
+   // Title Post Category | Archive } Search | Tag
+   // ======================================================================== /
+   & {
+
+      .title_main_content {
+         margin: 20px 0 30px;
+         padding: 20px;
+         font-weight: 700;
+         color: @c7;
+         background-color: @w;
+         box-shadow: @bx_post;
+      }
+   }
+
+
+}
+
+
+// ========================================================================
 // Mini Blog Style
 // ======================================================================== /
 .posts_mini_layout {
@@ -256,8 +299,6 @@
 
          .tag_cloud {
             a {
-               font-family: @font_body;
-               background-color: @bg_primary;
                border-color: @bdr_bg;
             }
          }
@@ -269,6 +310,13 @@
          }
       }
 
+   }
+
+   // Pagination
+   // ======================================================================== /
+   .pagination_bottom {
+      border-top: 1px solid @bdr_bg;
+      padding-top: 30px;
    }
 
 }

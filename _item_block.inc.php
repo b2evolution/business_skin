@@ -32,7 +32,7 @@ $params = array_merge( array(
 			'item_title_single_after'    => '</h1>',
 		'item_title_line_after'      => '</div>',
 		// Controlling the content:
-		'content_mode'               => 'excerpt',// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
+		'content_mode'               => 'auto',// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
 		'image_class'                => 'img-responsive',
 		'image_size'                 => 'fit-1280x720',
 		'author_link_text'           => 'preferredname',
