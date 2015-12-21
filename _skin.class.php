@@ -168,12 +168,29 @@ class business_Skin extends Skin
 					'label'  => T_('Media Post Settings')
 				),
                'mediaidx_thumb_size' => array(
-   					'label' => T_('Thumbnail size for media index'),
-   					'note' => '',
-   					'defaultvalue' => 'fit-640x480',
-   					'options' => get_available_thumb_sizes(),
-   					'type' => 'select',
+   					'label'        => T_('Thumbnail size for media index'),
+   					'note'         => '',
+   					'defaultvalue' => 'fit-1280x720',
+   					'options'      => get_available_thumb_sizes(),
+   					'type'         => 'select',
    				),
+               'mediaidx_grid' => array(
+						'label' => T_('Column'),
+						'note' => '',
+						'defaultvalue' => 'two_column',
+						'options' => array(
+                        'one_column'       => T_('1 Column'),
+								'two_column'       => T_('2 Column'),
+								'three_column'     => T_('3 Column'),
+							),
+						'type' => 'select',
+					),
+               'mediaidx_title' => array(
+						'label'        => T_('Display Title'),
+						'note'         => T_('Check to display title post image'),
+						'defaultvalue' => 1,
+						'type'         => 'checkbox',
+					),
 				'section_mediaidx_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -290,7 +307,7 @@ class business_Skin extends Skin
 	 */
 	function display_init()
 	{
-		global $Messages, $debug;
+		global $Messages, $debug, $disp;
 
 		// Request some common features that the parent function (Skin::display_init()) knows how to provide:
 		parent::display_init( array(
@@ -307,6 +324,20 @@ class business_Skin extends Skin
 
       //Include script and styles for Sticky Menu
 		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
+
+      // Include Masonry Grind for MediaIdx
+      if ( $disp == 'mediaidx' ) {
+         require_js( $this->get_url().'assets/js/masonry.pkgd.min.js' );
+         add_js_headline("
+				jQuery( document ).ready( function($) {
+               $('.evo_image_index').masonry({
+                 // options
+                  itemSelector: '.grid-item',
+               });
+				});
+			");
+      }
+
       require_js( $this->get_url().'assets/js/scripts.js' );
 
 		// Skin specific initializations:
@@ -743,7 +774,7 @@ class business_Skin extends Skin
 
    /**
     * ============================================================================
-    * Check if post have a Images and Attachment
+    * Check if post have a Images and Attachment for Mini Blog Layout
     * ============================================================================
     */
    function have_posts_image() {

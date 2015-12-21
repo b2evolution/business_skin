@@ -393,6 +393,29 @@ body.loggedin #main-header {
 .disp_posts #main-content .evo_post .evo_post__excerpt_text {
   padding: 10px 30px;
 }
+.disp_posts #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link {
+  display: block;
+  margin-top: 15px;
+}
+.disp_posts #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a {
+  display: inline-block;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #444444;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+}
+.disp_posts #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover,
+.disp_posts #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active,
+.disp_posts #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus {
+  text-decoration: none;
+  background-color: #1dc6df;
+  color: #ffffff;
+  border-color: #1dc6df;
+}
 .disp_posts #main-content .evo_post footer {
   padding: 0 30px 20px;
 }
@@ -491,29 +514,6 @@ body.loggedin #main-header {
     padding-right: 20px;
     min-height: 170px;
   }
-}
-.posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link {
-  display: block;
-  margin-top: 15px;
-}
-.posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a {
-  display: inline-block;
-  padding: 12px 20px;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #444444;
-  border: 1px solid #dddddd;
-  border-radius: 2px;
-}
-.posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover,
-.posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active,
-.posts_mini_layout #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus {
-  text-decoration: none;
-  background-color: #1dc6df;
-  color: #ffffff;
-  border-color: #1dc6df;
 }
 .posts_mini_layout #mini-blog .evo_post > footer {
   margin-top: 20px;
@@ -871,6 +871,16 @@ body.loggedin #main-header {
 .disp_page #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
 }
+.disp_mediaidx #main-mediaidx .title_mediaidx {
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  border-bottom: 2px solid #1dc6df;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 60px 15px 40px;
+}
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index {
   clear: both;
 }
@@ -878,10 +888,45 @@ body.loggedin #main-header {
   margin: 0 auto;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li {
-  display: inline-block;
+  display: block;
   float: left;
   width: 50%;
+  padding: 15px;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one {
+  width: 100%;
+  float: none;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one .note {
+  font-size: 2.4rem;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three {
+  width: 33.333%;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .note {
+  margin: auto;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure {
+  position: relative;
+  margin: 0;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
   text-align: center;
+  border-radius: 2px;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .note {
+  display: block;
+  font-family: "Roboto Slab", serif;
+  color: #222222;
+  font-size: 1.6rem;
+  letter-spacing: 0;
+  padding-top: 15px;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar

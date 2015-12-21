@@ -14,7 +14,9 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
-global $thumbnail_sizes;
+
+global $thumbnail_sizes, $Skin;
+
 if( empty( $params ) )
 { // Initialize array with params
 	$params = array();
@@ -31,26 +33,41 @@ if( isset( $thumbnail_sizes[ $params['mediaidx_thumb_size'] ] ) )
 		.'height:'.$thumbnail_sizes[ $params['mediaidx_thumb_size'] ][2].'px"';
 }
 
+// Variable Option Disp Mediaidx
+// ======================================================================== /
+if ( $Skin->get_setting( 'mediaidx_title' ) == 1 ) {
+   $title_image = true;
+} else {
+   $title_image = false;
+}
+
+$mediaidx_grid = $Skin->get_setting( 'mediaidx_grid' );
+$grid = "";
+if ( $mediaidx_grid == 'one_column' ) {
+   $grid = "one";
+} else if ( $mediaidx_grid == 'three_column' ) {
+   $grid = 'three';
+}
+
 // --------------------------------- START OF MEDIA INDEX --------------------------------
 skin_widget( array(
 		// CODE for the widget:
-		'widget' => 'coll_media_index',
+		'widget'              => 'coll_media_index',
 		// Optional display params
-		'block_start' => '<div class="evo_widget $wi_class$">',
-		'block_end' => '</div>',
+		'block_start'         => '<div class="evo_widget $wi_class$">',
+		'block_end'           => '</div>',
 		'block_display_title' => false,
-		'thumb_size' => $params['mediaidx_thumb_size'],
-		'thumb_layout' => 'grid',
-		'grid_start' => '<ul class="evo_image_index">',
-		'grid_end' => '</ul>',
-		'grid_nb_cols' => 8,
-		'grid_colstart' => '',
-		'grid_colend' => '',
-		'grid_cellstart' => '<li><figure'.$photocell_styles.'>',
-		'grid_cellend' => '</figure></li>',
-		'order_by' => $Blog->get_setting('orderby'),
-		'order_dir' => $Blog->get_setting('orderdir'),
-		'limit' => 1000,
+		'thumb_size'          => $params['mediaidx_thumb_size'],
+		'thumb_layout'        => 'list',
+      'disp_image_title'    => $title_image,
+		'list_start'          => '<ul class="evo_image_index">',
+		'list_end'            => '</ul>',
+		// 'item_start'         => '<li><figure'.$photocell_styles.'>',
+      'item_start'          => '<li class="grid-item '. $grid .'"><figure>',
+		'item_end'            => '</figure></li>',
+		'order_by'            => $Blog->get_setting('orderby'),
+		'order_dir'           => $Blog->get_setting('orderdir'),
+		'limit'               => 100,
 	) );
 // ---------------------------------- END OF MEDIA INDEX ---------------------------------
 

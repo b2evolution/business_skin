@@ -21,7 +21,7 @@ $clear_mini_blog = '';
 $more_excerpt_mini_blog = 'more';
 $icon_mexpt_mb = ' &raquo;';
 
-if ( $Skin->get_setting( 'layout_posts' ) === 'mini_blog' ) {
+if ( $Skin->get_setting( 'layout_posts' ) === 'mini_blog' || $disp == 'posts' ) {
    $clear_mini_blog = 'clearfix';
    $more_excerpt_mini_blog = 'Read More';
    $icon_mexpt_mb = '';
@@ -48,7 +48,7 @@ $params = array_merge( array(
 
 		'excerpt_before_more'      => ' <span class="evo_post__excerpt_more_link">',
 		'excerpt_after_more'       => '</span>',
-		'excerpt_more_text'        => T_( $more_excerpt_mini_blog ). $icon_mexpt_mb,
+		'excerpt_more_text'        => T_( 'Read More' ). $icon_mexpt_mb,
 
 		// In case we display a full version of the post:
 		'content_start_full_text'  => '<div class="evo_post__full_text">',

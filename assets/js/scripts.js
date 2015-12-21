@@ -1,3 +1,7 @@
-jQuery(document).ready(function($) {
-   $('#main-header').sticky({topSpacing:0});
+jQuery( document ).ready( function($) {
+
+   // Sticky Header
+   // ======================================================================== /
+   $( '#main-header' ).sticky( {topSpacing: 0} );
+
 });
