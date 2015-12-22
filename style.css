@@ -103,6 +103,7 @@ a {
   background-color: transparent;
   color: #1dc6df;
   font-weight: normal;
+  cursor: pointer;
 }
 #main-header .primary-nav .nav > li.active a::after {
   opacity: 1;
@@ -124,12 +125,16 @@ a {
   background-color: #1dc6df;
   opacity: 0;
 }
-#main-header .primary-nav .nav a:hover {
+#main-header .primary-nav .nav a:hover,
+#main-header .primary-nav .nav a:active,
+#main-header .primary-nav .nav a:focus {
   background-color: transparent;
   border: 0;
   color: #1dc6df;
 }
-#main-header .primary-nav .nav a:hover::after {
+#main-header .primary-nav .nav a:hover::after,
+#main-header .primary-nav .nav a:active::after,
+#main-header .primary-nav .nav a:focus::after {
   opacity: 1;
 }
 body.loggedin #main-header {
@@ -475,6 +480,9 @@ body.loggedin #main-header {
 }
 .post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #f7f7f7;
+}
+.post_regular #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a {
+  background-color: #ffffff;
 }
 .posts_mini_layout {
   background-color: #ffffff;
@@ -885,13 +893,17 @@ body.loggedin #main-header {
   clear: both;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index {
+  position: relative;
   margin: 0 auto;
+  text-align: left;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li {
-  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
   float: left;
   width: 50%;
-  padding: 15px;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one {
   width: 100%;
@@ -899,34 +911,92 @@ body.loggedin #main-header {
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one .note {
   font-size: 2.4rem;
+  padding-left: 30px;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three {
   width: 33.333%;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .box a::after {
+  bottom: 30px;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .box .note {
+  padding: 20px 15px 0;
+  margin-bottom: 20px;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .note {
   margin: auto;
   padding: 15px;
   font-size: 1.5rem;
 }
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .note::after {
+  bottom: 22px;
+}
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure {
   position: relative;
   margin: 0;
+  text-align: center;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 38px;
+  margin: 0 auto;
+  width: 90%;
+  height: 1px;
+  background-color: #777777;
+  z-index: 1;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box img {
+  border-radius: 2px;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box .note {
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 2;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box .note::after {
+  height: 0;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li img {
   display: block;
   max-width: 100%;
-  height: auto;
+  height: 100%;
+  min-height: 200px;
+  max-height: 100%;
+  min-height: 100%;
   margin: 0 auto;
   text-align: center;
-  border-radius: 2px;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .note {
-  display: block;
+  display: inline-block;
   font-family: "Roboto Slab", serif;
   color: #222222;
   font-size: 1.6rem;
   letter-spacing: 0;
-  padding-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #ffffff;
+  z-index: 0;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .note:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 18px;
+  width: 100%;
+  height: 1px;
+  background-color: #777777;
+  z-index: -1;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar
@@ -1147,6 +1217,7 @@ body.loggedin #main-header {
 #main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a {
   padding: 10px 12px;
   font-size: 1.6rem;
+  color: #1dc6df;
 }
 #main-sidebar .widget_plugin_evo_Calr .bCalendarTable tfoot tr td {
   border-bottom: 0;

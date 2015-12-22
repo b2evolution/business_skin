@@ -175,22 +175,51 @@ class business_Skin extends Skin
    					'type'         => 'select',
    				),
                'mediaidx_grid' => array(
-						'label' => T_('Column'),
-						'note' => '',
-						'defaultvalue' => 'two_column',
-						'options' => array(
+						'label'          => T_('Column'),
+						'note'           => '',
+						'defaultvalue'   => 'two_column',
+                  'type'           => 'select',
+						'options'        => array(
                         'one_column'       => T_('1 Column'),
 								'two_column'       => T_('2 Column'),
 								'three_column'     => T_('3 Column'),
 							),
-						'type' => 'select',
 					),
+               'mediaidx_style' => array(
+						'label'          => T_('Mediaidx Style'),
+						'note'           => T_('If you use box style you should change mediaidx background color. Exaple ( #F7F7F7 )'),
+						'defaultvalue'   => 'default',
+                  'type'           => 'select',
+						'options'        => array(
+                        'default'   => T_('Default'),
+								'box'       => T_('Box Style'),
+							),
+					),
+               'padding_column' => array(
+                  'label'          => T_('Padding Image Column'),
+                  'note'           => T_('px ( default padding 15px )'),
+                  'defaultvalue'   => '15',
+                  'type'           => 'integer',
+                  'allow_empty'    => true,
+               ),
                'mediaidx_title' => array(
 						'label'        => T_('Display Title'),
 						'note'         => T_('Check to display title post image'),
 						'defaultvalue' => 1,
 						'type'         => 'checkbox',
 					),
+               'mediaidx_bg' => array(
+                   'label'         => T_('Background Mediaidx'),
+                   'note'          => T_('Default color is #FFFFFF. Suggest Background Color (#F7F7F7)'),
+                   'defaultvalue'  => '#FFFFFF',
+                   'type'          => 'color',
+               ),
+               'mediaidx_bg_content' => array(
+                   'label'         => T_('Background Mediaidx Content'),
+                   'note'          => T_('Default color is #FFFFFF. Activated wen you use box style'),
+                   'defaultvalue'  => '#FFFFFF',
+                   'type'          => 'color',
+               ),
 				'section_mediaidx_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -328,12 +357,17 @@ class business_Skin extends Skin
       // Include Masonry Grind for MediaIdx
       if ( $disp == 'mediaidx' ) {
          require_js( $this->get_url().'assets/js/masonry.pkgd.min.js' );
+         require_js( $this->get_url().'assets/js/imagesloaded.pkgd.min.js' );
          add_js_headline("
 				jQuery( document ).ready( function($) {
-               $('.evo_image_index').masonry({
-                 // options
-                  itemSelector: '.grid-item',
+
+               $('.evo_image_index').imagesLoaded().done( function( instance ) {
+                  $('.evo_image_index').masonry({
+                   // options
+                    itemSelector: '.grid-item',
+                 });
                });
+
 				});
 			");
       }
@@ -341,6 +375,32 @@ class business_Skin extends Skin
       require_js( $this->get_url().'assets/js/scripts.js' );
 
 		// Skin specific initializations:
+      // Add Custome CSS
+      $custom_css = '';
+
+      /**
+       * ============================================================================
+       * Custom Style Mediaidx
+       * ============================================================================
+       */
+      if ( $padding = $this->get_setting( 'padding_column' ) ) {
+         $custom_css .= '.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li{ padding: '.$padding.'px }';
+      }
+
+      if ( $color = $this->get_setting( 'mediaidx_bg' ) ) {
+         $custom_css .= '.disp_mediaidx, .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .note {
+            background-color: '.$color.'; }';
+      }
+
+      if ( $color = $this->get_setting( 'mediaidx_bg_content' ) ) {
+         $custom_css .= '.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box,
+         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box .note {
+            background-color: '.$color.';}';
+      }
+
+      if ( ! empty( $custom_css ) ) {
+         add_css_headline( $custom_css );
+      }
 
 		// Limit images by max height:
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );

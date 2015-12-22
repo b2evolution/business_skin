@@ -15,7 +15,7 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $thumbnail_sizes, $Skin;
+global $thumbnail_sizes, $Skin, $Item;
 
 if( empty( $params ) )
 { // Initialize array with params
@@ -33,6 +33,7 @@ if( isset( $thumbnail_sizes[ $params['mediaidx_thumb_size'] ] ) )
 		.'height:'.$thumbnail_sizes[ $params['mediaidx_thumb_size'] ][2].'px"';
 }
 
+
 // Variable Option Disp Mediaidx
 // ======================================================================== /
 if ( $Skin->get_setting( 'mediaidx_title' ) == 1 ) {
@@ -49,6 +50,12 @@ if ( $mediaidx_grid == 'one_column' ) {
    $grid = 'three';
 }
 
+$style = '';
+if ( $Skin->get_setting( 'mediaidx_style' ) == 'box' ) {
+   $style = 'class="box"';
+}
+
+
 // --------------------------------- START OF MEDIA INDEX --------------------------------
 skin_widget( array(
 		// CODE for the widget:
@@ -63,7 +70,7 @@ skin_widget( array(
 		'list_start'          => '<ul class="evo_image_index">',
 		'list_end'            => '</ul>',
 		// 'item_start'         => '<li><figure'.$photocell_styles.'>',
-      'item_start'          => '<li class="grid-item '. $grid .'"><figure>',
+      'item_start'          => '<li class="grid-item '. $grid .'"><figure '. $style .'>',
 		'item_end'            => '</figure></li>',
 		'order_by'            => $Blog->get_setting('orderby'),
 		'order_dir'           => $Blog->get_setting('orderdir'),

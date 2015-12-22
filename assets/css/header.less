@@ -99,6 +99,7 @@
             background-color: transparent;
             color: @primary;
             font-weight: normal;
+            cursor: pointer;
 
             &::after{
                opacity: 1;
@@ -123,7 +124,7 @@
                opacity: 0;
             }
 
-            &:hover{
+            &:hover, &:active, &:focus{
                background-color: transparent;
                border: 0;
                color: @primary;
