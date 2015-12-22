@@ -41,9 +41,21 @@
                   width: 100%;
                   float: none;
 
+                  .box {
+                     &.title a {
+                        &::after {
+                           bottom: 42px;
+                        }
+                     }
+                  }
+
                   .note {
                      font-size: 2.4rem;
                      padding-left: 30px;
+
+                     &::after {
+                        bottom: 24px;
+                     }
                   }
                }
 
@@ -51,6 +63,10 @@
                   width: 33.333%;
 
                   .box {
+
+                     &.title a::after {
+                        bottom: 28px;
+                     }
 
                      a{
                         &::after {
@@ -90,7 +106,7 @@
                      box-shadow: @bx_post;
                      border-radius: 2px;
 
-                     a {
+                     &.title a {
                         &::after {
                            content: '';
                            position: absolute;

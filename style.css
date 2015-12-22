@@ -909,12 +909,21 @@ body.loggedin #main-header {
   width: 100%;
   float: none;
 }
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one .box.title a::after {
+  bottom: 42px;
+}
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one .note {
   font-size: 2.4rem;
   padding-left: 30px;
 }
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.one .note::after {
+  bottom: 24px;
+}
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three {
   width: 33.333%;
+}
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .box.title a::after {
+  bottom: 28px;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li.three .box a::after {
   bottom: 30px;
@@ -940,7 +949,7 @@ body.loggedin #main-header {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
 }
-.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box a::after {
+.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box.title a::after {
   content: '';
   position: absolute;
   left: 0;

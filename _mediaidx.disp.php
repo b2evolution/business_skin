@@ -52,7 +52,12 @@ if ( $mediaidx_grid == 'one_column' ) {
 
 $style = '';
 if ( $Skin->get_setting( 'mediaidx_style' ) == 'box' ) {
-   $style = 'class="box"';
+   $style = 'box';
+}
+
+$show_title = '';
+if ( $Skin->get_setting( 'mediaidx_title' )  == 1 ) {
+   $show_title = " title";
 }
 
 
@@ -70,7 +75,7 @@ skin_widget( array(
 		'list_start'          => '<ul class="evo_image_index">',
 		'list_end'            => '</ul>',
 		// 'item_start'         => '<li><figure'.$photocell_styles.'>',
-      'item_start'          => '<li class="grid-item '. $grid .'"><figure '. $style .'>',
+      'item_start'          => '<li class="grid-item '. $grid .'"><figure class="'. $style . $show_title .'">',
 		'item_end'            => '</figure></li>',
 		'order_by'            => $Blog->get_setting('orderby'),
 		'order_dir'           => $Blog->get_setting('orderdir'),
