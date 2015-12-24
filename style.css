@@ -958,11 +958,11 @@ body.loggedin #main-header {
   margin: 0 auto;
   width: 90%;
   height: 1px;
-  background-color: #777777;
+  background-color: #222222;
   z-index: 1;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box img {
-  border-radius: 2px;
+  border-radius: 2px 2px 0 0;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box .note {
   position: relative;

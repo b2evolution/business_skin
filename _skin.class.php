@@ -187,7 +187,7 @@ class business_Skin extends Skin
 					),
                'mediaidx_style' => array(
 						'label'          => T_('Mediaidx Style'),
-						'note'           => T_('If you use box style you should change mediaidx background color. Exaple ( #F7F7F7 )'),
+						'note'           => T_('If you use box style you should change Mediaidx Background Color. Example ( #F7F7F7 )'),
 						'defaultvalue'   => 'default',
                   'type'           => 'select',
 						'options'        => array(
@@ -216,8 +216,14 @@ class business_Skin extends Skin
                ),
                'mediaidx_bg_content' => array(
                    'label'         => T_('Background Mediaidx Content'),
-                   'note'          => T_('Default color is #FFFFFF. Activated wen you use box style'),
+                   'note'          => T_('Default color is #FFFFFF. Activated when you use box style'),
                    'defaultvalue'  => '#FFFFFF',
+                   'type'          => 'color',
+               ),
+               'mediaidx_title_color' => array(
+                   'label'         => T_('Mediaidx Title Color'),
+                   'note'          => T_('Default color is #222222. Activated when you use box style and checklis display title'),
+                   'defaultvalue'  => '#222222',
                    'type'          => 'color',
                ),
 				'section_mediaidx_end' => array(
@@ -395,6 +401,15 @@ class business_Skin extends Skin
       if ( $color = $this->get_setting( 'mediaidx_bg_content' ) ) {
          $custom_css .= '.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box,
          .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box .note {
+            background-color: '.$color.';}';
+      }
+
+      if ( $color = $this->get_setting( 'mediaidx_title_color' ) ) {
+         $custom_css .= '.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .note {
+            color: '.$color.';}';
+      }
+      if ( $bg_color = $this->get_setting( 'mediaidx_title_color' ) ) {
+         $custom_css .= '.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box.title a::after {
             background-color: '.$color.';}';
       }
 
