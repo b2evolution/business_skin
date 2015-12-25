@@ -1089,6 +1089,11 @@ body.loggedin #main-header {
   padding-right: 10px;
   background-color: #1dc6df;
 }
+.disp_search .search_result {
+  padding: 0 0 15px 0;
+  margin: 0 15px 15px;
+  border-bottom: 1px solid #e4e4e4;
+}
 /* ----------------------------------------------------------------------------
  * Main Sidebar
  * -------------------------------------------------------------------------- */
