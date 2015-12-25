@@ -3,9 +3,9 @@
 /**
  * Thanks to use Business Blog Skin
  *
- * Author: Ariflaw
- * Autor URI: http://www.ariflaw.com
- * Author Contact: hello@ariflaw.com
+ * Author:          Ariflaw
+ * Autor URI:       http://www.ariflaw.com
+ * Author Contact:  hello@ariflaw.com
  *
  * @support By B2evolution
  */
@@ -347,6 +347,42 @@ body.loggedin #main-header {
   background: #1dc6df;
   color: #ffffff;
   border-color: transparent;
+}
+/* ----------------------------------------------------------------------------
+ * Pagination
+ * -------------------------------------------------------------------------- */
+.pagination {
+  display: block;
+  margin: 0 0 30px;
+  border-radius: 0;
+}
+.pagination .active span,
+.pagination .active span:hover {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+  color: #ffffff;
+}
+.pagination li a,
+.pagination li span {
+  float: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  margin: 1px;
+  border-radius: 2px !important;
+  border-color: transparent;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.pagination li a:hover,
+.pagination li span:hover,
+.pagination li a:focus,
+.pagination li span:focus {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+  color: #ffffff;
+}
+.pagination li a {
+  color: #1dc6df;
 }
 .disp_posts {
   /* ----------------------------------------------------------------------------
@@ -1995,42 +2031,6 @@ div.bSideItem h4 {
 }
 .form_footer_notes {
   margin-top: 0;
-}
-/* ----------------------------------------------------------------------------
- * Pagination
- * -------------------------------------------------------------------------- */
-.pagination {
-  display: block;
-  margin: 0 0 30px;
-  border-radius: 0;
-}
-.pagination .active span,
-.pagination .active span:hover {
-  background-color: #1dc6df;
-  border-color: #1dc6df;
-  color: #ffffff;
-}
-.pagination li a,
-.pagination li span {
-  float: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 8px 16px;
-  margin: 1px;
-  border-radius: 2px !important;
-  border-color: transparent;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-.pagination li a:hover,
-.pagination li span:hover,
-.pagination li a:focus,
-.pagination li span:focus {
-  background-color: #1dc6df;
-  border-color: #1dc6df;
-  color: #ffffff;
-}
-.pagination li a {
-  color: #1dc6df;
 }
 div.action_messages,
 div.log_container {

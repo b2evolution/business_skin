@@ -180,3 +180,47 @@
    }
 
 }
+
+
+/* ----------------------------------------------------------------------------
+ * Pagination
+ * -------------------------------------------------------------------------- */
+.pagination {
+   display: block;
+	margin: 0 0 30px;
+   border-radius: 0;
+
+   .active{
+      span, span:hover{
+         background-color: @primary;
+         border-color: @primary;
+         color: @w;
+      }
+   }
+
+   li{
+
+      a, span {
+         float: none;
+         font-size: 1.6rem;
+         font-weight: 600;
+         padding: 8px 16px;
+         margin: 1px;
+         border-radius: 2px !important;
+         border-color: transparent;
+         box-shadow: @bx_post;
+
+         &:hover, &:focus {
+            background-color: @primary;
+            border-color: @primary;
+            color: @w;
+         }
+      }
+
+      a {
+         color: @primary;
+      }
+
+   }
+
+}

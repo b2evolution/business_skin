@@ -58,39 +58,39 @@ siteskin_include( '_site_body_header.inc.php' );
 
       </div><!-- .row -->
    </div><!-- .container -->
-</header><!-- .row -->
+</header><!-- #header-top -->
 <?php } ?>
 
 <header id="main-header">
    <div class="container">
       <div class="row">
 
-   	<div class="coll-xs-12 coll-sm-12 col-md-4">
-   		<div class="evo_container">
-         <?php
-   			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
-   			// Display container and contents:
-   			skin_container( NT_('Header'), array(
-   					// The following params will be used as defaults for widgets included in this container:
-   					'block_start'       => '<div class="evo_widget $wi_class$">',
-   					'block_end'         => '</div>',
-   					'block_title_start' => '<h1>',
-   					'block_title_end'   => '</h1>',
-   				) );
-   			// ----------------------------- END OF "Header" CONTAINER -----------------------------
-   		?>
-   		</div>
-   	</div><!-- .col -->
-
-   	<div class="coll-xs-12 col-sm-12 col-md-8">
-         <nav class="primary-nav">
-
-      		<ul class="nav nav-tabs evo_container evo_container__menu">
-      		<?php
-      			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
+      	<div class="coll-xs-12 coll-sm-12 col-md-4">
+      		<div class="evo_container">
+            <?php
+      			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
       			// Display container and contents:
-      			// Note: this container is designed to be a single <ul> list
-      			skin_container( NT_('Menu'), array(
+      			skin_container( NT_('Header'), array(
+      					// The following params will be used as defaults for widgets included in this container:
+      					'block_start'       => '<div class="evo_widget $wi_class$">',
+      					'block_end'         => '</div>',
+      					'block_title_start' => '<h1>',
+      					'block_title_end'   => '</h1>',
+      				) );
+      			// ----------------------------- END OF "Header" CONTAINER -----------------------------
+      		?>
+      		</div>
+      	</div><!-- .col -->
+
+      	<div class="coll-xs-12 col-sm-12 col-md-8">
+            <nav class="primary-nav">
+
+         		<ul class="nav nav-tabs evo_container evo_container__menu">
+         		<?php
+         			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
+         			// Display container and contents:
+         			// Note: this container is designed to be a single <ul> list
+         			skin_container( NT_('Menu'), array(
       					// The following params will be used as defaults for widgets included in this container:
       					'block_start'         => '',
       					'block_end'           => '',
@@ -104,13 +104,13 @@ siteskin_include( '_site_body_header.inc.php' );
       					'item_title_before'   => '',
       					'item_title_after'    => '',
       				) );
-      			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-      		?>
-      		</ul>
+         			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
+         		?>
+         		</ul>
 
-         </nav><!-- .primary-nav -->
-   	</div><!-- .col -->
+            </nav><!-- .primary-nav -->
+      	</div><!-- .col -->
 
       </div><!-- .row -->
    </div><!-- .container -->
-</header><!-- .row -->
+</header><!-- #main-header -->

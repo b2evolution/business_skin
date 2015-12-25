@@ -41,63 +41,65 @@ skin_include( '_body_header.inc.php' );
 <main id="main-mediaidx"><!-- This is were a link like "Jump to main content" would land -->
    <div class="container">
       <div class="row">
-         <!-- ================================= START OF MAIN AREA ================================== -->
 
-         <?php
-         if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
-         { // Don't display the messages here because they are displayed inside wrapper to have the same width as form
-            // ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
-            messages( array(
+         <!-- ================================= START OF MAIN AREA ================================== -->
+         <div class="<?php if( $Skin->get_setting( 'mediaidx_sidebar' ) == 1 ) { echo $Skin->get_column_class(); } ?>">
+
+            <?php
+            if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
+            { // Don't display the messages here because they are displayed inside wrapper to have the same width as form
+               // ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
+               messages( array(
                   'block_start' => '<div class="action_messages">',
                   'block_end'   => '</div>',
                ) );
-            // --------------------------------- END OF MESSAGES ---------------------------------
-         }
-         ?>
+               // --------------------------------- END OF MESSAGES ---------------------------------
+            }
+            ?>
 
-         <?php
-            // ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
-            item_prevnext_links( array(
+            <?php
+               // ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
+               item_prevnext_links( array(
                   'block_start' => '<nav><ul class="pager">',
-                     'prev_start'  => '<li class="previous">',
-                     'prev_end'    => '</li>',
-                     'next_start'  => '<li class="next">',
-                     'next_end'    => '</li>',
+                  'prev_start'  => '<li class="previous">',
+                  'prev_end'    => '</li>',
+                  'next_start'  => '<li class="next">',
+                  'next_end'    => '</li>',
                   'block_end'   => '</ul></nav>',
                ) );
-            // ------------------------- END OF PREV/NEXT POST LINKS -------------------------
-         ?>
+               // ------------------------- END OF PREV/NEXT POST LINKS -------------------------
+            ?>
 
-         <?php
-            // ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-            request_title( array(
-                  'title_before'      => '<h2 class="title_mediaidx">',
-                  'title_after'       => '</h2>',
-                  'title_none'        => '',
-                  'glue'              => ' - ',
-                  'title_single_disp' => false,
-                  'title_page_disp'   => false,
-                  'format'            => 'htmlbody',
-                  'register_text'     => '',
-                  'login_text'        => '',
-                  'lostpassword_text' => '',
+            <?php
+               // ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
+               request_title( array(
+                  'title_before'       => '<h2 class="title_mediaidx">',
+                  'title_after'        => '</h2>',
+                  'title_none'         => '',
+                  'glue'               => ' - ',
+                  'title_single_disp'  => false,
+                  'title_page_disp'    => false,
+                  'format'             => 'htmlbody',
+                  'register_text'      => '',
+                  'login_text'         => '',
+                  'lostpassword_text'  => '',
                   'account_activation' => '',
-                  'msgform_text'      => '',
-                  'user_text'         => '',
-                  'users_text'        => '',
-                  'display_edit_links'=> false,
-                  'arcdir_text'       => T_('Index'),
-                  'catdir_text'       => '',
-                  'category_text'     => T_('Gallery').': ',
-                  'categories_text'   => T_('Galleries').': ',
+                  'msgform_text'       => '',
+                  'user_text'          => '',
+                  'users_text'         => '',
+                  'display_edit_links' => false,
+                  'arcdir_text'        => T_('Index'),
+                  'catdir_text'        => '',
+                  'category_text'      => T_('Gallery').': ',
+                  'categories_text'    => T_('Galleries').': ',
                ) );
-            // ----------------------------- END OF REQUEST TITLE ----------------------------
-         ?>
+               // ----------------------------- END OF REQUEST TITLE ----------------------------
+            ?>
 
 
-   		<?php
-   			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
-   			skin_include( '$disp$', array(
+      		<?php
+      			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
+      			skin_include( '$disp$', array(
    					'author_link_text'     => 'preferredname',
    					'item_class'           => 'evo_post evo_content_block',
    					'item_type_class'      => 'evo_post__ptyp_',
@@ -110,10 +112,22 @@ skin_include( '_body_header.inc.php' );
    					'register_page_after'  => '</div></div>',
    					'display_abort_link'   => ( $Blog->get_setting( 'allow_access' ) == 'public' ), // Display link to abort login only when it is really possible
    				) );
-   			// Note: you can customize any of the sub templates included here by
-   			// copying the matching php file into your skin directory.
-   			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
-   		?>
+      			// Note: you can customize any of the sub templates included here by
+      			// copying the matching php file into your skin directory.
+      			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
+      		?>
+
+         </div><!-- .col -->
+
+         <?php
+            if ( $Skin->get_setting( 'mediaidx_sidebar' ) == 1 ) { // Display Sidebar for Mediaidx
+               // ------------------------- SIDEBAR INCLUDED HERE --------------------------
+               skin_include( '_sidebar.inc.php' );
+               // Note: You can customize the sidebar by copying the
+               // _sidebar.inc.php file into the current skin folder.
+               // ----------------------------- END OF SIDEBAR -----------------------------
+            }
+         ?>
 
    	</div><!-- .row -->
 
@@ -123,11 +137,11 @@ skin_include( '_body_header.inc.php' );
    	{	// Don't display the pages on disp=catdir because we don't have a limit by page there
    		// -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
    		mainlist_page_links( array(
-   				'block_start' => '<div class="nav_pages">',
-   				'block_end' => '</div>',
-   				'prev_text' => '&lt;&lt;',
-   				'next_text' => '&gt;&gt;',
-   			) );
+				'block_start' => '<div class="nav_pages">',
+				'block_end'   => '</div>',
+				'prev_text'   => '&lt;&lt;',
+				'next_text'   => '&gt;&gt;',
+			) );
    		// ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
    	}
    	?>

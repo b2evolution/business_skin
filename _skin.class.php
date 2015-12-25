@@ -74,36 +74,36 @@ class business_Skin extends Skin
 					'label'  => T_('General Settings')
 				),
 					'layout' => array(
-						'label' => T_('Layout'),
-						'note' => '',
+						'label'     => T_('Layout'),
+						'note'      => '',
+						'type'      => 'select',
+						'options'   => array(
+							'single_column'              => T_('Single Column Large'),
+							'single_column_normal'       => T_('Single Column'),
+							'single_column_narrow'       => T_('Single Column Narrow'),
+							'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
+							'left_sidebar'               => T_('Left Sidebar'),
+							'right_sidebar'              => T_('Right Sidebar'),
+						),
 						'defaultvalue' => 'right_sidebar',
-						'options' => array(
-								'single_column'              => T_('Single Column Large'),
-								'single_column_normal'       => T_('Single Column'),
-								'single_column_narrow'       => T_('Single Column Narrow'),
-								'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
-								'left_sidebar'               => T_('Left Sidebar'),
-								'right_sidebar'              => T_('Right Sidebar'),
-							),
-						'type' => 'select',
 					),
 					'max_image_height' => array(
-						'label' => T_('Max image height'),
-						'note' => 'px',
+						'label'        => T_( 'Max image height' ),
+						'note'         => 'px',
 						'defaultvalue' => '',
-						'type' => 'integer',
-						'allow_empty' => true,
+						'type'         => 'integer',
+						'allow_empty'  => true,
 					),
                'layout_posts' => array(
-						'label' => T_('Layout Posts'),
-						'note' => T_('Select Layout for Posts'),
-						'defaultvalue' => 'standard',
-						'options' => array(
-								'regular'      => T_('Regular Layout'),
-								'mini_blog'    => T_('Mini Blog Layout'),
-                     ),
-						'type' => 'select',
-					),
+                  'label'    => T_('Layout Posts'),
+                  'note'     => T_('Select Layout for Posts'),
+                  'type'     => 'select',
+                  'options'  => array(
+                     'regular'      => T_('Regular Layout'),
+                     'mini_blog'    => T_('Mini Blog Layout'),
+                  ),
+                  'defaultvalue' => 'standard',
+               ),
                'pagination_top_show' => array(
                   'label'        => T_('Show Pagination Top'),
                   'note'         => T_('Check to display Pagination top'),
@@ -185,6 +185,26 @@ class business_Skin extends Skin
 								'three_column'     => T_('3 Column'),
 							),
 					),
+               'mediaidx_sidebar' => array(
+						'label'        => T_('Display Sidebar'),
+						'note'         => T_('Check to display sidebar for Mediaidx. To settings sidebar, you can set on "General Layout".'),
+						'defaultvalue' => 0,
+						'type'         => 'checkbox',
+					),
+               'mediaidx_layout' => array(
+						'label'     => T_('Layout Mediaidx'),
+						'note'      => '',
+						'type'      => 'select',
+						'options'   => array(
+							'single_column'              => T_('Single Column Large'),
+							'single_column_normal'       => T_('Single Column'),
+							'single_column_narrow'       => T_('Single Column Narrow'),
+							'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
+							'left_sidebar'               => T_('Left Sidebar'),
+							'right_sidebar'              => T_('Right Sidebar'),
+						),
+						'defaultvalue' => 'right_sidebar',
+					),
                'mediaidx_style' => array(
 						'label'          => T_('Mediaidx Style'),
 						'note'           => T_('If you use box style you should change Mediaidx Background Color. Example ( #F7F7F7 )'),
@@ -236,46 +256,46 @@ class business_Skin extends Skin
 					'label'  => T_('Colorbox Image Zoom')
 				),
 					'colorbox' => array(
-						'label' => T_('Colorbox Image Zoom'),
-						'note' => T_('Check to enable javascript zooming on images (using the colorbox script)'),
+						'label'        => T_('Colorbox Image Zoom'),
+						'note'         => T_('Check to enable javascript zooming on images (using the colorbox script)'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'colorbox_vote_post' => array(
-						'label' => T_('Voting on Post Images'),
-						'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
+						'label'        => T_('Voting on Post Images'),
+						'note'         => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'colorbox_vote_post_numbers' => array(
-						'label' => T_('Display Votes'),
-						'note' => T_('Check to display number of likes and dislikes'),
+						'label'        => T_('Display Votes'),
+						'note'         => T_('Check to display number of likes and dislikes'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'colorbox_vote_comment' => array(
-						'label' => T_('Voting on Comment Images'),
-						'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
+						'label'        => T_('Voting on Comment Images'),
+						'note'         => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'colorbox_vote_comment_numbers' => array(
-						'label' => T_('Display Votes'),
-						'note' => T_('Check to display number of likes and dislikes'),
+						'label'        => T_('Display Votes'),
+						'note'         => T_('Check to display number of likes and dislikes'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'colorbox_vote_user' => array(
-						'label' => T_('Voting on User Images'),
-						'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
+						'label'        => T_('Voting on User Images'),
+						'note'         => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'colorbox_vote_user_numbers' => array(
-						'label' => T_('Display Votes'),
-						'note' => T_('Check to display number of likes and dislikes'),
+						'label'        => T_('Display Votes'),
+						'note'         => T_('Check to display number of likes and dislikes'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 				'section_colorbox_end' => array(
 					'layout' => 'end_fieldset',
@@ -287,22 +307,22 @@ class business_Skin extends Skin
 					'label'  => T_('Username options')
 				),
 					'gender_colored' => array(
-						'label' => T_('Display gender'),
-						'note' => T_('Use colored usernames to differentiate men & women.'),
+						'label'        => T_('Display gender'),
+						'note'         => T_('Use colored usernames to differentiate men & women.'),
 						'defaultvalue' => 0,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'bubbletip' => array(
-						'label' => T_('Username bubble tips'),
-						'note' => T_('Check to enable bubble tips on usernames'),
+						'label'        => T_('Username bubble tips'),
+						'note'         => T_('Check to enable bubble tips on usernames'),
 						'defaultvalue' => 0,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 					'autocomplete_usernames' => array(
-						'label' => T_('Autocomplete usernames'),
-						'note' => T_('Check to enable auto-completion of usernames entered after a "@" sign in the comment forms'),
+						'label'        => T_('Autocomplete usernames'),
+						'note'         => T_('Check to enable auto-completion of usernames entered after a "@" sign in the comment forms'),
 						'defaultvalue' => 1,
-						'type' => 'checkbox',
+						'type'         => 'checkbox',
 					),
 				'section_username_end' => array(
 					'layout' => 'end_fieldset',
@@ -314,9 +334,9 @@ class business_Skin extends Skin
 					'label'  => T_('When access is denied or requires login...')
 				),
 					'access_login_containers' => array(
-						'label' => T_('Display on login screen'),
-						'note' => '',
-						'type' => 'checklist',
+						'label'   => T_('Display on login screen'),
+						'note'    => '',
+						'type'    => 'checklist',
 						'options' => array(
 							array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
 							array( 'page_top', sprintf( T_('"%s" container'), NT_('Page Top') ),  1 ),
@@ -346,16 +366,16 @@ class business_Skin extends Skin
 
 		// Request some common features that the parent function (Skin::display_init()) knows how to provide:
 		parent::display_init( array(
-				'jquery',                  // Load jQuery
-				'font_awesome',            // Load Font Awesome (and use its icons as a priority over the Bootstrap glyphicons)
-				'bootstrap',               // Load Bootstrap (without 'bootstrap_theme_css')
-				'bootstrap_evo_css',       // Load the b2evo_base styles for Bootstrap (instead of the old b2evo_base styles)
-				'bootstrap_messages',      // Initialize $Messages Class to use Bootstrap styles
-				'style_css',               // Load the style.css file of the current skin
-				'colorbox',                // Load Colorbox (a lightweight Lightbox alternative + customizations for b2evo)
-				'bootstrap_init_tooltips', // Inline JS to init Bootstrap tooltips (E.g. on comment form for allowed file extensions)
-				'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
-			) );
+			'jquery',                  // Load jQuery
+			'font_awesome',            // Load Font Awesome (and use its icons as a priority over the Bootstrap glyphicons)
+			'bootstrap',               // Load Bootstrap (without 'bootstrap_theme_css')
+			'bootstrap_evo_css',       // Load the b2evo_base styles for Bootstrap (instead of the old b2evo_base styles)
+			'bootstrap_messages',      // Initialize $Messages Class to use Bootstrap styles
+			'style_css',               // Load the style.css file of the current skin
+			'colorbox',                // Load Colorbox (a lightweight Lightbox alternative + customizations for b2evo)
+			'bootstrap_init_tooltips', // Inline JS to init Bootstrap tooltips (E.g. on comment form for allowed file extensions)
+			'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
+		) );
 
       //Include script and styles for Sticky Menu
 		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
@@ -702,15 +722,15 @@ class business_Skin extends Skin
 			case 'plugin_template':
 				// Template for plugins:
 				return array(
-						// This template is used to build a plugin toolbar with action buttons above edit item/comment area:
-						'toolbar_before'       => '<div class="btn-toolbar $toolbar_class$" role="toolbar">',
-						'toolbar_after'        => '</div>',
-						'toolbar_title_before' => '<div class="btn-toolbar-title">',
-						'toolbar_title_after'  => '</div>',
-						'toolbar_group_before' => '<div class="btn-group btn-group-xs" role="group">',
-						'toolbar_group_after'  => '</div>',
-						'toolbar_button_class' => 'btn btn-default',
-					);
+					// This template is used to build a plugin toolbar with action buttons above edit item/comment area:
+					'toolbar_before'       => '<div class="btn-toolbar $toolbar_class$" role="toolbar">',
+					'toolbar_after'        => '</div>',
+					'toolbar_title_before' => '<div class="btn-toolbar-title">',
+					'toolbar_title_after'  => '</div>',
+					'toolbar_group_before' => '<div class="btn-group btn-group-xs" role="group">',
+					'toolbar_group_after'  => '</div>',
+					'toolbar_button_class' => 'btn btn-default',
+				);
 
 			case 'modal_window_js_func':
 				// JavaScript function to initialize Modal windows, @see echo_user_ajaxwindow_js()
@@ -773,7 +793,13 @@ class business_Skin extends Skin
 	 */
 	function get_column_class()
 	{
-		switch( $this->get_setting( 'layout' ) )
+      $class = 'layout';
+
+      if( $this->get_setting( 'mediaidx_sidebar' )  == 1 && $disp = 'mediaidx' ) {
+         $class = 'mediaidx_layout';
+      }
+
+		switch( $this->get_setting( $class ) )
 		{
 			case 'single_column':
 				// Single Column Large

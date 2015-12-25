@@ -17,18 +17,17 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 global $thumbnail_sizes, $Skin, $Item;
 
-if( empty( $params ) )
-{ // Initialize array with params
+if( empty( $params ) ) { // Initialize array with params
 	$params = array();
 }
+
 // Merge the params from current skin
 $params = array_merge( array(
-		'mediaidx_thumb_size' => $Skin->get_setting( 'mediaidx_thumb_size' ),
-	), $params );
-$photocell_styles = '';
+	'mediaidx_thumb_size' => $Skin->get_setting( 'mediaidx_thumb_size' ),
+), $params );
 
-if( isset( $thumbnail_sizes[ $params['mediaidx_thumb_size'] ] ) )
-{
+$photocell_styles = '';
+if( isset( $thumbnail_sizes[ $params['mediaidx_thumb_size'] ] ) ) {
 	$photocell_styles = ' style="width:'.$thumbnail_sizes[ $params['mediaidx_thumb_size'] ][1].'px;'
 		.'height:'.$thumbnail_sizes[ $params['mediaidx_thumb_size'] ][2].'px"';
 }
@@ -63,24 +62,24 @@ if ( $Skin->get_setting( 'mediaidx_title' )  == 1 ) {
 
 // --------------------------------- START OF MEDIA INDEX --------------------------------
 skin_widget( array(
-		// CODE for the widget:
-		'widget'              => 'coll_media_index',
-		// Optional display params
-		'block_start'         => '<div class="evo_widget $wi_class$">',
-		'block_end'           => '</div>',
-		'block_display_title' => false,
-		'thumb_size'          => $params['mediaidx_thumb_size'],
-		'thumb_layout'        => 'list',
-      'disp_image_title'    => $title_image,
-		'list_start'          => '<ul class="evo_image_index">',
-		'list_end'            => '</ul>',
-		// 'item_start'         => '<li><figure'.$photocell_styles.'>',
-      'item_start'          => '<li class="grid-item '. $grid .'"><figure class="'. $style . $show_title .'">',
-		'item_end'            => '</figure></li>',
-		'order_by'            => $Blog->get_setting('orderby'),
-		'order_dir'           => $Blog->get_setting('orderdir'),
-		'limit'               => 100,
-	) );
+	// CODE for the widget:
+	'widget'              => 'coll_media_index',
+	// Optional display params
+	'block_start'         => '<div class="evo_widget $wi_class$">',
+	'block_end'           => '</div>',
+	'block_display_title' => false,
+	'thumb_size'          => $params['mediaidx_thumb_size'],
+	'thumb_layout'        => 'list',
+   'disp_image_title'    => $title_image,
+	'list_start'          => '<ul class="evo_image_index">',
+	'list_end'            => '</ul>',
+	// 'item_start'         => '<li><figure'.$photocell_styles.'>',
+   'item_start'          => '<li class="grid-item '. $grid .'"><figure class="'. $style . $show_title .'">',
+	'item_end'            => '</figure></li>',
+	'order_by'            => $Blog->get_setting('orderby'),
+	'order_dir'           => $Blog->get_setting('orderdir'),
+	'limit'               => 100,
+) );
 // ---------------------------------- END OF MEDIA INDEX ---------------------------------
 
 ?>

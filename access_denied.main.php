@@ -37,7 +37,6 @@ siteskin_include( '_site_body_header.inc.php' );
 
 <div class="container">
 
-
 <header class="row">
 
 	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
@@ -103,19 +102,19 @@ if( $Skin->is_visible_container( 'menu' ) )
 			// Display container and contents:
 			// Note: this container is designed to be a single <ul> list
 			skin_container( NT_('Menu'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'         => '',
-					'block_end'           => '',
-					'block_display_title' => false,
-					'list_start'          => '',
-					'list_end'            => '',
-					'item_start'          => '<li class="evo_widget $wi_class$">',
-					'item_end'            => '</li>',
-					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
-					'item_selected_end'   => '</li>',
-					'item_title_before'   => '',
-					'item_title_after'    => '',
-				) );
+				// The following params will be used as defaults for widgets included in this container:
+				'block_start'         => '',
+				'block_end'           => '',
+				'block_display_title' => false,
+				'list_start'          => '',
+				'list_end'            => '',
+				'item_start'          => '<li class="evo_widget $wi_class$">',
+				'item_end'            => '</li>',
+				'item_selected_start' => '<li class="active evo_widget $wi_class$">',
+				'item_selected_end'   => '</li>',
+				'item_title_before'   => '',
+				'item_title_after'    => '',
+			) );
 			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
 		?>
 		</ul>
@@ -134,20 +133,20 @@ if( $Skin->is_visible_container( 'menu' ) )
 		<?php
 			// ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
 			messages( array(
-					'block_start' => '<div class="action_messages">',
-					'block_end'   => '</div>',
-				) );
+				'block_start' => '<div class="action_messages">',
+				'block_end'   => '</div>',
+			) );
 			// --------------------------------- END OF MESSAGES ---------------------------------
 		?>
 
 		<?php
 			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
 			request_title( array(
-					'title_before'      => '<h2 class="page_title">',
-					'title_after'       => '</h2>',
-					'title_none'        => '',
-					'glue'              => ' - ',
-				) );
+				'title_before'      => '<h2 class="page_title">',
+				'title_after'       => '</h2>',
+				'title_none'        => '',
+				'glue'              => ' - ',
+			) );
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
@@ -178,35 +177,35 @@ if( $Skin->is_visible_container( 'menu' ) )
 			// ------------------------- "Sidebar" CONTAINER EMBEDDED HERE --------------------------
 			// Display container contents:
 			skin_container( NT_('Sidebar'), array(
-					// The following (optional) params will be used as defaults for widgets included in this container:
-					// This will enclose each widget in a block:
-					'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
-					'block_end' => '</div>',
-					// This will enclose the title of each widget:
-					'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
-					'block_title_end' => '</h4></div>',
-					// This will enclose the body of each widget:
-					'block_body_start' => '<div class="panel-body">',
-					'block_body_end' => '</div>',
-					// If a widget displays a list, this will enclose that list:
-					'list_start' => '<ul>',
-					'list_end' => '</ul>',
-					// This will enclose each item in a list:
-					'item_start' => '<li>',
-					'item_end' => '</li>',
-					// This will enclose sub-lists in a list:
-					'group_start' => '<ul>',
-					'group_end' => '</ul>',
-					// This will enclose (foot)notes:
-					'notes_start' => '<div class="notes">',
-					'notes_end' => '</div>',
-					// Widget 'Search form':
-					'search_class'         => 'compact_search_form',
-					'search_input_before'  => '<div class="input-group">',
-					'search_input_after'   => '',
-					'search_submit_before' => '<span class="input-group-btn">',
-					'search_submit_after'  => '</span></div>',
-				) );
+				// The following (optional) params will be used as defaults for widgets included in this container:
+				// This will enclose each widget in a block:
+				'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
+				'block_end' => '</div>',
+				// This will enclose the title of each widget:
+				'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
+				'block_title_end' => '</h4></div>',
+				// This will enclose the body of each widget:
+				'block_body_start' => '<div class="panel-body">',
+				'block_body_end' => '</div>',
+				// If a widget displays a list, this will enclose that list:
+				'list_start' => '<ul>',
+				'list_end' => '</ul>',
+				// This will enclose each item in a list:
+				'item_start' => '<li>',
+				'item_end' => '</li>',
+				// This will enclose sub-lists in a list:
+				'group_start' => '<ul>',
+				'group_end' => '</ul>',
+				// This will enclose (foot)notes:
+				'notes_start' => '<div class="notes">',
+				'notes_end' => '</div>',
+				// Widget 'Search form':
+				'search_class'         => 'compact_search_form',
+				'search_input_before'  => '<div class="input-group">',
+				'search_input_after'   => '',
+				'search_submit_before' => '<span class="input-group-btn">',
+				'search_submit_after'  => '</span></div>',
+			) );
 			// ----------------------------- END OF "Sidebar" CONTAINER -----------------------------
 		?>
 		</div>
@@ -221,35 +220,35 @@ if( $Skin->is_visible_container( 'menu' ) )
 			// ------------------------- "Sidebar" CONTAINER EMBEDDED HERE --------------------------
 			// Display container contents:
 			skin_container( NT_('Sidebar 2'), array(
-					// The following (optional) params will be used as defaults for widgets included in this container:
-					// This will enclose each widget in a block:
-					'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
-					'block_end' => '</div>',
-					// This will enclose the title of each widget:
-					'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
-					'block_title_end' => '</h4></div>',
-					// This will enclose the body of each widget:
-					'block_body_start' => '<div class="panel-body">',
-					'block_body_end' => '</div>',
-					// If a widget displays a list, this will enclose that list:
-					'list_start' => '<ul>',
-					'list_end' => '</ul>',
-					// This will enclose each item in a list:
-					'item_start' => '<li>',
-					'item_end' => '</li>',
-					// This will enclose sub-lists in a list:
-					'group_start' => '<ul>',
-					'group_end' => '</ul>',
-					// This will enclose (foot)notes:
-					'notes_start' => '<div class="notes">',
-					'notes_end' => '</div>',
-					// Widget 'Search form':
-					'search_class'         => 'compact_search_form',
-					'search_input_before'  => '<div class="input-group">',
-					'search_input_after'   => '',
-					'search_submit_before' => '<span class="input-group-btn">',
-					'search_submit_after'  => '</span></div>',
-				) );
+				// The following (optional) params will be used as defaults for widgets included in this container:
+				// This will enclose each widget in a block:
+				'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
+				'block_end' => '</div>',
+				// This will enclose the title of each widget:
+				'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
+				'block_title_end' => '</h4></div>',
+				// This will enclose the body of each widget:
+				'block_body_start' => '<div class="panel-body">',
+				'block_body_end' => '</div>',
+				// If a widget displays a list, this will enclose that list:
+				'list_start' => '<ul>',
+				'list_end' => '</ul>',
+				// This will enclose each item in a list:
+				'item_start' => '<li>',
+				'item_end' => '</li>',
+				// This will enclose sub-lists in a list:
+				'group_start' => '<ul>',
+				'group_end' => '</ul>',
+				// This will enclose (foot)notes:
+				'notes_start' => '<div class="notes">',
+				'notes_end' => '</div>',
+				// Widget 'Search form':
+				'search_class'         => 'compact_search_form',
+				'search_input_before'  => '<div class="input-group">',
+				'search_input_after'   => '',
+				'search_submit_before' => '<span class="input-group-btn">',
+				'search_submit_after'  => '</span></div>',
+			) );
 			// ----------------------------- END OF "Sidebar" CONTAINER -----------------------------
 		?>
 		</div>
@@ -274,10 +273,10 @@ if( $Skin->is_visible_container( 'menu' ) )
 		<?php
 			// Display container and contents:
 			skin_container( NT_("Footer"), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'       => '<div class="evo_widget $wi_class$">',
-					'block_end'         => '</div>',
-				) );
+				// The following params will be used as defaults for widgets included in this container:
+				'block_start'       => '<div class="evo_widget $wi_class$">',
+				'block_end'         => '</div>',
+			) );
 			// Note: Double quotes have been used around "Footer" only for test purposes.
 		?>
 		</div>
@@ -287,9 +286,9 @@ if( $Skin->is_visible_container( 'menu' ) )
 			<?php
 				// Display footer text (text can be edited in Blog Settings):
 				$Blog->footer_text( array(
-						'before' => '',
-						'after'  => ' &bull; ',
-					) );
+					'before' => '',
+					'after'  => ' &bull; ',
+				) );
 
 			// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
 			?>
@@ -297,17 +296,17 @@ if( $Skin->is_visible_container( 'menu' ) )
 			<?php
 				// Display a link to contact the owner of this blog (if owner accepts messages):
 				$Blog->contact_link( array(
-						'before' => '',
-						'after'  => ' &bull; ',
-						'text'   => T_('Contact'),
-						'title'  => T_('Send a message to the owner of this blog...'),
-					) );
+					'before' => '',
+					'after'  => ' &bull; ',
+					'text'   => T_('Contact'),
+					'title'  => T_('Send a message to the owner of this blog...'),
+				) );
 				// Display a link to help page:
 				$Blog->help_link( array(
-						'before'      => ' ',
-						'after'       => ' ',
-						'text'        => T_('Help'),
-					) );
+					'before'      => ' ',
+					'after'       => ' ',
+					'text'        => T_('Help'),
+				) );
 			?>
 
 			<?php
@@ -315,12 +314,12 @@ if( $Skin->is_visible_container( 'menu' ) )
 				// If you can add your own credits without removing the defaults, you'll be very cool :))
 				// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
 				credits( array(
-						'list_start'  => '&bull;',
-						'list_end'    => ' ',
-						'separator'   => '&bull;',
-						'item_start'  => ' ',
-						'item_end'    => ' ',
-					) );
+					'list_start'  => '&bull;',
+					'list_end'    => ' ',
+					'separator'   => '&bull;',
+					'item_start'  => ' ',
+					'item_end'    => ' ',
+				) );
 			?>
 		</p>
 
