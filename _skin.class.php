@@ -185,25 +185,16 @@ class business_Skin extends Skin
 								'three_column'     => T_('3 Column'),
 							),
 					),
-               'mediaidx_sidebar' => array(
-						'label'        => T_('Display Sidebar'),
-						'note'         => T_('Check to display sidebar for Mediaidx. To settings sidebar, you can set on "General Layout".'),
-						'defaultvalue' => 0,
-						'type'         => 'checkbox',
-					),
                'mediaidx_layout' => array(
-						'label'     => T_('Layout Mediaidx'),
+						'label'     => T_( 'Layout Mediaidx' ),
 						'note'      => '',
 						'type'      => 'select',
 						'options'   => array(
-							'single_column'              => T_('Single Column Large'),
-							'single_column_normal'       => T_('Single Column'),
-							'single_column_narrow'       => T_('Single Column Narrow'),
-							'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
-							'left_sidebar'               => T_('Left Sidebar'),
-							'right_sidebar'              => T_('Right Sidebar'),
+							'no_sidebar'        => T_( 'No Sidebar' ),
+							'left_sidebar'      => T_( 'Left Sidebar' ),
+							'right_sidebar'     => T_( 'Right Sidebar' ),
 						),
-						'defaultvalue' => 'right_sidebar',
+						'defaultvalue' => 'no_sidebar',
 					),
                'mediaidx_style' => array(
 						'label'          => T_('Mediaidx Style'),
@@ -791,16 +782,9 @@ class business_Skin extends Skin
 	 *
 	 * @return string
 	 */
-	function get_column_class()
-	{
-      $class = 'layout';
+	function get_column_class() {
 
-      if( $this->get_setting( 'mediaidx_sidebar' )  == 1 && $disp = 'mediaidx' ) {
-         $class = 'mediaidx_layout';
-      }
-
-		switch( $this->get_setting( $class ) )
-		{
+		switch( $this->get_setting( 'layout' ) ) {
 			case 'single_column':
 				// Single Column Large
 				return 'col-md-12';
@@ -857,7 +841,7 @@ class business_Skin extends Skin
 				return 'col-md-12';
 		}
    }
-
+   
    /**
     * ============================================================================
     * Layout Post Setting
@@ -870,6 +854,31 @@ class business_Skin extends Skin
       } else {
          echo "main-content";
       }
+
+   }
+
+   /**
+    * ============================================================================
+    * Layout Mediaidx Settings
+    * ============================================================================
+    */
+   function layout_mediaidx_setting() {
+
+      switch( $this->get_setting( 'mediaidx_layout' ) )
+		{
+			case 'no_sidebar':
+				// Single Column Large
+				return 'col-md-12';
+
+			case 'left_sidebar':
+				// Left Sidebar
+				return 'col-md-8 pull-right';
+
+			case 'right_sidebar':
+				// Right Sidebar
+			default:
+				return 'col-md-8';
+		}
 
    }
 

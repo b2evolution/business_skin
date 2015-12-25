@@ -18,26 +18,26 @@ if ( $Skin->is_visible_sidebar() ) { // Display sidebar:
       skin_container( NT_('Sidebar'), array(
          // The following (optional) params will be used as defaults for widgets included in this container:
          // This will enclose each widget in a block:
-         'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
-         'block_end' => '</div>',
+         'block_start'          => '<div class="panel panel-default evo_widget $wi_class$">',
+         'block_end'            => '</div>',
          // This will enclose the title of each widget:
-         'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
-         'block_title_end' => '</h4></div>',
+         'block_title_start'    => '<div class="panel-heading"><h4 class="panel-title">',
+         'block_title_end'      => '</h4></div>',
          // This will enclose the body of each widget:
-         'block_body_start' => '<div class="panel-body">',
-         'block_body_end' => '</div>',
+         'block_body_start'     => '<div class="panel-body">',
+         'block_body_end'       => '</div>',
          // If a widget displays a list, this will enclose that list:
-         'list_start' => '<ul>',
-         'list_end' => '</ul>',
+         'list_start'           => '<ul>',
+         'list_end'             => '</ul>',
          // This will enclose each item in a list:
-         'item_start' => '<li>',
-         'item_end' => '</li>',
+         'item_start'           => '<li>',
+         'item_end'             => '</li>',
          // This will enclose sub-lists in a list:
-         'group_start' => '<ul>',
-         'group_end' => '</ul>',
+         'group_start'          => '<ul>',
+         'group_end'            => '</ul>',
          // This will enclose (foot)notes:
-         'notes_start' => '<div class="notes">',
-         'notes_end' => '</div>',
+         'notes_start'          => '<div class="notes">',
+         'notes_end'            => '</div>',
          // Widget 'Search form':
          'search_class'         => 'compact_search_form',
          'search_input_before'  => '<div class="input-group">',
@@ -56,26 +56,26 @@ if ( $Skin->is_visible_sidebar() ) { // Display sidebar:
       skin_container( NT_('Sidebar 2'), array(
          // The following (optional) params will be used as defaults for widgets included in this container:
          // This will enclose each widget in a block:
-         'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
-         'block_end' => '</div>',
+         'block_start'          => '<div class="panel panel-default evo_widget $wi_class$">',
+         'block_end'            => '</div>',
          // This will enclose the title of each widget:
-         'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
-         'block_title_end' => '</h4></div>',
+         'block_title_start'    => '<div class="panel-heading"><h4 class="panel-title">',
+         'block_title_end'      => '</h4></div>',
          // This will enclose the body of each widget:
-         'block_body_start' => '<div class="panel-body">',
-         'block_body_end' => '</div>',
+         'block_body_start'     => '<div class="panel-body">',
+         'block_body_end'       => '</div>',
          // If a widget displays a list, this will enclose that list:
-         'list_start' => '<ul>',
-         'list_end' => '</ul>',
+         'list_start'           => '<ul>',
+         'list_end'             => '</ul>',
          // This will enclose each item in a list:
-         'item_start' => '<li>',
-         'item_end' => '</li>',
+         'item_start'           => '<li>',
+         'item_end'             => '</li>',
          // This will enclose sub-lists in a list:
-         'group_start' => '<ul>',
-         'group_end' => '</ul>',
+         'group_start'          => '<ul>',
+         'group_end'            => '</ul>',
          // This will enclose (foot)notes:
-         'notes_start' => '<div class="notes">',
-         'notes_end' => '</div>',
+         'notes_start'          => '<div class="notes">',
+         'notes_end'            => '</div>',
          // Widget 'Search form':
          'search_class'         => 'compact_search_form',
          'search_input_before'  => '<div class="input-group">',

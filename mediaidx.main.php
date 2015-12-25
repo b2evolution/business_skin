@@ -43,7 +43,7 @@ skin_include( '_body_header.inc.php' );
       <div class="row">
 
          <!-- ================================= START OF MAIN AREA ================================== -->
-         <div class="<?php if( $Skin->get_setting( 'mediaidx_sidebar' ) == 1 ) { echo $Skin->get_column_class(); } ?>">
+         <div class="<?php echo $Skin->layout_mediaidx_setting(); ?>">
 
             <?php
             if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
@@ -120,7 +120,7 @@ skin_include( '_body_header.inc.php' );
          </div><!-- .col -->
 
          <?php
-            if ( $Skin->get_setting( 'mediaidx_sidebar' ) == 1 ) { // Display Sidebar for Mediaidx
+            if ( $Skin->get_setting( 'mediaidx_layout' ) !== 'no_sidebar'  ) { // Display Sidebar for Mediaidx
                // ------------------------- SIDEBAR INCLUDED HERE --------------------------
                skin_include( '_sidebar.inc.php' );
                // Note: You can customize the sidebar by copying the
