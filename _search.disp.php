@@ -30,25 +30,6 @@ $params = array_merge( array(
 ), $params );
 
 
-// ------------------------ START OF SEARCH FORM WIDGET ------------------------
-skin_widget( array(
-	// CODE for the widget:
-	'widget'               => 'coll_search_form',
-	// Optional display params
-	'block_start'          => '<div class="evo_widget $wi_class$">',
-	'block_end'            => '</div>',
-	'block_display_title'  => false,
-	'disp_search_options'  => 0,
-	'search_class'         => $params['search_class'],
-	'search_input_before'  => $params['search_input_before'],
-	'search_input_after'   => $params['search_input_after'],
-	'search_submit_before' => $params['search_submit_before'],
-	'search_submit_after'  => $params['search_submit_after'],
-	'use_search_disp'      => 1,
-   'button'               => T_('Search')
-) );
-// ------------------------- END OF SEARCH FORM WIDGET -------------------------
-
 // Perform search (after having displayed the first part of the page) & display results:
 search_result_block( array(
 	'pagination'        => $params['pagination'],
@@ -57,5 +38,4 @@ search_result_block( array(
 	'cell_author_start' => $params['search_cell_author_start'],
 	'cell_author_end'   => $params['search_cell_author_end'],
 	'date_format'       => $params['search_date_format'],
-   'thumb_size'  => 'crop-top-48x48',
 ) );

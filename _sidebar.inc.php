@@ -6,8 +6,6 @@
  */
 if ( $Skin->is_visible_sidebar() ) { // Display sidebar:
 
-// if ( $Skin->get_setting( 'mediaidx_sidebar' ) == 1 )
-
 ?>
 <aside id="main-sidebar" class="col-md-4<?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
    <!-- =================================== START OF SIDEBAR =================================== -->

@@ -23,7 +23,27 @@ siteskin_include( '_site_body_header.inc.php' );
    <div class="container">
       <div class="row">
 
-      	<div class="col-xs-12 col-sm-6 col-md-6">
+      	<div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+      		<div class="evo_container">
+               <?php
+      			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
+      			// Display container and contents:
+      			skin_container( NT_('Page Top'), array(
+   					// The following params will be used as defaults for widgets included in this container:
+   					'block_start'         => '<div class="evo_widget $wi_class$">',
+   					'block_end'           => '</div>',
+   					'block_display_title' => false,
+   					'list_start'          => '<ul>',
+   					'list_end'            => '</ul>',
+   					'item_start'          => '<li>',
+   					'item_end'            => '</li>',
+   				) );
+      			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
+         		?>
+      		</div>
+      	</div><!-- .col -->
+
+         <div class="col-xs-12 col-sm-6 col-md-6">
       		<div class="evo_container">
       		   <p class="header-contact-info">
                <?php
@@ -33,26 +53,6 @@ siteskin_include( '_site_body_header.inc.php' );
                   };
                ?>
                </p>
-      		</div>
-      	</div><!-- .col -->
-
-      	<div class="col-xs-12 col-sm-6 col-md-6">
-      		<div class="evo_container">
-               <?php
-         			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
-         			// Display container and contents:
-         			skin_container( NT_('Page Top'), array(
-      					// The following params will be used as defaults for widgets included in this container:
-      					'block_start'         => '<div class="evo_widget $wi_class$">',
-      					'block_end'           => '</div>',
-      					'block_display_title' => false,
-      					'list_start'          => '<ul>',
-      					'list_end'            => '</ul>',
-      					'item_start'          => '<li>',
-      					'item_end'            => '</li>',
-      				) );
-         			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
-         		?>
       		</div>
       	</div><!-- .col -->
 
@@ -67,7 +67,7 @@ siteskin_include( '_site_body_header.inc.php' );
 
       	<div class="coll-xs-12 coll-sm-12 col-md-4">
       		<div class="evo_container">
-            <?php
+               <?php
       			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
       			// Display container and contents:
       			skin_container( NT_('Header'), array(
@@ -78,7 +78,7 @@ siteskin_include( '_site_body_header.inc.php' );
    					'block_title_end'   => '</h1>',
    				) );
       			// ----------------------------- END OF "Header" CONTAINER -----------------------------
-      		?>
+         		?>
       		</div>
       	</div><!-- .col -->
 
