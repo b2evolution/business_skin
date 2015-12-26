@@ -23,7 +23,7 @@ $params = array_merge( array(
 	'search_submit_before'     => '',
 	'search_submit_after'      => '',
 	'search_use_editor'        => true,
-	'search_author_format'     => 'avatar_name',
+	'search_author_format'     => 'name',
 	'search_cell_author_start' => '<div class="search_info dimmed">',
 	'search_cell_author_end'   => '</div>',
 	'search_date_format'       => 'F j, Y',

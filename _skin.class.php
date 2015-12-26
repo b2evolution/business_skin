@@ -242,6 +242,32 @@ class business_Skin extends Skin
 				),
             // End Section Header Top
 
+            /**
+             * ============================================================================
+             * Search Disp
+             * ============================================================================
+             */
+            'section_search_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_('Search Disp Settings')
+            ),
+               'search_bg' => array(
+                   'label'         => T_('Background Body'),
+                   'note'          => T_('Default color is #F7F7F7.'),
+                   'defaultvalue'  => '#F7F7F7',
+                   'type'          => 'color',
+               ),
+               'search_field' => array(
+						'label'        => T_('Show Search Field'),
+						'note'         => T_('Check to show search field'),
+						'defaultvalue' => 1,
+						'type'         => 'checkbox',
+					),
+            'section_search_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Section Header Top
+
 				'section_colorbox_start' => array(
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Colorbox Image Zoom')
@@ -424,6 +450,16 @@ class business_Skin extends Skin
             background-color: '.$color.';}';
       }
 
+      /**
+       * ============================================================================
+       * Disp Search Custome Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'search_bg' ) ) {
+         $custom_css .= '.disp_search { background-color: '. $bg_color .'; }';
+      }
+
+      // Custom CSS Output
       if ( ! empty( $custom_css ) ) {
          add_css_headline( $custom_css );
       }
@@ -841,7 +877,7 @@ class business_Skin extends Skin
 				return 'col-md-12';
 		}
    }
-   
+
    /**
     * ============================================================================
     * Layout Post Setting

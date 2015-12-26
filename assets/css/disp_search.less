@@ -2,12 +2,12 @@
 // Disp Style Code
 // ======================================================================== /
 .disp_search {
-   background-color: @bg_post_regular;
+   // background-color: @bg_post_regular;
 
    // Search Box Style
    // ======================================================================== /
    .search-box {
-      padding: 30px;
+      padding: 50px 30px 30px;
       border-bottom: 1px solid @bdr_bg;
 
       // Title
@@ -15,7 +15,7 @@
       .title_search_box {
          font-family: @font_title;
          font-weight: 700;
-         font-size: 3.2rem;
+         font-size: 2.6rem;
          text-align: center;
          margin-bottom: 20px;
       }
@@ -26,18 +26,30 @@
          overflow: hidden;
 
          .compact_search_form {
+            margin: 0 auto;
+            width: 90%;
+
+            @media screen and (max-width: 768px) {
+               width: 100%;
+            }
 
             .search_field, .search_submit {
                height: 50px;
-               line-height: 45px;
+               line-height: 35px;
+               border-color: @primary;
                border-radius: 0;
-               box-shadow: none;
-               border-color: @bdr_bg;
+
+               &:hover, &:focus, &:active {
+                  outline: none;
+                  box-shadow: none;
+               }
             }
 
             .search_field {
                width: 75%;
-               // border-right-color: transparent;
+               font-size: 1.6rem;
+               padding-right: 15px;
+               padding-left: 15px;
 
                &:focus, &:active {
                   border-color: @primary;
@@ -63,10 +75,109 @@
    // Search Result
    // ======================================================================== /
    .search_result {
-      padding: 0 0 15px 0;
-      margin: 0 15px 15px;
-      border-bottom: 1px solid @bdr_bg;
+
+      .search_result_score.dimmed{
+         width: 55px;
+         height: 55px;
+         line-height: 55px;
+         text-align: center;
+         font-weight: 700;
+         border-radius: 100%;
+         background-color: @primary;
+         color: @w;
+         // box-shadow: @bx_post;
+      }
+
+      .search_content_wrap {
+         padding: 0 0 40px 0;
+         margin-bottom: 30px;
+         margin-left: 80px;
+         border-bottom: 1px solid @bdr_bg;
+
+         .search_title {
+            font-family: @font_title;
+            font-size: 2.2rem;
+            // font-weight: 700;
+            margin-bottom: 15px;
+            color: @primary;
+
+            a {
+               color: @primary;
+               text-decoration: none;
+
+               &:hover, &:active, &:focus {
+                  color: @primary;
+               }
+            }
+         }
+
+         .result_content {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+         }
+
+         .search_info {
+            margin-bottom: 5px;
+            font-size: 85%;
+
+            a {
+               color: @c4;
+               border-bottom: 1px dotted @primary;
+
+               &:hover, &:active, &:focus {
+                  text-decoration: none;
+                  color: @primary;
+               }
+            }
+         }
+
+      }
    }
 
+   // Pagination
+   // ======================================================================== /
+   .pagination {
+
+      li{
+         display: inline-block;
+         margin: 0 1px;
+
+         .active {
+            margin-right: 1px;
+         }
+      }
+   }
+
+   // ========================================================================
+   // Main Sidebar Style
+   // ======================================================================== /
+   #main-sidebar {
+
+      // Tags Style
+      // ======================================================================== /
+      .widget_core_coll_tag_cloud {
+
+         .tag_cloud {
+            a {
+               background-color: @w;
+            }
+         }
+      }
+
+      // Calender
+      // ======================================================================== /
+      .widget_plugin_evo_Calr {
+
+         .bCalendarTable {
+            caption {
+               a {
+                  background-color: @bg_post_regular;
+               }
+            }
+         }
+
+      }
+
+   }
 
 }

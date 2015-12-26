@@ -65,25 +65,26 @@ skin_include( '_body_header.inc.php' );
       ?>
 
 <?php
-   // ------------------------ START OF SEARCH FORM WIDGET ------------------------
-   skin_widget( array(
-      // CODE for the widget:
-      'widget'               => 'coll_search_form',
-      // Optional display params
-      'block_start'          => '<div class="evo_widget $wi_class$">',
-      'block_end'            => '</div>',
-      'block_display_title'  => false,
-      'disp_search_options'  => 0,
-      'search_class'         => 'compact_search_form',
-      'search_input_before'  => '',
-      'search_input_after'   => '',
-      'search_submit_before' => '',
-      'search_submit_after'  => '',
-      'use_search_disp'      => 1,
-      'button'               => T_('Search')
-   ) );
-   // ------------------------- END OF SEARCH FORM WIDGET -------------------------
-
+   if ( $Skin->get_setting( 'search_field' ) == 1 ) {
+      // ------------------------ START OF SEARCH FORM WIDGET ------------------------
+      skin_widget( array(
+         // CODE for the widget:
+         'widget'               => 'coll_search_form',
+         // Optional display params
+         'block_start'          => '<div class="evo_widget $wi_class$">',
+         'block_end'            => '</div>',
+         'block_display_title'  => false,
+         'disp_search_options'  => 0,
+         'search_class'         => 'compact_search_form',
+         'search_input_before'  => '',
+         'search_input_after'   => '',
+         'search_submit_before' => '',
+         'search_submit_after'  => '',
+         'use_search_disp'      => 1,
+         'button'               => T_('Search')
+      ) );
+      // ------------------------- END OF SEARCH FORM WIDGET -------------------------
+   }
 ?>
    </div>
 </section>

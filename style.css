@@ -352,7 +352,6 @@ body.loggedin #main-header {
  * Pagination
  * -------------------------------------------------------------------------- */
 .pagination {
-  display: block;
   margin: 0 0 30px;
   border-radius: 0;
 }
@@ -1046,33 +1045,50 @@ body.loggedin #main-header {
   background-color: #777777;
   z-index: -1;
 }
-.disp_search {
-  background-color: #f7f7f7;
-}
 .disp_search .search-box {
-  padding: 30px;
+  padding: 50px 30px 30px;
   border-bottom: 1px solid #e4e4e4;
 }
 .disp_search .search-box .title_search_box {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   text-align: center;
   margin-bottom: 20px;
 }
 .disp_search .search-box .widget_core_coll_search_form {
   overflow: hidden;
 }
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form {
+  margin: 0 auto;
+  width: 90%;
+}
+@media screen and (max-width: 768px) {
+  .disp_search .search-box .widget_core_coll_search_form .compact_search_form {
+    width: 100%;
+  }
+}
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field,
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit {
   height: 50px;
-  line-height: 45px;
+  line-height: 35px;
+  border-color: #1dc6df;
   border-radius: 0;
+}
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:hover,
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit:hover,
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus,
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit:focus,
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active,
+.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit:active {
+  outline: none;
   box-shadow: none;
-  border-color: #e4e4e4;
 }
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field {
   width: 75%;
+  font-size: 1.6rem;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus,
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active {
@@ -1089,10 +1105,67 @@ body.loggedin #main-header {
   padding-right: 10px;
   background-color: #1dc6df;
 }
-.disp_search .search_result {
-  padding: 0 0 15px 0;
-  margin: 0 15px 15px;
+.disp_search .search_result .search_result_score.dimmed {
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 100%;
+  background-color: #1dc6df;
+  color: #ffffff;
+}
+.disp_search .search_result .search_content_wrap {
+  padding: 0 0 40px 0;
+  margin-bottom: 30px;
+  margin-left: 80px;
   border-bottom: 1px solid #e4e4e4;
+}
+.disp_search .search_result .search_content_wrap .search_title {
+  font-family: "Roboto Slab", serif;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #1dc6df;
+}
+.disp_search .search_result .search_content_wrap .search_title a {
+  color: #1dc6df;
+  text-decoration: none;
+}
+.disp_search .search_result .search_content_wrap .search_title a:hover,
+.disp_search .search_result .search_content_wrap .search_title a:active,
+.disp_search .search_result .search_content_wrap .search_title a:focus {
+  color: #1dc6df;
+}
+.disp_search .search_result .search_content_wrap .result_content {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.disp_search .search_result .search_content_wrap .search_info {
+  margin-bottom: 5px;
+  font-size: 85%;
+}
+.disp_search .search_result .search_content_wrap .search_info a {
+  color: #444444;
+  border-bottom: 1px dotted #1dc6df;
+}
+.disp_search .search_result .search_content_wrap .search_info a:hover,
+.disp_search .search_result .search_content_wrap .search_info a:active,
+.disp_search .search_result .search_content_wrap .search_info a:focus {
+  text-decoration: none;
+  color: #1dc6df;
+}
+.disp_search .pagination li {
+  display: inline-block;
+  margin: 0 1px;
+}
+.disp_search .pagination li .active {
+  margin-right: 1px;
+}
+.disp_search #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a {
+  background-color: #ffffff;
+}
+.disp_search #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
+  background-color: #f7f7f7;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar
