@@ -46,7 +46,7 @@ skin_include( '_body_header.inc.php' );
          request_title( array(
             'title_before'         => '<h2 class="title_search_box">',
             'title_after'          => '</h2>',
-            'search_text'          => T_( 'Search Results' ),
+            'search_text'          => T_( $Skin->get_setting( 'search_title' ) ),
             'title_none'           => '',
             'glue'                 => ' - ',
             'title_single_disp'    => false,
@@ -81,7 +81,7 @@ skin_include( '_body_header.inc.php' );
          'search_submit_before' => '',
          'search_submit_after'  => '',
          'use_search_disp'      => 1,
-         'button'               => T_('Search')
+         'button'               => T_( $Skin->get_setting( 'search_button_text' ) )
       ) );
       // ------------------------- END OF SEARCH FORM WIDGET -------------------------
    }

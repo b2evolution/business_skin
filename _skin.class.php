@@ -251,18 +251,32 @@ class business_Skin extends Skin
                'layout' => 'begin_fieldset',
                'label'  => T_('Search Disp Settings')
             ),
-               'search_bg' => array(
-                   'label'         => T_('Background Body'),
-                   'note'          => T_('Default color is #F7F7F7.'),
-                   'defaultvalue'  => '#F7F7F7',
-                   'type'          => 'color',
+               'search_title' => array(
+                  'label'        => T_('Search Box Title'),
+                  'defaultvalue' => 'Search Result',
+                  'note'         => T_('Change the title Search Box.'),
+                  'type'         => 'text',
+                  'size'         => '30'
+               ),
+               'search_button_text' => array(
+                  'label'        => T_('Button Text'),
+                  'defaultvalue' => 'Search',
+                  'note'         => T_('Change the button text search.'),
+                  'type'         => 'text',
+                  'size'         => '20'
                ),
                'search_field' => array(
-						'label'        => T_('Show Search Field'),
-						'note'         => T_('Check to show search field'),
-						'defaultvalue' => 1,
-						'type'         => 'checkbox',
-					),
+                  'label'        => T_('Show Search Field'),
+                  'note'         => T_('Check to show search field'),
+                  'defaultvalue' => 1,
+                  'type'         => 'checkbox',
+               ),
+               'search_bg' => array(
+                  'label'         => T_('Background Body'),
+                  'note'          => T_('Default color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
             'section_search_end' => array(
                'layout' => 'end_fieldset',
             ),

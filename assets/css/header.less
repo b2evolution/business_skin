@@ -12,7 +12,7 @@
    .header-contact-info {
       font-size: 1.3rem;
       color: @c7;
-      margin: 12px 0px 10px;
+      margin: 15px 0px 10px;
    }
 
    // Widget Page Top
@@ -26,15 +26,39 @@
          a {
             background-color: transparent;
             color: @c7;
-            border-right: 1px solid @e;
+            border-left: 1px solid @e;
 
-            &:first-child{
-               border-left: 1px solid @e;
+            &:last-child{
+               border-right: 1px solid @e;
             }
 
          }
       }
    }
+
+   // Responsive
+   // ======================================================================== /
+   @media screen and ( max-width: 768px) {
+      text-align: center;
+
+      .widget_core_user_links .ufld_icon_links {
+         text-align: center;
+      }
+
+      .page-top {
+         border-bottom: 1px solid @e;
+      }
+
+   }
+
+   @media screen and ( max-width: 480px) {
+      .widget_core_user_links .ufld_icon_links a span, .widget_core_user_links .ufld_icon_links a {
+         width: 40px;
+         height: 40px;
+         line-height: 40px;
+      }
+   }
+
 }
 // end header-top
 
@@ -72,8 +96,14 @@
    }
 
    .widget_core_coll_logo {
+      text-align: left;
+
       h1{
          margin: -3px 0 0;
+      }
+
+      @media screen and ( max-width: 768px ) {
+         margin-bottom: 15px;
       }
    }
 
@@ -135,6 +165,42 @@
             }
          }
       }
+
+      .navbar-header {
+
+         .navbar-toggle {
+            border-color: @b;
+            border-radius: 0;
+            margin-top: 3px;
+            margin-right: 0;
+
+            .icon-bar {
+               background-color: @b;
+            }
+         }
+      }
+
+   }
+
+   // Responsive
+   // ======================================================================== /
+   @media ( min-width: 768px ) {
+      text-align: center;
+
+      .widget_core_coll_logo {
+         text-align: center;
+         margin-bottom: 10px;
+      }
+
+      .primary-nav {
+
+         .nav-tabs {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            float: none;
+         }
+      }
    }
 
 }
@@ -149,4 +215,12 @@ body.loggedin #main-header {
 #main-header-sticky-wrapper.is-sticky #main-header {
    padding: 15px 0 0;
    transition: all 0.3s ease-in-out;
+
+   @media ( max-width: 990px ) {
+      padding-bottom: 10px;
+   }
+
+   @media ( max-width: 768px ) {
+      padding-bottom: 5px;
+   }
 }

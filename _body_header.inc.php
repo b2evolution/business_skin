@@ -23,7 +23,7 @@ siteskin_include( '_site_body_header.inc.php' );
    <div class="container">
       <div class="row">
 
-      	<div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+      	<div class="col-xs-12 col-sm-6 col-md-6 pull-right page-top">
       		<div class="evo_container">
                <?php
       			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
@@ -65,7 +65,7 @@ siteskin_include( '_site_body_header.inc.php' );
    <div class="container">
       <div class="row">
 
-      	<div class="coll-xs-12 coll-sm-12 col-md-4">
+      	<div class="col-xs-6 col-sm-12 col-md-4">
       		<div class="evo_container">
                <?php
       			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
@@ -82,31 +82,42 @@ siteskin_include( '_site_body_header.inc.php' );
       		</div>
       	</div><!-- .col -->
 
-      	<div class="coll-xs-12 col-sm-12 col-md-8">
+      	<div class="col-xs-6 col-sm-12 col-md-8">
             <nav class="primary-nav">
+               <!-- Toggle get grouped for better mobile display -->
+               <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary_nav" aria-expanded="false">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                </button>
+               </div>
 
-         		<ul class="nav nav-tabs evo_container evo_container__menu">
-         		<?php
-         			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
-         			// Display container and contents:
-         			// Note: this container is designed to be a single <ul> list
-         			skin_container( NT_('Menu'), array(
-      					// The following params will be used as defaults for widgets included in this container:
-      					'block_start'         => '',
-      					'block_end'           => '',
-      					'block_display_title' => false,
-      					'list_start'          => '',
-      					'list_end'            => '',
-      					'item_start'          => '<li class="evo_widget $wi_class$">',
-      					'item_end'            => '</li>',
-      					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
-      					'item_selected_end'   => '</li>',
-      					'item_title_before'   => '',
-      					'item_title_after'    => '',
-      				) );
-         			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-         		?>
-         		</ul>
+               <div class="collapse navbar-collapse" id="primary_nav">
+            		<ul class="nav nav-tabs evo_container evo_container__menu">
+            		<?php
+            			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
+            			// Display container and contents:
+            			// Note: this container is designed to be a single <ul> list
+            			skin_container( NT_('Menu'), array(
+         					// The following params will be used as defaults for widgets included in this container:
+         					'block_start'         => '',
+         					'block_end'           => '',
+         					'block_display_title' => false,
+         					'list_start'          => '',
+         					'list_end'            => '',
+         					'item_start'          => '<li class="evo_widget $wi_class$">',
+         					'item_end'            => '</li>',
+         					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
+         					'item_selected_end'   => '</li>',
+         					'item_title_before'   => '',
+         					'item_title_after'    => '',
+         				) );
+            			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
+            		?>
+            		</ul>
+               </div>
 
             </nav><!-- .primary-nav -->
       	</div><!-- .col -->
