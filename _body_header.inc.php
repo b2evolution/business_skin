@@ -86,7 +86,7 @@ siteskin_include( '_site_body_header.inc.php' );
             <nav class="primary-nav">
                <!-- Toggle get grouped for better mobile display -->
                <div class="navbar-header">
-                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary_nav" aria-expanded="false">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary_nav">
                    <span class="sr-only">Toggle navigation</span>
                    <span class="icon-bar"></span>
                    <span class="icon-bar"></span>
@@ -117,6 +117,8 @@ siteskin_include( '_site_body_header.inc.php' );
             			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
             		?>
             		</ul>
+                  <button type="button" class="close-menu collapsed" data-toggle="collapse" data-target="#primary_nav">
+                   </button>
                </div>
 
             </nav><!-- .primary-nav -->

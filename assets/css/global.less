@@ -38,3 +38,16 @@ a{
    color: @primary;
    transition: all 0.2s ease-in-out;
 }
+
+// Row -> Remove row If min-width: 480px and max-width: 768px
+// ======================================================================== /
+@media screen
+and ( min-width: 480px )
+and ( max-width: 768px ) {
+
+   .row {
+      margin-right: 0;
+      margin-left: 0;
+   }
+
+}

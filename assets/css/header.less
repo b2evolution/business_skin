@@ -65,7 +65,7 @@
 // Main Header
 // ======================================================================== /
 #main-header {
-   padding: 20px 0 10px;
+   padding: 20px 0 25px;
    box-shadow: 0 3px 5px rgba(0,0,0,.1);
    z-index: 9999;
 
@@ -96,7 +96,8 @@
    }
 
    .widget_core_coll_logo {
-      text-align: left;
+      // text-align: left;
+      margin-bottom: 0;
 
       h1{
          margin: -3px 0 0;
@@ -181,15 +182,96 @@
       }
 
    }
+}
 
-   // Responsive
-   // ======================================================================== /
-   @media ( min-width: 768px ) {
+
+// Responsive Button Close
+// ======================================================================== /
+.close-menu {
+   position: relative;
+   top: 30px;
+   // right: 0;
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   background-color: @b;
+   border-radius: 100%;
+
+   /* image replacement */
+   overflow: hidden;
+   text-indent: 100%;
+   white-space: nowrap;
+   border: 0;
+   outline: none;
+
+   opacity: 0;
+   visibility: hidden;
+
+   &::before, &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      left: 10px;
+      width: 20px;
+      height: 3px;
+      background-color: #FFF;
+
+      transition-property: transform;
+      transition-duration: .3s;
+   }
+
+   &::before {
+      transform: rotate(45deg);
+   }
+
+   &::after {
+      transform: rotate(135deg);
+   }
+
+   .no-touch &:hover {
+      &::before {
+         transform: rotate(225deg);
+      }
+
+      &::after {
+         transform: rotate(315deg);
+      }
+   }
+}
+
+// Sticky Header
+// ======================================================================== /
+body.loggedin #main-header {
+   top: 25px !important;
+}
+
+#main-header-sticky-wrapper.is-sticky #main-header {
+   padding: 15px 0 20px;
+   transition: all 0.3s ease-in-out;
+
+   @media ( max-width: 990px ) {
+      padding-bottom: 15px;
+   }
+
+   @media ( max-width: 768px ) {
+      padding-bottom: 5px;
+   }
+}
+
+
+// Responsive
+// ======================================================================== /
+@media screen
+and ( min-width: @M )
+and ( max-width: @MM ) {
+   #main-header {
       text-align: center;
+      padding-bottom: 20px;
 
       .widget_core_coll_logo {
          text-align: center;
-         margin-bottom: 10px;
+         margin-bottom: 8px;
       }
 
       .primary-nav {
@@ -202,25 +284,68 @@
          }
       }
    }
-
 }
 
+@media screen and ( max-width: 768px ) {
 
-// Sticky Header
-// ======================================================================== /
-body.loggedin #main-header {
-   top: 25px !important;
-}
-
-#main-header-sticky-wrapper.is-sticky #main-header {
-   padding: 15px 0 0;
-   transition: all 0.3s ease-in-out;
-
-   @media ( max-width: 990px ) {
-      padding-bottom: 10px;
+   .loggedin #main-header .navbar-collapse.in{
+      top: 25px;
    }
 
-   @media ( max-width: 768px ) {
-      padding-bottom: 5px;
+   #main-header {
+      padding-bottom: 10px;
+
+      .navbar-collapse {
+         text-align: center;
+
+         .nav-tabs {
+            padding-top: 20px;
+            float: none;
+            width: 100%;
+
+            li{
+               float: none;
+               padding: 15px;
+            }
+
+            a {
+               display: inline-block;
+            }
+
+         }
+      }
+
+      .navbar-collapse, .collapsing {
+         position: fixed;
+         width: 100%;
+         height: 100% !important;
+         top: 0;
+         left: 0;
+         z-index: 9999;
+         background-color: @w;
+
+         /* Force Hardware Acceleration in WebKit */
+         -webkit-backface-visibility: hidden;
+         transition: all 0.32s ease-in-out;
+         transform: scale(0);
+      }
+
+      .navbar-collapse.in {
+         transform: scale(1);
+
+         .close-menu {
+            opacity: 1;
+            visibility: visible;
+         }
+         
+      }
+   }
+
+}
+
+
+@media only screen and ( max-width: 415px ) {
+   .loggedin #main-header .navbar-collapse.in{
+      top: 30px;
    }
 }
