@@ -205,7 +205,7 @@ a {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #333333;
+  background-color: #1dc6df;
   border-radius: 100%;
   /* image replacement */
   overflow: hidden;
@@ -225,7 +225,7 @@ a {
   left: 10px;
   width: 20px;
   height: 3px;
-  background-color: #FFF;
+  background-color: #ffffff;
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: .3s;
@@ -250,6 +250,18 @@ a {
   -webkit-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
   transform: rotate(315deg);
+}
+@media only screen and (max-width: 480px) {
+  .close-menu {
+    width: 35px;
+    height: 35px;
+  }
+  .close-menu::before,
+  .close-menu::after {
+    top: 16px;
+    left: 9px;
+    width: 18px;
+  }
 }
 body.loggedin #main-header {
   top: 25px !important;

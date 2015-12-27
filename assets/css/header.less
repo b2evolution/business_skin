@@ -194,7 +194,7 @@
    display: inline-block;
    width: 40px;
    height: 40px;
-   background-color: @b;
+   background-color: @primary;
    border-radius: 100%;
 
    /* image replacement */
@@ -215,7 +215,7 @@
       left: 10px;
       width: 20px;
       height: 3px;
-      background-color: #FFF;
+      background-color: @w;
 
       transition-property: transform;
       transition-duration: .3s;
@@ -237,6 +237,18 @@
       &::after {
          transform: rotate(315deg);
       }
+   }
+
+   @media only screen and ( max-width: @S ){
+      width: 35px;
+      height: 35px;
+
+      &::before, &::after {
+         top: 16px;
+         left: 9px;
+         width: 18px;
+      }
+
    }
 }
 
@@ -337,7 +349,7 @@ and ( max-width: @MM ) {
             opacity: 1;
             visibility: visible;
          }
-         
+
       }
    }
 
