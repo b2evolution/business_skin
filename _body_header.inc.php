@@ -117,8 +117,7 @@ siteskin_include( '_site_body_header.inc.php' );
             			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
             		?>
             		</ul>
-                  <button type="button" class="close-menu collapsed" data-toggle="collapse" data-target="#primary_nav">
-                   </button>
+                  <button type="button" class="close-menu collapsed" data-toggle="collapse" data-target="#primary_nav"></button>
                </div>
 
             </nav><!-- .primary-nav -->
