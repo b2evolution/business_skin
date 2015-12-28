@@ -172,6 +172,11 @@ a {
   font-size: 1.4rem;
   padding: 0;
 }
+@media screen and (max-width: 480px) {
+  #main-header .primary-nav .nav a {
+    font-size: 1.5rem;
+  }
+}
 #main-header .primary-nav .nav a::after {
   content: '';
   position: absolute;
@@ -196,12 +201,20 @@ a {
 }
 #main-header .primary-nav .navbar-header .navbar-toggle {
   border-color: #333333;
-  border-radius: 0;
+  border-radius: 2px;
   margin-top: 3px;
   margin-right: 0;
 }
 #main-header .primary-nav .navbar-header .navbar-toggle .icon-bar {
   background-color: #333333;
+}
+@media screen and (max-width: 480px) {
+  #main-header .primary-nav .navbar-header .navbar-toggle {
+    padding: 7px;
+  }
+  #main-header .primary-nav .navbar-header .navbar-toggle .icon-bar {
+    height: 1px;
+  }
 }
 .close-menu {
   position: relative;
@@ -361,6 +374,12 @@ body.loggedin #main-header {
 #main-content,
 #mini-blog {
   margin-top: 60px;
+}
+@media only screen and (max-width: 480px) {
+  #main-content,
+  #mini-blog {
+    margin-top: 30px;
+  }
 }
 #main-content .evo_post_title,
 #mini-blog .evo_post_title {
@@ -711,6 +730,7 @@ body.loggedin #main-header {
 .post_regular #main-content .msg_nothing {
   padding: 30px;
   text-align: center;
+  background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable {
@@ -1260,6 +1280,12 @@ body.loggedin #main-header {
 .disp_search .search-box {
   padding: 60px 30px;
   border-bottom: 1px solid #e4e4e4;
+}
+@media only screen and (max-width: 480px) {
+  .disp_search .search-box {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .disp_search .search-box .title_search_box {
   font-family: "Roboto Slab", serif;
