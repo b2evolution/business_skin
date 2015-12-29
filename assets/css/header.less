@@ -72,13 +72,14 @@
    // WIdget Site Title
    // ======================================================================== /
    .widget_core_coll_title, .widget_core_coll_logo{
+      margin-bottom: 2px;
 
       h1{
          margin: 0;
-         font-size: 3.6rem;
+         font-size: 4rem;
          text-transform: uppercase;
          font-weight: 700;
-         text-shadow: @bx_post;
+         // text-shadow: @bx_post;
 
          a{
             color: @b;
@@ -110,22 +111,23 @@
 
    .widget_core_coll_tagline {
       margin-top: -3px;
+      margin-bottom: 0;
    }
 
    // Primary Nav
    // ======================================================================== /
    .primary-nav{
 
-      .nav{
+      .nav {
          margin: 0;
          border: none;
          float: right;
 
-         li{
+         li {
             padding: 10px;
          }
 
-         & > li.active a{
+         & > li.active a {
             border: 0;
             background-color: transparent;
             color: @primary;
@@ -137,7 +139,7 @@
             }
          }
 
-         a{
+         a {
             position: relative;
             border: 0;
             color: @b;
@@ -148,7 +150,7 @@
                font-size: 1.5rem;
             }
 
-            &::after{
+            &::after {
                content: '';
                position: absolute;
                bottom: -8px;
@@ -159,12 +161,12 @@
                opacity: 0;
             }
 
-            &:hover, &:active, &:focus{
+            &:hover, &:active, &:focus {
                background-color: transparent;
                border: 0;
                color: @primary;
 
-               &::after{
+               &::after {
                   opacity: 1;
                }
             }
@@ -194,6 +196,12 @@
          }
       }
 
+      @media screen and ( max-width: @L ) and ( min-width: @M ) {
+         .navbar-collapse {
+            display: flex !important;
+         }
+      }
+
    }
 }
 
@@ -204,7 +212,6 @@
    position: relative;
    top: 30px;
    // right: 0;
-   display: inline-block;
    width: 40px;
    height: 40px;
    background-color: @primary;
@@ -217,7 +224,7 @@
    border: 0;
    outline: none;
 
-   opacity: 0;
+   display: none;
    visibility: hidden;
 
    &::before, &::after {
@@ -359,7 +366,7 @@ and ( max-width: @MM ) {
          transform: scale(1);
 
          .close-menu {
-            opacity: 1;
+            display: inline-block;
             visibility: visible;
          }
 

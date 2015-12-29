@@ -94,15 +94,103 @@ class business_Skin extends Skin
 						'type'         => 'integer',
 						'allow_empty'  => true,
 					),
+               'color_schemes' => array(
+                  'label'        => T_(' Color Schemes '),
+                  'note'         => T_(' Default color schemes is #1dc6df. Change everything color theme with one set color'),
+                  'defaultvalue' => '#1dc6df',
+                  'type'         => 'color',
+               ),
+				'section_general_end' => array(
+					'layout' => 'end_fieldset',
+				),
+
+            /**
+             * ============================================================================
+             * Section Header Settings
+             * ============================================================================
+             */
+            'section_header_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Header Settings')
+				),
+               'ht_show' => array(
+                  'label'        => T_('Display Header Top'),
+                  'note'         => T_('Check to display header top'),
+                  'defaultvalue' => 1,
+                  'type'         => 'checkbox',
+               ),
+               'ht_contact_info' => array(
+                  'label'        => T_('Header Top Contact Info'),
+                  'defaultvalue' => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
+                  'note'         => T_('Add your contact Info'),
+                  'type'         => 'text',
+                  'size'         => '60'
+               ),
+               'header_top_color' => array(
+                  'label'         => T_('Header Top Color'),
+                  'note'          => T_('Default color is #777777.'),
+                  'defaultvalue'  => '#777777',
+                  'type'          => 'color',
+               ),
+               'header_top_bg' => array(
+                  'label'         => T_('Header Top Background'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+               'menu_link_color' => array(
+                  'label'         => T_('Menu Link Color'),
+                  'note'          => T_('Default color is #777777.'),
+                  'defaultvalue'  => '#777777',
+                  'type'          => 'color',
+               ),
+               'main_header_bg' => array(
+                  'label'         => T_('Main Header Background'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+				'section_header_end' => array(
+					'layout' => 'end_fieldset',
+				),
+            // End Section Header Top
+
+            /**
+             * ============================================================================
+             * Options Disp Posts
+             * ============================================================================
+             */
+            'section_disp_post_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_('Disp Posts Settings')
+            ),
                'layout_posts' => array(
                   'label'    => T_('Layout Posts'),
-                  'note'     => T_('Select Layout for Posts'),
-                  'type'     => 'select',
+                  // 'note'     => T_('Select Layout for Posts'),
+                  // 'type'     => 'select',
+                  // 'options'  => array(
+                  //    'regular'      => T_('Regular Layout'),
+                  //    'mini_blog'    => T_('Mini Blog Layout'),
+                  // ),
+                  'note'     => '',
+                  'type'     => 'radio',
                   'options'  => array(
-                     'regular'      => T_('Regular Layout'),
-                     'mini_blog'    => T_('Mini Blog Layout'),
-                  ),
-                  'defaultvalue' => 'standard',
+							array( 'regular', T_('Regular') ),
+							array( 'mini_blog', T_('Mini Blog Layout') ),
+						),
+                  'defaultvalue' => 'regular',
+               ),
+               'regular_post_bg' => array(
+                  'label'         => T_('Background Regular Layout'),
+                  'note'          => T_('Default background color is #F7F7F7. Example another background color #F9F9F9'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
+               'mini_blog_bg' => array(
+                  'label'         => T_('Background Mini Blog'),
+                  'note'          => T_('Default background color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
                ),
                'pagination_top_show' => array(
                   'label'        => T_('Show Pagination Top'),
@@ -122,41 +210,15 @@ class business_Skin extends Skin
                   'defaultvalue' => 'center',
                   'type'         => 'select',
                   'options' => array(
-							'left'     => T_('Left'),
-							'center'   => T_('Center'),
+                     'left'     => T_('Left'),
+                     'center'   => T_('Center'),
                      'right'    => T_('Right'),
                   ),
                ),
-				'section_general_end' => array(
-					'layout' => 'end_fieldset',
-				),
-
-            /**
-             * ============================================================================
-             * Section Header Top
-             * ============================================================================
-             */
-            'section_header_top_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Header Top Settings')
-				),
-               'ht_show' => array(
-                  'label'        => T_('Display Header Top'),
-                  'note'         => T_('Check to display header top'),
-                  'defaultvalue' => 1,
-                  'type'         => 'checkbox',
-               ),
-               'ht_contact_info' => array(
-                  'label'        => T_('Header Top Contact Info'),
-                  'defaultvalue' => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
-                  'note'         => T_('Add your contact Info'),
-                  'type'         => 'text',
-                  'size'         => '60'
-               ),
-				'section_header_top_end' => array(
-					'layout' => 'end_fieldset',
-				),
-            // End Section Header Top
+            'section_disp_post_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Option Disp Posts
 
             /**
              * ============================================================================
@@ -180,9 +242,9 @@ class business_Skin extends Skin
 						'defaultvalue'   => 'two_column',
                   'type'           => 'select',
 						'options'        => array(
-                        'one_column'       => T_('1 Column'),
-								'two_column'       => T_('2 Column'),
-								'three_column'     => T_('3 Column'),
+                        'one_column'     => T_('1 Column'),
+								'two_column'     => T_('2 Column'),
+								'three_column'   => T_('3 Column'),
 							),
 					),
                'mediaidx_layout' => array(
@@ -190,9 +252,9 @@ class business_Skin extends Skin
 						'note'      => '',
 						'type'      => 'select',
 						'options'   => array(
-							'no_sidebar'        => T_( 'No Sidebar' ),
-							'left_sidebar'      => T_( 'Left Sidebar' ),
-							'right_sidebar'     => T_( 'Right Sidebar' ),
+							'no_sidebar'      => T_( 'No Sidebar' ),
+							'left_sidebar'    => T_( 'Left Sidebar' ),
+							'right_sidebar'   => T_( 'Right Sidebar' ),
 						),
 						'defaultvalue' => 'no_sidebar',
 					),
@@ -202,9 +264,9 @@ class business_Skin extends Skin
 						'defaultvalue'   => 'default',
                   'type'           => 'select',
 						'options'        => array(
-                        'default'   => T_('Default'),
-								'box'       => T_('Box Style'),
-							),
+                     'default' => T_('Default'),
+							'box'     => T_('Box Style'),
+						),
 					),
                'padding_column' => array(
                   'label'          => T_('Padding Image Column'),
@@ -214,10 +276,10 @@ class business_Skin extends Skin
                   'allow_empty'    => true,
                ),
                'mediaidx_title' => array(
-						'label'        => T_('Display Title'),
-						'note'         => T_('Check to display title post image'),
-						'defaultvalue' => 1,
-						'type'         => 'checkbox',
+						'label'          => T_('Display Title'),
+						'note'           => T_('Check to display title post image'),
+						'defaultvalue'   => 1,
+						'type'           => 'checkbox',
 					),
                'mediaidx_bg' => array(
                    'label'         => T_('Background Mediaidx'),
@@ -413,11 +475,10 @@ class business_Skin extends Skin
 
       // Include Masonry Grind for MediaIdx
       if ( $disp == 'mediaidx' ) {
-         require_js( $this->get_url().'assets/js/masonry.pkgd.min.js' );
-         require_js( $this->get_url().'assets/js/imagesloaded.pkgd.min.js' );
+         require_js( $this->get_url() . 'assets/js/masonry.pkgd.min.js' );
+         require_js( $this->get_url() . 'assets/js/imagesloaded.pkgd.min.js' );
          add_js_headline("
 				jQuery( document ).ready( function($) {
-
                $('.evo_image_index').imagesLoaded().done( function( instance ) {
                   $('.evo_image_index').masonry({
                    // options
@@ -429,7 +490,7 @@ class business_Skin extends Skin
 			");
       }
 
-      require_js( $this->get_url().'assets/js/scripts.js' );
+      require_js( $this->get_url() . 'assets/js/scripts.js' );
 
 		// Skin specific initializations:
       // Add Custome CSS
@@ -437,11 +498,89 @@ class business_Skin extends Skin
 
       /**
        * ============================================================================
-       * Custom Style Mediaidx
+       * General Settings
+       * ============================================================================
+       */
+      if ( $color = $this->get_setting( 'color_schemes' ) ) {
+         // Disp Posts
+         $custom_css .= '
+         a,
+         #main-header .primary-nav .nav a:hover, #main-header .primary-nav .nav a:active, #main-header .primary-nav .nav a:focus,
+         #main-header .primary-nav .nav > li.active a,
+         #main-content .evo_post_title h1 a:hover, #mini-blog .evo_post_title h1 a:hover, #main-content .evo_post_title h2 a:hover, #mini-blog .evo_post_title h2 a:hover, #main-content .evo_post_title h3 a:hover, #mini-blog .evo_post_title h3 a:hover, #main-content .evo_post_title h1 a:active, #mini-blog .evo_post_title h1 a:active, #main-content .evo_post_title h2 a:active, #mini-blog .evo_post_title h2 a:active, #main-content .evo_post_title h3 a:active, #mini-blog .evo_post_title h3 a:active, #main-content .evo_post_title h1 a:focus, #mini-blog .evo_post_title h1 a:focus, #main-content .evo_post_title h2 a:focus, #mini-blog .evo_post_title h2 a:focus, #main-content .evo_post_title h3 a:focus, #mini-blog .evo_post_title h3 a:focus,
+         #main-content .evo_post .small.text-muted a:hover, #mini-blog .evo_post .small.text-muted a:hover, #main-content .evo_post .small.text-muted a .glyphicon:hover, #mini-blog .evo_post .small.text-muted a .glyphicon:hover,
+         .pagination li a,
+
+         #main-sidebar .evo_widget a:hover, #main-sidebar .evo_widget a:active, #main-sidebar .evo_widget a:focus,
+         #main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a
+         { color: '.$color.'; }
+
+         #main-header .primary-nav .nav a::after,
+         .disp_posts .evo_intro_post,
+         .disp_posts #main-content .posts_date,
+         .disp_posts #main-content .timeline,
+         #main-content .evo_post .evo_image_block a::before, #mini-blog .evo_post .evo_image_block a::before, #main-content .evo_post .evo_post_gallery__image a::before, #mini-blog .evo_post .evo_post_gallery__image a::before,
+         #main-content .evo_post .evo_post__full_text .evo_post_more_link a:hover, #mini-blog .evo_post .evo_post__full_text .evo_post_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover,
+         .pagination .active span, .pagination .active span:hover,
+         .pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
+         #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+
+         #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
+         #main-sidebar .widget_core_coll_media_index .widget_flow_blocks > div a::before,
+         #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
+         #main-sidebar .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday
+         { background-color: '.$color.'; }
+
+         .pagination .active span, .pagination .active span:hover,
+         .pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
+         .posts_mini_layout #mini-blog .pagination li a, .posts_mini_layout #mini-blog .pagination li span,
+         #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+
+         #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
+         #main-sidebar .widget_core_coll_search_form .compact_search_form .search_field,
+         #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus
+         { border-color: '.$color.'; }
+         ';
+      }
+
+      /**
+       * ============================================================================
+       * Header Custom Style
+       * ============================================================================
+       */
+      if ( $color = $this->get_setting( 'header_top_color' ) ) {
+         $custom_css .= '#header-top .header-contact-info, #header-top .widget_core_user_links .ufld_icon_links a { color: '.$color.';}';
+      }
+      if ( $bg_color = $this->get_setting( 'header_top_bg' ) ) {
+         $custom_css .= '#header-top{ background-color: '.$bg_color.'; }';
+      }
+      if ( $color = $this->get_setting( 'menu_link_color' ) ) {
+         $custom_css .= '#main-header .primary-nav .nav a { color: '.$color.';}';
+      }
+      if ( $bg_color = $this->get_setting( 'main_header_bg' ) ) {
+         $custom_css .= '#main-header{ background-color: '.$bg_color.'; }';
+      }
+
+      /**
+       * ============================================================================
+       * Posts Custome Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'regular_post_bg' ) ) {
+         $custom_css .= '.post_regular { background-color: '.$bg_color.'; }';
+      }
+      if ( $bg_color = $this->get_setting( 'mini_blog_bg' ) ) {
+         $custom_css .= '.posts_mini_layout{ background-color: '.$bg_color.'; }';
+      }
+
+      /**
+       * ============================================================================
+       * Mediaidx Custom Style
        * ============================================================================
        */
       if ( $padding = $this->get_setting( 'padding_column' ) ) {
          $custom_css .= '.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li{ padding: '.$padding.'px }';
+         $custom_css .= '.disp_mediaidx #main-mediaidx .title_mediaidx { margin-left: '.$padding.'px; margin-right: '.$padding.'px; }';
       }
 
       if ( $color = $this->get_setting( 'mediaidx_bg' ) ) {
@@ -497,98 +636,98 @@ class business_Skin extends Skin
 			case 'Results':
 				// Results list (Used to view the lists of the users, messages, contacts and etc.):
 				return array(
-					'page_url' => '', // All generated links will refer to the current page
-					'before' => '<div class="results panel panel-default">',
-					'content_start' => '<div id="$prefix$ajax_content">',
-					'header_start' => '',
-						'header_text' => '<div class="center"><ul class="pagination">'
-								.'$prev$$first$$list_prev$$list$$list_next$$last$$next$'
-							   .'</ul></div>',
-						'header_text_single' => '',
-					'header_end' => '',
-					'head_title' => '<div class="panel-heading fieldset_title"><span class="pull-right">$global_icons$</span><h3 class="panel-title">$title$</h3></div>'."\n",
-					'global_icons_class' => 'btn btn-default btn-sm',
-					'filters_start'        => '<div class="filters panel-body">',
-					'filters_end'          => '</div>',
-					'filter_button_class'  => 'btn-sm btn-info',
-					'filter_button_before' => '<div class="form-group pull-right">',
-					'filter_button_after'  => '</div>',
-					'messages_start' => '<div class="messages form-inline">',
-					'messages_end' => '</div>',
-					'messages_separator' => '<br />',
-					'list_start' => '<div class="table_scroll">'."\n"
-					               .'<table class="table table-striped table-bordered table-hover table-condensed" cellspacing="0">'."\n",
-						'head_start' => "<thead>\n",
-							'line_start_head' => '<tr>',  // TODO: fusionner avec colhead_start_first; mettre a jour admin_UI_general; utiliser colspan="$headspan$"
-							'colhead_start' => '<th $class_attrib$>',
-							'colhead_start_first' => '<th class="firstcol $class$">',
-							'colhead_start_last' => '<th class="lastcol $class$">',
-							'colhead_end' => "</th>\n",
-							'sort_asc_off' => get_icon( 'sort_asc_off' ),
-							'sort_asc_on' => get_icon( 'sort_asc_on' ),
-							'sort_desc_off' => get_icon( 'sort_desc_off' ),
-							'sort_desc_on' => get_icon( 'sort_desc_on' ),
-							'basic_sort_off' => '',
-							'basic_sort_asc' => get_icon( 'ascending' ),
-							'basic_sort_desc' => get_icon( 'descending' ),
-						'head_end' => "</thead>\n\n",
-						'tfoot_start' => "<tfoot>\n",
-						'tfoot_end' => "</tfoot>\n\n",
-						'body_start' => "<tbody>\n",
-							'line_start' => '<tr class="even">'."\n",
-							'line_start_odd' => '<tr class="odd">'."\n",
-							'line_start_last' => '<tr class="even lastline">'."\n",
-							'line_start_odd_last' => '<tr class="odd lastline">'."\n",
-								'col_start' => '<td $class_attrib$>',
-								'col_start_first' => '<td class="firstcol $class$">',
-								'col_start_last' => '<td class="lastcol $class$">',
-								'col_end' => "</td>\n",
-							'line_end' => "</tr>\n\n",
-							'grp_line_start' => '<tr class="group">'."\n",
-							'grp_line_start_odd' => '<tr class="odd">'."\n",
-							'grp_line_start_last' => '<tr class="lastline">'."\n",
-							'grp_line_start_odd_last' => '<tr class="odd lastline">'."\n",
-										'grp_col_start' => '<td $class_attrib$ $colspan_attrib$>',
-										'grp_col_start_first' => '<td class="firstcol $class$" $colspan_attrib$>',
-										'grp_col_start_last' => '<td class="lastcol $class$" $colspan_attrib$>',
-								'grp_col_end' => "</td>\n",
-							'grp_line_end' => "</tr>\n\n",
-						'body_end' => "</tbody>\n\n",
-						'total_line_start' => '<tr class="total">'."\n",
-							'total_col_start' => '<td $class_attrib$>',
-							'total_col_start_first' => '<td class="firstcol $class$">',
-							'total_col_start_last' => '<td class="lastcol $class$">',
-							'total_col_end' => "</td>\n",
-						'total_line_end' => "</tr>\n\n",
-					'list_end' => "</table></div>\n\n",
-					'footer_start' => '',
-					'footer_text' => '<div class="center"><ul class="pagination">'
-							.'$prev$$first$$list_prev$$list$$list_next$$last$$next$'
-						.'</ul></div><div class="center">$page_size$</div>'
-					                  /* T_('Page $scroll_list$ out of $total_pages$   $prev$ | $next$<br />'. */
-					                  /* '<strong>$total_pages$ Pages</strong> : $prev$ $list$ $next$' */
-					                  /* .' <br />$first$  $list_prev$  $list$  $list_next$  $last$ :: $prev$ | $next$') */,
-					'footer_text_single' => '<div class="center">$page_size$</div>',
-					'footer_text_no_limit' => '', // Text if theres no LIMIT and therefor only one page anyway
-						'page_current_template' => '<span>$page_num$</span>',
-						'page_item_before' => '<li>',
-						'page_item_after' => '</li>',
-						'page_item_current_before' => '<li class="active">',
-						'page_item_current_after'  => '</li>',
-						'prev_text' => T_('Previous'),
-						'next_text' => T_('Next'),
-						'no_prev_text' => '',
-						'no_next_text' => '',
-						'list_prev_text' => T_('...'),
-						'list_next_text' => T_('...'),
-						'list_span' => 11,
-						'scroll_list_range' => 5,
-					'footer_end' => "\n\n",
-					'no_results_start' => '<div class="panel-footer">'."\n",
-					'no_results_end'   => '$no_results$</div>'."\n\n",
-					'content_end' => '</div>',
-					'after' => '</div>',
-					'sort_type' => 'basic'
+					'page_url'                => '', // All generated links will refer to the current page
+					'before'                  => '<div class="results panel panel-default">',
+					'content_start'           => '<div id="$prefix$ajax_content">',
+					'header_start'            => '',
+					'header_text'             => '<div class="center"><ul class="pagination">'
+                        						   .'$prev$$first$$list_prev$$list$$list_next$$last$$next$'
+                        						   .'</ul></div>',
+					'header_text_single'      => '',
+					'header_end'              => '',
+					'head_title'              => '<div class="panel-heading fieldset_title"><span class="pull-right">$global_icons$</span><h3 class="panel-title">$title$</h3></div>'."\n",
+					'global_icons_class'      => 'btn btn-default btn-sm',
+					'filters_start'           => '<div class="filters panel-body">',
+					'filters_end'             => '</div>',
+					'filter_button_class'     => 'btn-sm btn-info',
+					'filter_button_before'    => '<div class="form-group pull-right">',
+					'filter_button_after'     => '</div>',
+					'messages_start'          => '<div class="messages form-inline">',
+					'messages_end'            => '</div>',
+					'messages_separator'      => '<br />',
+					'list_start'              => '<div class="table_scroll">'."\n"
+					                           .'<table class="table table-striped table-bordered table-hover table-condensed" cellspacing="0">'."\n",
+					'head_start'              => "<thead>\n",
+					'line_start_head'         => '<tr>',  // TODO: fusionner avec colhead_start_first; mettre a jour admin_UI_general; utiliser colspan="$headspan$"
+					'colhead_start'           => '<th $class_attrib$>',
+					'colhead_start_first'     => '<th class="firstcol $class$">',
+					'colhead_start_last'      => '<th class="lastcol $class$">',
+					'colhead_end'             => "</th>\n",
+					'sort_asc_off'            => get_icon( 'sort_asc_off' ),
+					'sort_asc_on'             => get_icon( 'sort_asc_on' ),
+					'sort_desc_off'           => get_icon( 'sort_desc_off' ),
+					'sort_desc_on'            => get_icon( 'sort_desc_on' ),
+					'basic_sort_off'          => '',
+					'basic_sort_asc'          => get_icon( 'ascending' ),
+					'basic_sort_desc'         => get_icon( 'descending' ),
+					'head_end'                => "</thead>\n\n",
+					'tfoot_start'             => "<tfoot>\n",
+					'tfoot_end'               => "</tfoot>\n\n",
+					'body_start'              => "<tbody>\n",
+					'line_start'              => '<tr class="even">'."\n",
+					'line_start_odd'          => '<tr class="odd">'."\n",
+					'line_start_last'         => '<tr class="even lastline">'."\n",
+					'line_start_odd_last'     => '<tr class="odd lastline">'."\n",
+					'col_start'               => '<td $class_attrib$>',
+					'col_start_first'         => '<td class="firstcol $class$">',
+					'col_start_last'          => '<td class="lastcol $class$">',
+					'col_end'                 => "</td>\n",
+					'line_end'                => "</tr>\n\n",
+					'grp_line_start'          => '<tr class="group">'."\n",
+					'grp_line_start_odd'      => '<tr class="odd">'."\n",
+					'grp_line_start_last'     => '<tr class="lastline">'."\n",
+					'grp_line_start_odd_last' => '<tr class="odd lastline">'."\n",
+					'grp_col_start'           => '<td $class_attrib$ $colspan_attrib$>',
+					'grp_col_start_first'     => '<td class="firstcol $class$" $colspan_attrib$>',
+					'grp_col_start_last'      => '<td class="lastcol $class$" $colspan_attrib$>',
+					'grp_col_end'             => "</td>\n",
+					'grp_line_end'            => "</tr>\n\n",
+					'body_end'                => "</tbody>\n\n",
+					'total_line_start'        => '<tr class="total">'."\n",
+					'total_col_start'         => '<td $class_attrib$>',
+					'total_col_start_first'   => '<td class="firstcol $class$">',
+					'total_col_start_last'    => '<td class="lastcol $class$">',
+					'total_col_end'           => "</td>\n",
+					'total_line_end'          => "</tr>\n\n",
+					'list_end'                => "</table></div>\n\n",
+					'footer_start'            => '',
+					'footer_text'             => '<div class="center"><ul class="pagination">'
+                        							.'$prev$$first$$list_prev$$list$$list_next$$last$$next$'
+                        						   .'</ul></div><div class="center">$page_size$</div>'
+            					                  /* T_('Page $scroll_list$ out of $total_pages$   $prev$ | $next$<br />'. */
+            					                  /* '<strong>$total_pages$ Pages</strong> : $prev$ $list$ $next$' */
+            					                  /* .' <br />$first$  $list_prev$  $list$  $list_next$  $last$ :: $prev$ | $next$') */,
+					'footer_text_single'       => '<div class="center">$page_size$</div>',
+					'footer_text_no_limit'     => '', // Text if theres no LIMIT and therefor only one page anyway
+					'page_current_template'    => '<span>$page_num$</span>',
+					'page_item_before'         => '<li>',
+					'page_item_after'          => '</li>',
+					'page_item_current_before' => '<li class="active">',
+					'page_item_current_after'  => '</li>',
+					'prev_text'                => T_('Previous'),
+					'next_text'                => T_('Next'),
+					'no_prev_text'             => '',
+					'no_next_text'             => '',
+					'list_prev_text'           => T_('...'),
+					'list_next_text'           => T_('...'),
+					'list_span'                => 11,
+					'scroll_list_range'        => 5,
+					'footer_end'               => "\n\n",
+					'no_results_start'         => '<div class="panel-footer">'."\n",
+					'no_results_end'           => '$no_results$</div>'."\n\n",
+					'content_end'              => '</div>',
+					'after'                    => '</div>',
+					'sort_type'                => 'basic'
 				);
 				break;
 
@@ -602,7 +741,7 @@ class business_Skin extends Skin
 					'title_fmt'      => '$title$'."\n",
 					'no_title_fmt'   => '',
 					'fieldset_begin' => '<fieldset $fieldset_attribs$>'."\n"
-																.'<legend $title_attribs$>$fieldset_title$</legend>'."\n",
+												.'<legend $title_attribs$>$fieldset_title$</legend>'."\n",
 					'fieldset_end'   => '</fieldset>'."\n",
 					'fieldstart'     => '<div class="form-group form-group-sm" $ID$>'."\n",
 					'fieldend'       => "</div>\n\n",
@@ -648,7 +787,7 @@ class business_Skin extends Skin
 					'title_fmt'      => '<span style="float:right">$global_icons$</span><h2>$title$</h2>'."\n",
 					'no_title_fmt'   => '<span style="float:right">$global_icons$</span>'."\n",
 					'fieldset_begin' => '<div class="fieldset_wrapper $class$" id="fieldset_wrapper_$id$"><fieldset $fieldset_attribs$><div class="panel panel-default">'."\n"
-															.'<legend class="panel-heading" $title_attribs$>$fieldset_title$</legend><div class="panel-body $class$">'."\n",
+										   .'<legend class="panel-heading" $title_attribs$>$fieldset_title$</legend><div class="panel-body $class$">'."\n",
 					'fieldset_end'   => '</div></div></fieldset></div>'."\n",
 					'fieldstart'     => '<div class="form-group" $ID$>'."\n",
 					'fieldend'       => "</div>\n\n",
@@ -693,7 +832,7 @@ class business_Skin extends Skin
 					'title_fmt'      => '<span style="float:right">$global_icons$</span><h2>$title$</h2>'."\n",
 					'no_title_fmt'   => '<span style="float:right">$global_icons$</span>'."\n",
 					'fieldset_begin' => '<div class="fieldset_wrapper $class$" id="fieldset_wrapper_$id$"><fieldset $fieldset_attribs$><div class="panel panel-default">'."\n"
-															.'<legend class="panel-heading" $title_attribs$>$fieldset_title$</legend><div class="panel-body $class$">'."\n",
+											   .'<legend class="panel-heading" $title_attribs$>$fieldset_title$</legend><div class="panel-body $class$">'."\n",
 					'fieldset_end'   => '</div></div></fieldset></div>'."\n",
 					'fieldstart'     => '<div class="form-group fixedform-group" $ID$>'."\n",
 					'fieldend'       => "</div>\n\n",
@@ -955,5 +1094,3 @@ class business_Skin extends Skin
    }
 
 }
-
-?>

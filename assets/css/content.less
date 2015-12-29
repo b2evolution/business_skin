@@ -106,7 +106,7 @@
                bottom: 0;
                width: 100%;
                height: 100%;
-               background-color: rgba(29, 198, 223, 0.8);
+               background-color: @primary;
             }
 
             &::after {
@@ -127,7 +127,10 @@
 
          }
 
-         &:hover a::before, &:hover a::after {
+         &:hover a::before {
+            opacity: 0.8;
+         }
+         &:hover a::after {
             opacity: 1;
          }
 
@@ -176,6 +179,35 @@
                   background: @primary;
                   color: @w;
                   border-color: transparent;
+               }
+            }
+         }
+      }
+
+      // Text Excerpt
+      // ======================================================================== /
+      .evo_post__excerpt_text {
+
+         .evo_post__excerpt_more_link {
+            display: block;
+            margin-top: 15px;
+
+            a{
+               display: inline-block;
+               padding: 12px 20px;
+               text-transform: uppercase;
+               font-size: 1.2rem;
+               font-weight: 700;
+               letter-spacing: 1px;
+               color: @c4;
+               border: 1px solid @d;
+               border-radius: 2px;
+
+               &:hover, &:active, &:focus {
+                  text-decoration: none;
+                  background-color: @primary;
+                  color: @w;
+                  border-color: @primary;
                }
             }
          }

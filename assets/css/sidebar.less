@@ -90,11 +90,17 @@
       background: transparent;
    }
 
-   input {
+   input[type="email"],
+   input[type="number"],
+   input[type="password"],
+   input[type="tel"],
+   input[type="url"],
+   input[type="text"]{
       box-shadow: none;
 
       &:focus {
-         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+         box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px @primary;
+         opacity: 0.6;
       }
    }
 
@@ -212,12 +218,8 @@
          }
 
          .search_field {
-            border-color: #e4e4e4;
-            border-right-color: @primary;
-
-            &:focus {
-               border-color: @primary;
-            }
+            border-color: @primary;
+            // border-right-color: @primary;
          }
 
          .search_submit{
@@ -378,7 +380,7 @@
                   bottom: -100%;
                   width: 100%;
                   height: 100%;
-                  background-color: rgba(29, 198, 223, 0.8);
+                  background-color: @primary;
                }
 
                &::after {
@@ -400,7 +402,7 @@
             }
 
             &:hover a::before {
-               opacity: 1;
+               opacity: 0.8;
                bottom: 0;
             }
 
