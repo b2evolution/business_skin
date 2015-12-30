@@ -320,6 +320,11 @@ body.loggedin #main-header {
 #main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title {
   margin-bottom: -10px;
 }
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  #main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title {
+    margin-bottom: -2px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #main-header {
     text-align: center;
@@ -1120,6 +1125,15 @@ body.loggedin #main-header {
   padding: 10px 0;
   border: 0;
 }
+.disp_single #main-content .evo_post .evo_form .form_textarea_input:hover,
+.disp_page #main-content .evo_post .evo_form .form_textarea_input:hover,
+.disp_single #main-content .evo_post .evo_form .form_textarea_input:focus,
+.disp_page #main-content .evo_post .evo_form .form_textarea_input:focus,
+.disp_single #main-content .evo_post .evo_form .form_textarea_input:active,
+.disp_page #main-content .evo_post .evo_form .form_textarea_input:active {
+  box-shadow: none;
+  border-color: #1dc6df;
+}
 .disp_single #main-content .evo_post .evo_form .preview,
 .disp_page #main-content .evo_post .evo_form .preview,
 .disp_single #main-content .evo_post .evo_form .submit,
@@ -1370,7 +1384,7 @@ body.loggedin #main-header {
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field,
 .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit {
   height: 50px;
-  line-height: 35px;
+  line-height: 15px;
   border-color: #1dc6df;
   border-radius: 0;
 }
@@ -1470,6 +1484,126 @@ body.loggedin #main-header {
 .disp_search #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #f7f7f7;
 }
+.disp_front #main-content .evo_widget {
+  position: relative;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+.disp_front #main-content .evo_widget h3 {
+  display: table;
+  font-family: "Roboto Slab", serif;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 35px;
+}
+.disp_front #main-content .evo_widget h3::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1dc6df;
+}
+.disp_front #main-content .evo_widget a {
+  color: #333333;
+}
+.disp_front #main-content .evo_widget a:hover,
+.disp_front #main-content .evo_widget a:active,
+.disp_front #main-content .evo_widget a:focus {
+  color: #1dc6df;
+}
+.disp_front #main-content .evo_widget ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.disp_front #main-content .evo_widget.widget_core_coll_tag_cloud .tag_cloud a {
+  display: inline-block;
+  float: left;
+  padding: 5px 12px;
+  font-size: 1.4rem !important;
+  margin: 2px;
+  background-color: #f7f7f7;
+  border: 1px solid #e4e4e4;
+  border-radius: 2px;
+}
+.disp_front #main-content .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover,
+.disp_front #main-content .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active,
+.disp_front #main-content .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus {
+  text-decoration: none;
+  background-color: #1dc6df;
+  color: #ffffff;
+  border-color: #1dc6df;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable {
+  font-size: 100%;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable caption {
+  position: relative;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable caption a {
+  z-index: 0;
+  padding: 0 15px;
+  background-color: #ffffff;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable caption a:hover {
+  text-decoration: none;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable caption a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 45%;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  z-index: -1;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable th,
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable td {
+  border-right: 1px solid rgba(228, 228, 228, 0.3);
+  border-bottom: 1px solid rgba(228, 228, 228, 0.3);
+  background-color: #ffffff;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable tr:last-child {
+  border: 0;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable th {
+  width: 10ex;
+  padding: 10px;
+  text-align: center;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable td {
+  padding: 8px 0;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable td:last-child {
+  border-right: 0;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable td a {
+  padding: 10px 12px;
+  font-size: 1.6rem;
+  color: #1dc6df;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable tfoot tr td {
+  border-bottom: 0;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday {
+  border: 0;
+  font-weight: 700;
+  background-color: #1dc6df;
+  color: #ffffff;
+  border-radius: 0;
+}
+.disp_front #main-content .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday a {
+  color: #ffffff;
+}
 /* ----------------------------------------------------------------------------
  * Main Sidebar
  * -------------------------------------------------------------------------- */
@@ -1553,7 +1687,8 @@ body.loggedin #main-header {
 #main-sidebar input[type="tel"]:focus,
 #main-sidebar input[type="url"]:focus,
 #main-sidebar input[type="text"]:focus {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #1dc6df;
+  box-shadow: none;
+  border-color: #1dc6df;
   opacity: 0.6;
 }
 #main-sidebar .panel-body {
@@ -1796,6 +1931,7 @@ body.loggedin #main-header {
 .evo_widget a {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  font-style: normal;
 }
 .evo_widget a:hover,
 .evo_widget a:active,

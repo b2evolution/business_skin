@@ -71,7 +71,7 @@ class business_Skin extends Skin
 		$r = array_merge( array(
 				'section_general_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('General Settings')
+					'label'  => T_('General Options')
 				),
 					'layout' => array(
 						'label'     => T_('Layout'),
@@ -111,7 +111,7 @@ class business_Skin extends Skin
              */
             'section_header_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Header Settings')
+					'label'  => T_('Header Options')
 				),
                'ht_show' => array(
                   'label'        => T_('Display Header Top'),
@@ -162,7 +162,7 @@ class business_Skin extends Skin
              */
             'section_disp_post_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Disp Posts Settings')
+               'label'  => T_('Disp Posts Options')
             ),
                'layout_posts' => array(
                   'label'    => T_('Layout Posts'),
@@ -222,6 +222,26 @@ class business_Skin extends Skin
 
             /**
              * ============================================================================
+             * Single and Page Disp Options
+             * ============================================================================
+             */
+            'section_single_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_('Single and Page Disp Options')
+            ),
+               'single_bg' => array(
+                  'label'         => T_('Background Single Disp'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+            'section_single_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Single Disp
+
+            /**
+             * ============================================================================
              * Sidebar Widget Options
              * ============================================================================
              */
@@ -265,7 +285,7 @@ class business_Skin extends Skin
              */
             'section_mediaidx_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Media Post Settings')
+					'label'  => T_('Media Post Options')
 				),
                'mediaidx_thumb_size' => array(
    					'label'        => T_('Thumbnail size for media index'),
@@ -349,7 +369,7 @@ class business_Skin extends Skin
              */
             'section_search_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Search Disp Settings')
+               'label'  => T_('Search Disp Options')
             ),
                'search_title' => array(
                   'label'        => T_('Search Box Title'),
@@ -586,10 +606,6 @@ class business_Skin extends Skin
          #main-content .evo_post .small.text-muted a:hover, #mini-blog .evo_post .small.text-muted a:hover, #main-content .evo_post .small.text-muted a .glyphicon:hover, #mini-blog .evo_post .small.text-muted a .glyphicon:hover,
          .pagination li a,
 
-         .disp_single #main-content .pager .previous a:hover, .disp_page #main-content .pager .previous a:hover, .disp_single #main-content .pager .next a:hover, .disp_page #main-content .pager .next a:hover, .disp_single #main-content .pager .previous a:active, .disp_page #main-content .pager .previous a:active, .disp_single #main-content .pager .next a:active, .disp_page #main-content .pager .next a:active, .disp_single #main-content .pager .previous a:focus, .disp_page #main-content .pager .previous a:focus, .disp_single #main-content .pager .next a:focus, .disp_page #main-content .pager .next a:focus,
-         .disp_single #main-content .evo_post .single_tags a:hover, .disp_page #main-content .evo_post .single_tags a:hover, .disp_single #main-content .evo_post .single_tags a:active, .disp_page #main-content .evo_post .single_tags a:active, .disp_single #main-content .evo_post .single_tags a:focus, .disp_page #main-content .evo_post .single_tags a:focus,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a,
-
          #main-sidebar .evo_widget a:hover, #main-sidebar .evo_widget a:active, #main-sidebar .evo_widget a:focus,
          #main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a,
 
@@ -607,12 +623,6 @@ class business_Skin extends Skin
          .pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
          #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         .disp_single #main-content .evo_post .evo_image_block a::before, .disp_page #main-content .evo_post .evo_image_block a::before, .disp_single #main-content .evo_post .evo_post_gallery__image a::before, .disp_page #main-content .evo_post .evo_post_gallery__image a::before,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
-         .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
-         .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right,
-
          #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
          #main-sidebar .widget_core_coll_media_index .widget_flow_blocks > div a::before,
          #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
@@ -628,20 +638,58 @@ class business_Skin extends Skin
          .posts_mini_layout #mini-blog .pagination li a, .posts_mini_layout #mini-blog .pagination li span,
          #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
-         .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
-         .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active
-
          #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
          #main-sidebar .widget_core_coll_search_form .compact_search_form .search_field,
          #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
 
          #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
-         .widget_core_coll_search_form .compact_search_form .search_submit
+         .widget_core_coll_search_form .compact_search_form .search_submit,
+         #main-sidebar input[type="email"]:focus, #main-sidebar input[type="number"]:focus, #main-sidebar input[type="password"]:focus, #main-sidebar input[type="tel"]:focus, #main-sidebar input[type="url"]:focus, #main-sidebar input[type="text"]:focus
+         { border-color: '.$color.'; }
+         ';
+
+         // Disp Single
+         $custom_css .= '
+         .disp_single #main-content .pager .previous a:hover, .disp_page #main-content .pager .previous a:hover, .disp_single #main-content .pager .next a:hover, .disp_page #main-content .pager .next a:hover, .disp_single #main-content .pager .previous a:active, .disp_page #main-content .pager .previous a:active, .disp_single #main-content .pager .next a:active, .disp_page #main-content .pager .next a:active, .disp_single #main-content .pager .previous a:focus, .disp_page #main-content .pager .previous a:focus, .disp_single #main-content .pager .next a:focus, .disp_page #main-content .pager .next a:focus,
+         .disp_single #main-content .evo_post .single_tags a:hover, .disp_page #main-content .evo_post .single_tags a:hover, .disp_single #main-content .evo_post .single_tags a:active, .disp_page #main-content .evo_post .single_tags a:active, .disp_single #main-content .evo_post .single_tags a:focus, .disp_page #main-content .evo_post .single_tags a:focus,
+         .disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a
+         { color: '.$color.'; }
+
+         .disp_single #main-content .evo_post .evo_image_block a::before, .disp_page #main-content .evo_post .evo_image_block a::before, .disp_single #main-content .evo_post .evo_post_gallery__image a::before, .disp_page #main-content .evo_post .evo_post_gallery__image a::before,
+         .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
+         .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
+         .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
+         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right
+         { background-color: '.$color.'; }
+
+         .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
+         .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
+         .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
+         .disp_single #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_page #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_single #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_page #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_single #main-content .evo_post .evo_form .form_textarea_input:active, .disp_page #main-content .evo_post .evo_form .form_textarea_input:active
          { border-color: '.$color.'; }
 
          .disp_single #main-content .evo_post > header .cat-links a, .disp_page #main-content .evo_post > header .cat-links a,
-         .disp_single #main-content .evo_post .single_tags a, .disp_page #main-content .evo_post .single_tags a
+         .disp_single #main-content .evo_post .single_tags a, .disp_page #main-content .evo_post .single_tags a,
+
+         .disp_mediaidx #main-mediaidx .title_mediaidx
+         { border-bottom-color: '.$color.'; }
+         ';
+
+         // Disp Search
+         $custom_css .= '
+         .disp_search .search_result .search_content_wrap .search_title a:hover, .disp_search .search_result .search_content_wrap .search_title a:active, .disp_search .search_result .search_content_wrap .search_title a:focus,
+         .disp_search .search_result .search_content_wrap .search_info a:hover, .disp_search .search_result .search_content_wrap .search_info a:active, .disp_search .search_result .search_content_wrap .search_info a:focus
+         { color: '.$color.'; }
+
+         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
+         .disp_search .search_result .search_result_score.dimmed
+         { background-color: '.$color.'; }
+
+         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
+         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active
+         { border-color: '.$color.'; }
+
+         .disp_search .search_result .search_content_wrap .search_info a
          { border-bottom-color: '.$color.'; }
          ';
       }
@@ -678,6 +726,20 @@ class business_Skin extends Skin
       }
       if ( $bg_color = $this->get_setting( 'mini_blog_bg' ) ) {
          $custom_css .= '.posts_mini_layout{ background-color: '.$bg_color.'; }';
+      }
+
+      /**
+       * ============================================================================
+       * Single and Page Disp Custom Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'single_bg' ) ) {
+         $custom_css .= '
+         .disp_single, .disp_page,
+         .disp_single .pager li>a, .disp_single .pager li>span,
+         .disp_single .evo_post .panel-default
+         { background-color: '.$bg_color.'; }
+         ';
       }
 
       /**
