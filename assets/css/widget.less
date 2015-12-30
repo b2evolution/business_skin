@@ -247,3 +247,48 @@
       }
    }
 }
+
+// Search Form
+// ======================================================================== /
+.widget_core_coll_search_form {
+   .compact_search_form{
+
+      .search_field, .search_submit {
+         box-shadow: none;
+         border-radius: 0;
+         background-color: @w;
+
+         &:focus, &:hover, &:active {
+            opacity: 1;
+            box-shadow: none;
+         }
+      }
+
+      .form-control, .btn {
+         padding: 15px 20px;
+         height: 45px;
+      }
+
+      .search_field {
+         border-color: @primary;
+         padding-left: 12px;
+         padding-right: 12px;
+         // border-right-color: @primary;
+      }
+
+      .search_submit{
+         background-color: @primary;
+         border-color: @primary;
+         font-size: 1.8rem;
+         font-weight: 600;
+         line-height: 0;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+
+         &:focus, &:hover, &:active {
+            outline: 0;
+         }
+      }
+
+   }
+}

@@ -27,6 +27,11 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 					'block_end'         => '</div>',
                'block_title_start' => '<h4 class="widget_title">',
                'block_title_end'   => '</h4>',
+               // Search
+               'search_input_before'  => '<div class="input-group">',
+               'search_input_after'   => '',
+               'search_submit_before' => '<span class="input-group-btn">',
+               'search_submit_after'  => '</span></div>',
 				) );
    			// Note: Double quotes have been used around "Footer" only for test purposes.
    		?>

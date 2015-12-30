@@ -59,6 +59,8 @@ siteskin_include( '_site_body_header.inc.php' );
       </div><!-- .row -->
    </div><!-- .container -->
 </header><!-- #header-top -->
+<?php } else { ?>
+   <header id="header-top-hidden"></header>
 <?php } ?>
 
 <header id="main-header">

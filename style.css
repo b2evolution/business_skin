@@ -105,8 +105,12 @@ a {
     line-height: 40px;
   }
 }
+#header-top-hidden {
+  display: block;
+  margin-top: -15px;
+}
 #main-header {
-  padding: 20px 0 25px;
+  padding: 25px 0 30px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   z-index: 9999;
 }
@@ -137,6 +141,9 @@ a {
 #main-header .widget_core_coll_logo img {
   max-width: 160px;
 }
+#main-header .widget_core_coll_title {
+  margin-bottom: -10px;
+}
 #main-header .widget_core_coll_logo {
   margin-bottom: 0;
 }
@@ -149,7 +156,7 @@ a {
   }
 }
 #main-header .widget_core_coll_tagline {
-  margin-top: -3px;
+  margin-top: 5px;
   margin-bottom: 0;
 }
 #main-header .primary-nav .nav {
@@ -309,6 +316,9 @@ body.loggedin #main-header {
   #main-header-sticky-wrapper.is-sticky #main-header {
     padding-bottom: 5px;
   }
+}
+#main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title {
+  margin-bottom: -10px;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #main-header {
@@ -1478,6 +1488,7 @@ body.loggedin #main-header {
   }
 }
 #main-sidebar .evo_widget {
+  font-size: 1.4rem;
   border: 0;
   box-shadow: none;
   background-color: transparent;
@@ -1574,6 +1585,9 @@ body.loggedin #main-header {
 #main-sidebar .widget_core_org_members .panel-body .ufld_icon_links {
   margin-bottom: 10px;
 }
+#main-sidebar .widget_core_org_members .panel-body .ufld_icon_links a {
+  color: #777777;
+}
 #main-sidebar .widget_core_org_members .panel-body .ufld_icon_links a:hover,
 #main-sidebar .widget_core_org_members .panel-body .ufld_icon_links a:active,
 #main-sidebar .widget_core_org_members .panel-body .ufld_icon_links a:focus {
@@ -1595,30 +1609,15 @@ body.loggedin #main-header {
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_field,
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit {
   box-shadow: none;
-  border-radius: 0;
-  background-color: #ffffff;
 }
-#main-sidebar .widget_core_coll_search_form .compact_search_form .form-control,
-#main-sidebar .widget_core_coll_search_form .compact_search_form .btn {
-  padding: 15px 20px;
-  height: 45px;
-}
-#main-sidebar .widget_core_coll_search_form .compact_search_form .search_field {
-  border-color: #1dc6df;
-}
-#main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit {
-  background-color: #1dc6df;
-  border-color: #1dc6df;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+#main-sidebar .widget_core_coll_search_form .compact_search_form .search_field:focus,
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit:focus,
+#main-sidebar .widget_core_coll_search_form .compact_search_form .search_field:hover,
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit:hover,
+#main-sidebar .widget_core_coll_search_form .compact_search_form .search_field:active,
 #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit:active {
-  outline: 0;
+  opacity: 1;
+  box-shadow: none;
 }
 #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a {
   display: inline-block;
@@ -2031,6 +2030,45 @@ body.loggedin #main-header {
   font-size: 1.4rem !important;
   margin: 2px;
 }
+.widget_core_coll_search_form .compact_search_form .search_field,
+.widget_core_coll_search_form .compact_search_form .search_submit {
+  box-shadow: none;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+.widget_core_coll_search_form .compact_search_form .search_field:focus,
+.widget_core_coll_search_form .compact_search_form .search_submit:focus,
+.widget_core_coll_search_form .compact_search_form .search_field:hover,
+.widget_core_coll_search_form .compact_search_form .search_submit:hover,
+.widget_core_coll_search_form .compact_search_form .search_field:active,
+.widget_core_coll_search_form .compact_search_form .search_submit:active {
+  opacity: 1;
+  box-shadow: none;
+}
+.widget_core_coll_search_form .compact_search_form .form-control,
+.widget_core_coll_search_form .compact_search_form .btn {
+  padding: 15px 20px;
+  height: 45px;
+}
+.widget_core_coll_search_form .compact_search_form .search_field {
+  border-color: #1dc6df;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.widget_core_coll_search_form .compact_search_form .search_submit {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.widget_core_coll_search_form .compact_search_form .search_submit:focus,
+.widget_core_coll_search_form .compact_search_form .search_submit:hover,
+.widget_core_coll_search_form .compact_search_form .search_submit:active {
+  outline: 0;
+}
 /* ----------------------------------------------------------------------------
  * Main Footer Styling
  * -------------------------------------------------------------------------- */
@@ -2047,7 +2085,8 @@ body.loggedin #main-header {
 #main-footer .widget_footer .evo_widget .widget_title {
   font-size: 1.2rem;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1.8px;
   margin-bottom: 25px;
@@ -2058,12 +2097,14 @@ body.loggedin #main-header {
   padding: 0;
 }
 #main-footer .widget_footer .evo_widget a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
+  opacity: 0.8;
 }
 #main-footer .widget_footer .evo_widget a:hover,
 #main-footer .widget_footer .evo_widget a:active,
 #main-footer .widget_footer .evo_widget a:focus {
   color: #1dc6df;
+  opacity: 1;
 }
 #main-footer .widget_footer .panel.panel-default {
   background-color: transparent;
@@ -2123,6 +2164,20 @@ body.loggedin #main-header {
   text-decoration: none;
   background-color: #1dc6df;
   color: #ffffff;
+}
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_field,
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_submit {
+  border-radius: 0;
+  box-shadow: none;
+}
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_field:focus,
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_submit:focus,
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_field:hover,
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_submit:hover,
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_field:active,
+#main-footer .widget_footer .widget_core_coll_search_form .compact_search_form .search_submit:active {
+  opacity: 1;
+  box-shadow: none;
 }
 #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable {
   font-size: 100%;

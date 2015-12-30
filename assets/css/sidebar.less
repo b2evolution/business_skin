@@ -22,6 +22,7 @@
    // Widget Styling
    // ======================================================================== /
    .evo_widget {
+      font-size: 1.4rem;
       border: 0;
       box-shadow: none;
       background-color: transparent;
@@ -162,6 +163,7 @@
             margin-bottom: 10px;
 
             a {
+               color: @c7;
                // background-color: #ddd;
 
                &:hover, &:active, &:focus {
@@ -208,38 +210,18 @@
 
          .search_field, .search_submit {
             box-shadow: none;
-            border-radius: 0;
-            background-color: @w;
-         }
-
-         .form-control, .btn {
-            padding: 15px 20px;
-            height: 45px;
-         }
-
-         .search_field {
-            border-color: @primary;
-            // border-right-color: @primary;
-         }
-
-         .search_submit{
-            background-color: @primary;
-            border-color: @primary;
-            font-size: 1.8rem;
-            font-weight: 600;
-            line-height: 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
 
             &:focus, &:hover, &:active {
-               outline: 0;
+               opacity: 1;
+               box-shadow: none;
             }
          }
 
       }
    }
 
-
+   // Tag Cloud
+   // ======================================================================== /
    .widget_core_coll_tag_cloud {
 
       .tag_cloud {
