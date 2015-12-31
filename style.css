@@ -637,6 +637,22 @@ body.loggedin #main-header {
   color: #ffffff;
   border-color: #1dc6df;
 }
+.page_title {
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  color: #333333;
+  border-bottom: 2px solid #1dc6df;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .page_title {
+    margin-bottom: 30px;
+    font-size: 2.6rem;
+  }
+}
 /* ----------------------------------------------------------------------------
  * Pagination
  * -------------------------------------------------------------------------- */
@@ -1576,6 +1592,67 @@ body.loggedin #main-header {
 .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_register .input_text:focus {
   box-shadow: none;
 }
+.disp_comments .evo_comment {
+  margin-bottom: 30px;
+  border-color: #eeeeee;
+  border-radius: 2px;
+}
+.disp_comments .evo_comment a {
+  color: #000000;
+}
+.disp_comments .evo_comment a:hover,
+.disp_comments .evo_comment a:active,
+.disp_comments .evo_comment a:focus {
+  color: #1dc6df;
+}
+.disp_comments .evo_comment .panel-heading {
+  background-color: transparent;
+  border-color: #eeeeee;
+  color: #444444;
+  padding: 12px 15px;
+}
+.disp_comments .evo_comment .panel-heading .evo_comment_title,
+.disp_comments .evo_comment .panel-heading .panel-title {
+  font-size: 1.3rem;
+  font-family: "Roboto Slab", serif;
+}
+.disp_comments .evo_comment .panel-heading .evo_comment_title a,
+.disp_comments .evo_comment .panel-heading .panel-title a {
+  color: #1dc6df;
+}
+.disp_comments .evo_comment .panel-heading .evo_comment_title a:hover,
+.disp_comments .evo_comment .panel-heading .panel-title a:hover,
+.disp_comments .evo_comment .panel-heading .evo_comment_title a:active,
+.disp_comments .evo_comment .panel-heading .panel-title a:active,
+.disp_comments .evo_comment .panel-heading .evo_comment_title a:focus,
+.disp_comments .evo_comment .panel-heading .panel-title a:focus {
+  background-color: transparent;
+}
+@media only screen and (max-width: 768px) {
+  .disp_comments .evo_comment .panel-heading .panel-title {
+    margin-bottom: 5px;
+  }
+}
+.disp_comments .evo_comment .evo_comment_text {
+  font-size: 1.4rem;
+}
+.disp_comments .evo_comment .evo_comment_info {
+  padding-top: 5px;
+}
+.disp_comments .evo_comment .evo_comment_info a {
+  background-color: #eeeeee;
+  padding: 2px 5px;
+  color: #444444;
+  border-radius: 2px;
+}
+.disp_comments .evo_comment .evo_comment_info a:hover {
+  text-decoration: none;
+  background-color: #1dc6df;
+  color: #ffffff;
+}
+.disp_comments .evo_comment .evo_comment_avatar img {
+  margin-right: 20px;
+}
 /* ----------------------------------------------------------------------------
  * Main Sidebar
  * -------------------------------------------------------------------------- */
@@ -2189,6 +2266,17 @@ body.loggedin #main-header {
 .widget_core_profile_menu_link img {
   border-radius: 100%;
 }
+.widget_core_user_login .form_text_input {
+  margin-bottom: 15px;
+}
+.widget_core_user_login .panel .field_register_btn {
+  padding-top: 5px;
+}
+.widget_core_user_login .field_login_btn,
+.widget_core_user_register .field_register_btn {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
 /* ----------------------------------------------------------------------------
  * Main Footer Styling
  * -------------------------------------------------------------------------- */
@@ -2325,6 +2413,7 @@ body.loggedin #main-header {
 #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable th {
   padding: 6px;
   width: 6ex;
+  color: #333333;
 }
 #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a {
   color: #1dc6df;
@@ -2334,6 +2423,7 @@ body.loggedin #main-header {
   background-color: #1dc6df;
   border-color: #1dc6df;
   font-weight: 700;
+  color: #ffffff;
 }
 #main-footer .widget_footer .widget_core_coll_comment_list a:hover,
 #main-footer .widget_footer .widget_core_coll_comment_list a:focus,

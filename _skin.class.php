@@ -100,16 +100,22 @@ class business_Skin extends Skin
                   'defaultvalue' => '#1dc6df',
                   'type'         => 'color',
                ),
+               'front_bg' => array(
+                  'label'         => T_('Background Front Disp'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
                'single_bg' => array(
                   'label'         => T_('Background Single and Page Disp'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
-               'front_bg' => array(
-                  'label'         => T_('Background Front Disp'),
-                  'note'          => T_('Default color is #FFFFFF.'),
-                  'defaultvalue'  => '#FFFFFF',
+               'comments_bg' => array(
+                  'label'         => T_('Background Comments Disp'),
+                  'note'          => T_('Default color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
 				'section_general_end' => array(
@@ -722,6 +728,18 @@ class business_Skin extends Skin
          { border-color: '.$color.'; }
          ';
 
+         // Disp Comments
+         $custom_css .= '
+         .disp_comments .page_title
+         { border-bottom-color: '.$color.'; }
+
+         .disp_comments .evo_comment .panel-heading .evo_comment_title a, .disp_comments .evo_comment .panel-heading .panel-title a
+         { color: '.$color.'; }
+
+         .disp_comments .evo_comment .evo_comment_info a:hover
+         { background-color: '.$color.'; }
+         ';
+
       }
 
       /**
@@ -818,6 +836,18 @@ class business_Skin extends Skin
          $custom_css .= '
          .disp_front,
          .disp_front .evo_container__front_page_primary .widget_core_user_login
+         { background-color: '.$bg_color.'; }
+         ';
+      }
+
+      /**
+       * ============================================================================
+       * Front Disp Custom Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'comments_bg' ) ) {
+         $custom_css .= '
+         .disp_comments
          { background-color: '.$bg_color.'; }
          ';
       }
