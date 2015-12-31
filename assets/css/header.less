@@ -289,6 +289,13 @@ body.loggedin #main-header {
    top: 25px !important;
 }
 
+#main-header-sticky-wrapper #main-header {
+   .widget_core_coll_title {
+      margin-bottom: 0;
+   }
+
+}
+
 #main-header-sticky-wrapper.is-sticky #main-header {
    padding: 15px 0 20px;
    transition: all 0.3s ease-in-out;
@@ -305,7 +312,7 @@ body.loggedin #main-header {
       margin-bottom: -10px;
 
       @media only screen and ( max-width: 1024px ) and ( min-width: 768px ) {
-         margin-bottom: -2px;
+         margin-bottom: -6px;
       }
    }
 
@@ -316,7 +323,7 @@ body.loggedin #main-header {
 // ======================================================================== /
 @media screen
 and ( min-width: @M )
-and ( max-width: @MM ) {
+and ( max-width: 990px ) {
    #main-header {
       text-align: center;
       padding-bottom: 20px;

@@ -3,7 +3,7 @@
 // ======================================================================== /
 .disp_front {
 
-   #main-content {
+   .evo_container__front_page_primary {
 
       // Widget Front Page
       // ======================================================================== /
@@ -13,10 +13,11 @@
          margin-bottom: 40px;
 
          h3 {
+            position: relative;
             display: table;
             font-family: @font_title;
             font-size: 2rem;
-            position: relative;
+            color: @c0;
             margin-bottom: 35px;
 
             &::before {
@@ -36,6 +37,7 @@
 
             &:hover, &:active, &:focus {
                color: @primary;
+               text-decoration: none;
                // background-color: transparent;
             }
 
@@ -53,115 +55,92 @@
 
             .tag_cloud {
                a{
-                  display: inline-block;
-                  float: left;
-                  padding: 5px 12px;
-                  font-size: 1.4rem !important;
-                  margin: 2px;
                   background-color: @bg_post_regular;
                   border: 1px solid @bdr_bg;
-                  border-radius: 2px;
 
                   &:hover, &:active, &:focus {
-                     text-decoration: none;
                      background-color: @primary;
-                     color: @w;
                      border-color: @primary;
+                     color: @w !important;
                   }
                }
             }
          }
 
-         // Calender widget style
+         // Image Widget Custome Style
          // ======================================================================== /
-         &.widget_plugin_evo_Calr {
-
-            .bCalendarTable {
-               font-size: 100%;
-               border: 1px solid @e;
-               border-radius: 3px;
-
-               caption {
-                  position: relative;
-                  text-align: center;
-                  font-family: @font_title;
-                  font-size: 1.6rem;
-                  margin-bottom: 15px;
-
-                  a{
-                     z-index: 0;
-                     padding: 0 15px;
-                     background-color: @w;
-
-                     &:hover {
-                        text-decoration: none;
-                     }
-
-                     &::after {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: 45%;
-                        width: 100%;
-                        height: 1px;
-                        background-color: #ccc;
-                        z-index: -1;
-                     }
-                  }
-
-               }
-
-               th, td {
-                  border-right: 1px solid rgba(228, 228, 228, 0.3);
-                  border-bottom: 1px solid rgba(228, 228, 228, 0.3);
-                  background-color: @w;
-               }
-
-               tr {
-                  &:last-child {
-                     border: 0;
-                  }
-               }
-
-               th {
-                  width: 10ex;
-                  padding: 10px;
-                  text-align: center;
-               }
-
-               td {
-                  padding: 8px 0;
-
-                  &:last-child {
-                     border-right: 0;
-                  }
-
-                  a{
-                     padding: 10px 12px;
-                     font-size: 1.6rem;
-                     color: @primary;
-                  }
-               }
-
-               tfoot tr td {
-                  border-bottom: 0;
-               }
-
-               #bCalendarToday {
-                  border: 0;
-                  font-weight: 700;
-                  background-color: @primary;
-                  color: @w;
-                  border-radius: 0;
-
-                  a{
-                     color: @w;
-                  }
-               }
-
+         &.widget_core_image {
+            img {
+               max-width: 100%;
             }
          }
 
+         // Comment List Custome Style for Front Disp
+         // ======================================================================== /
+         &.widget_core_coll_comment_list {
+            a {
+               &:hover {
+                  background-color: transparent;
+               }
+            }
+         }
+
+         // User Links
+         // ======================================================================== /
+         &.widget_core_user_links {
+
+            .ufld_icon_links {
+               text-align: left;
+
+               a{
+                  margin: 1px;
+                  color: @c4;
+                  background-color: #eee;
+                  text-align: center;
+               }
+            }
+         }
+
+         // Widget Random User
+         // ======================================================================== /
+         &.widget_core_user_avatars {
+            .widget_flow_blocks {
+               align-content: flex-start;
+            }
+         }
+
+         // WIdget Member
+         // ======================================================================== /
+         &.widget_core_org_members {
+
+            h3 {
+               display: block;
+
+               &::before {
+                  display: none;
+               }
+            }
+
+             div.col-lg-4 {
+                width: 50%;
+                float: left;
+             }
+
+             a {
+
+               &:hover, &:active, &:focus {
+                  color: @w;
+               }
+             }
+         }
+
+         &.widget_core_user_login, &.widget_core_user_register {
+            .input_text {
+               &:focus {
+                  box-shadow: none;
+               }
+            }
+         }
 
       }
 

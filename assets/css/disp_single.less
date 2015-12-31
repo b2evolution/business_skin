@@ -20,6 +20,7 @@
       .pager {
          border: 1px solid @e;
          margin-top: 0;
+         background-color: @w;
 
          .previous, .next {
             a{
@@ -29,6 +30,7 @@
                border: 0;
                margin: 0;
                padding: 10px 12px;
+               background-color: @w;
 
                &:hover, &:active, &:focus {
                   background-color: transparent;
@@ -249,7 +251,7 @@
                padding-left: 0;
                padding-right: 0;
                overflow: hidden;
-               margin-bottom: 10px;
+               padding-bottom: 15px;
 
                &::after {
                   content: '';
@@ -272,6 +274,7 @@
             & > .panel-body {
                border: 1px solid @e;
                padding: 20px;
+               background-color: @w;
             }
 
          }

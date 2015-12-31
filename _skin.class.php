@@ -100,6 +100,18 @@ class business_Skin extends Skin
                   'defaultvalue' => '#1dc6df',
                   'type'         => 'color',
                ),
+               'single_bg' => array(
+                  'label'         => T_('Background Single and Page Disp'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+               'front_bg' => array(
+                  'label'         => T_('Background Front Disp'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -222,19 +234,14 @@ class business_Skin extends Skin
 
             /**
              * ============================================================================
-             * Single and Page Disp Options
+             * Disp Single and Page Options
              * ============================================================================
              */
             'section_single_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Single and Page Disp Options')
+               'label'  => T_('Disp Single and Page Options')
             ),
-               'single_bg' => array(
-                  'label'         => T_('Background Single Disp'),
-                  'note'          => T_('Default color is #FFFFFF.'),
-                  'defaultvalue'  => '#FFFFFF',
-                  'type'          => 'color',
-               ),
+
             'section_single_end' => array(
                'layout' => 'end_fieldset',
             ),
@@ -269,14 +276,40 @@ class business_Skin extends Skin
                ),
                'sidebar_border_widget' => array(
                   'label'         => T_('Border Color Widget'),
-                  'note'          => T_('Default color is #E4E4E4.'),
-                  'defaultvalue'  => '#E4E4E4',
+                  'note'          => T_('Default color is #EEEEEE.'),
+                  'defaultvalue'  => '#EEEEEE',
                   'type'          => 'color',
                ),
             'section_sidebar_end' => array(
                'layout' => 'end_fieldset',
             ),
             // End Section Sidebar Widget Options
+
+            /**
+             * ============================================================================
+             * Footer Options
+             * ============================================================================
+             */
+            'section_footer_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_('Footer')
+            ),
+               'footer_border_widget' => array(
+                  'label'         => T_('Border Color Widget'),
+                  'note'          => T_('Default color is #333333.'),
+                  'defaultvalue'  => '#333333',
+                  'type'          => 'color',
+               ),
+               'footer_bg' => array(
+                  'label'         => T_('Background Footer'),
+                  'note'          => T_('Default color is #222222.'),
+                  'defaultvalue'  => '#222222',
+                  'type'          => 'color',
+               ),
+            'section_footer_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Section Footer Top
 
             /**
              * ============================================================================
@@ -401,32 +434,6 @@ class business_Skin extends Skin
                'layout' => 'end_fieldset',
             ),
             // End Search Disp
-
-            /**
-             * ============================================================================
-             * Footer Options
-             * ============================================================================
-             */
-            'section_footer_start' => array(
-               'layout' => 'begin_fieldset',
-               'label'  => T_('Footer')
-            ),
-               'footer_border_widget' => array(
-                  'label'         => T_('Border Color Widget'),
-                  'note'          => T_('Default color is #333333.'),
-                  'defaultvalue'  => '#333333',
-                  'type'          => 'color',
-               ),
-               'footer_bg' => array(
-                  'label'         => T_('Background Footer'),
-                  'note'          => T_('Default color is #222222.'),
-                  'defaultvalue'  => '#222222',
-                  'type'          => 'color',
-               ),
-            'section_footer_end' => array(
-               'layout' => 'end_fieldset',
-            ),
-            // End Section Footer Top
 
             /**
              * ============================================================================
@@ -630,7 +637,9 @@ class business_Skin extends Skin
 
          #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:active, #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:focus,
          #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
-         .widget_core_coll_search_form .compact_search_form .search_submit
+         .widget_core_coll_search_form .compact_search_form .search_submit,
+
+         .widget_core_coll_media_index .widget_flow_blocks > div a::before
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -673,6 +682,9 @@ class business_Skin extends Skin
 
          .disp_mediaidx #main-mediaidx .title_mediaidx
          { border-bottom-color: '.$color.'; }
+
+         .disp_single #main-content .evo_post .evo_post__full_text blockquote, .disp_page #main-content .evo_post .evo_post__full_text blockquote
+         { border-left-color: '.$color.'; }
          ';
 
          // Disp Search
@@ -692,6 +704,24 @@ class business_Skin extends Skin
          .disp_search .search_result .search_content_wrap .search_info a
          { border-bottom-color: '.$color.'; }
          ';
+
+         // Disp Front
+         $custom_css .= '
+         .disp_front .evo_container__front_page_primary .evo_widget a:hover, .disp_front .evo_container__front_page_primary .evo_widget a:active, .disp_front .evo_container__front_page_primary .evo_widget a:focus,
+         .disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable td a
+         { color: '.$color.'; }
+
+         .disp_front .evo_container__front_page_primary .evo_widget h3::before,
+         .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
+         .disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday
+         { background-color: '.$color.'; }
+
+         .evo_container__front_page_primary .widget_core_coll_search_form .compact_search_form .search_field,
+         .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
+         .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_login .input_text:focus, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_register .input_text:focus
+         { border-color: '.$color.'; }
+         ';
+
       }
 
       /**
@@ -737,7 +767,10 @@ class business_Skin extends Skin
          $custom_css .= '
          .disp_single, .disp_page,
          .disp_single .pager li>a, .disp_single .pager li>span,
-         .disp_single .evo_post .panel-default
+         .disp_single .evo_post .panel-default,
+         .disp_single #main-content .evo_post .panel .panel-heading .panel-title, .disp_page #main-content .evo_post .panel .panel-heading .panel-title,
+         .disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading, .disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading,
+         .disp_single #main-content .evo_post .panel .panel-heading, .disp_page #main-content .evo_post .panel .panel-heading
          { background-color: '.$bg_color.'; }
          ';
       }
@@ -773,6 +806,19 @@ class business_Skin extends Skin
          $custom_css .= '
          #main-sidebar .evo_widget a
          { color: '.$color.'; }
+         ';
+      }
+
+      /**
+       * ============================================================================
+       * Front Disp Custom Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'front_bg' ) ) {
+         $custom_css .= '
+         .disp_front,
+         .disp_front .evo_container__front_page_primary .widget_core_user_login
+         { background-color: '.$bg_color.'; }
          ';
       }
 

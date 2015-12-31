@@ -21,6 +21,10 @@
       }
    }
 
+   .avatar {
+      border-radius: 100%;
+   }
+
 }
 
 // List Styling
@@ -235,6 +239,113 @@
 
 }
 
+// Profile Menu Link
+// ======================================================================== /
+.widget_core_profile_menu_link {
+
+   a{
+      font-family: @font_title;
+   }
+
+   img{
+      border-radius: 100%;
+      vertical-align: middle;
+      margin-right: 5px;
+   }
+}
+
+// Calender widget style
+// ======================================================================== /
+.widget_plugin_evo_Calr {
+
+   .bCalendarTable {
+      font-size: 100%;
+      border: 1px solid @e;
+      border-radius: 3px;
+
+      caption {
+         position: relative;
+         text-align: center;
+         font-family: @font_title;
+         font-size: 1.6rem;
+         margin-bottom: 15px;
+
+         a{
+            z-index: 0;
+            padding: 5px 20px;
+            background-color: @w;
+            border-radius: 50px;
+
+            &:hover {
+               text-decoration: none;
+            }
+
+            &::after {
+               content: '';
+               position: absolute;
+               left: 0;
+               bottom: 45%;
+               width: 100%;
+               height: 1px;
+               background-color: #ccc;
+               z-index: -1;
+            }
+         }
+
+      }
+
+      th, td {
+         border-right: 1px solid rgba(228, 228, 228, 0.3);
+         border-bottom: 1px solid rgba(228, 228, 228, 0.3);
+         background-color: @w;
+      }
+
+      tr {
+         &:last-child {
+            border: 0;
+         }
+      }
+
+      th {
+         width: 10ex;
+         padding: 10px;
+         text-align: center;
+      }
+
+      td {
+         padding: 8px 0;
+
+         &:last-child {
+            border-right: 0;
+         }
+
+         a{
+            padding: 10px 12px;
+            font-size: 1.6rem;
+            color: @primary;
+         }
+      }
+
+      tfoot tr td {
+         border-bottom: 0;
+      }
+
+      #bCalendarToday {
+         border: 0;
+         font-weight: 700;
+         background-color: @primary;
+         color: @w;
+         border-radius: 0;
+
+         a{
+            color: @w;
+         }
+      }
+
+   }
+}
+
+
 // Widget Tags
 // ======================================================================== /
 .widget_core_coll_tag_cloud {
@@ -246,6 +357,14 @@
          padding: 5px 12px;
          font-size: 1.4rem !important;
          margin: 2px;
+         border-radius: 2px;
+
+         &:hover, &:active, &:focus {
+            text-decoration: none;
+            background-color: @primary;
+            color: @w;
+            border-color: @primary;
+         }
       }
    }
 }
@@ -267,7 +386,7 @@
       }
 
       .form-control, .btn {
-         padding: 15px 20px;
+         padding: 15px 30px;
          height: 45px;
       }
 
@@ -292,5 +411,86 @@
          }
       }
 
+   }
+}
+
+// Media Index
+// ======================================================================== /
+.widget_core_coll_media_index {
+
+   img {
+      border-radius: 2px;
+   }
+
+   .widget_flow_blocks {
+      & > div {
+         position: relative;
+         overflow: hidden;
+
+         a {
+
+            &::before, &::after {
+               position: absolute;
+               left: 0;
+               opacity: 0;
+               transition: all 0.32s ease;
+            }
+
+            &::before {
+               content: '';
+               bottom: -100%;
+               width: 100%;
+               height: 100%;
+               background-color: @primary;
+            }
+
+            &::after {
+               content: "\f002";
+               right: 0;
+               bottom: -100%;
+               margin: auto;
+               text-align: center;
+               display: block;
+               color: @w;
+               font-family: FontAwesome;
+               font-weight: normal;
+               font-style: normal;
+               text-rendering: auto;
+               -webkit-font-smoothing: antialiased;
+               -moz-osx-font-smoothing: grayscale;
+            }
+
+         }
+
+         &:hover a::before {
+            opacity: 0.8;
+            bottom: 0;
+         }
+
+         &:hover a::after {
+            opacity: 1;
+            bottom: 35%;
+         }
+      }
+   }
+}
+
+
+// Widget Image Avatar
+// ======================================================================== /
+.widget_core_coll_avatar {
+
+   img{
+      border-radius: 100%;
+      border: 5px solid @e;
+      box-shadow: @bx_post;
+   }
+}
+
+// Avatar Image Custome Style
+// ======================================================================== /
+.widget_core_coll_avatar, .widget_core_profile_menu_link {
+   img {
+      border-radius: 100%;
    }
 }
