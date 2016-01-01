@@ -89,6 +89,8 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
    </div><!-- .copyright -->
 </footer><!-- #main-footer -->
 
+<a href="#0" class="cd-top"><i class="fa fa-angle-up"></i></a>
+
 </div><!-- #skin_wrapper -->
 
 

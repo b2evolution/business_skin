@@ -281,3 +281,52 @@
    }
 
 }
+
+
+// Style Back to Top
+// ======================================================================== /
+.cd-top {
+   display: inline-block;
+   height: 40px;
+   width: 40px;
+   position: fixed;
+   bottom: 40px;
+   right: 10px;
+   font-size: 2rem;
+   text-align: center;
+   line-height: 40px;
+   color: @w;
+   border-radius: 2px;
+   box-shadow: 0 0 10px rgba( 0, 0, 0, 0.05 );
+   overflow: hidden;
+   background-color: @primary;
+   visibility: hidden;
+   opacity: 0;
+   transition: all 0.3s ease-in-out;
+
+   &.cd-is-visible {
+      // the button becomes visible
+      visibility: visible;
+      opacity: 1;
+      color: @w;
+
+      &:hover {
+         opacity: 1;
+      }
+   }
+
+   &.cd-fade-out {
+      // if the user keeps scrolling down, the button is out of focus and becomes less visible
+      opacity: 0.5;
+   }
+
+   @media screen and ( min-width: @M ) {
+      right: 20px;
+      bottom: 20px;
+   }
+
+}
+
+.no-touch .cd-hover {
+   opacity: 1;
+}

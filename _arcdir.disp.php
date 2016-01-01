@@ -18,7 +18,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 $Plugins->call_by_code( 'evo_Arch', array(
    'title'         => '',
-   'block_start'   => '<div class="evo_widget widget_plgugin_achive">',
+   'block_start'   => '<div class="evo_widget widget_plugin_achive">',
    'block_end'     => '</div>',
    'limit'         => '',
    'more_link'     => ''

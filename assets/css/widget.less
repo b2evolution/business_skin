@@ -369,6 +369,23 @@
    }
 }
 
+.post_regular,
+.disp_comments,
+.disp_arcdir,
+.disp_catdir,
+.disp_postidx,
+.disp_tags {
+
+   #main-sidebar {
+      .widget_core_coll_tag_cloud {
+         .tag_cloud a{
+            background-color: @w;
+         }
+      }
+   }
+
+}
+
 // Search Form
 // ======================================================================== /
 .widget_core_coll_search_form {
@@ -500,7 +517,8 @@
 .widget_core_user_login {
 
    .form_text_input {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      border-radius: 2px;
    }
 
    .panel {

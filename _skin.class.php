@@ -118,6 +118,36 @@ class business_Skin extends Skin
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
+               'arcdir_bg' => array(
+                  'label'         => T_('Background Archive Disp'),
+                  'note'          => T_('Default color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
+               'catdir_bg' => array(
+                  'label'         => T_('Background Category Disp'),
+                  'note'          => T_('Default color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
+               'postidx_bg' => array(
+                  'label'         => T_('Background Postidx Disp'),
+                  'note'          => T_('Default color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
+               'tags_bg' => array(
+                  'label'         => T_('Background Tags Disp'),
+                  'note'          => T_('Default color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
+               'back_to_top' => array(
+                  'label'        => T_('Display Back To Top'),
+                  'note'         => T_('Check to display back top top button'),
+                  'defaultvalue' => 1,
+                  'type'         => 'checkbox',
+               ),
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -623,7 +653,13 @@ class business_Skin extends Skin
          #main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a,
 
          #main-footer .widget_footer .evo_widget a:hover, #main-footer .widget_footer .evo_widget a:active, #main-footer .widget_footer .evo_widget a:focus,
-         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a
+         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a,
+
+         .disp_catdir #main-content .widget_core_coll_category_list a:hover, .disp_catdir #main-content .widget_core_coll_category_list a:active, .disp_catdir #main-content .widget_core_coll_category_list a:focus,
+         .disp_arcdir #main-content .widget_plugin_achive a:hover, .disp_arcdir #main-content .widget_plugin_achive a:focus, .disp_arcdir #main-content .widget_plugin_achive a:active,
+         .disp_postidx #main-content .widget_core_coll_post_list a:hover, .disp_postidx #main-content .widget_core_coll_post_list a:focus, .disp_postidx #main-content .widget_core_coll_post_list a:active,
+
+         .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus
          { color: '.$color.'; }
 
          #main-header .primary-nav .nav a::after,
@@ -645,7 +681,12 @@ class business_Skin extends Skin
          #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
          .widget_core_coll_search_form .compact_search_form .search_submit,
 
-         .widget_core_coll_media_index .widget_flow_blocks > div a::before
+         .widget_core_coll_media_index .widget_flow_blocks > div a::before,
+
+         .close-menu, .cd-top,
+
+         .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
+         .disp_sitemap .content_sitemap .title_widgets::after
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -659,8 +700,14 @@ class business_Skin extends Skin
 
          #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
          .widget_core_coll_search_form .compact_search_form .search_submit,
-         #main-sidebar input[type="email"]:focus, #main-sidebar input[type="number"]:focus, #main-sidebar input[type="password"]:focus, #main-sidebar input[type="tel"]:focus, #main-sidebar input[type="url"]:focus, #main-sidebar input[type="text"]:focus
+         #main-sidebar input[type="email"]:focus, #main-sidebar input[type="number"]:focus, #main-sidebar input[type="password"]:focus, #main-sidebar input[type="tel"]:focus, #main-sidebar input[type="url"]:focus, #main-sidebar input[type="text"]:focus,
+
+         .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus
          { border-color: '.$color.'; }
+
+         .page_title,
+         .disp_sitemap .content_sitemap .title_widgets
+         { border-bottom-color: '.$color.'; }
          ';
 
          // Disp Single
@@ -886,6 +933,51 @@ class business_Skin extends Skin
        */
       if ( $bg_color = $this->get_setting( 'search_bg' ) ) {
          $custom_css .= '.disp_search { background-color: '. $bg_color .'; }';
+      }
+
+      /**
+       * ============================================================================
+       * Disp Archir Custome Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'arcdir_bg' ) ) {
+         $custom_css .= '.disp_arcdir { background-color: '. $bg_color .'; }';
+      }
+
+      /**
+       * ============================================================================
+       * Disp Catdir Custome Style
+       * ============================================================================
+       */
+      if ( $bg_color = $this->get_setting( 'catdir_bg' ) ) {
+         $custom_css .= '.disp_catdir { background-color: '. $bg_color .'; }';
+      }
+
+      /**
+      * ============================================================================
+      * Disp Postidx Custome Style
+      * ============================================================================
+      */
+      if ( $bg_color = $this->get_setting( 'postidx_bg' ) ) {
+         $custom_css .= '.disp_postidx { background-color: '. $bg_color .'; }';
+      }
+
+      /**
+      * ============================================================================
+      * Disp Tags Custome Style
+      * ============================================================================
+      */
+      if ( $bg_color = $this->get_setting( 'tags_bg' ) ) {
+         $custom_css .= '.disp_tags { background-color: '. $bg_color .'; }';
+      }
+
+      /**
+      * ============================================================================
+      * Dispay Back To Top
+      * ============================================================================
+      */
+      if ( $dispay = $this->get_setting( 'back_to_top' ) == 0 ) {
+         $custom_css .= '.cd-top { display: none; }';
       }
 
       /**
@@ -1287,12 +1379,12 @@ class business_Skin extends Skin
 
 			case 'left_sidebar':
 				// Left Sidebar
-				return 'col-md-8 pull-right';
+				return 'col-xs-12 col-sm-12 col-md-8 pull-right';
 
 			case 'right_sidebar':
 				// Right Sidebar
 			default:
-				return 'col-md-8';
+				return 'col-xs-12 col-sm-12 col-md-8';
 		}
 	}
 
@@ -1356,12 +1448,12 @@ class business_Skin extends Skin
 
 			case 'left_sidebar':
 				// Left Sidebar
-				return 'col-md-8 pull-right';
+				return 'col-xs-12 col-sm-12 col-md-8 pull-right';
 
 			case 'right_sidebar':
 				// Right Sidebar
 			default:
-				return 'col-md-8';
+				return 'col-xs-12 col-sm-12 col-md-8';
 		}
 
    }
