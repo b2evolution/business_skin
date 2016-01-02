@@ -1075,6 +1075,7 @@ body.loggedin #main-header {
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text {
   display: block;
   font-size: 1.4rem;
+  min-height: 65px;
 }
 .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer,
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer {
@@ -2371,7 +2372,7 @@ body.loggedin #main-header {
 .widget_core_coll_search_form .compact_search_form .search_submit {
   background-color: #1dc6df;
   border-color: #1dc6df;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 0;
   text-transform: uppercase;

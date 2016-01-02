@@ -1,15 +1,13 @@
 # Business Skin for b2evolution CMS v6
 
-Business Skin Blog 
+Business - Elegant and Clean Skin Blog
 
-We will keep this up to date to have the correct minimal files as well as up to date features for a b2evolution skin package.
+Business is a professional, Clean & Personal Blogging Skin tailored to be exceptional on b2evolution CMS. Not only its modern design is pleasing to the eyes, it packs in robust yet easy-to-use backend system all managed through Skin Options on B2evolution. Perfect choice for your personal blog, niche blog, corporate blog, marketing blog, authority blog or any type of creative blog or simple magazine.
 
-## Some tips:
+It is highly customizable so it can match your personal taste. Enjoy Wellow’s Awesome features such as both sidebar & full-width layouts, a variety of post layout options, numerous sidebar & footer widgets, and plentiful colors, backgrounds and general theme options.
 
-- Create a 720x570 pixels `skinshot.png` file for use within b2evolution to visually identify your skin.
-- Add some `skinshot_disp.jpg` images to demo the different "disps" of your skin(change the `_disp` part. See included `skinshot_posts.jpg` for example.
-- You can also add additional images by numbering them, e-g: `skinshot_single_02.jpg`
-- When you publish your skin, update this readme.md file (it uses Markdown syntax), remove the instructions and include your skinshots like this:
+Get Business today and impress your readers!
+
 
 ### Front Page
 
@@ -22,3 +20,36 @@ We will keep this up to date to have the correct minimal files as well as up to 
 ### Single Post Page
 
 ![disp=single](skinshot_single.jpg)
+
+
+### Some of the Features:
+
+- Fully Responsive Design
+- Unlimited Color Schemes
+- Top Bar Header Elements
+- Smooth Sticky Top Bar with Logo
+- Responsive Mobile Menu
+- Full Width Elements
+- Unlimited Sidebars Layout
+- Standard Blog Layout
+- Mini Blog Layout
+- Full Post, Sidebar, and Grid
+- List Layout Full Width
+- Blog Layout Full Width
+- Blog Masonry
+- Blog Large Media
+- Blog Small Media
+- Back to top button
+- Crossbrowser Compatible
+- Free Updates and new features.
+- Long-term Support
+
+
+### Need Assistance? Get In Touch!
+
+We would greatly appreciate if you use our Support <a href="http://forums.b2evolution.net/ target="blank">Forum</a> for any modifications you need instead of the public comments. We’d be glad to help you :)
+
+
+### Changes & Updates
+
+Version 1.0 – Initial Version – 11 January, 2016
