@@ -1,8 +1,8 @@
 # Business Skin for b2evolution CMS v6
 
-#### Business - Elegant and Clean Skin Blog
-
 ![Logo](logo.png)
+
+#### Business - Elegant and Clean Skin Blog
 
 Business is a professional, Clean & Personal Blogging Skin tailored to be exceptional on b2evolution CMS. Not only its modern design is pleasing to the eyes, it packs in robust yet easy-to-use backend system all managed through skin options on b2evolution. Perfect choice for your personal blog, niche blog, corporate blog, marketing blog, authority blog or any type of creative blog or simple magazine.
 
