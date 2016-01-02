@@ -47,7 +47,7 @@ Get Business today and impress your readers!
 
 ### Need Assistance? Get In Touch!
 
-We would greatly appreciate if you use our Support <a href="http://forums.b2evolution.net/>Forum</a> for any modifications you need instead of the public comments. We’d be glad to help you :)
+We would greatly appreciate if you use our Support <a href="http://forums.b2evolution.net/">Forum</a> for any modifications you need instead of the public comments. We’d be glad to help you :)
 
 
 ### Changes & Updates
