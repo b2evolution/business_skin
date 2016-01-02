@@ -12,7 +12,7 @@ Get Business today and impress your readers!
 
 ### Demo Skin
 
-<a href="http://skin.ariflaw.com/business/">Demo Skin</a>
+<a href="http://skin.ariflaw.com/business/"><strong>Demo Skin</strong></a>
 
 
 ### Front Page
