@@ -47,7 +47,7 @@ Get Business today and impress your readers!
 
 ### Need Assistance? Get In Touch!
 
-We would greatly appreciate if you use our Support <a href="http://forums.b2evolution.net/">Forum</a> for any modifications you need instead of the public comments. We’d be glad to help you :)
+If you ever get stuck with setting up Business with your B2evolution installation, you can get in touch with our friendly and dedicated support via our <a href="http://forums.b2evolution.net/">Support Forum</a>.
 
 
 ### Changes & Updates
