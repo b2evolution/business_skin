@@ -8,7 +8,9 @@ It is highly customizable so it can match your personal taste. Enjoy Wellow’s 
 
 Get Business today and impress your readers!
 
-#### <a href="http://skin.ariflaw.com/business/">Demo Skin</a>
+#### Demo Skin
+
+<a href="http://skin.ariflaw.com/business/">Demo Skin</a>
 
 ### Front Page
 
