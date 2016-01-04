@@ -11,8 +11,8 @@ Get Business today and impress your readers!
 -------------
 ### Demo Skin
 
-- Posts Disp <a href="http://skin.ariflaw.com/business/"><strong>Demo</strong></a>
-- Single Disp <a href="http://skin.ariflaw.com/business/"><strong>Demo</strong></a>
+- Posts Disp - <a href="http://skin.ariflaw.com/business/"><strong>Demo</strong></a>
+- Single Disp - <a href="http://skin.ariflaw.com/business/"><strong>Demo</strong></a>
 
 
 ### Front Page

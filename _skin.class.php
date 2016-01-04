@@ -142,6 +142,14 @@ class business_Skin extends Skin
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
+
+					'favicon' => array(
+						'label'          => T_('Favicon'),
+						'note'           => T_('Change the default favicon'),
+						'defaultvalue'   => 'assets/img/favicon.png',
+						'type'           => 'text',
+						'size'           => '50'
+					),
                'back_to_top' => array(
                   'label'        => T_('Display Back To Top'),
                   'note'         => T_('Check to display back top top button'),
@@ -1033,6 +1041,9 @@ class business_Skin extends Skin
 		{
 			add_css_headline( '.evo_image_block img { max-height: '.$max_image_height.'px; width: auto; }' );
 		}
+      // Add Favicon
+      $favicon = $this->get_setting( 'favicon' );
+      add_headline( '<link rel="shortcut icon" href="'. $favicon .'"/>' );
 	}
 
 
