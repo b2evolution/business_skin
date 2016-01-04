@@ -58,4 +58,4 @@ If you ever get stuck with setting up Business with your B2evolution installatio
 
 ### Changes & Updates
 
-Version 1.0 – Initial Version – 02 January, 2016
+Version 1.0 – Initial Version – January, 2016
