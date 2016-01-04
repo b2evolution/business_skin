@@ -503,7 +503,8 @@ body.loggedin #main-header {
 }
 #main-content .evo_post .evo_post__full_text ul ul,
 #mini-blog .evo_post .evo_post__full_text ul ul {
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #main-content .evo_post .evo_post__full_text ul p,
 #mini-blog .evo_post .evo_post__full_text ul p {
@@ -805,7 +806,7 @@ body.loggedin #main-header {
 }
 .disp_posts #main-content .evo_post .evo_post__full_text .evo_post_more_link,
 .disp_posts #main-content .evo_post .evo_post__excerpt_text .evo_post_more_link {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .disp_posts #main-content .evo_post footer {
   padding: 0 30px 20px;
@@ -979,7 +980,7 @@ body.loggedin #main-header {
 }
 .disp_single #main-content .evo_post img,
 .disp_page #main-content .evo_post img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_single #main-content .evo_post > header,
 .disp_page #main-content .evo_post > header {
