@@ -6,7 +6,7 @@ Business is a professional, Clean & Personal Blogging Skin tailored to be except
 
 It is highly customizable so it can match your personal taste. Enjoy Wellow’s Awesome features such as both sidebar & full-width layouts, a variety of post layout options, numerous sidebar & footer widgets, and plentiful colors, backgrounds and general skin options.
 
-Get Business today and impress your readers!
+Get Business today and impress your readers! - <a href="https://github.com/b2evolution/business_skin/archive/master.zip">Download now</a>
 
 -------------
 ### Demo Skin
