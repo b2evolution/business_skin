@@ -154,25 +154,25 @@ class business_Skin extends Skin
 
             /**
              * ============================================================================
-             * Section Header Options
+             * Section Header Top Options
              * ============================================================================
              */
             'section_header_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Header Options')
+					'label'  => T_('Header Top Options')
 				),
                'ht_show' => array(
-                  'label'        => T_('Display Header Top'),
-                  'note'         => T_('Check to display header top'),
-                  'defaultvalue' => 1,
-                  'type'         => 'checkbox',
+                  'label'         => T_('Display Header Top'),
+                  'note'          => T_('Check to display header top'),
+                  'defaultvalue'  => 1,
+                  'type'          => 'checkbox',
                ),
                'ht_contact_info' => array(
-                  'label'        => T_('Header Top Contact Info'),
-                  'defaultvalue' => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
-                  'note'         => T_('Add your contact Info'),
-                  'type'         => 'text',
-                  'size'         => '60'
+                  'label'         => T_('Header Top Contact Info'),
+                  'defaultvalue'  => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
+                  'note'          => T_('Add your contact Info'),
+                  'type'          => 'text',
+                  'size'          => '60'
                ),
                'header_top_color' => array(
                   'label'         => T_('Header Top Color'),
@@ -186,6 +186,26 @@ class business_Skin extends Skin
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
+				'section_header_end' => array(
+					'layout' => 'end_fieldset',
+				),
+            // End Section Header Options
+
+            /**
+             * ============================================================================
+             * Section MainHeader Options
+             * ============================================================================
+             */
+            'section_main_header_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Main Header Options')
+				),
+               'header_sticky' => array(
+                  'label'         => T_('Activate Main Header Sticky'),
+                  'note'          => T_('Check to activate main header sticky'),
+                  'defaultvalue'  => 1,
+                  'type'          => 'checkbox',
+               ),
                'menu_link_color' => array(
                   'label'         => T_('Menu Link Color'),
                   'note'          => T_('Default color is #333333.'),
@@ -198,10 +218,10 @@ class business_Skin extends Skin
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
-				'section_header_end' => array(
+				'section_main_header_end' => array(
 					'layout' => 'end_fieldset',
 				),
-            // End Section Header Options
+            // End Section Main Header Options
 
             /**
              * ============================================================================
@@ -273,14 +293,14 @@ class business_Skin extends Skin
              * Disp Single and Page Options
              * ============================================================================
              */
-            'section_single_start' => array(
-               'layout' => 'begin_fieldset',
-               'label'  => T_('Disp Single and Page Options')
-            ),
-
-            'section_single_end' => array(
-               'layout' => 'end_fieldset',
-            ),
+            // 'section_single_start' => array(
+            //    'layout' => 'begin_fieldset',
+            //    'label'  => T_('Disp Single and Page Options')
+            // ),
+            //
+            // 'section_single_end' => array(
+            //    'layout' => 'end_fieldset',
+            // ),
             // End Single Disp
 
             /**
@@ -330,6 +350,12 @@ class business_Skin extends Skin
                'layout' => 'begin_fieldset',
                'label'  => T_('Footer')
             ),
+               'footer_dispay' => array(
+                  'label'          => T_('Display Footer Widget'),
+                  'note'           => T_('Check to display footer widget area with 4 column'),
+                  'defaultvalue'   => 1,
+                  'type'           => 'checkbox',
+               ),
                'footer_border_widget' => array(
                   'label'         => T_('Border Color Widget'),
                   'note'          => T_('Default color is #333333.'),
@@ -653,7 +679,7 @@ class business_Skin extends Skin
          #main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a,
 
          #main-footer .widget_footer .evo_widget a:hover, #main-footer .widget_footer .evo_widget a:active, #main-footer .widget_footer .evo_widget a:focus,
-         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a,
+         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a, #main-footer .widget_footer .widget_plugin_evo_Calr tfoot a,
 
          .disp_catdir #main-content .widget_core_coll_category_list a:hover, .disp_catdir #main-content .widget_core_coll_category_list a:active, .disp_catdir #main-content .widget_core_coll_category_list a:focus,
          .disp_arcdir #main-content .widget_plugin_achive a:hover, .disp_arcdir #main-content .widget_plugin_achive a:focus, .disp_arcdir #main-content .widget_plugin_achive a:active,
@@ -686,7 +712,9 @@ class business_Skin extends Skin
          .close-menu, .cd-top,
 
          .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
-         .disp_sitemap .content_sitemap .title_widgets::after
+         .disp_sitemap .content_sitemap .title_widgets::after,
+
+         .posts_mini_layout #mini-blog .msg_nothing
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -799,6 +827,10 @@ class business_Skin extends Skin
       }
       if ( $bg_color = $this->get_setting( 'header_top_bg' ) ) {
          $custom_css .= '#header-top{ background-color: '.$bg_color.'; }';
+      }
+
+      if ( $this->get_setting( 'header_sticky' ) == 0 ) {
+         $custom_css .= '#main-header{ position: relative !important;} body.loggedin #main-header{ top: 0 !important; }';
       }
       if ( $color = $this->get_setting( 'menu_link_color' ) ) {
          $custom_css .= '#main-header .primary-nav .nav a { color: '.$color.';}';
@@ -969,15 +1001,6 @@ class business_Skin extends Skin
       */
       if ( $bg_color = $this->get_setting( 'tags_bg' ) ) {
          $custom_css .= '.disp_tags { background-color: '. $bg_color .'; }';
-      }
-
-      /**
-      * ============================================================================
-      * Dispay Back To Top
-      * ============================================================================
-      */
-      if ( $dispay = $this->get_setting( 'back_to_top' ) == 0 ) {
-         $custom_css .= '.cd-top { display: none; }';
       }
 
       /**

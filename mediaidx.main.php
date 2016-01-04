@@ -147,7 +147,6 @@ skin_include( '_body_header.inc.php' );
    	?>
 
    </div><!-- end .container -->
-
 </main>
 
 

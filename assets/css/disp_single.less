@@ -48,6 +48,10 @@
          box-shadow: none;
          overflow: hidden;
 
+         img {
+            border-radius: 2px;
+         }
+
         & > header {
            border-bottom: 1px solid @e;
            padding-bottom: 10px;
@@ -66,50 +70,6 @@
 
              }
           }
-        }
-
-         // Full Text
-         // ======================================================================== /
-        .evo_post__full_text {
-
-            h1, h2, h3, h4, h5, h6 {
-               font-family: @font_title;
-               font-weight: 700;
-               margin: 1.5em 0 0.5em;
-            }
-
-            p {
-
-               iframe {
-                  max-width: 100%;
-               }
-            }
-
-            p, pre {
-               margin-bottom: 18px;
-            }
-
-            blockquote {
-               border-left: 2px solid @primary;
-               padding: 8px 20px;
-               font-style: italic;
-               font-size: 1.5rem;
-               line-height: 1.4;
-               letter-spacing: 0.2px;
-               color: @c7;
-
-               p{
-                  margin-bottom: 0;
-               }
-            }
-
-            address {
-               font-style: italic;
-            }
-
-            iframe {
-               max-width: 100%;
-            }
         }
 
          // Image Hover
@@ -201,6 +161,7 @@
 
                   img {
                      float: none;
+                     border-radius: 100%;
                   }
                }
 

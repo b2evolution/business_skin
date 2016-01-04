@@ -41,13 +41,17 @@ skin_include( '_body_header.inc.php' );
 <main id="main-content">
    <div class="container">
 
-      <?php if ( ! empty($Item->get_cover_image_url() ) ) { ?>
+      <?php
+      $cover_image_url = $Item->get_cover_image_url();
+      if ( empty( $cover_image_url ) ) {  ?>
+      <div class="no_image_cover"></div>
+      <?php } else { ?>
       <div class="row">
          <div class="evo_cover_image <?php echo $Skin->get_column_cover_image(); ?>">
-            <img src="<?php echo $Item->get_cover_image_url(); ?>" alt="" class="img-responsive">
+            <img src="<?php echo $cover_image_url; ?>" alt="" class="img-responsive">
          </div>
       </div>
-      <?php }; ?>
+      <?php } ?>
 
       <div class="row">
       	<div class="<?php echo $Skin->get_column_class(); ?>">

@@ -15,6 +15,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 <footer id="main-footer">
 
 	<!-- =================================== START OF FOOTER =================================== -->
+   <?php if ( $Skin->get_setting( 'footer_dispay' ) == 1 ) { ?>
    <div class="widget_footer">
 	   <div class="container">
 
@@ -39,6 +40,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
       </div><!-- .container -->
    </div><!-- .widget_footer -->
+   <?php } ?>
 
    <div class="copyright">
       <div class="container">
@@ -89,7 +91,9 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
    </div><!-- .copyright -->
 </footer><!-- #main-footer -->
 
+<?php if ( $Skin->get_setting( 'back_to_top' ) == 1 ) { ?>
 <a href="#0" class="cd-top"><i class="fa fa-angle-up"></i></a>
+<?php } ?>
 
 </div><!-- #skin_wrapper -->
 

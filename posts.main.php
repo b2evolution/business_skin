@@ -45,7 +45,6 @@ skin_include( '_body_header.inc.php' );
       <div class="row">
 
       	<div class="<?php echo $Skin->get_column_class(); ?>">
-
       		<main><!-- This is were a link like "Jump to main content" would land -->
 
       		<!-- ================================= START OF MAIN AREA ================================== -->
@@ -77,21 +76,21 @@ skin_include( '_body_header.inc.php' );
       		<?php
       			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
       			request_title( array(
-   					'title_before'      => '<h2 class="title_main_content">',
-   					'title_after'       => '</h2>',
-   					'title_none'        => '',
-   					'glue'              => ' - ',
-   					'title_single_disp' => false,
-   					'title_page_disp'   => false,
-   					'format'            => 'htmlbody',
-   					'register_text'     => '',
-   					'login_text'        => '',
-   					'lostpassword_text' => '',
+   					'title_before'       => '<h2 class="title_main_content">',
+   					'title_after'        => '</h2>',
+   					'title_none'         => '',
+   					'glue'               => ' - ',
+   					'title_single_disp'  => false,
+   					'title_page_disp'    => false,
+   					'format'             => 'htmlbody',
+   					'register_text'      => '',
+   					'login_text'         => '',
+   					'lostpassword_text'  => '',
    					'account_activation' => '',
-   					'msgform_text'      => '',
-   					'user_text'         => '',
-   					'users_text'        => '',
-   					'display_edit_links'=> false,
+   					'msgform_text'       => '',
+   					'user_text'          => '',
+   					'users_text'         => '',
+   					'display_edit_links' => false,
    				) );
       			// ----------------------------- END OF REQUEST TITLE ----------------------------
       		?>
@@ -183,9 +182,7 @@ skin_include( '_body_header.inc.php' );
       			// copying the matching php file into your skin directory.
       			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
       		?>
-
       		</main>
-
       	</div><!-- .col -->
 
 
