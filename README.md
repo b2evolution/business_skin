@@ -8,7 +8,7 @@ It is highly customizable so it can match your personal taste. Enjoy Wellow’s 
 
 Get Business today and impress your readers! - <a href="https://github.com/b2evolution/business_skin/archive/master.zip">Download Now</a>
 
--------------
+======
 ### Demo Skin
 - Front Disp - <a href="http://skin.ariflaw.com/business/index.php/b/"><strong>Demo</strong></a>
 - Posts Regular Disp - <a href="http://skin.ariflaw.com/business/"><strong>Demo</strong></a>
@@ -20,7 +20,7 @@ Get Business today and impress your readers! - <a href="https://github.com/b2evo
 - Comment Disp - <a href="http://skin.ariflaw.com/business/index.php/a/?disp=comments"><strong>Demo</strong></a>
 - Search Disp - <a href="http://skin.ariflaw.com/business/index.php/a/?s=post&submit=Search&disp=search"><strong>Demo</strong></a>
 
--------------
+======
 
 ### Front Page
 
