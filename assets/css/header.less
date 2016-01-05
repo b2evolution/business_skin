@@ -238,6 +238,10 @@
    display: none;
    visibility: hidden;
 
+   @media only screen and ( max-width: 480px ) {
+      top: 10px;
+   }
+
    &::before, &::after {
       content: '';
       display: inline-block;
@@ -285,8 +289,14 @@
 
 // Sticky Header
 // ======================================================================== /
-body.loggedin #main-header {
-   top: 25px !important;
+@media only screen and (min-device-width: 1025px) {
+   body.loggedin #main-header {
+      top: 25px !important;
+   }
+
+   .loggedin #main-header .navbar-collapse.in {
+      top: 25px;
+   }
 }
 
 #main-header-sticky-wrapper #main-header {
@@ -347,9 +357,6 @@ and ( max-width: 990px ) {
 
 @media screen and ( max-width: 767px ) {
 
-   .loggedin #main-header .navbar-collapse.in{
-      top: 25px;
-   }
 
    #main-header {
       padding-bottom: 10px;
@@ -382,6 +389,7 @@ and ( max-width: 990px ) {
          left: 0;
          z-index: 9999;
          background-color: @w;
+         padding-bottom: 20px;
 
          /* Force Hardware Acceleration in WebKit */
          -webkit-backface-visibility: hidden;
@@ -400,11 +408,4 @@ and ( max-width: 990px ) {
       }
    }
 
-}
-
-
-@media only screen and ( max-width: 415px ) {
-   .loggedin #main-header .navbar-collapse.in{
-      top: 30px;
-   }
 }

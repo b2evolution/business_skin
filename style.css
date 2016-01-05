@@ -252,6 +252,11 @@ a {
   display: none;
   visibility: hidden;
 }
+@media only screen and (max-width: 480px) {
+  .close-menu {
+    top: 10px;
+  }
+}
 .close-menu::before,
 .close-menu::after {
   content: '';
@@ -299,8 +304,13 @@ a {
     width: 18px;
   }
 }
-body.loggedin #main-header {
-  top: 25px !important;
+@media only screen and (min-device-width: 1025px) {
+  body.loggedin #main-header {
+    top: 25px !important;
+  }
+  .loggedin #main-header .navbar-collapse.in {
+    top: 25px;
+  }
 }
 #main-header-sticky-wrapper #main-header .widget_core_coll_title {
   margin-bottom: 0;
@@ -345,9 +355,6 @@ body.loggedin #main-header {
   }
 }
 @media screen and (max-width: 767px) {
-  .loggedin #main-header .navbar-collapse.in {
-    top: 25px;
-  }
   #main-header {
     padding-bottom: 10px;
   }
@@ -375,6 +382,7 @@ body.loggedin #main-header {
     left: 0;
     z-index: 9999;
     background-color: #ffffff;
+    padding-bottom: 20px;
     /* Force Hardware Acceleration in WebKit */
     -webkit-backface-visibility: hidden;
     -webkit-transition: all 0.32s ease-in-out;
@@ -391,11 +399,6 @@ body.loggedin #main-header {
   #main-header .navbar-collapse.in .close-menu {
     display: inline-block;
     visibility: visible;
-  }
-}
-@media only screen and (max-width: 415px) {
-  .loggedin #main-header .navbar-collapse.in {
-    top: 30px;
   }
 }
 /* ----------------------------------------------------------------------------
@@ -543,6 +546,36 @@ body.loggedin #main-header {
   max-width: 100%;
   width: 100%;
   height: 422px;
+}
+@media screen and (max-width: 1024px) {
+  #main-content .evo_post .evo_post__full_text iframe,
+  #mini-blog .evo_post .evo_post__full_text iframe {
+    height: 348px;
+  }
+}
+@media only screen and (max-width: 990px) {
+  #main-content .evo_post .evo_post__full_text iframe,
+  #mini-blog .evo_post .evo_post__full_text iframe {
+    height: 405px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #main-content .evo_post .evo_post__full_text iframe,
+  #mini-blog .evo_post .evo_post__full_text iframe {
+    height: 390px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #main-content .evo_post .evo_post__full_text iframe,
+  #mini-blog .evo_post .evo_post__full_text iframe {
+    height: 304px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #main-content .evo_post .evo_post__full_text iframe,
+  #mini-blog .evo_post .evo_post__full_text iframe {
+    height: 236px;
+  }
 }
 #main-content .evo_post .evo_post_images,
 #mini-blog .evo_post .evo_post_images {
@@ -696,6 +729,10 @@ body.loggedin #main-header {
   color: #ffffff;
   border-color: #1dc6df;
 }
+#main-content .col-md-12 .evo_post .evo_post__full_text iframe,
+#mini-blog .col-md-12 .evo_post .evo_post__full_text iframe {
+  height: 490px;
+}
 .page_title {
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -772,6 +809,53 @@ body.loggedin #main-header {
 .disp_posts .evo_intro_post .evo_post__full_text {
   margin-top: 15px;
   font-size: 1.4rem;
+}
+.disp_posts .evo_featured_post {
+  position: relative;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-bottom: 50px;
+}
+.disp_posts .evo_featured_post header .small.text-muted {
+  color: #999999;
+  margin: 5px 0 20px;
+}
+.disp_posts .evo_featured_post header .small.text-muted a:hover,
+.disp_posts .evo_featured_post header .small.text-muted a:active,
+.disp_posts .evo_featured_post header .small.text-muted a:focus {
+  color: #1dc6df;
+}
+.disp_posts .evo_featured_post .cat-links {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+.disp_posts .evo_featured_post .evo_post__excerpt_text {
+  font-size: 1.4rem;
+}
+.disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a {
+  display: inline-block;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #444444;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  margin-top: 20px;
+}
+.disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover,
+.disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active,
+.disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus {
+  text-decoration: none;
+  background-color: #1dc6df;
+  color: #ffffff;
+  border-color: #1dc6df;
+}
+.disp_posts .evo_featured_post .post_tags {
+  margin-top: 20px;
 }
 .disp_posts #main-content .evo_content_block {
   position: relative;
@@ -1539,6 +1623,51 @@ body.loggedin #main-header {
 }
 .disp_search #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #f7f7f7;
+}
+.disp_front #main-content ul > li:last-child {
+  border-bottom: none;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron {
+  margin-bottom: 0;
+  border-radius: 3px;
+  background-color: #1dc6df;
+  color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron p {
+  font-size: 2rem;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post_title h3 {
+  display: inline-block;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 0 !important;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post_title h3::before {
+  background-color: #ffffff;
+  top: 40px;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post_title .btn-group {
+  padding-top: 0 !important;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post_title .btn-group a {
+  border-color: #ffffff;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post_title .btn-group a:hover {
+  background-color: #ffffff;
+  color: #333333;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post__full_text {
+  font-size: 2rem;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post__full_text a {
+  color: #ffffff;
+  font-weight: 600;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post__full_text a:hover {
+  text-decoration: underline;
 }
 .disp_front .evo_container__front_page_primary .evo_widget {
   position: relative;

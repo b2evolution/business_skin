@@ -693,7 +693,9 @@ class business_Skin extends Skin
          .disp_arcdir #main-content .widget_plugin_achive a:hover, .disp_arcdir #main-content .widget_plugin_achive a:focus, .disp_arcdir #main-content .widget_plugin_achive a:active,
          .disp_postidx #main-content .widget_core_coll_post_list a:hover, .disp_postidx #main-content .widget_core_coll_post_list a:focus, .disp_postidx #main-content .widget_core_coll_post_list a:active,
 
-         .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus
+         .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
+
+         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus
          { color: '.$color.'; }
 
          #main-header .primary-nav .nav a::after,
@@ -722,7 +724,10 @@ class business_Skin extends Skin
          .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
          .disp_sitemap .content_sitemap .title_widgets::after,
 
-         .posts_mini_layout #mini-blog .msg_nothing
+         .posts_mini_layout #mini-blog .msg_nothing,
+
+         .disp_front #main-content .widget_core_coll_featured_intro .jumbotron,
+         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -738,7 +743,9 @@ class business_Skin extends Skin
          .widget_core_coll_search_form .compact_search_form .search_submit,
          #main-sidebar input[type="email"]:focus, #main-sidebar input[type="number"]:focus, #main-sidebar input[type="password"]:focus, #main-sidebar input[type="tel"]:focus, #main-sidebar input[type="url"]:focus, #main-sidebar input[type="text"]:focus,
 
-         .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus
+         .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
+
+         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus
          { border-color: '.$color.'; }
 
          .page_title,

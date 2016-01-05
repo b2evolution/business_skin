@@ -3,6 +3,78 @@
 // ======================================================================== /
 .disp_front {
 
+   #main-content {
+
+      ul > li {
+
+         &:last-child {
+            border-bottom: none;
+         }
+      }
+
+      // Featured Intro
+      // ======================================================================== /
+      .widget_core_coll_featured_intro {
+
+         .jumbotron {
+            margin-bottom: 0;
+            border-radius: 3px;
+            background-color: @primary;
+            color: @w;
+            box-shadow: @bx_post;
+
+            p {
+               font-size: 2rem;
+            }
+
+            .featurepost {
+
+               .evo_post_title {
+                  h3 {
+                     display: inline-block;
+                     font-weight: 700;
+                     color: @w;
+                     padding-top: 0 !important;
+                     margin-top: 0;
+                     margin-bottom: 30px;
+
+                     &::before {
+                        background-color: @w;
+                        top: 40px;
+                     }
+                  }
+
+                  .btn-group {
+                     padding-top: 0 !important;
+
+                     a {
+                        border-color: @w;
+
+                        &:hover {
+                           background-color: @w;
+                           color: @b;
+                        }
+                     }
+                  }
+               }
+
+               .evo_post__full_text {
+                  font-size: 2rem;
+
+                  a {
+                     color: @w;
+                     font-weight: 600;
+
+                     &:hover {
+                        text-decoration: underline;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
    .evo_container__front_page_primary {
 
       // Widget Front Page

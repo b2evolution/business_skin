@@ -15,6 +15,11 @@ Get Business today and impress your readers! - <a href="https://github.com/b2evo
 - Single Disp - <a href="http://skin.ariflaw.com/business/index.php/a/typography-post"><strong>Demo</strong></a>
 - Single Vimeo Post - <a href="http://skin.ariflaw.com/business/index.php/a/vimeo-post"><strong>Demo</strong></a>
 - Single Image Post - <a href="http://skin.ariflaw.com/business/index.php/a/image-post"><strong>Demo</strong></a>
+- Page Disp - <a href="http://skin.ariflaw.com/business/index.php/a/about-blog-a"><strong>Demo</strong></a>
+- Comment Disp - <a href="http://skin.ariflaw.com/business/index.php/a/?disp=comments"><strong>Demo</strong></a>
+- Search Disp - <a href="http://skin.ariflaw.com/business/index.php/a/?s=post&submit=Search&disp=search"><strong>Demo</strong></a>
+
+-------------
 
 ### Front Page
 
