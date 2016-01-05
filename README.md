@@ -6,7 +6,7 @@
 
 It is highly customizable so it can match your personal taste. Enjoy wellow’s awesome features such as both sidebar, a variety of post layout options, numerous sidebar & footer widgets, and plentiful colors, backgrounds and general skin options.
 
-Get Business today and impress your readers! - [Download Now](https://github.com/b2evolution/business_skin/archive/master.zip)
+Get Business today and impress your readers! - **[Download Now](https://github.com/b2evolution/business_skin/archive/master.zip)**
 
 ======
 ### Demo Skin
@@ -62,12 +62,13 @@ Get Business today and impress your readers! - [Download Now](https://github.com
 
 ### Need Assistance? Get In Touch!
 
-If you ever get stuck with setting up Business with your B2evolution installation, you can get in touch with our friendly and dedicated support via our [Support Forum](http://forums.b2evolution.net/).
+If you ever get stuck with setting up Business with your B2evolution installation, you can get in touch with our friendly and dedicated support via our [Support Forum](http://forums.b2evolution.net/) or you can contact this email hello@ariflaw.com.
 
 ===
 
 ### Changes & Updates
 
 ```
-Version 1.0 – Initial Version – 05 January, 2016
+Version 1.0
+– Initial Version – 05 January, 2016
 ```
