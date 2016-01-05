@@ -34,6 +34,7 @@ Get Business today and impress your readers! - [Download Now](https://github.com
 
 ![disp=single](skinshot_single.png)
 
+====
 
 ### Some of the Features:
 
@@ -57,11 +58,13 @@ Get Business today and impress your readers! - [Download Now](https://github.com
 - Free Updates and new features.
 - Long-term Support
 
+====
 
 ### Need Assistance? Get In Touch!
 
 If you ever get stuck with setting up Business with your B2evolution installation, you can get in touch with our friendly and dedicated support via our [Support Forum](http://forums.b2evolution.net/).
 
+===
 
 ### Changes & Updates
 
