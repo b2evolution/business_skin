@@ -24,15 +24,15 @@ Get Business today and impress your readers! - <a href="https://github.com/b2evo
 
 ### Front Page
 
-![disp=front](skinshot_front.jpg)
+![disp=front](skinshot_front.png)
 
 ### Posts Page
 
-![disp=posts](skinshot_posts.jpg)
+![disp=posts](skinshot_posts.png)
 
 ### Single Post Page
 
-![disp=single](skinshot_single.jpg)
+![disp=single](skinshot_single.png)
 
 
 ### Some of the Features:
