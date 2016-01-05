@@ -10,9 +10,9 @@ Get Business today and impress your readers! - <a href="https://github.com/b2evo
 
 ======
 ### Demo Skin
-- Front Disp - <a href="http://skin.ariflaw.com/business/index.php/b/"><strong>Demo</strong></a>
-- Posts Regular Disp - <a href="http://skin.ariflaw.com/business/"><strong>Demo</strong></a>
-- Posts Mini Disp - <a href="http://skin.ariflaw.com/business/index.php/b/?disp=posts"><strong>Demo</strong></a>
+- Front Disp - **[Demo](http://skin.ariflaw.com/business/index.php/b/)**
+- Posts Regular Disp - **[Demo](http://skin.ariflaw.com/business/)**
+- Posts Mini Disp - **[Demo](http://skin.ariflaw.com/business/index.php/b/?disp=posts)**
 - Single Disp - <a href="http://skin.ariflaw.com/business/index.php/a/typography-post"><strong>Demo</strong></a>
 - Single Vimeo Post - <a href="http://skin.ariflaw.com/business/index.php/a/vimeo-post"><strong>Demo</strong></a>
 - Single Image Post - <a href="http://skin.ariflaw.com/business/index.php/a/image-post"><strong>Demo</strong></a>
