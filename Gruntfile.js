@@ -16,6 +16,16 @@
 // Note for devs: when adding new plugins, use for example "npm install grunt-contrib-less --save-dev"
 // to update the package.json file with the new plugin reference.
 
+// Install NPM for Linux
+// 1. sudo add-apt-repository ppa:chris-lea/node.js
+// 2. sudo apt-get update
+// 3. sudo apt-get install nodejs
+
+// After Finished Install NPM
+// 1. (sudo) npm install -g grunt-cli
+// 2. Change Proxy URL (proxy: "http://localhost/b2evo/business/index.php/a/")
+// 3. grunt
+
 module.exports = function(grunt) {
 
 	// Project configuration:
@@ -90,7 +100,7 @@ module.exports = function(grunt) {
            options: {
              watchTask: true,
             //  Change your url Deploy
-             proxy: "http://localhost/upwork/b2evolution/b2/index.php/a/",
+             proxy: "http://localhost/b2evo/business/index.php/a/",
            }
          }
       },
