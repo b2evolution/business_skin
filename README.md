@@ -69,6 +69,10 @@ If you ever get stuck with setting up Business with your B2evolution installatio
 ### Changes & Updates
 
 ```
+Version 1.1
+– Fix overflow the avatar popup on comment
+
+
 Version 1.0
 – Initial Version – 05 January, 2016
 ```
