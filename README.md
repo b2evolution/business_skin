@@ -70,8 +70,16 @@ If you ever get stuck with setting up Business with your B2evolution installatio
 
 ```
 Version 1.1
-– Fix overflow the avatar popup on comment
-
+– Fix overflow the avatar pop up on comment
+- Fix z-index for back to button
+- Fix Responsive logo and menu
+- Same Icon hover Image and Gallery
+- Fix responsive Logo and menu on max-width 991px
+- Make variable for media screen width
+- Change style on comment
+- Fix style popup comment user
+- add style caption when image hover
+- Change tags style
 
 Version 1.0
 – Initial Version – 05 January, 2016

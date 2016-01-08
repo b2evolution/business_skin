@@ -15,16 +15,16 @@
          font-family: @font_title;
          font-size: 3.2rem;
          font-weight: 700;
+         text-align: center;
          border-bottom: 2px solid @primary;
          padding-bottom: 10px;
-         text-align: center;
          margin: 0 15px 40px;
 
          @media only screen and ( max-width: @M ) {
             margin-bottom: 30px;
          }
 
-         @media ( max-width: 600px ) {
+         @media ( max-width: @MX ) {
             margin-right: 0 !important;
             margin-left: 0 !important;
             margin-bottom: 20px;
@@ -42,14 +42,13 @@
 
             // Responsive
             // ======================================================================== /
-            @media ( max-width: 600px ) {
+            @media ( max-width: @MX ) {
                .grid-item, .grid-item.three, .grid-item.one {
                   width: 100%;
                   float: none;
                   padding-left: 0;
                   padding-right: 0;
                }
-
             }
 
             // Default 2 Column
@@ -92,13 +91,9 @@
                &.three {
                   width: 33.333%;
 
-                  @media only screen and ( max-width: 990px ) {
+                  @media only screen and ( max-width: @MM ) {
                      width: 50%;
                   }
-
-                  // @media screen and ( max-width: @M ) {
-                  //    width: 50%;
-                  // }
 
                   .box {
 
@@ -197,13 +192,13 @@
             .note {
                display: inline-block;
                font-family: @font_title;
-               color: @c2;
                font-size: 1.6rem;
                letter-spacing: 0;
-               margin-top: 25px;
-               margin-bottom: 10px;
                padding-right: 15px;
                padding-left: 15px;
+               margin-top: 25px;
+               margin-bottom: 10px;
+               color: @c2;
                background-color: @w;
                z-index: 0;
 
@@ -212,14 +207,13 @@
                   position: absolute;
                   left: 0;
                   right: 0;
-                  margin: 0 auto;
                   bottom: 18px;
                   width: 100%;
                   height: 1px;
+                  margin: 0 auto;
                   background-color: @c7;
                   z-index: -1;
                }
-
             }
 
          }

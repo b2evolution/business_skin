@@ -493,6 +493,41 @@
 }
 
 
+// User Popup
+// ======================================================================== /
+.popover.top.in {
+   font-family: @font_title;
+   border: 1px solid rgba(148, 148, 148, 0.08);
+   border-radius: 3px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+   .popover-content {
+
+      img {
+         border-radius: 100% !important;
+      }
+
+      .user {
+         b {
+            display: block;
+            padding-top: 5px;
+         }
+      }
+
+      a {
+         &:after {
+            content: '';
+         }
+      }
+
+      li {
+         padding: 2px 0;
+         border-bottom: none;
+      }
+   }
+}
+
+
 // Widget Image Avatar
 // ======================================================================== /
 .widget_core_coll_avatar {
@@ -503,6 +538,7 @@
       box-shadow: @bx_post;
    }
 }
+
 
 // Avatar Image Custome Style
 // ======================================================================== /

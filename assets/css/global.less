@@ -10,19 +10,16 @@
 html{
    font-size: 10px;
 
-   @media screen and ( max-width: 900px ) {
+   @media screen and ( max-width: @MM ) {
       font-size: 9.75px;
    }
-
-   @media screen and ( max-width: 768px ) {
+   @media screen and ( max-width: @M ) {
       font-size: 9.5px;
    }
-
-   @media screen and ( max-width: 600px ) {
+   @media screen and ( max-width: @MX ) {
       font-size: 9.25px;
    }
-
-   @media screen and ( max-width: 480px ) {
+   @media screen and ( max-width: @S ) {
       font-size: 9px;
    }
 
@@ -37,13 +34,17 @@ body{
 a{
    color: @primary;
    transition: all 0.2s ease-in-out;
+
+   &:hover, &:focus, &:active {
+      color: @primary;
+   }
 }
 
 // Row -> Remove row If min-width: 480px and max-width: 768px
 // ======================================================================== /
 @media screen
-and ( min-width: 480px )
-and ( max-width: 768px ) {
+and ( min-width: @S )
+and ( max-width: @M ) {
 
    .row {
       margin-right: 0;

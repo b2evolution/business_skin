@@ -190,9 +190,9 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 			if( ! $Item->is_intro() && $disp == 'posts' )
 			{ // List all tags attached to this post:
 				$Item->tags( array(
-					'before'    => '<nav class="small post_tags">',
-					'after'     => '</nav>',
-					'separator' => ' ',
+					'before'    => '<div class="small post_tags">'. T_('Tags: '),
+					'after'     => '</div>',
+					'separator' => ',',
 				) );
 			} else if ( $disp == 'single' ) {
             $Item->tags( array(
@@ -207,26 +207,26 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		<?php
 			// Link to comments, trackbacks, etc.:
 			$Item->feedback_link( array(
-						'type' => 'comments',
-						'link_before' => '',
-						'link_after' => '',
-						'link_text_zero' => '#',
-						'link_text_one' => '#',
-						'link_text_more' => '#',
-						'link_title' => '#',
+						'type'            => 'comments',
+						'link_before'     => '',
+						'link_after'      => '',
+						'link_text_zero'  => '#',
+						'link_text_one'   => '#',
+						'link_text_more'  => '#',
+						'link_title'      => '#',
 						// fp> WARNING: creates problem on home page: 'link_class' => 'btn btn-default btn-sm',
 						// But why do we even have a comment link on the home page ? (only when logged in)
 					) );
 
 			// Link to comments, trackbacks, etc.:
 			$Item->feedback_link( array(
-						'type' => 'trackbacks',
-						'link_before' => ' &bull; ',
-						'link_after' => '',
-						'link_text_zero' => '#',
-						'link_text_one' => '#',
-						'link_text_more' => '#',
-						'link_title' => '#',
+						'type'            => 'trackbacks',
+						'link_before'     => ' &bull; ',
+						'link_after'      => '',
+						'link_text_zero'  => '#',
+						'link_text_one'   => '#',
+						'link_text_more'  => '#',
+						'link_title'      => '#',
 					) );
 		?>
 		</nav>
