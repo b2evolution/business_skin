@@ -695,7 +695,8 @@ class business_Skin extends Skin
 
          .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
 
-         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus
+         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus,
+         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
          { color: '.$color.'; }
 
          #main-header .primary-nav .nav a::after,
@@ -749,7 +750,8 @@ class business_Skin extends Skin
          { border-color: '.$color.'; }
 
          .page_title,
-         .disp_sitemap .content_sitemap .title_widgets
+         .disp_sitemap .content_sitemap .title_widgets,
+         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
          { border-bottom-color: '.$color.'; }
          ';
 

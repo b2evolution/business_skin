@@ -82,12 +82,12 @@ echo '<div class="evo_content_block">'; // Beginning of post display
    			if( $disp == 'single' || $disp == 'page' )
    			{
    				$title_before = $params['item_title_single_before'];
-   				$title_after = $params['item_title_single_after'];
+   				$title_after  = $params['item_title_single_after'];
    			}
    			else
    			{
    				$title_before = $params['item_title_before'];
-   				$title_after = $params['item_title_after'];
+   				$title_after  = $params['item_title_after'];
    			}
 
    			// POST TITLE:
@@ -190,13 +190,14 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 			if( ! $Item->is_intro() && $disp == 'posts' )
 			{ // List all tags attached to this post:
 				$Item->tags( array(
-					'before'    => '<div class="small post_tags">'. T_('Tags: '),
+					'before'    => '<div class="post_tags">'. T_('Tags').': ',
 					'after'     => '</div>',
-					'separator' => ',',
+					'separator' => ', ',
+               'text'      => ''
 				) );
 			} else if ( $disp == 'single' ) {
             $Item->tags( array(
-					'before'    => '<div class="single_tags">'. T_('Tags: '),
+					'before'    => '<div class="single_tags">'. T_('Tags').': ',
 					'after'     => '</div>',
 					'separator' => ', ',
 				) );

@@ -13,12 +13,14 @@ Get Business today and impress your readers! - **[Download Now](https://github.c
 - Front Disp - **[Demo](http://skin.ariflaw.com/business/index.php/b/)**
 - Posts Regular Disp - **[Demo](http://skin.ariflaw.com/business/)**
 - Posts Mini Disp - **[Demo](http://skin.ariflaw.com/business/index.php/b/?disp=posts)**
-- Single Disp - **[Demo](http://skin.ariflaw.com/business/index.php/a/typography-post)**
+- Single Typography - **[Demo](http://skin.ariflaw.com/business/index.php/a/typography-post)**
+- Single have Cover Image - **[Demo](http://skin.ariflaw.com/business/index.php/a/extended-post)**
+- Single Image and Gallery - **[Demo](http://skin.ariflaw.com/business/index.php/a/image-post)**
 - Single Vimeo Post - **[Demo](http://skin.ariflaw.com/business/index.php/a/vimeo-post)**
-- Single Image Post - **[Demo](http://skin.ariflaw.com/business/index.php/a/image-post)**
 - Page Disp - **[Demo](http://skin.ariflaw.com/business/index.php/a/about-blog-a)**
 - Comment Disp - **[Demo](http://skin.ariflaw.com/business/index.php/a/?disp=comments)**
 - Search Disp - **[Demo](http://skin.ariflaw.com/business/index.php/a/?s=post&submit=Search&disp=search)**
+- Photo Index - **[Demo](http://skin.ariflaw.com/business/index.php/photos/)**
 
 ======
 
@@ -69,18 +71,18 @@ If you ever get stuck with setting up Business with your B2evolution installatio
 ### Changes & Updates
 
 ```
-Version 1.1
+Version 0.5
 – Fix overflow the avatar pop up on comment
-- Fix z-index for back to button
+- Fix z-index for back to top button
 - Fix Responsive logo and menu
-- Same Icon hover Image and Gallery
+- Some Icon hover Image and Gallery
 - Fix responsive Logo and menu on max-width 991px
 - Make variable for media screen width
 - Change style on comment
-- Fix style popup comment user
-- add style caption when image hover
+- Fix style pop up comment user
+- Add style caption when image hover
 - Change tags style
 
-Version 1.0
+Version 0.1
 – Initial Version – 05 January, 2016
 ```

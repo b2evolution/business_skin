@@ -582,6 +582,10 @@ a:active {
 #mini-blog .evo_post .small.text-muted .cat-links {
   display: inline-block;
 }
+#main-content .evo_post figure,
+#mini-blog .evo_post figure {
+  margin-top: 0;
+}
 #main-content .evo_post .evo_post__full_text h1,
 #mini-blog .evo_post .evo_post__full_text h1,
 #main-content .evo_post .evo_post__full_text h2,
@@ -868,6 +872,29 @@ a:active {
 #mini-blog .col-md-12 .evo_post .evo_post__full_text iframe {
   height: 490px;
 }
+#main-content .post_tags a,
+#mini-blog .post_tags a {
+  display: inline-block;
+  padding: 0;
+  font-size: 1.4rem;
+  color: #444444;
+  background-color: transparent;
+  border-bottom: 1px dotted #1dc6df;
+  border-radius: 0;
+  margin-left: 5px;
+}
+#main-content .post_tags a:hover,
+#mini-blog .post_tags a:hover,
+#main-content .post_tags a:active,
+#mini-blog .post_tags a:active,
+#main-content .post_tags a:focus,
+#mini-blog .post_tags a:focus {
+  color: #1dc6df;
+}
+#main-content .post_tags a::before,
+#mini-blog .post_tags a::before {
+  content: '';
+}
 .page_title {
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -1029,11 +1056,6 @@ a:active {
 }
 .disp_posts #main-content .evo_post footer {
   padding: 0 30px 20px;
-}
-.disp_posts #main-content .evo_post footer .post_tags a {
-  padding: 3px 10px;
-  border-radius: 2px;
-  color: #444444;
 }
 .disp_posts #main-content .posts_date {
   position: relative;
@@ -1197,10 +1219,6 @@ a:active {
   box-shadow: none;
   overflow: hidden;
 }
-.disp_single #main-content .evo_post img,
-.disp_page #main-content .evo_post img {
-  border-radius: 0;
-}
 .disp_single #main-content .evo_post > header,
 .disp_page #main-content .evo_post > header {
   border-bottom: 1px solid #eeeeee;
@@ -1223,20 +1241,6 @@ a:active {
 .disp_single #main-content .evo_post > header .cat-links a:focus,
 .disp_page #main-content .evo_post > header .cat-links a:focus {
   text-decoration: none;
-}
-.disp_single #main-content .evo_post .evo_image_block a::before,
-.disp_page #main-content .evo_post .evo_image_block a::before,
-.disp_single #main-content .evo_post .evo_post_gallery__image a::before,
-.disp_page #main-content .evo_post .evo_post_gallery__image a::before {
-  background-color: rgba(29, 198, 223, 0.6);
-}
-.disp_single #main-content .evo_post .evo_image_block a::after,
-.disp_page #main-content .evo_post .evo_image_block a::after,
-.disp_single #main-content .evo_post .evo_post_gallery__image a::after,
-.disp_page #main-content .evo_post .evo_post_gallery__image a::after {
-  content: "\f002";
-  color: #ffffff;
-  background-color: transparent;
 }
 .disp_single #main-content .evo_post .single_tags,
 .disp_page #main-content .evo_post .single_tags {
