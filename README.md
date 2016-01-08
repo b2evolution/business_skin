@@ -36,6 +36,10 @@ Get Business today and impress your readers! - **[Download Now](https://github.c
 
 ![disp=single](skinshot_single.png)
 
+### Skin Options
+
+![skin=options](skinshot_skin.png)
+
 ====
 
 ### Some of the Features:
