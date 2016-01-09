@@ -185,7 +185,6 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 	?>
 
 	<footer>
-
 		<?php
 			if( ! $Item->is_intro() && $disp == 'posts' )
 			{ // List all tags attached to this post:

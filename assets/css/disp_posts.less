@@ -40,6 +40,12 @@
       z-index: 1;
       margin-bottom: 50px;
 
+      // Global Style evo_post__full_text and evo_post__excerpt_text
+      // ======================================================================== /
+      .evo_post__full, .evo_post__excerpt {
+         margin-bottom: 30px;
+      }
+
       header {
          .small.text-muted {
             color: @c9;
@@ -60,29 +66,6 @@
 
       .evo_post__excerpt_text {
          font-size: 1.4rem;
-
-         .evo_post__excerpt_more_link {
-
-            a {
-               display: inline-block;
-               padding: 12px 20px;
-               text-transform: uppercase;
-               font-size: 1.2rem;
-               font-weight: 700;
-               letter-spacing: 1px;
-               color: @c4;
-               border: 1px solid @d;
-               border-radius: 2px;
-               margin-top: 20px;
-
-               &:hover, &:active, &:focus {
-                  text-decoration: none;
-                  background-color: @primary;
-                  color: @w;
-                  border-color: @primary;
-               }
-            }
-         }
       }
 
       .post_tags {
@@ -102,13 +85,6 @@
          position: relative;
          z-index: 1;
       }
-
-      // Intro Post
-      // ======================================================================== /
-      // .evo_intro_post{
-      //    background-color: @w;
-      //    color: @b;
-      // }
 
       // Article Post Styling
       // ======================================================================== /
@@ -144,30 +120,18 @@
          // Full Text
          // ======================================================================== /
          .evo_post__full_text, .evo_post__excerpt_text {
-            padding: 10px 30px;
+            padding: 0 30px;
 
             p {
                margin-bottom: 15px;
             }
 
-            .evo_post_more_link {
-               margin-bottom: 5px;
-            }
          }
 
          // Footer Post
          // ======================================================================== /
          footer {
             padding: 0 30px 20px;
-
-            // .post_tags{
-            //    a{
-            //       padding: 3px 10px;
-            //       border-radius: 2px;
-            //       color: @c4;
-            //    }
-            // }
-
          }
 
       }// end .evo_post
@@ -284,6 +248,14 @@
          font-family: @font_title;
       }
 
+      // Featured Posts
+      // ======================================================================== /
+      .evo_featured_post {
+         box-shadow: none;
+         padding-bottom: 2.5rem;
+         margin-bottom: 2.5rem;
+      }
+
       // Pagination Style
       // ======================================================================== /
       .pagination {
@@ -359,7 +331,7 @@
          // Footer Content
          // ======================================================================== /
          & > footer {
-            margin-top: 20px;
+            // margin-top: 20px;
 
             .post_tags {
                margin-top: 0;

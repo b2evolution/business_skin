@@ -67,7 +67,7 @@ siteskin_include( '_site_body_header.inc.php' );
    <div class="container">
       <div class="row">
 
-      	<div class="col-xs-9 col-sm-12 col-md-4">
+      	<div class="col-xs-9 col-sm-12 col-md-5">
       		<div class="evo_container">
                <?php
       			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
@@ -84,7 +84,7 @@ siteskin_include( '_site_body_header.inc.php' );
       		</div>
       	</div><!-- .col -->
 
-      	<div class="col-xs-3 col-sm-12 col-md-8">
+      	<div class="col-xs-3 col-sm-12 col-md-7">
             <nav class="primary-nav">
                <!-- Toggle get grouped for better mobile display -->
                <div class="navbar-header">
