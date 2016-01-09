@@ -2,7 +2,7 @@
 
 #### Business - Elegant and Clean Skin Blog
 
-**Business** is a professional, Clean & Personal blogging skin tailored to be exceptional on b2evolution CMS. Not only its modern design is pleasing to the eyes, it packs in robust yet easy-to-use backend system all managed through skin options on b2evolution. Perfect choice for your personal blog, niche blog, corporate blog, marketing blog, authority blog or any type of creative blog or simple magazine.
+**Business** is a professional, clean & personal blogging skin tailored to be exceptional on B2evolution CMS. Not only its modern design is pleasing to the eyes, it packs in robust yet easy-to-use backend system all managed through skin options on b2evolution. Perfect choice for your personal blog, niche blog, corporate blog, marketing blog, authority blog or any type of creative blog or simple magazine.
 
 It is highly customizable so it can match your personal taste. Enjoy wellow’s awesome features such as both sidebar, a variety of post layout options, numerous sidebar & footer widgets, and plentiful colors, backgrounds and general skin options.
 
@@ -46,6 +46,7 @@ Get Business today and impress your readers! - **[Download Now](https://github.c
 
 - Fully Responsive Design
 - Unlimited Color Schemes
+- Unlimited Background Color
 - Top Bar Header Elements
 - Smooth Sticky Top Bar with Logo
 - Responsive Mobile Menu
@@ -56,9 +57,14 @@ Get Business today and impress your readers! - **[Download Now](https://github.c
 - Full Post, Sidebar, and Grid
 - List Layout Full Width
 - Blog Layout Full Width
-- Blog Masonry
 - Blog Large Media
 - Blog Small Media
+- Photo Index Style Masonry
+- One Column
+- Right Sidebar
+- Left Sidebar
+- Footer Widget
+- Social Icon
 - Back to top button
 - Crossbrowser Compatible
 - Free Updates and new features.
