@@ -25,11 +25,16 @@
 
             p {
                font-size: 2rem;
+
+               @media screen and ( max-width: @MX ) {
+                  font-size: 1.7rem;
+               }
             }
 
             .featurepost {
 
                .evo_post_title {
+
                   h3 {
                      display: inline-block;
                      font-weight: 700;
@@ -40,7 +45,7 @@
 
                      &::before {
                         background-color: @w;
-                        top: 40px;
+                        top: 140%;
                      }
                   }
 
@@ -60,6 +65,9 @@
 
                .evo_post__full_text {
                   font-size: 2rem;
+                  @media screen and ( max-width: @MX ) {
+                     font-size: 1.7rem;
+                  }
 
                   a {
                      color: @w;

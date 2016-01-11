@@ -76,6 +76,13 @@
                      }
                   }
 
+                  .title.title_overlay {
+
+                     .note {
+                        font-size: 1.8rem;
+                     }
+                  }
+
                   .note {
                      font-size: 2.4rem;
                      padding-left: 30px;
@@ -117,6 +124,13 @@
                      }
                   }
 
+                  .title_overlay {
+                     .note {
+                        font-size: 1.4rem;
+                        padding: 10px 20px;
+                     }
+                  }
+
                   .note {
                      margin: auto;
                      padding: 15px;
@@ -133,6 +147,7 @@
                   position: relative;
                   margin: 0;
                   text-align: center;
+                  overflow: hidden;
 
                   // Style Box Layout
                   // ======================================================================== /
@@ -163,14 +178,37 @@
                         position: relative;
                         margin-bottom: 30px;
                         z-index: 2;
+                        top: 0;
+                        bottom: inherit;
 
                         &::after {
                            height: 0;
                         }
                      }
-                  }
 
-               }
+                     // Title Overlay
+                     &.title.title_overlay {
+                        border-radius: 0;
+
+                        img {
+                           border-radius: 0;
+                        }
+
+                        a::after {
+                           display: none;
+                        }
+
+                        .note {
+                           position: absolute;
+                           margin-bottom: 0;
+                           background-color: @primary;
+                           color: @w;
+                        }
+                     }
+
+                  } // end .box
+
+               } // end figure
 
                img {
                   display: block;
@@ -214,6 +252,39 @@
                   background-color: @c7;
                   z-index: -1;
                }
+            }
+
+            // Title Overlay
+            // ======================================================================== /
+            .title_overlay {
+               opacity: 0.8;
+               transition: all 0.32s ease-in-out;
+
+               &:hover {
+                  opacity: 1;
+               }
+
+               .note {
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  left: -100%;
+                  font-weight: 600;
+                  background-color: @primary;
+                  color: @w;
+                  margin: 0;
+                  padding: 10px 20px;
+                  transition: all 0.32s ease-in-out;
+
+                  &::after {
+                     display: none;
+                  }
+               }
+
+            }
+
+            .grid-item:hover .title.title_overlay .note{
+               left: 0;
             }
 
          }

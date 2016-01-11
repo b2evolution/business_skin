@@ -51,12 +51,17 @@ if ( $mediaidx_grid == 'one_column' ) {
 
 $style = '';
 if ( $Skin->get_setting( 'mediaidx_style' ) == 'box' ) {
-   $style = 'box';
+   $style = 'box ';
 }
 
 $show_title = '';
 if ( $Skin->get_setting( 'mediaidx_title' )  == 1 ) {
-   $show_title = " title";
+   $show_title = "title ";
+}
+
+$title_overlay = '';
+if ( $Skin->get_setting( 'mediaidx_title_style' ) == 'hover' && $Skin->get_setting( 'mediaidx_title' )  == 1 ) {
+   $title_overlay = 'title_overlay';
 }
 
 
@@ -74,7 +79,7 @@ skin_widget( array(
 	'list_start'          => '<ul class="evo_image_index">',
 	'list_end'            => '</ul>',
 	// 'item_start'         => '<li><figure'.$photocell_styles.'>',
-   'item_start'          => '<li class="grid-item '. $grid .'"><figure class="'. $style . $show_title .'">',
+   'item_start'          => '<li class="grid-item '. $grid .'"><figure class="'. $style . $show_title . $title_overlay.'">',
 	'item_end'            => '</figure></li>',
 	'order_by'            => $Blog->get_setting('orderby'),
 	'order_dir'           => $Blog->get_setting('orderdir'),

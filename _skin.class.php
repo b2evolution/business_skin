@@ -442,6 +442,16 @@ class business_Skin extends Skin
 						'defaultvalue'   => 1,
 						'type'           => 'checkbox',
 					),
+               'mediaidx_title_style' => array(
+                  'label'          => T_('Mediaidx Title Style'),
+                  'note'           => T_('Select the title style for Photo Index and reinput padding column (10px).'),
+                  'defaultvalue'   => 'default',
+                  'type'           => 'select',
+                  'options'        => array(
+                     'default' => T_('Default'),
+                     'hover'   => T_('Hover Style'),
+                  ),
+               ),
                'mediaidx_bg' => array(
                    'label'         => T_('Background Mediaidx'),
                    'note'          => T_('Default color is #FFFFFF. Suggest Background Color (#F7F7F7)'),
