@@ -92,6 +92,7 @@ Version 0.5
 - Fix style pop up comment user
 - Add style caption when image hover
 - Change tags style
+- Add Title Hover on Mediaidx
 
 Version 0.1
 – Initial Version – 05 January, 2016
