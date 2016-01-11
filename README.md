@@ -81,7 +81,7 @@ If you ever get stuck with setting up Business with your B2evolution installatio
 ### Changes & Updates
 
 ```
-Version 0.5
+#### Version 0.5
 – Fix overflow the avatar pop up on comment
 - Fix z-index for back to top button
 - Fix Responsive logo and menu
@@ -94,6 +94,6 @@ Version 0.5
 - Change tags style
 - Add Title Hover on Mediaidx
 
-Version 0.1
+#### Version 0.1
 – Initial Version – 05 January, 2016
 ```
