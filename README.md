@@ -13,7 +13,6 @@ Get Business today and impress your readers! - **[Download Now](https://github.c
 
 - How to Install Business Skin on your server - **[Watch Video](https://youtu.be/Sddvai3-Puk)**
 
-======
 
 ======
 ### Demo Skin
