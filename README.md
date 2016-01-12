@@ -9,6 +9,13 @@ It is highly customizable so it can match your personal taste. Enjoy wellow’s 
 Get Business today and impress your readers! - **[Download Now](https://github.com/b2evolution/business_skin/archive/master.zip)**
 
 ======
+### Tutorial
+
+- How to Install Business Skin on your serve - **[Watch Video](https://youtu.be/Sddvai3-Puk)**
+
+======
+
+======
 ### Demo Skin
 - Front Disp - **[Demo](http://skin.ariflaw.com/business/index.php/b/)**
 - Posts Regular Disp - **[Demo](http://skin.ariflaw.com/business/)**
