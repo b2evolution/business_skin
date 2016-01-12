@@ -36,7 +36,6 @@ skin_include( '_html_header.inc.php', array() );
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
-
 ?>
 
 <main id="main-content">
