@@ -162,6 +162,31 @@ class business_Skin extends Skin
 
             /**
              * ============================================================================
+             * Section Typograpy
+             * ============================================================================
+             */
+            'section_typograpy_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_('Typograpy')
+            ),
+               'typograpy_fz' => array(
+                  'label'    => T_('Font Size'),
+                  'note'     => '',
+                  'type'     => 'radio',
+                  'options'  => array(
+                     array( 'small', T_('Small') ),
+                     array( 'normal', T_('Normal') ),
+                     array( 'large', T_('Large') ),
+                  ),
+                  'defaultvalue' => 'small',
+               ),
+            'section_typograpy_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Section Typograpy
+
+            /**
+             * ============================================================================
              * Section Header Top Options
              * ============================================================================
              */
@@ -295,6 +320,38 @@ class business_Skin extends Skin
                'layout' => 'end_fieldset',
             ),
             // End Options Disp Posts
+
+            /**
+             * ============================================================================
+             * Disp Single and Page Options
+             * ============================================================================
+             */
+            'section_tags_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_('Tags Layout')
+            ),
+               'tags_color' => array(
+                  'label'         => T_('Tags Posts Color'),
+                  'note'          => T_('Default background color is #444444.'),
+                  'defaultvalue'  => '#444444',
+                  'type'          => 'color',
+               ),
+               'tags_bdr_color' => array(
+                  'label'         => T_('Tags Posts Background Color'),
+                  'note'          => T_('Default background color is #E4E4E4.'),
+                  'defaultvalue'  => '#E4E4E4',
+                  'type'          => 'color',
+               ),
+               'tags_bg_color' => array(
+                  'label'         => T_('Tags Posts Border Color'),
+                  'note'          => T_('Default background color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+            'section_tags_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Single Disp
 
             /**
              * ============================================================================
@@ -705,8 +762,7 @@ class business_Skin extends Skin
 
          .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
 
-         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus,
-         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
+         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus
          { color: '.$color.'; }
 
          #main-header .primary-nav .nav a::after,
@@ -738,7 +794,9 @@ class business_Skin extends Skin
          .posts_mini_layout #mini-blog .msg_nothing,
 
          .disp_front #main-content .widget_core_coll_featured_intro .jumbotron,
-         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus
+         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+
+         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -756,12 +814,13 @@ class business_Skin extends Skin
 
          .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
 
-         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus
+         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+
+         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
          { border-color: '.$color.'; }
 
          .page_title,
-         .disp_sitemap .content_sitemap .title_widgets,
-         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
+         .disp_sitemap .content_sitemap .title_widgets
          { border-bottom-color: '.$color.'; }
          ';
 
@@ -793,7 +852,7 @@ class business_Skin extends Skin
          .disp_mediaidx #main-mediaidx .title_mediaidx
          { border-bottom-color: '.$color.'; }
 
-         .disp_single #main-content .evo_post .evo_post__full_text blockquote, .disp_page #main-content .evo_post .evo_post__full_text blockquote
+         #main-content .evo_post .evo_post__full_text blockquote, .disp_page #main-content .evo_post .evo_post__full_text blockquote, blockquote
          { border-left-color: '.$color.'; }
          ';
 
@@ -845,6 +904,40 @@ class business_Skin extends Skin
          ';
 
       }
+
+      /**
+       * ============================================================================
+       * Typograpy
+       * ============================================================================
+       */
+      $font_size = $this->get_setting( 'typograpy_fz' );
+      switch( $font_size ) {
+           case 'normal': // When regular layout is chosen, nothing happens, since regular is default
+           $custom_css .= 'body { font-size: 1.5rem; }';
+           break;
+
+           case 'large':
+            $custom_css .= 'body { font-size: 1.65rem; line-height: 1.3; }';
+           break;
+       }
+
+      /**
+       * ============================================================================
+       * Tags Layout
+       * ============================================================================
+       */
+      if ( $color = $this->get_setting( 'tags_color' ) ) {
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a { color: $color; }";
+      }
+
+      if ( $bg_color = $this->get_setting( 'tags_bg_color' ) ) {
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a { background-color: $bg_color; }";
+      }
+
+      if( $bdr_color = $this->get_setting( 'tags_bdr_color' ) ) {
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a { border-color: $bdr_color; }";
+      }
+
 
       /**
        * ============================================================================
@@ -950,7 +1043,7 @@ class business_Skin extends Skin
 
       /**
        * ============================================================================
-       * Front Disp Custom Style
+       * Comments Disp Custom Style
        * ============================================================================
        */
       if ( $bg_color = $this->get_setting( 'comments_bg' ) ) {

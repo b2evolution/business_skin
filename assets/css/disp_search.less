@@ -80,6 +80,7 @@
    // Search Result
    // ======================================================================== /
    .search_result {
+      padding: 0;
 
       .search_result_score.dimmed{
          width: 55px;
@@ -87,10 +88,21 @@
          line-height: 55px;
          text-align: center;
          font-weight: 700;
+         font-size: 1.5rem;
          border-radius: 100%;
          background-color: @primary;
          color: @w;
-         // box-shadow: @bx_post;
+         box-shadow: @bx_post;
+
+         @media screen and ( max-width: @S ) {
+            // width: 100%;
+            // height: 100%;
+            margin: 0 auto;
+            float: none;
+            border-radius: 2px;
+            margin-bottom: 15px;
+         }
+
       }
 
       .search_content_wrap {
@@ -99,12 +111,16 @@
          margin-left: 80px;
          border-bottom: 1px solid @bdr_bg;
 
+         @media screen and ( max-width: @S ) {
+            margin-left: 0;
+         }
+
          .search_title {
             font-family: @font_title;
             font-size: 2.2rem;
-            // font-weight: 700;
+            font-weight: 700;
             margin-bottom: 15px;
-            color: @c4;
+            color: @c5;
 
             a {
                color: @c4;
@@ -119,7 +135,7 @@
          }
 
          .result_content {
-            font-size: 1.4rem;
+            // font-size: 1.4rem;
             margin-bottom: 15px;
          }
 

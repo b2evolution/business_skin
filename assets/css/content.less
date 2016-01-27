@@ -14,10 +14,10 @@
       display: table;
 
       h1, h2, h3 {
+         display: table-cell;
          font-family: @font_title;
          font-size: 3.2rem;
          line-height: 3.2rem;
-         display: table-cell;
          margin: 0;
          padding: 20px 0 0;
 
@@ -31,7 +31,7 @@
          }
 
          a {
-            color: @b;
+            color: @c4;
 
             &:hover, &:active, &:focus{
                text-decoration: none;
@@ -89,12 +89,6 @@
       // ======================================================================== /
       .evo_post__full_text {
 
-         h1, h2, h3, h4, h5, h6 {
-            font-family: @font_title;
-            font-weight: 700;
-            margin: 25px 0 15px;
-         }
-
          ul {
 
             & ul {
@@ -103,7 +97,7 @@
             }
 
             p {
-               margin-bottom: 0;
+               margin-bottom: 0 !important;
             }
 
          }
@@ -121,16 +115,15 @@
          }
 
          blockquote {
-            border-left: 2px solid @primary;
-            padding: 8px 20px;
+            border-left: 4px solid @primary;
             font-style: italic;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             line-height: 1.4;
             letter-spacing: 0.2px;
             color: @c7;
 
             p{
-               margin-bottom: 0;
+               margin-bottom: 0 !important;
             }
          }
 
@@ -229,7 +222,7 @@
             &::after {
                content: "\f002";
                right: 0;
-               bottom: 50%;;
+               bottom: 45%;;
                margin: auto;
                text-align: center;
                display: block;
@@ -277,7 +270,8 @@
          margin-top: -15px;
 
          .evo_post_gallery__image{
-            margin: 0 10px 15px 0;
+            float: left;
+            margin: 0 10px 10px 0;
 
             a::after {
                bottom: 35%;
@@ -295,7 +289,6 @@
 
    // Iframe if Single Column
    // ======================================================================== /
-
    .col-md-12 .evo_post {
       .evo_post__full_text {
          iframe {
@@ -304,7 +297,6 @@
       }
    }
 
-
    // Post Tags Style
    // ======================================================================== /
    .post_tags {
@@ -312,16 +304,24 @@
 
       a {
          display: inline-block;
-         padding: 0;
-         font-size: 1.4rem;
-         color: @c4;
-         background-color: transparent;
-         border-bottom: 1px dotted @primary;
-         border-radius: 0;
-         margin-left: 5px;
+         // padding: 0;
+         // font-size: 1.4rem;
+         // color: @c4;
+         // background-color: transparent;
+         // border-bottom: 1px dotted @primary;
+         // margin-left: 5px;
+         // border-radius: 0;
+
+         padding: 0 5px;
+         font-size: 1.2rem;
+         background-color: @bg_post_regular;
+         border: 1px solid @bdr_bg;
+         border-radius: 2px;
 
          &:hover, &:active, &:focus {
-            color: @primary;
+            color: @w;
+            background-color: @primary;
+            border-color: @primary;
          }
 
          &::before {
@@ -336,12 +336,8 @@
 // Full Text
 // ======================================================================== /
 .evo_post__full_text, .evo_post__excerpt_text {
-   font-size: 1.4rem;
-   line-height: 1.6;
-
-   @media screen and ( max-width: @S ) {
-      font-size: 1.3rem;
-   }
+   // font-size: 1.4rem;
+   // line-height: 1.6;
 
    .evo_post_more_link{
       margin-top: 25px;
@@ -410,7 +406,7 @@
    margin-top: 0;
    margin-bottom: 40px;
 
-   @media only screen and ( max-width: @M ) {
+   @media screen and ( max-width: @M ) {
       margin-bottom: 30px;
       font-size: 2.6rem;
    }

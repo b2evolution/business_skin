@@ -186,21 +186,18 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 
 	<footer>
 		<?php
-			if( ! $Item->is_intro() && $disp == 'posts' )
-			{ // List all tags attached to this post:
-				$Item->tags( array(
-					'before'    => '<div class="post_tags">'. T_('Tags').': ',
-					'after'     => '</div>',
-					'separator' => ', ',
-               'text'      => ''
-				) );
-			} else if ( $disp == 'single' ) {
-            $Item->tags( array(
-					'before'    => '<div class="single_tags">'. T_('Tags').': ',
-					'after'     => '</div>',
-					'separator' => ', ',
-				) );
-         }
+
+         $Item->tags( array(
+            'before'    => '<div class="post_tags">'. T_('Tags').': ',
+            'after'     => '</div>',
+            'separator' => '',
+            'text'      => ''
+         ) );
+         // $Item->tags( array(
+			// 	'before'    => '<div class="single_tags">'. T_('Tags').': ',
+			// 	'after'     => '</div>',
+			// 	'separator' => ', ',
+			// ) );
 		?>
 
 		<nav class="post_comments_link">

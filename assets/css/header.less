@@ -106,7 +106,7 @@
          }
 
          @media screen and ( max-width: @MX ) {
-            font-size: 3.4rem !important;
+            font-size: 3.4rem;
             line-height: 35px;
 
             margin-top: 8px;
@@ -174,7 +174,7 @@
       }
 
       @media screen and ( max-width: @MX ) {
-         margin-top: -5px;
+         margin-top: -4px;
       }
 
       @media screen and ( max-width: @XS ) {
@@ -214,9 +214,9 @@
             font-size: 1.4rem;
             padding: 0;
 
-            @media screen and ( max-width: @S ) {
-               font-size: 1.5rem;
-            }
+            // @media screen and ( max-width: @S ) {
+            //    font-size: 1.5rem;
+            // }
 
             &::after {
                content: '';
@@ -405,12 +405,18 @@
          margin-bottom: -6px;
       }
 
-      // @media only screen and ( max-width: @S ) {
-      //    h1{
-      //       font-size: 3.4rem;
-      //       line-height: 1.2;
-      //    }
-      // }
+      @media only screen and ( max-width: @MX ) {
+         h1{
+            font-size: 3.4rem;
+         }
+      }
+
+      @media only screen and ( max-width: @S ) {
+         h1{
+            font-size: 3.2rem;
+            margin-bottom: 0;
+         }
+      }
 
    }
 

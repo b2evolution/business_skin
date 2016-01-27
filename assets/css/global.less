@@ -7,26 +7,26 @@
 /* ----------------------------------------------------------------------------
  * Globall Style
  * -------------------------------------------------------------------------- */
-html{
+html, body{
    font-size: 10px;
 
-   @media screen and ( max-width: @MM ) {
-      font-size: 9.75px;
-   }
-   @media screen and ( max-width: @M ) {
-      font-size: 9.5px;
-   }
-   @media screen and ( max-width: @MX ) {
-      font-size: 9.25px;
-   }
-   @media screen and ( max-width: @S ) {
-      font-size: 9px;
-   }
+   // @media screen and ( max-width: @MM ) {
+   //    font-size: 9.75px;
+   // }
+   // @media screen and ( max-width: @M ) {
+   //    font-size: 9.5px;
+   // }
+   // @media screen and ( max-width: @MX ) {
+   //    font-size: 9.25px;
+   // }
+   // @media screen and ( max-width: @S ) {
+   //    font-size: 9px;
+   // }
 
 }
 
 body{
-   font: normal 1.5rem/1.3 @font_body;
+   font: normal 1.4rem/1.6 @font_body;
    color: @c4;
    background-color: @w;
 }
@@ -37,6 +37,40 @@ a{
 
    &:hover, &:focus, &:active {
       color: @primary;
+   }
+}
+
+// Typograpy
+// ======================================================================== /
+h1, h2, h3, h4, h5, h6 {
+   font-family: @font_title;
+   font-weight: 700;
+   margin: 25px 0 15px;
+
+   @media screen and ( max-width: @S ) {
+      margin-top: 15px;
+      margin-bottom: 5px;
+   }
+}
+
+ul {
+
+   p {
+      margin-bottom: 0 !important;
+   }
+
+}
+
+blockquote {
+   // border-left: 4px solid @primary;
+   font-style: italic;
+   font-size: 1.6rem;
+   line-height: 1.4;
+   letter-spacing: 0.2px;
+   color: @c7;
+
+   p{
+      margin-bottom: 0 !important;
    }
 }
 

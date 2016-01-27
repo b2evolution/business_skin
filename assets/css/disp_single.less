@@ -24,7 +24,7 @@
          .previous, .next {
             a{
                color: @c7;
-               font-size: 1.4rem;
+               // font-size: 1.4rem;
                border-radius: 0;
                border: 0;
                margin: 0;
@@ -46,10 +46,6 @@
       .evo_post {
          box-shadow: none;
          overflow: hidden;
-
-         // img {
-         //    border-radius: 0;
-         // }
 
         & > header {
            border-bottom: 1px solid @e;
@@ -78,7 +74,7 @@
             color: @c7;
 
             a{
-               font-size: 1.4rem;
+               // font-size: 1.4rem;
                color: @c4;
                border-bottom: 1px dotted @primary;
 
@@ -121,6 +117,8 @@
 
                   .evo_comment_title{
                      font-size: 1.5rem;
+                     font-weight: normal;
+
                      a{
                         color: @primary;
 
@@ -141,10 +139,22 @@
                      float: none;
                      border-radius: 100%;
                   }
+
+                  @media screen and ( max-width: @S ) {
+                     display: block;
+                     position: relative;
+                     left: 0;
+                     margin: 0 auto;
+                     text-align: center;
+                  }
                }
 
                .evo_comment_rating, .evo_comment_text {
                   margin-left: 80px;
+
+                  @media screen and ( max-width: @S ) {
+                     margin-left: 0;
+                  }
                }
 
                .evo_comment_rating {
@@ -153,8 +163,13 @@
 
                .evo_comment_text {
                   display: block;
-                  font-size: 1.4rem;
+                  // font-size: 1.4rem;
                   min-height: 65px;
+
+                     img {
+                     max-width: 100%;
+                  }
+
                }
 
                .evo_comment_footer {
@@ -168,6 +183,7 @@
                      border-radius: 2px;
                      margin-left: 0.5rem;
                      font-size: 1.2rem;
+                     margin-top: -5px;
 
                      &:hover, &:active, &:focus {
                         text-decoration: none;
@@ -204,8 +220,8 @@
 
                .panel-title {
                   display: inline-block;
-                  font-family: @font_title;
                   font-size: 1.8rem;
+                  font-weight: normal;
                   background: @w;
                   padding-right: 10px;
                }
@@ -282,7 +298,7 @@
          // Comment Notification
          // ======================================================================== /
          .evo_post_comment_notification, .evo_post_feedback_feed_msg {
-            font-size: 1.4rem;
+            // font-size: 1.4rem;
          }
 
          // Comment Notification

@@ -7,7 +7,7 @@
 if ( $Skin->is_visible_sidebar() ) { // Display sidebar:
 
 ?>
-<aside id="main-sidebar" class="col-md-4<?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
+<aside id="main-sidebar" class="col-xs-12 col-sm-12 col-md-4<?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
    <!-- =================================== START OF SIDEBAR =================================== -->
    <div class="evo_container evo_container__sidebar">
    <?php

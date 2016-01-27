@@ -23,6 +23,11 @@
             color: @w;
             box-shadow: @bx_post;
 
+            @media screen and ( max-width: @S ) {
+               padding-bottom: 15px;
+               padding-top: 10px;
+            }
+
             p {
                font-size: 2rem;
 
@@ -89,7 +94,6 @@
       // ======================================================================== /
       .evo_widget {
          position: relative;
-         font-size: 1.4rem;
          margin-bottom: 40px;
 
          h3 {
