@@ -1458,16 +1458,6 @@ blockquote p {
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text img {
   max-width: 100%;
 }
-.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block,
-.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block {
-  display: table;
-  margin-right: auto;
-  margin-left: auto;
-}
-.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block:hover a::before,
-.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block:hover a::before {
-  border-radius: 3px;
-}
 .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer,
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer {
   margin-top: 15px;
