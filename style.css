@@ -235,6 +235,7 @@ blockquote p {
   }
 }
 #main-header .widget_core_coll_tagline {
+  font-size: 1.4rem;
   margin-top: -2px;
   margin-bottom: 0;
 }
@@ -680,7 +681,7 @@ blockquote p {
 #mini-blog .evo_post .evo_post__full_text p,
 #main-content .evo_post .evo_post__full_text pre,
 #mini-blog .evo_post .evo_post__full_text pre {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.8px;
 }
 #main-content .evo_post .evo_post__full_text blockquote,
 #mini-blog .evo_post .evo_post__full_text blockquote {
@@ -884,11 +885,18 @@ blockquote p {
 #mini-blog .post_tags {
   margin-top: 0;
 }
+#main-content .post_tags h3,
+#mini-blog .post_tags h3 {
+  display: inline-block;
+  padding-right: 10px;
+  font-size: 1.7rem;
+  color: #555555;
+}
 #main-content .post_tags a,
 #mini-blog .post_tags a {
   display: inline-block;
-  padding: 0 5px;
-  font-size: 1.2rem;
+  padding: 5px 12px;
+  font-size: 1.4rem;
   background-color: #f7f7f7;
   border: 1px solid #e4e4e4;
   border-radius: 2px;
@@ -906,6 +914,14 @@ blockquote p {
 #main-content .post_tags a::before,
 #mini-blog .post_tags a::before {
   content: '';
+}
+#main-content .post_comments_link a,
+#mini-blog .post_comments_link a {
+  font-size: 1.4rem;
+}
+.evo_post__full_text,
+.evo_post__excerpt_text {
+  font-size: 1.4rem;
 }
 .evo_post__full_text .evo_post_more_link,
 .evo_post__excerpt_text .evo_post_more_link {
@@ -1274,6 +1290,7 @@ blockquote p {
 .disp_single #main-content .pager .next a,
 .disp_page #main-content .pager .next a {
   color: #777777;
+  font-size: 1.4rem;
   border-radius: 0;
   border: 0;
   margin: 0;
@@ -1362,6 +1379,10 @@ blockquote p {
   color: #ffffff;
   border-color: #1dc6df;
 }
+.disp_single #main-content .evo_post #feedbacks .alert,
+.disp_page #main-content .evo_post #feedbacks .alert {
+  font-size: 1.4rem;
+}
 .disp_single #main-content .evo_post #feedbacks .evo_comment,
 .disp_page #main-content .evo_post #feedbacks .evo_comment {
   position: relative;
@@ -1430,16 +1451,32 @@ blockquote p {
 .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text,
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text {
   display: block;
+  font-size: 1.4rem;
   min-height: 65px;
 }
 .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text img,
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text img {
   max-width: 100%;
 }
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block:hover a::before,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text .evo_image_block:hover a::before {
+  border-radius: 3px;
+}
 .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer,
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer {
   margin-top: 15px;
   display: block;
+}
+.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small,
+.disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small {
+  font-size: 100%;
+  font-size: 1.3rem;
 }
 .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right,
 .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right {
@@ -1499,6 +1536,7 @@ blockquote p {
 .disp_single #main-content .evo_post .evo_form .form-group label,
 .disp_page #main-content .evo_post .evo_form .form-group label {
   font-family: "Roboto Slab", serif;
+  font-size: 1.4rem;
 }
 .disp_single #main-content .evo_post .evo_form .fieldset_wrapper .panel-body,
 .disp_page #main-content .evo_post .evo_form .fieldset_wrapper .panel-body {
@@ -1513,6 +1551,10 @@ blockquote p {
 .disp_page #main-content .evo_post .evo_form .form_textarea_input:active {
   box-shadow: none;
   border-color: #1dc6df;
+}
+.disp_single #main-content .evo_post .evo_form .user,
+.disp_page #main-content .evo_post .evo_form .user {
+  font-size: 1.4rem;
 }
 .disp_single #main-content .evo_post .evo_form .preview,
 .disp_page #main-content .evo_post .evo_form .preview,
@@ -1563,6 +1605,12 @@ blockquote p {
   outline: 0;
   background-color: #09C1DC;
   border-color: #09C1DC;
+}
+.disp_single #main-content .evo_post .evo_post_comment_notification,
+.disp_page #main-content .evo_post .evo_post_comment_notification,
+.disp_single #main-content .evo_post .evo_post_feedback_feed_msg,
+.disp_page #main-content .evo_post .evo_post_feedback_feed_msg {
+  font-size: 1.4rem;
 }
 .disp_single #main-content .evo_post .evo_post_comment_notification a,
 .disp_page #main-content .evo_post .evo_post_comment_notification a {
@@ -1863,6 +1911,7 @@ blockquote p {
   background-color: #1dc6df;
 }
 .disp_search .search_result {
+  font-size: 1.4rem;
   padding: 0;
 }
 .disp_search .search_result .search_result_score.dimmed {
@@ -1917,8 +1966,8 @@ blockquote p {
   margin-bottom: 15px;
 }
 .disp_search .search_result .search_content_wrap .search_info {
-  margin-bottom: 5px;
-  font-size: 85%;
+  margin-bottom: 2px;
+  font-size: 94%;
 }
 .disp_search .search_result .search_content_wrap .search_info a {
   color: #444444;
@@ -3031,6 +3080,7 @@ blockquote p {
   padding: 40px 0;
 }
 #main-footer .widget_footer .evo_widget .widget_title {
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;

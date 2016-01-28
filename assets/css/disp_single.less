@@ -24,7 +24,7 @@
          .previous, .next {
             a{
                color: @c7;
-               // font-size: 1.4rem;
+               font-size: 1.4rem;
                border-radius: 0;
                border: 0;
                margin: 0;
@@ -106,6 +106,10 @@
                }
             }
 
+            .alert {
+               font-size: 1.4rem;
+            }
+
             // Evo_comment
             // ======================================================================== /
             .evo_comment {
@@ -163,11 +167,23 @@
 
                .evo_comment_text {
                   display: block;
-                  // font-size: 1.4rem;
+                  font-size: 1.4rem;
                   min-height: 65px;
 
                      img {
                      max-width: 100%;
+                  }
+
+                  .evo_image_block {
+                     display: table;
+                     margin-right: auto;
+                     margin-left: auto;
+
+                     &:hover a {
+                        &::before {
+                           border-radius: 3px;
+                        }
+                     }
                   }
 
                }
@@ -175,6 +191,11 @@
                .evo_comment_footer {
                   margin-top: 15px;
                   display: block;
+
+                  small {
+                     font-size: 100%;
+                     font-size: 1.3rem;
+                  }
 
                   .permalink_right {
                      background-color: @primary;
@@ -242,6 +263,7 @@
             .form-group {
                label {
                   font-family: @font_title;
+                  font-size: 1.4rem;
                }
             }
 
@@ -258,6 +280,10 @@
                   box-shadow: none;
                   border-color: @primary;
                }
+            }
+
+            .user {
+               font-size: 1.4rem;
             }
 
             .preview, .submit {
@@ -298,7 +324,7 @@
          // Comment Notification
          // ======================================================================== /
          .evo_post_comment_notification, .evo_post_feedback_feed_msg {
-            // font-size: 1.4rem;
+            font-size: 1.4rem;
          }
 
          // Comment Notification

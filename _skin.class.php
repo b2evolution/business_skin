@@ -323,7 +323,7 @@ class business_Skin extends Skin
 
             /**
              * ============================================================================
-             * Disp Single and Page Options
+             * Tags Layout
              * ============================================================================
              */
             'section_tags_start' => array(
@@ -332,20 +332,20 @@ class business_Skin extends Skin
             ),
                'tags_color' => array(
                   'label'         => T_('Tags Posts Color'),
-                  'note'          => T_('Default background color is #444444.'),
-                  'defaultvalue'  => '#444444',
-                  'type'          => 'color',
-               ),
-               'tags_bdr_color' => array(
-                  'label'         => T_('Tags Posts Background Color'),
-                  'note'          => T_('Default background color is #E4E4E4.'),
-                  'defaultvalue'  => '#E4E4E4',
+                  'note'          => T_('Default background color is #333333.'),
+                  'defaultvalue'  => '#333333',
                   'type'          => 'color',
                ),
                'tags_bg_color' => array(
+                  'label'         => T_('Tags Posts Background Color'),
+                  'note'          => T_('Default background color is #F7F7F7.'),
+                  'defaultvalue'  => '#F7F7F7',
+                  'type'          => 'color',
+               ),
+               'tags_bdr_color' => array(
                   'label'         => T_('Tags Posts Border Color'),
-                  'note'          => T_('Default background color is #FFFFFF.'),
-                  'defaultvalue'  => '#FFFFFF',
+                  'note'          => T_('Default border-color is #E4E4E4.'),
+                  'defaultvalue'  => '#E4E4E4',
                   'type'          => 'color',
                ),
             'section_tags_end' => array(
@@ -913,11 +913,21 @@ class business_Skin extends Skin
       $font_size = $this->get_setting( 'typograpy_fz' );
       switch( $font_size ) {
            case 'normal': // When regular layout is chosen, nothing happens, since regular is default
-           $custom_css .= 'body { font-size: 1.5rem; }';
+           $custom_css .= 'html, body
+           { font-size: 11.42855px; }
+
+           @media screen and (max-width: 480px) {
+             html, body { font-size: 10.5px; }
+           }';
            break;
 
            case 'large':
-            $custom_css .= 'body { font-size: 1.65rem; line-height: 1.3; }';
+            $custom_css .= 'html, body
+            { font-size: 12.85715px; }
+
+            @media screen and (max-width: 480px) {
+              html, body { font-size: 11px; }
+            }';
            break;
        }
 
@@ -927,15 +937,15 @@ class business_Skin extends Skin
        * ============================================================================
        */
       if ( $color = $this->get_setting( 'tags_color' ) ) {
-         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a { color: $color; }";
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { color: $color; }";
       }
 
       if ( $bg_color = $this->get_setting( 'tags_bg_color' ) ) {
-         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a { background-color: $bg_color; }";
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { background-color: $bg_color; }";
       }
 
       if( $bdr_color = $this->get_setting( 'tags_bdr_color' ) ) {
-         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a { border-color: $bdr_color; }";
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { border-color: $bdr_color; }";
       }
 
 

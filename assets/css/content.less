@@ -111,7 +111,7 @@
          }
 
          p, pre {
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.8px;
          }
 
          blockquote {
@@ -302,18 +302,17 @@
    .post_tags {
       margin-top: 0;
 
+      h3 {
+         display: inline-block;
+         padding-right: 10px;
+         font-size: 1.7rem;
+         color: @c5;
+      }
+
       a {
          display: inline-block;
-         // padding: 0;
-         // font-size: 1.4rem;
-         // color: @c4;
-         // background-color: transparent;
-         // border-bottom: 1px dotted @primary;
-         // margin-left: 5px;
-         // border-radius: 0;
-
-         padding: 0 5px;
-         font-size: 1.2rem;
+         padding: 5px 12px;
+         font-size: 1.4rem;
          background-color: @bg_post_regular;
          border: 1px solid @bdr_bg;
          border-radius: 2px;
@@ -330,13 +329,19 @@
       }
    }
 
+   .post_comments_link {
+      a {
+         font-size: 1.4rem;
+      }
+   }
+
 }
 
 
 // Full Text
 // ======================================================================== /
 .evo_post__full_text, .evo_post__excerpt_text {
-   // font-size: 1.4rem;
+   font-size: 1.4rem;
    // line-height: 1.6;
 
    .evo_post_more_link{

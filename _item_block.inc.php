@@ -188,7 +188,7 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		<?php
 
          $Item->tags( array(
-            'before'    => '<div class="post_tags">'. T_('Tags').': ',
+            'before'    => '<div class="post_tags"><h3>'.T_( 'Tags :' ).'</h3>',
             'after'     => '</div>',
             'separator' => '',
             'text'      => ''
@@ -234,6 +234,10 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		skin_include( '_item_feedback.inc.php', array_merge( array(
 			'before_section_title' => '<div class="clearfix"></div><h3 class="evo_comment__list_title">',
 			'after_section_title'  => '</h3>',
+         'before_images'        => '<div class="evo_post_images">',
+         'before_image'         => '<figure class="evo_image_block">',
+         'after_image'          => '</figure>',
+         'after_images'         => '</div>',
 		), $params ) );
 		// Note: You can customize the default item feedback by copying the generic
 		// /skins/_item_feedback.inc.php file into the current skin folder.
