@@ -796,7 +796,10 @@ class business_Skin extends Skin
          .disp_front #main-content .widget_core_coll_featured_intro .jumbotron,
          .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus
+         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
+
+         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box.title.title_overlay .note,
+         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .title_overlay .note
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
