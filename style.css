@@ -90,7 +90,8 @@ blockquote p {
 #header-top .header-contact-info {
   font-size: 1.3rem;
   color: #777777;
-  margin: 15px 0px 10px;
+  line-height: 45px;
+  margin: 0;
 }
 #header-top .widget_core_user_links {
   margin: 0;
@@ -681,7 +682,7 @@ blockquote p {
 #mini-blog .evo_post .evo_post__full_text p,
 #main-content .evo_post .evo_post__full_text pre,
 #mini-blog .evo_post .evo_post__full_text pre {
-  margin-bottom: 1.8px;
+  margin-bottom: 18px;
 }
 #main-content .evo_post .evo_post__full_text blockquote,
 #mini-blog .evo_post .evo_post__full_text blockquote {
@@ -884,6 +885,7 @@ blockquote p {
 #main-content .post_tags,
 #mini-blog .post_tags {
   margin-top: 0;
+  margin-bottom: 20px;
 }
 #main-content .post_tags h3,
 #mini-blog .post_tags h3 {
@@ -891,6 +893,7 @@ blockquote p {
   padding-right: 10px;
   font-size: 1.7rem;
   color: #555555;
+  margin: 0;
 }
 #main-content .post_tags a,
 #mini-blog .post_tags a {
@@ -1051,6 +1054,7 @@ blockquote p {
 .disp_posts .evo_featured_post {
   position: relative;
   background-color: #ffffff;
+  padding: 1rem 3rem 2rem;
   border: none;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -1079,6 +1083,7 @@ blockquote p {
 }
 .disp_posts .evo_featured_post .post_tags {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .disp_posts #main-content .evo_content_block {
   position: relative;
@@ -1199,6 +1204,58 @@ blockquote p {
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+.post_regular #main-content .evo_featured_post {
+  color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post .evo_post__full,
+.post_regular #main-content .evo_featured_post .evo_post__excerpt {
+  color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post header .evo_post_title h3 a,
+.post_regular #main-content .evo_featured_post header .evo_post_title h2 a {
+  color: #ffffff !important;
+}
+.post_regular #main-content .evo_featured_post header .small.text-muted {
+  color: #ffffff;
+  margin: 5px 0 20px;
+}
+.post_regular #main-content .evo_featured_post header .small.text-muted a {
+  color: #ffffff !important;
+}
+.post_regular #main-content .evo_featured_post header .small.text-muted a:hover,
+.post_regular #main-content .evo_featured_post header .small.text-muted a:active,
+.post_regular #main-content .evo_featured_post header .small.text-muted a:focus {
+  color: #1dc6df;
+}
+.post_regular #main-content .evo_featured_post .cat-links {
+  display: inline-block;
+}
+.post_regular #main-content .evo_featured_post .evo_post__excerpt_more_link a {
+  color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post .evo_post__excerpt_more_link a:hover,
+.post_regular #main-content .evo_featured_post .evo_post__excerpt_more_link a:focus,
+.post_regular #main-content .evo_featured_post .evo_post__excerpt_more_link a:active {
+  color: #444444;
+  background-color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post .post_tags h3 {
+  color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post .post_tags a {
+  background-color: transparent ;
+  color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post .post_tags a:hover,
+.post_regular #main-content .evo_featured_post .post_tags a:active,
+.post_regular #main-content .evo_featured_post .post_tags a:focus {
+  color: #444444;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+.post_regular #main-content .evo_featured_post .post_comments_link a {
+  color: #ffffff;
+}
 .post_regular #main-sidebar .widget_plugin_evo_Calr .bCalendarTable {
   border: 0;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1217,6 +1274,16 @@ blockquote p {
   box-shadow: none;
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
+  background: #f7f7f7;
+  border: 1px solid #e4e4e4;
+  padding: 1rem 3rem 2rem;
+  border-radius: 2px;
+}
+.posts_mini_layout #mini-blog .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a {
+  background-color: #ffffff;
+}
+.posts_mini_layout #mini-blog .evo_featured_post .post_tags a {
+  background-color: #ffffff;
 }
 .posts_mini_layout #mini-blog .pagination li a,
 .posts_mini_layout #mini-blog .pagination li span {
@@ -1270,10 +1337,6 @@ blockquote p {
 .posts_mini_layout .pagination_bottom {
   border-top: 1px solid #e4e4e4;
   padding-top: 30px;
-}
-.disp_single,
-.disp_page {
-  background-color: #ffffff;
 }
 .disp_single .evo_cover_image,
 .disp_page .evo_cover_image {
@@ -1829,7 +1892,7 @@ blockquote p {
   display: block;
   position: absolute;
   bottom: 0;
-  left: -100%;
+  left: -102%;
   font-weight: 600;
   background-color: #1dc6df;
   color: #ffffff;
@@ -1976,6 +2039,7 @@ blockquote p {
 .disp_search .search_result .search_content_wrap .search_info a:hover,
 .disp_search .search_result .search_content_wrap .search_info a:active,
 .disp_search .search_result .search_content_wrap .search_info a:focus {
+  background-color: transparent;
   text-decoration: none;
   color: #1dc6df;
 }
@@ -2040,6 +2104,10 @@ blockquote p {
 .disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post_title .btn-group a:hover {
   background-color: #ffffff;
   color: #333333;
+}
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post__full_text,
+.disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post__excerpt_text {
+  color: #ffffff;
 }
 .disp_front #main-content .widget_core_coll_featured_intro .jumbotron .featurepost .evo_post__full_text {
   font-size: 2rem;
@@ -2220,9 +2288,6 @@ blockquote p {
     text-align: center;
   }
 }
-.disp_arcdir {
-  background-color: #f7f7f7;
-}
 .disp_arcdir #main-content .widget_plugin_achive {
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -2243,9 +2308,6 @@ blockquote p {
 .disp_arcdir #main-sidebar .widget_plugin_achive {
   box-shadow: none;
   padding: 0;
-}
-.disp_catdir {
-  background-color: #f7f7f7;
 }
 .disp_catdir #main-content .widget_core_coll_category_list {
   background-color: #ffffff;
@@ -2270,9 +2332,6 @@ blockquote p {
   box-shadow: none;
   padding: 0;
 }
-.disp_postidx {
-  background-color: #f7f7f7;
-}
 .disp_postidx #main-content .widget_core_coll_post_list {
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -2293,9 +2352,6 @@ blockquote p {
 .disp_postidx #main-sidebar .widget_core_coll_post_list {
   box-shadow: none;
   padding: 0;
-}
-.disp_tags {
-  background-color: #f7f7f7;
 }
 .disp_tags #main-content .tag_cloud {
   background-color: #ffffff;
@@ -2329,9 +2385,6 @@ blockquote p {
 .disp_tags #main-sidebar .tag_cloud {
   box-shadow: none;
   padding: 0;
-}
-.disp_sitemap {
-  background-color: #f7f7f7;
 }
 .disp_sitemap .content_sitemap {
   position: relative;
@@ -3282,8 +3335,8 @@ blockquote p {
   height: 40px;
   width: 40px;
   position: fixed;
-  bottom: 40px;
-  right: 10px;
+  bottom: 30px;
+  right: 15px;
   z-index: 9998;
   font-size: 2rem;
   text-align: center;
@@ -3314,7 +3367,7 @@ blockquote p {
     opacity: 0.9;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .cd-top {
     right: 20px;
     bottom: 20px;

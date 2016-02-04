@@ -40,6 +40,7 @@
    .evo_featured_post {
       position: relative;
       background-color: @w;
+      padding: 1rem 3rem 2rem;
       border: none;
       box-shadow: @bx_post;
       z-index: 1;
@@ -56,6 +57,7 @@
       }
 
       header {
+
          .small.text-muted {
             color: @c9;
             margin: 5px 0 20px;
@@ -73,12 +75,9 @@
          // font-size: 1.4rem;
       }
 
-      .evo_post__excerpt_text {
-         // font-size: 1.4rem;
-      }
-
       .post_tags {
          margin-top: 20px;
+         margin-bottom: 20px;
       }
 
    }
@@ -249,6 +248,86 @@
          box-shadow: @bx_post;
       }
 
+      // Featured Posts
+      // ======================================================================== /
+      .evo_featured_post {
+         color: @w;
+
+         // Global Style evo_post__full_text and evo_post__excerpt_text
+         // ======================================================================== /
+         .evo_post__full, .evo_post__excerpt {
+            color: @w;
+         }
+
+         header {
+
+            .evo_post_title {
+               h3,h2 {
+                  a {
+                     color: @w !important;
+                  }
+               }
+            }
+
+            .small.text-muted {
+               color: @w;
+               margin: 5px 0 20px;
+
+               a {
+                  color: @w !important;
+
+                  &:hover, &:active, &:focus {
+                     color: @primary;
+                  }
+               }
+            }
+         }
+
+         .cat-links {
+            display: inline-block;
+         }
+
+         .evo_post__excerpt_more_link {
+
+            a {
+               color: @w;
+
+               &:hover, &:focus, &:active {
+                  color: @c4;
+                  background-color: @w;
+                  background-color: @w;
+               }
+            }
+
+         }
+
+         .post_tags {
+
+            h3 {
+               color: @w;
+            }
+
+            a {
+               background-color: transparent ;
+               color: @w;
+
+               &:hover, &:active, &:focus {
+                  color: @c4;
+                  background-color: @w;
+                  border-color: @w;
+               }
+            }
+
+         }
+
+         .post_comments_link{
+            a {
+               color: @w;
+            }
+         }
+
+      }
+
    }
 
 
@@ -293,6 +372,18 @@
          box-shadow: none;
          padding-bottom: 2.5rem;
          margin-bottom: 2.5rem;
+         background: @bg_post_regular;
+         border: 1px solid @bdr_bg;
+         padding: 1rem 3rem 2rem;
+         border-radius: 2px;
+
+         .evo_post__excerpt_text .evo_post__excerpt_more_link a {
+            background-color: @w;
+         }
+
+         .post_tags a {
+            background-color: @w;
+         }
       }
 
       // Pagination Style

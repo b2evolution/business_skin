@@ -96,9 +96,15 @@ class business_Skin extends Skin
 					),
                'color_schemes' => array(
                   'label'        => T_(' Color Schemes '),
-                  'note'         => T_(' Default color schemes is #1dc6df. Change everything color theme with one set color'),
+                  'note'         => T_(' Default color schemes is #1DC6DF. Change everything color theme with one set color'),
                   'defaultvalue' => '#1dc6df',
                   'type'         => 'color',
+               ),
+               'background_disp' => array(
+                  'label'         => T_('Background Color'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
                ),
                'front_bg' => array(
                   'label'         => T_('Background Front Disp'),
@@ -180,6 +186,12 @@ class business_Skin extends Skin
                   ),
                   'defaultvalue' => 'small',
                ),
+               'color_content' => array(
+                  'label'        => T_('Color Content'),
+                  'note'         => T_('Default color schemes is #444444. Change everything color theme with one set color'),
+                  'defaultvalue' => '#444444',
+                  'type'         => 'color',
+               ),
             'section_typograpy_end' => array(
                'layout' => 'end_fieldset',
             ),
@@ -208,7 +220,7 @@ class business_Skin extends Skin
                   'size'          => '60'
                ),
                'header_top_color' => array(
-                  'label'         => T_('Header Top Color'),
+                  'label'         => T_('Header Top Content Color'),
                   'note'          => T_('Default color is #777777.'),
                   'defaultvalue'  => '#777777',
                   'type'          => 'color',
@@ -306,8 +318,8 @@ class business_Skin extends Skin
                   'type'         => 'checkbox',
                ),
                'pagination_align' => array(
-                  'label'        => T_('Show Align Pagination'),
-                  'note'         => T_('Select Align Pagination'),
+                  'label'        => T_('Pagination Alignment'),
+                  'note'         => T_('Select left, right, or centered alignment of the pagination.'),
                   'defaultvalue' => 'center',
                   'type'         => 'select',
                   'options' => array(
@@ -378,7 +390,7 @@ class business_Skin extends Skin
                'label'  => T_('Sidebar Widget')
             ),
                'sidebar_title_widget' => array(
-                  'label'         => T_('Title Widget Color'),
+                  'label'         => T_('Widget Title Color'),
                   'note'          => T_('Default color is #000000.'),
                   'defaultvalue'  => '#000000',
                   'type'          => 'color',
@@ -396,7 +408,7 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'sidebar_border_widget' => array(
-                  'label'         => T_('Border Color Widget'),
+                  'label'         => T_('Widget Border Color'),
                   'note'          => T_('Default color is #EEEEEE.'),
                   'defaultvalue'  => '#EEEEEE',
                   'type'          => 'color',
@@ -736,6 +748,18 @@ class business_Skin extends Skin
       $custom_css = '';
 
       /**
+      * ============================================================================
+      * This is Title
+      * ============================================================================
+      */
+      if ( $bg_color = $this->get_setting( 'background_disp' ) ) {
+         $custom_css .= '
+         html, body
+         { background-color: '. $bg_color .' };
+         ';
+      }
+
+      /**
        * ============================================================================
        * General Settings
        * ============================================================================
@@ -799,7 +823,11 @@ class business_Skin extends Skin
          #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
 
          .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box.title.title_overlay .note,
-         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .title_overlay .note
+         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .title_overlay .note,
+
+         .disp_posts .evo_featured_post,
+         .posts_mini_layout #mini-blog .evo_featured_post .post_tags a:hover,
+         .posts_mini_layout #mini-blog .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -906,6 +934,20 @@ class business_Skin extends Skin
          { background-color: '.$color.'; }
          ';
 
+      }
+
+      /**
+       * ============================================================================
+       * Color Content
+       * ============================================================================
+       */
+      if ( $color = $this->get_setting( 'color_content' ) ) {
+         $custom_css .= '
+         .evo_post__full_text, .evo_post__excerpt_text,
+         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text,
+         .disp_comments .evo_comment .evo_comment_text
+         { color: '. $color .' };
+         ';
       }
 
       /**
@@ -1061,7 +1103,7 @@ class business_Skin extends Skin
        */
       if ( $bg_color = $this->get_setting( 'comments_bg' ) ) {
          $custom_css .= '
-         .disp_comments
+
          { background-color: '.$bg_color.'; }
          ';
       }
