@@ -19,8 +19,20 @@
          margin-bottom: 30px;
       }
 
+      a {
+         color: @w;
+         border-bottom: 1px dotted rgba( 255,255,255, 0.6 );
+
+         &:hover, &:active, &:focus {
+            color: @w;
+            border-bottom-color: @w;
+            text-decoration: none;
+         }
+      }
+
       .btn-group {
          a {
+            color: @c4;
             border-color: @w;
 
             &:hover, &:active, &:focus {

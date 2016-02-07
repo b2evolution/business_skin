@@ -31,7 +31,7 @@ class business_Skin extends Skin
 	 */
 	function get_default_name()
 	{
-		return 'Business Skin';
+		return 'Business Blog Skin';
 	}
 
 
@@ -95,8 +95,8 @@ class business_Skin extends Skin
 						'allow_empty'  => true,
 					),
                'color_schemes' => array(
-                  'label'        => T_(' Color Schemes '),
-                  'note'         => T_(' Default color schemes is #1DC6DF. Change everything color theme with one set color'),
+                  'label'        => T_('Color Schemes'),
+                  'note'         => T_('Default color schemes is #1DC6DF. Change everything color theme with one set color'),
                   'defaultvalue' => '#1dc6df',
                   'type'         => 'color',
                ),
@@ -187,7 +187,7 @@ class business_Skin extends Skin
                   'defaultvalue' => 'small',
                ),
                'color_content' => array(
-                  'label'        => T_('Color Content'),
+                  'label'        => T_('Page Text Color'),
                   'note'         => T_('Default color schemes is #444444. Change everything color theme with one set color'),
                   'defaultvalue' => '#444444',
                   'type'         => 'color',
@@ -432,6 +432,18 @@ class business_Skin extends Skin
                   'note'           => T_('Check to display footer widget area with 4 column'),
                   'defaultvalue'   => 1,
                   'type'           => 'checkbox',
+               ),
+               'footer_text_content' => array(
+                  'label'         => T_('Footer Text Content'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+               'footer_link_color' => array(
+                  'label'         => T_('Footer Link Color'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
                ),
                'footer_border_widget' => array(
                   'label'         => T_('Border Color Widget'),
@@ -755,7 +767,7 @@ class business_Skin extends Skin
       if ( $bg_color = $this->get_setting( 'background_disp' ) ) {
          $custom_css .= '
          html, body
-         { background-color: '. $bg_color .' };
+         { background-color: '. $bg_color .' }
          ';
       }
 
@@ -787,7 +799,7 @@ class business_Skin extends Skin
          .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
 
          .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus
-         { color: '.$color.'; }
+         { color: '.$color.' }
 
          #main-header .primary-nav .nav a::after,
          .disp_posts .evo_intro_post,
@@ -942,12 +954,12 @@ class business_Skin extends Skin
        * ============================================================================
        */
       if ( $color = $this->get_setting( 'color_content' ) ) {
-         $custom_css .= '
-         .evo_post__full_text, .evo_post__excerpt_text,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text,
-         .disp_comments .evo_comment .evo_comment_text
-         { color: '. $color .' };
-         ';
+         // $custom_css .= '
+         // .evo_post__full_text, .evo_post__full_text a, .evo_post__excerpt_text, .evo_post__excerpt_text a,
+         // .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_posts .evo_intro_post a,
+         // .disp_comments .evo_comment .evo_comment_text
+         // { color: '. $color .' }';
+         $custom_css .= 'body{ color: '.$color.' }';
       }
 
       /**
@@ -1195,7 +1207,13 @@ class business_Skin extends Skin
          $custom_css .= '#main-footer .widget_footer .widget_core_coll_category_list ul > li, #main-footer .widget_footer .widget_core_content_hierarchy ul > li, #main-footer .widget_footer .widget_core_coll_common_links ul > li, #main-footer .widget_footer .widget_core_coll_post_list ul > li, #main-footer .widget_footer .widget_core_coll_page_list ul > li, #main-footer .widget_footer .widget_core_coll_related_post_list ul > li, #main-footer .widget_footer .widget_plugin_evo_Arch ul > li, #main-footer .widget_footer .widget_core_linkblog ul > li, #main-footer .widget_footer .widget_core_coll_item_list.evo_noexcerpt ul > li, #main-footer .widget_footer .widget_core_coll_comment_list ul > li, #main-footer .widget_footer .widget_core_coll_xml_feeds ul > li, #main-footer .widget_footer .widget_core_colls_list_public ul > li, #main-footer .widget_footer .widget_core_user_tools ul > li
          { border-color: '. $border .'; }';
 
-         $custom_css .= '#main-footer .copyright { border-top-color: '.$border.' }/n';
+         $custom_css .= '#main-footer .copyright { border-top-color: '.$border.' }';
+      }
+      if ( $color = $this->get_setting( 'footer_text_content' ) ) {
+         $custom_css .= '#main-footer { color: '. $color .'; }';
+      }
+      if ( $color = $this->get_setting( 'footer_link_color' ) ) {
+         $custom_css .= '#main-footer a, #main-footer .widget_footer .evo_widget a { color: '.$color.' }';
       }
 
 
