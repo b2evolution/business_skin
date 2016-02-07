@@ -748,7 +748,6 @@ class business_Skin extends Skin
                     itemSelector: '.grid-item',
                  });
                });
-
 				});
 			");
       }
