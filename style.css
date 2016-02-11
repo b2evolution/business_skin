@@ -154,7 +154,7 @@ blockquote p {
 #main-header .widget_core_coll_title h1,
 #main-header .widget_core_coll_logo h1 {
   margin: 0;
-  font-size: 3.8rem;
+  font-size: 38px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -173,7 +173,7 @@ blockquote p {
 @media screen and (max-width: 600px) {
   #main-header .widget_core_coll_title h1,
   #main-header .widget_core_coll_logo h1 {
-    font-size: 3.4rem;
+    font-size: 34px;
     line-height: 35px;
     margin-top: 8px;
     margin-bottom: 0px;
@@ -182,7 +182,7 @@ blockquote p {
 @media screen and (max-width: 320px) {
   #main-header .widget_core_coll_title h1,
   #main-header .widget_core_coll_logo h1 {
-    font-size: 3.2rem;
+    font-size: 32px;
     line-height: 2.8rem;
     margin-bottom: 3px;
   }
@@ -225,6 +225,7 @@ blockquote p {
 @media screen and (max-width: 600px) {
   #main-header .widget_core_coll_logo {
     font-size: 3.5rem;
+    font-size: 35px;
     line-height: 36px;
     margin-top: 8px;
     margin-bottom: 0px;
@@ -445,6 +446,7 @@ blockquote p {
 }
 #main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title h1 {
   font-size: 3.6rem;
+  font-size: 36px;
 }
 @media only screen and (max-width: 1025px) and (min-width: 768px) {
   #main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title {
@@ -454,11 +456,13 @@ blockquote p {
 @media only screen and (max-width: 600px) {
   #main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title h1 {
     font-size: 3.4rem;
+    font-size: 34px;
   }
 }
 @media only screen and (max-width: 480px) {
   #main-header-sticky-wrapper.is-sticky #main-header .widget_core_coll_title h1 {
     font-size: 3.2rem;
+    font-size: 32px;
     margin-bottom: 0;
   }
 }
@@ -516,6 +520,7 @@ blockquote p {
   }
   #main-header .navbar-collapse .nav-tabs a {
     display: inline-block;
+    font-size: 14px;
   }
   #main-header .navbar-collapse,
   #main-header .collapsing {
@@ -1062,6 +1067,9 @@ blockquote p {
 }
 .disp_posts .evo_intro_post .evo_post__full_text {
   margin-top: 15px;
+}
+.disp_posts .evo_intro_post .post_comments_link {
+  display: none;
 }
 .disp_posts .evo_featured_post {
   position: relative;
@@ -2141,6 +2149,7 @@ blockquote p {
 .disp_front .evo_container__front_page_primary .evo_widget {
   position: relative;
   margin-bottom: 40px;
+  font-size: 1.4rem;
 }
 .disp_front .evo_container__front_page_primary .evo_widget h3 {
   position: relative;
@@ -2153,7 +2162,7 @@ blockquote p {
 .disp_front .evo_container__front_page_primary .evo_widget h3::before {
   content: '';
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 0;
   width: 100%;
   height: 2px;
