@@ -1141,7 +1141,7 @@ class business_Skin extends Skin
        */
       if ( $bg_color = $this->get_setting( 'comments_bg' ) ) {
          $custom_css .= '
-
+         .disp_comments
          { background-color: '.$bg_color.'; }
          ';
       }
@@ -1234,6 +1234,8 @@ class business_Skin extends Skin
          { border-color: '. $border .'; }';
 
          $custom_css .= '#main-footer .copyright { border-top-color: '.$border.' }';
+         $custom_css .= '#main-footer .widget_footer .widget_core_coll_category_list ul > li, #main-footer .widget_footer .widget_core_content_hierarchy ul > li, #main-footer .widget_footer .widget_core_coll_common_links ul > li, #main-footer .widget_footer .widget_core_coll_post_list ul > li, #main-footer .widget_footer .widget_core_coll_page_list ul > li, #main-footer .widget_footer .widget_core_coll_related_post_list ul > li, #main-footer .widget_footer .widget_plugin_evo_Arch ul > li, #main-footer .widget_footer .widget_core_linkblog ul > li, #main-footer .widget_footer .widget_core_coll_item_list.evo_noexcerpt ul > li, #main-footer .widget_footer .widget_core_coll_comment_list ul > li, #main-footer .widget_footer .widget_core_coll_xml_feeds ul > li, #main-footer .widget_footer .widget_core_colls_list_public ul > li, #main-footer .widget_footer .widget_core_user_tools ul > li, #main-footer .widget_footer .widget_core_coll_link_list ul > li, #main-footer .widget_footer .widget_core_colls_list_owner ul > li
+         { border-bottom-color: '.$border.' }';
       }
       if ( $color = $this->get_setting( 'footer_text_content' ) ) {
          $custom_css .= '#main-footer { color: '. $color .'; }';

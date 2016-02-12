@@ -948,7 +948,11 @@ blockquote p {
   padding: 12px 18px;
 }
 .evo_post__full_text .evo_post_more_link a:hover,
-.evo_post__excerpt_text .evo_post_more_link a:hover {
+.evo_post__excerpt_text .evo_post_more_link a:hover,
+.evo_post__full_text .evo_post_more_link a:active,
+.evo_post__excerpt_text .evo_post_more_link a:active,
+.evo_post__full_text .evo_post_more_link a:focus,
+.evo_post__excerpt_text .evo_post_more_link a:focus {
   text-decoration: none;
   background: #1dc6df;
   color: #ffffff;
@@ -1220,6 +1224,7 @@ blockquote p {
 }
 .post_regular #main-content .msg_nothing {
   padding: 30px;
+  font-size: 1.6rem;
   text-align: center;
   background-color: #ffffff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -1236,6 +1241,7 @@ blockquote p {
   color: #ffffff !important;
 }
 .post_regular #main-content .evo_featured_post header .small.text-muted {
+  font-size: 1.4rem;
   color: #ffffff;
   margin: 5px 0 20px;
 }
@@ -1912,20 +1918,24 @@ blockquote p {
   display: block;
   position: absolute;
   bottom: 0;
-  left: -102%;
+  left: -100%;
   font-weight: 600;
   background-color: #1dc6df;
   color: #ffffff;
   margin: 0;
   padding: 10px 20px;
-  -webkit-transition: all 0.32s ease-in-out;
-  transition: all 0.32s ease-in-out;
+  opacity: 0;
+  -webkit-transition: all 0.52s ease-in-out;
+  transition: all 0.52s ease-in-out;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .title_overlay .note::after {
   display: none;
 }
 .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .grid-item:hover .title.title_overlay .note {
   left: 0;
+  opacity: 1;
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
 }
 .disp_search .search-box {
   padding: 60px 30px;
@@ -2031,6 +2041,7 @@ blockquote p {
 .disp_search .search_result .search_content_wrap .search_title {
   font-family: "Roboto Slab", serif;
   font-size: 2.2rem;
+  line-height: 1.3;
   font-weight: 700;
   margin-bottom: 15px;
   color: #555555;
@@ -2162,7 +2173,7 @@ blockquote p {
 .disp_front .evo_container__front_page_primary .evo_widget h3::before {
   content: '';
   position: absolute;
-  top: 35px;
+  top: 32px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -2286,6 +2297,7 @@ blockquote p {
 }
 .disp_comments .evo_comment .evo_comment_info {
   padding-top: 5px;
+  font-size: 1.4rem;
 }
 .disp_comments .evo_comment .evo_comment_info a {
   background-color: #eeeeee;
@@ -2408,6 +2420,9 @@ blockquote p {
 .disp_tags #main-sidebar .tag_cloud {
   box-shadow: none;
   padding: 0;
+}
+.disp_sitemap {
+  background-color: #f7f7f7;
 }
 .disp_sitemap .content_sitemap {
   position: relative;
@@ -3316,6 +3331,9 @@ blockquote p {
   color: #ffffff;
   font-size: 90%;
 }
+#main-footer .widget_footer .widget_core_coll_logo img {
+  max-width: 100%;
+}
 #main-footer .widget_footer .widget_core_org_members div.col-lg-4 {
   display: inline-block;
   clear: both;
@@ -3362,6 +3380,7 @@ blockquote p {
   right: 15px;
   z-index: 9998;
   font-size: 2rem;
+  font-size: 20px;
   text-align: center;
   line-height: 40px;
   color: #ffffff;
