@@ -215,7 +215,7 @@ class business_Skin extends Skin
                ),
                'color_content' => array(
                   'label'        => T_('Page Text Color'),
-                  'note'         => T_('Default color schemes is empty. Change everything color theme with one set color. Example #444444'),
+                  'note'         => T_('Default page text color is <b>Empty</b>. Change everything page text color with one set color. Example #444444'),
                   'defaultvalue' => '',
                   'allow_empty'  => true,
                   'type'         => 'color',
@@ -278,6 +278,12 @@ class business_Skin extends Skin
                   'note'          => T_('Check to activate main header sticky'),
                   'defaultvalue'  => 1,
                   'type'          => 'checkbox',
+               ),
+               'site_tite_color' => array(
+                  'label'         => T_('Site Title Color'),
+                  'note'          => T_('Default color is #333333.'),
+                  'defaultvalue'  => '#333333',
+                  'type'          => 'color',
                ),
                'menu_link_color' => array(
                   'label'         => T_('Menu Link Color'),
@@ -1014,6 +1020,7 @@ class business_Skin extends Skin
        */
       if ( $color = $this->get_setting( 'color_content' ) ) {
          $custom_css .= '
+         #main-content .evo_post_title h1 a, #mini-blog .evo_post_title h1 a, #main-content .evo_post_title h2 a, #mini-blog .evo_post_title h2 a, #main-content .evo_post_title h3 a, #mini-blog .evo_post_title h3 a,
          #main-content .evo_post_title h3 a,
          .evo_post__full_text, .evo_post__full_text a, .evo_post__excerpt_text, .evo_post__excerpt_text a,
          .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment,
@@ -1031,7 +1038,9 @@ class business_Skin extends Skin
          #main-content .evo_post .evo_post__full_text blockquote, #mini-blog .evo_post .evo_post__full_text blockquote,
          #main-content .evo_post .evo_post__full_text pre, #mini-blog .evo_post .evo_post__full_text pre,
          .disp_single #main-content .evo_post .panel .panel-heading .panel-title, .disp_page #main-content .evo_post .panel .panel-heading .panel-title,
-         .evo_comment_text pre, blockquote,
+         .evo_comment_text pre, blockquote, .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small,
+
+         .disp_single #main-content .pager .previous a, .disp_page #main-content .pager .previous a, .disp_single #main-content .pager .next a, .disp_page #main-content .pager .next a, .btn-default,
 
          .disp_search .search_result .search_content_wrap .search_title,
          .disp_search .search_result .search_content_wrap .search_title a,
@@ -1098,6 +1107,12 @@ class business_Skin extends Skin
 
       if ( $this->get_setting( 'header_sticky' ) == 0 ) {
          $custom_css .= '#main-header{ position: relative !important;} body.loggedin #main-header{ top: 0 !important; }';
+      }
+      if ( $color = $this->get_setting( 'site_tite_color' ) ) {
+         $custom_css .= '#main-header .widget_core_coll_title h1 a, #main-header .widget_core_coll_logo h1 a,
+         .page_title
+         { color: '.$color.' }
+         ';
       }
       if ( $color = $this->get_setting( 'menu_link_color' ) ) {
          $custom_css .= '#main-header .primary-nav .nav a { color: '.$color.';}';
