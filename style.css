@@ -849,7 +849,7 @@ blockquote p {
   bottom: -15%;
   left: 0;
   right: 0;
-  font-size: 90%;
+  font-size: 1.2rem;
   padding: 15px 30px;
   color: #444444;
   background-color: #fff;
@@ -1071,6 +1071,10 @@ blockquote p {
 }
 .disp_posts .evo_intro_post .evo_post__full_text {
   margin-top: 15px;
+  color: #ffffff;
+}
+.disp_posts .evo_intro_post .evo_post__full_text a {
+  color: #ffffff;
 }
 .disp_posts .evo_intro_post .post_comments_link {
   display: none;
@@ -2044,7 +2048,7 @@ blockquote p {
   line-height: 1.3;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #555555;
+  color: #444444;
 }
 .disp_search .search_result .search_content_wrap .search_title a {
   color: #444444;
@@ -2249,11 +2253,12 @@ blockquote p {
   border-radius: 2px;
 }
 .disp_comments .evo_comment a {
-  color: #000000;
+  color: #1dc6df;
 }
 .disp_comments .evo_comment a:hover,
 .disp_comments .evo_comment a:active,
 .disp_comments .evo_comment a:focus {
+  background-color: transparent;
   color: #1dc6df;
 }
 .disp_comments .evo_comment img {
@@ -3007,6 +3012,15 @@ blockquote p {
 }
 .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday a {
   color: #ffffff !important;
+}
+.widget_core_coll_comment_list ul li a::after {
+  opacity: 0;
+}
+.widget_core_coll_comment_list ul li a.user::after {
+  opacity: 1;
+}
+.widget_core_coll_comment_list ul li:hover a::after {
+  color: #1dc6df;
 }
 .widget_core_coll_tag_cloud .tag_cloud a {
   display: inline-block;

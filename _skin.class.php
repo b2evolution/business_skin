@@ -215,8 +215,9 @@ class business_Skin extends Skin
                ),
                'color_content' => array(
                   'label'        => T_('Page Text Color'),
-                  'note'         => T_('Default color schemes is #444444. Change everything color theme with one set color'),
-                  'defaultvalue' => '#444444',
+                  'note'         => T_('Default color schemes is empty. Change everything color theme with one set color. Example #444444'),
+                  'defaultvalue' => '',
+                  'allow_empty'  => true,
                   'type'         => 'color',
                ),
             'section_typograpy_end' => array(
@@ -332,6 +333,18 @@ class business_Skin extends Skin
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
+               'post_info_color' => array(
+                  'label'         => T_('Post Info Content Color'),
+                  'note'          => T_('Default background color is #999999.'),
+                  'defaultvalue'  => '#999999',
+                  'type'          => 'color',
+               ),
+               'post_info_link' => array(
+                  'label'         => T_('Post Info Link Color'),
+                  'note'          => T_('Default background color is #333333.'),
+                  'defaultvalue'  => '#333333',
+                  'type'          => 'color',
+               ),
                'pagination_top_show' => array(
                   'label'        => T_('Show Pagination Top'),
                   'note'         => T_('Check to display Pagination top'),
@@ -422,14 +435,14 @@ class business_Skin extends Skin
                   'defaultvalue'  => '#000000',
                   'type'          => 'color',
                ),
-               'sidebar_color_link' => array(
-                  'label'         => T_('Widget Link Color'),
+               'sidebar_color_content' => array(
+                  'label'         => T_('Widget Content Color'),
                   'note'          => T_('Default color is #333333.'),
                   'defaultvalue'  => '#333333',
                   'type'          => 'color',
                ),
-               'sidebar_color_content' => array(
-                  'label'         => T_('Widget Content Color'),
+               'sidebar_color_link' => array(
+                  'label'         => T_('Widget Link Color'),
                   'note'          => T_('Default color is #333333.'),
                   'defaultvalue'  => '#333333',
                   'type'          => 'color',
@@ -460,6 +473,12 @@ class business_Skin extends Skin
                   'defaultvalue'   => 1,
                   'type'           => 'checkbox',
                ),
+               'footer_title_color' => array(
+                  'label'         => T_('Widget Title Color'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
                'footer_text_content' => array(
                   'label'         => T_('Footer Text Content'),
                   'note'          => T_('Default color is #FFFFFF.'),
@@ -476,6 +495,12 @@ class business_Skin extends Skin
                   'label'         => T_('Border Color Widget'),
                   'note'          => T_('Default color is #333333.'),
                   'defaultvalue'  => '#333333',
+                  'type'          => 'color',
+               ),
+               'copyright_color' => array(
+                  'label'         => T_('Copyright Color Content'),
+                  'note'          => T_('Default color is #999999.'),
+                  'defaultvalue'  => '#999999',
                   'type'          => 'color',
                ),
                'footer_bg' => array(
@@ -611,6 +636,12 @@ class business_Skin extends Skin
                   'note'         => T_('Check to show search field'),
                   'defaultvalue' => 1,
                   'type'         => 'checkbox',
+               ),
+               'search_text_info' => array(
+                  'label'         => T_('Search Info Text Color'),
+                  'note'          => T_('Default color is #999999.'),
+                  'defaultvalue'  => '#999999',
+                  'type'          => 'color',
                ),
                'search_bg' => array(
                   'label'         => T_('Background Body'),
@@ -824,7 +855,8 @@ class business_Skin extends Skin
 
          .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
 
-         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus
+         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus,
+         .widget_core_coll_comment_list ul li:hover a::after
          { color: '.$color.' }
 
          #main-header .primary-nav .nav a::after,
@@ -965,7 +997,8 @@ class business_Skin extends Skin
          .disp_comments .page_title
          { border-bottom-color: '.$color.'; }
 
-         .disp_comments .evo_comment .panel-heading .evo_comment_title a, .disp_comments .evo_comment .panel-heading .panel-title a
+         .disp_comments .evo_comment .panel-heading .evo_comment_title a, .disp_comments .evo_comment .panel-heading .panel-title a,
+         .disp_comments .evo_comment a
          { color: '.$color.'; }
 
          .disp_comments .evo_comment .evo_comment_info a:hover
@@ -980,12 +1013,31 @@ class business_Skin extends Skin
        * ============================================================================
        */
       if ( $color = $this->get_setting( 'color_content' ) ) {
-         // $custom_css .= '
-         // .evo_post__full_text, .evo_post__full_text a, .evo_post__excerpt_text, .evo_post__excerpt_text a,
-         // .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_posts .evo_intro_post a,
-         // .disp_comments .evo_comment .evo_comment_text
-         // { color: '. $color .' }';
-         $custom_css .= 'body{ color: '.$color.' }';
+         $custom_css .= '
+         #main-content .evo_post_title h3 a,
+         .evo_post__full_text, .evo_post__full_text a, .evo_post__excerpt_text, .evo_post__excerpt_text a,
+         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment,
+         #main-content .post_tags h3, #mini-blog .post_tags h3, .evo_comment_text, .disp_posts .evo_intro_post a,
+         .disp_comments .evo_comment .evo_comment_text,
+         .disp_catdir #main-content .widget_core_coll_category_list a,
+         .disp_front .evo_container__front_page_primary .evo_widget a,
+         .disp_arcdir #main-content .widget_plugin_achive a,
+
+         .evo_post__excerpt_text .evo_post__excerpt_more_link a,
+         .disp_comments .evo_comment .panel-heading .evo_comment_title, .disp_comments .evo_comment .panel-heading .panel-title,
+         .disp_postidx #main-content .widget_core_coll_post_list a,
+         .disp_sitemap .content_sitemap .evo_widget a,
+
+         #main-content .evo_post .evo_post__full_text blockquote, #mini-blog .evo_post .evo_post__full_text blockquote,
+         #main-content .evo_post .evo_post__full_text pre, #mini-blog .evo_post .evo_post__full_text pre,
+         .disp_single #main-content .evo_post .panel .panel-heading .panel-title, .disp_page #main-content .evo_post .panel .panel-heading .panel-title,
+         .evo_comment_text pre, blockquote,
+
+         .disp_search .search_result .search_content_wrap .search_title,
+         .disp_search .search_result .search_content_wrap .search_title a,
+         .disp_search .search_result .search_content_wrap .search_info a
+         { color: '. $color .' }';
+         $custom_css .= 'body, main{ color: '.$color.' !important }';
       }
 
       /**
@@ -1069,6 +1121,16 @@ class business_Skin extends Skin
       if ( $bg_color = $this->get_setting( 'mini_blog_bg' ) ) {
          $custom_css .= '.posts_mini_layout{ background-color: '.$bg_color.'; }';
       }
+      if ( $color = $this->get_setting( 'post_info_color' ) ) {
+         $custom_css .= '#main-content .evo_post .small.text-muted, #mini-blog .evo_post .small.text-muted
+         { color: '.$color.' };
+         ';
+      }
+      if ( $color = $this->get_setting( 'post_info_link' ) ) {
+         $custom_css .= '.disp_single #main-content .evo_post > header .cat-links a, .disp_page #main-content .evo_post > header .cat-links a
+         { color: '.$color.' }
+         ';
+      }
 
       /**
        * ============================================================================
@@ -1104,7 +1166,8 @@ class business_Skin extends Skin
       }
       if ( $color = $this->get_setting( 'sidebar_title_widget' ) ) {
          $custom_css .= '
-         #main-sidebar .panel-heading .panel-title
+         #main-sidebar .panel-heading .panel-title,
+         .disp_front .evo_container__front_page_primary .evo_widget h3
          { color: '.$color.'; }
          ';
       }
@@ -1116,7 +1179,8 @@ class business_Skin extends Skin
       }
       if ( $color = $this->get_setting( 'sidebar_color_link' ) ) {
          $custom_css .= '
-         #main-sidebar .evo_widget a
+         #main-sidebar .evo_widget a,
+         #main-sidebar .evo_widget ul li strong a
          { color: '.$color.'; }
          ';
       }
@@ -1178,6 +1242,10 @@ class business_Skin extends Skin
        * Disp Search Custome Style
        * ============================================================================
        */
+      if ( $color = $this->get_setting( 'search_text_info' ) ) {
+         $custom_css .= '.disp_search .search_result .search_content_wrap .search_info
+         { color: '.$color.' }';
+      }
       if ( $bg_color = $this->get_setting( 'search_bg' ) ) {
          $custom_css .= '.disp_search { background-color: '. $bg_color .'; }';
       }
@@ -1237,11 +1305,19 @@ class business_Skin extends Skin
          $custom_css .= '#main-footer .widget_footer .widget_core_coll_category_list ul > li, #main-footer .widget_footer .widget_core_content_hierarchy ul > li, #main-footer .widget_footer .widget_core_coll_common_links ul > li, #main-footer .widget_footer .widget_core_coll_post_list ul > li, #main-footer .widget_footer .widget_core_coll_page_list ul > li, #main-footer .widget_footer .widget_core_coll_related_post_list ul > li, #main-footer .widget_footer .widget_plugin_evo_Arch ul > li, #main-footer .widget_footer .widget_core_linkblog ul > li, #main-footer .widget_footer .widget_core_coll_item_list.evo_noexcerpt ul > li, #main-footer .widget_footer .widget_core_coll_comment_list ul > li, #main-footer .widget_footer .widget_core_coll_xml_feeds ul > li, #main-footer .widget_footer .widget_core_colls_list_public ul > li, #main-footer .widget_footer .widget_core_user_tools ul > li, #main-footer .widget_footer .widget_core_coll_link_list ul > li, #main-footer .widget_footer .widget_core_colls_list_owner ul > li
          { border-bottom-color: '.$border.' }';
       }
+      if ( $color = $this->get_setting( 'footer_title_color' ) ) {
+         $custom_css .= '#main-footer .widget_footer .evo_widget .widget_title { color: '. $color .' }';
+      }
       if ( $color = $this->get_setting( 'footer_text_content' ) ) {
          $custom_css .= '#main-footer { color: '. $color .'; }';
       }
       if ( $color = $this->get_setting( 'footer_link_color' ) ) {
-         $custom_css .= '#main-footer a, #main-footer .widget_footer .evo_widget a { color: '.$color.' }';
+         $custom_css .= '#main-footer a, #main-footer .widget_footer .evo_widget a,
+         #main-footer .copyright a
+         { color: '.$color.' }';
+      }
+      if ( $color = $this->get_setting( 'copyright_color' ) ) {
+         $custom_css .= '#main-footer .copyright p{ color: '.$color.' }';
       }
 
 

@@ -361,6 +361,33 @@
    }
 }
 
+// Widget Comment List
+// ======================================================================== /
+.widget_core_coll_comment_list {
+
+   ul {
+      li {
+
+         a {
+            &::after {
+               opacity: 0;
+            }
+
+            &.user::after {
+               opacity: 1;
+            }
+         }
+
+         &:hover {
+            a::after {
+               color: @primary;
+            }
+         }
+
+      }
+   }
+
+}
 
 // Widget Tags
 // ======================================================================== /
