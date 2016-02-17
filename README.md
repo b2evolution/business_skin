@@ -10,6 +10,14 @@ It is highly customizable so it can match your personal taste. Enjoy wellow’s 
 
 ![preview](Preview.jpg)
 
+### Posts Mini Blog
+
+![disp=posts](posts_mini_blog.png)
+
+### Search Page
+
+![disp=search](search_page.png)
+
 ====
 
 ### Some of the Features:
