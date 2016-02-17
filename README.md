@@ -6,8 +6,6 @@
 
 It is highly customizable so it can match your personal taste. Enjoy wellow’s awesome features such as both sidebar, a variety of post layout options, numerous sidebar & footer widgets, and plentiful colors, backgrounds and general skin options.
 
-Get Business today and impress your readers!
-
 ====
 
 ![preview](Preview.jpg)
