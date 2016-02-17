@@ -10,21 +10,7 @@ Get Business today and impress your readers!
 
 ====
 
-### Front Page
-
-![disp=front](skinshot_front.png)
-
-### Posts Page
-
-![disp=posts](skinshot_posts.png)
-
-### Single Post Page
-
-![disp=single](skinshot_single.png)
-
-### Skin Options
-
-![skin=options](skinshot_skin.png)
+![preview](Preview.jpg)
 
 ====
 
