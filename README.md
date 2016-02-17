@@ -12,11 +12,15 @@ It is highly customizable so it can match your personal taste. Enjoy wellow’s 
 
 ### Posts Mini Blog
 
-![disp=posts](posts_mini_blog.png)
+![disp=posts](skinshot_posts_mini_blog.png)
 
 ### Search Page
 
-![disp=search](search_page.png)
+![disp=search](skinshot_search.png)
+
+### Media Page
+
+![disp=search](skinshot_media.png)
 
 ====
 
