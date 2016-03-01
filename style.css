@@ -1726,6 +1726,24 @@ blockquote p {
 .disp_page #main-sidebar .widget_plugin_evo_Calr .bCalendarTable caption a {
   background-color: #ffffff;
 }
+.bubbletip_user__buttons a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.3rem;
+  padding: 6px 0 !important;
+  color: #ffffff !important;
+}
+.bubbletip_user__buttons .btn-primary {
+  background-color: #337ab7 !important;
+}
+.bubbletip_user__buttons .btn-primary:hover {
+  background-color: #286090 !important;
+}
+.bubbletip_user__buttons .btn-danger {
+  background-color: #d43f3a !important;
+}
+.bubbletip_user__buttons .btn-danger:hover {
+  background-color: #c9302c !important;
+}
 .disp_mediaidx #main-mediaidx {
   margin-top: 60px;
 }
@@ -3021,6 +3039,15 @@ blockquote p {
 }
 .widget_core_coll_comment_list ul li:hover a::after {
   color: #1dc6df;
+}
+.widget_core_coll_comment_list .popover-content a[rel="nofollow"] {
+  color: #444444 !important;
+}
+.widget_core_coll_comment_list .popover-content .user {
+  color: #333333 !important;
+}
+.widget_core_coll_comment_list .popover-content li {
+  border-bottom: none !important;
 }
 .widget_core_coll_tag_cloud .tag_cloud a {
   display: inline-block;

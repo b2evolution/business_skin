@@ -18,7 +18,6 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
    <?php if ( $Skin->get_setting( 'footer_dispay' ) == 1 ) { ?>
    <div class="widget_footer">
 	   <div class="container">
-
    		<div class="row">
    		<?php
    			// Display container and contents:
@@ -36,8 +35,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 				) );
    			// Note: Double quotes have been used around "Footer" only for test purposes.
    		?>
-   		</div>
-
+         </div><!-- .row -->
       </div><!-- .container -->
    </div><!-- .widget_footer -->
    <?php } ?>

@@ -476,7 +476,7 @@ class business_Skin extends Skin
                'footer_dispay' => array(
                   'label'          => T_('Display Footer Widget'),
                   'note'           => T_('Check to display footer widget area with 4 column'),
-                  'defaultvalue'   => 1,
+                  'defaultvalue'   => 0,
                   'type'           => 'checkbox',
                ),
                'footer_title_color' => array(
@@ -725,12 +725,6 @@ class business_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Username options')
 				),
-					'gender_colored' => array(
-						'label'        => T_('Display gender'),
-						'note'         => T_('Use colored usernames to differentiate men & women.'),
-						'defaultvalue' => 0,
-						'type'         => 'checkbox',
-					),
 					'bubbletip' => array(
 						'label'        => T_('Username bubble tips'),
 						'note'         => T_('Check to enable bubble tips on usernames'),
