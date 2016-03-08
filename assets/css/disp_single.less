@@ -331,14 +331,23 @@
          // ======================================================================== /
          .evo_post_comment_notification {
 
-            a  {
+            a {
                color: @c4;
                font-size: 1.3rem;
 
                &:hover, &:active, &:focus {
+                  color: @primary;
+                  border: none;
+                  background-color: transparent;
+               }
+            }
+
+            a.btn  {
+
+               &:hover, &:active, &:focus {
                   color: @w;
                   background-color: @primary;
-                  border-color: @primary;
+                  border: 1px solid @primary;
                   box-shadow: none;
                   outline: 0;
                }

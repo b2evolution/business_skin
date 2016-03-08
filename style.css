@@ -1727,9 +1727,19 @@ blockquote p {
 .disp_page #main-content .evo_post .evo_post_comment_notification a:active,
 .disp_single #main-content .evo_post .evo_post_comment_notification a:focus,
 .disp_page #main-content .evo_post .evo_post_comment_notification a:focus {
+  color: #1dc6df;
+  border: none;
+  background-color: transparent;
+}
+.disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover,
+.disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover,
+.disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active,
+.disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active,
+.disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus,
+.disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus {
   color: #ffffff;
   background-color: #1dc6df;
-  border-color: #1dc6df;
+  border: 1px solid #1dc6df;
   box-shadow: none;
   outline: 0;
 }
@@ -2548,6 +2558,7 @@ blockquote p {
   margin-bottom: 10px;
 }
 .evo_form__thread .control-buttons .btn {
+  font-size: 1.3rem;
   border-radius: 2px;
   padding: 10px 25px;
   font-weight: 700;
