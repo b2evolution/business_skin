@@ -1,0 +1,70 @@
+// Concat Disp Style
+// ======================================================================== /
+.evo_form__thread {
+   border: 1px solid @e;
+   padding: 30px;
+   transition: all 0.32s ease-in-out;
+
+   &:hover {
+      box-shadow: 1px 2px 8px rgba(108, 106, 106, 0.1);
+   }
+
+   .control-label {
+      font-family: @font_title;
+   }
+
+   .form-control,
+   .token-input-list-facebook
+    {
+      border-radius: 2px;
+      padding: 20px 12px;
+      box-shadow: none;
+      border-color: @bdr_bg;
+
+      &:focus {
+         box-shadow: none;
+         border-color: @primary;
+      }
+   }
+
+   .token-input-list-facebook {
+      box-shadow: none;
+      padding: 8px 8px 4px;
+   }
+
+   .form_textarea_input {
+      padding-top: 8px;
+      padding-bottom: 8px;
+   }
+
+   .message_toolbars {
+      margin-bottom: 10px;
+   }
+
+   .control-buttons {
+      .btn {
+         border-radius: 2px;
+         padding: 10px 25px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+
+         &:active, &:hover, &:focus {
+            outline: none;
+            box-shadow: none;
+         }
+
+         &-primary {
+            background-color: @primary;
+            border-color: @primary;
+         }
+
+         &-info {
+            color: @c9;
+            background-color: @e;
+            border-color: @e;
+         }
+      }
+   }
+
+}

@@ -289,6 +289,21 @@
          }
       }
 
+      // User Link for Main Nav
+      // ======================================================================== /
+      .ufld_icon_links {
+         a {
+            &:hover, &:active, &:focus {
+               color: @w !important;
+               text-decoration: none;
+
+               &::after {
+                  display: none;
+               }
+            }
+         }
+      }
+
    }
 }
 

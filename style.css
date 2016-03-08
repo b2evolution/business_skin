@@ -341,6 +341,17 @@ blockquote p {
     display: flex !important;
   }
 }
+#main-header .primary-nav .ufld_icon_links a:hover,
+#main-header .primary-nav .ufld_icon_links a:active,
+#main-header .primary-nav .ufld_icon_links a:focus {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+#main-header .primary-nav .ufld_icon_links a:hover::after,
+#main-header .primary-nav .ufld_icon_links a:active::after,
+#main-header .primary-nav .ufld_icon_links a:focus::after {
+  display: none;
+}
 .close-menu {
   position: relative;
   top: 30px;
@@ -2500,6 +2511,63 @@ blockquote p {
 }
 .disp_sitemap .content_sitemap .widget_core_coll_post_list li:last-child {
   border-bottom: none;
+}
+.evo_form__thread {
+  border: 1px solid #eeeeee;
+  padding: 30px;
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+.evo_form__thread:hover {
+  box-shadow: 1px 2px 8px rgba(108, 106, 106, 0.1);
+}
+.evo_form__thread .control-label {
+  font-family: "Roboto Slab", serif;
+}
+.evo_form__thread .form-control,
+.evo_form__thread .token-input-list-facebook {
+  border-radius: 2px;
+  padding: 20px 12px;
+  box-shadow: none;
+  border-color: #e4e4e4;
+}
+.evo_form__thread .form-control:focus,
+.evo_form__thread .token-input-list-facebook:focus {
+  box-shadow: none;
+  border-color: #1dc6df;
+}
+.evo_form__thread .token-input-list-facebook {
+  box-shadow: none;
+  padding: 8px 8px 4px;
+}
+.evo_form__thread .form_textarea_input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.evo_form__thread .message_toolbars {
+  margin-bottom: 10px;
+}
+.evo_form__thread .control-buttons .btn {
+  border-radius: 2px;
+  padding: 10px 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.evo_form__thread .control-buttons .btn:active,
+.evo_form__thread .control-buttons .btn:hover,
+.evo_form__thread .control-buttons .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+.evo_form__thread .control-buttons .btn-primary {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+}
+.evo_form__thread .control-buttons .btn-info {
+  color: #999999;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar

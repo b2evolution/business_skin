@@ -100,7 +100,7 @@ module.exports = function(grunt) {
            options: {
              watchTask: true,
             //  Change your url Deploy
-             proxy: "http://localhost/b2evo/business/index.php/a/",
+             proxy: "http://localhost/b2evo/stain/",
            }
          }
       },
