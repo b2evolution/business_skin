@@ -40,6 +40,10 @@ a{
    }
 }
 
+a[rel~=nofollow]:not([class~=btn]):hover {
+   background-color: transparent;
+}
+
 // Typograpy
 // ======================================================================== /
 h1, h2, h3, h4, h5, h6 {
@@ -93,4 +97,9 @@ and ( max-width: @M ) {
       }
    }
 
+}
+
+.alert-dismissable .close,
+.alert-dismissible .close {
+   top: 1px;
 }

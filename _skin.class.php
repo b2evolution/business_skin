@@ -34,7 +34,6 @@ class business_Skin extends Skin
 		return 'Business Blog Skin';
 	}
 
-
 	/**
 	 * Get default type for the skin.
 	 */
@@ -42,7 +41,6 @@ class business_Skin extends Skin
 	{
 		return 'normal';
 	}
-
 
 	/**
 	 * What evoSkins API does has this skin been designed with?
@@ -54,7 +52,6 @@ class business_Skin extends Skin
 	{
 		return 6;
 	}
-
 
    /**
    * Get supported collection kinds.
@@ -184,10 +181,10 @@ class business_Skin extends Skin
 						'size'           => '50'
 					),
                'back_to_top' => array(
-                  'label'        => T_('Display Back To Top'),
-                  'note'         => T_('Check to display back top top button'),
-                  'defaultvalue' => 1,
-                  'type'         => 'checkbox',
+                  'label'          => T_('Display Back To Top'),
+                  'note'           => T_('Check to display back top top button'),
+                  'defaultvalue'   => 1,
+                  'type'           => 'checkbox',
                ),
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
@@ -474,10 +471,10 @@ class business_Skin extends Skin
                'label'  => T_('Footer')
             ),
                'footer_dispay' => array(
-                  'label'          => T_('Display Footer Widget'),
-                  'note'           => T_('Check to display footer widget area with 4 column'),
-                  'defaultvalue'   => 0,
-                  'type'           => 'checkbox',
+                  'label'         => T_('Display Footer Widget'),
+                  'note'          => T_('Check to display footer widget area with 4 column'),
+                  'defaultvalue'  => 0,
+                  'type'          => 'checkbox',
                ),
                'footer_title_color' => array(
                   'label'         => T_('Widget Title Color'),
@@ -537,11 +534,11 @@ class business_Skin extends Skin
    					'type'         => 'select',
    				),
                'mediaidx_grid' => array(
-						'label'          => T_('Column'),
-						'note'           => '',
-						'defaultvalue'   => 'two_column',
-                  'type'           => 'select',
-						'options'        => array(
+						'label'        => T_('Column'),
+						'note'         => '',
+						'defaultvalue' => 'two_column',
+                  'type'         => 'select',
+						'options'      => array(
                         'one_column'     => T_('1 Column'),
 								'two_column'     => T_('2 Column'),
 								'three_column'   => T_('3 Column'),
@@ -644,16 +641,16 @@ class business_Skin extends Skin
                   'type'         => 'checkbox',
                ),
                'search_text_info' => array(
-                  'label'         => T_('Search Info Text Color'),
-                  'note'          => T_('Default color is #999999.'),
-                  'defaultvalue'  => '#999999',
-                  'type'          => 'color',
+                  'label'        => T_('Search Info Text Color'),
+                  'note'         => T_('Default color is #999999.'),
+                  'defaultvalue' => '#999999',
+                  'type'         => 'color',
                ),
                'search_bg' => array(
-                  'label'         => T_('Background Body'),
-                  'note'          => T_('Default color is #F7F7F7.'),
-                  'defaultvalue'  => '#F7F7F7',
-                  'type'          => 'color',
+                  'label'        => T_('Background Body'),
+                  'note'         => T_('Default color is #F7F7F7.'),
+                  'defaultvalue' => '#F7F7F7',
+                  'type'         => 'color',
                ),
             'section_search_end' => array(
                'layout' => 'end_fieldset',
@@ -899,7 +896,10 @@ class business_Skin extends Skin
          .posts_mini_layout #mini-blog .evo_featured_post .post_tags a:hover,
          .posts_mini_layout #mini-blog .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover,
 
-			.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+			.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover, .evo_form__thread .control-buttons .btn-primary,
+
+			.skin-form .panel-heading, .evo_panel__login .btn.btn-success, .evo_panel__lostpass .btn.btn-success, .evo_panel__register .btn.btn-success, .evo_panel__activation .btn.btn-success,
+			.evo_form .submit, .detail_threads .results .panel-heading, .detail_messages .evo_private_messages_list .panel .panel-heading, .detail_messages .evo_private_messages_list .panel .SaveButton.btn-primary, .detail_contacts .results .panel-heading, .detail_contacts .form_send_contacts .btn-default:hover, .detail_contacts .form_send_contacts .btn-default:active, .detail_contacts .form_send_contacts .btn-default:focus, .detail_contacts .form_add_contacts .SaveButton
          { background-color: '.$color.'; }
 
          .pagination .active span, .pagination .active span:hover,
@@ -921,7 +921,16 @@ class business_Skin extends Skin
 
          #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
 
-			.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+			.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover,
+			.skin-form, .evo_panel__login .form_text_input, .evo_panel__lostpass .form_text_input, .evo_panel__register .form_text_input, .evo_panel__activation .form_text_input, .evo_panel__login .btn.btn-success, .evo_panel__lostpass .btn.btn-success, .evo_panel__register .btn.btn-success, .evo_panel__activation .btn.btn-success,
+			#login_form input:focus:invalid:focus, #login_form select:focus:invalid:focus, #login_form textarea:focus:invalid:focus,
+			.evo_panel__login .form_text_input:focus, .evo_panel__lostpass .form_text_input:focus, .evo_panel__register .form_text_input:focus, .evo_panel__activation .form_text_input:focus,
+			.evo_form__thread .control-buttons .btn-primary, .evo_form__thread:hover,
+
+			.evo_form .form_text_input:hover, .evo_form .form_textarea_input:hover, .evo_form .form_text_input:active, .evo_form .form_textarea_input:active, .evo_form .form_text_input:focus, .evo_form .form_textarea_input:focus,
+			.evo_form .submit,
+			.evo_form__thread .form-control:hover, .evo_form__thread .token-input-list-facebook:hover, .evo_form__thread .form-control:focus, .evo_form__thread .token-input-list-facebook:focus, .evo_form__thread .form-control:active, .evo_form__thread .token-input-list-facebook:active, .detail_threads .results,
+			.detail_threads .results .form_text_input:hover, .detail_threads .results .form_text_input:active, .detail_threads .results .form_text_input:focus, .detail_messages .evo_private_messages_list .panel, .detail_messages .evo_private_messages_list .panel .SaveButton.btn-primary, .detail_messages .evo_private_messages_list .results .form_text_input:focus, .detail_messages .evo_private_messages_list .results .form_text_input:hover, .detail_messages .evo_private_messages_list .results .form_text_input:active, .detail_contacts .results, .detail_contacts .results .form_text_input:hover, .detail_contacts .results .form_text_input:active, .detail_contacts .results .form_text_input:focus, .detail_contacts .form_send_contacts .btn-default, .detail_contacts .form_add_contacts .input-sm, .detail_contacts .form_add_contacts .SaveButton
          { border-color: '.$color.'; }
 
          .page_title,
@@ -934,7 +943,8 @@ class business_Skin extends Skin
          .disp_single #main-content .pager .previous a:hover, .disp_page #main-content .pager .previous a:hover, .disp_single #main-content .pager .next a:hover, .disp_page #main-content .pager .next a:hover, .disp_single #main-content .pager .previous a:active, .disp_page #main-content .pager .previous a:active, .disp_single #main-content .pager .next a:active, .disp_page #main-content .pager .next a:active, .disp_single #main-content .pager .previous a:focus, .disp_page #main-content .pager .previous a:focus, .disp_single #main-content .pager .next a:focus, .disp_page #main-content .pager .next a:focus,
          .disp_single #main-content .evo_post .single_tags a:hover, .disp_page #main-content .evo_post .single_tags a:hover, .disp_single #main-content .evo_post .single_tags a:active, .disp_page #main-content .evo_post .single_tags a:active, .disp_single #main-content .evo_post .single_tags a:focus, .disp_page #main-content .evo_post .single_tags a:focus,
          .disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a,
-         .disp_single #main-content .evo_post .evo_post_comment_notification a:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a:active, .disp_page #main-content .evo_post .evo_post_comment_notification a:active, .disp_single #main-content .evo_post .evo_post_comment_notification a:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a:focus
+         .disp_single #main-content .evo_post .evo_post_comment_notification a:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a:active, .disp_page #main-content .evo_post .evo_post_comment_notification a:active, .disp_single #main-content .evo_post .evo_post_comment_notification a:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a:focus,
+			.disp_single #main-content .evo_post .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post .evo_comment .panel-heading .evo_comment_title a, .disp_single #main-content .evo_post .evo_comment__preview .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post .evo_comment__preview .panel-heading .evo_comment_title a
          { color: '.$color.'; }
 
          .disp_single #main-content .evo_post .evo_image_block a::before, .disp_page #main-content .evo_post .evo_image_block a::before, .disp_single #main-content .evo_post .evo_post_gallery__image a::before, .disp_page #main-content .evo_post .evo_post_gallery__image a::before,
@@ -942,14 +952,16 @@ class business_Skin extends Skin
          .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
          .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
          .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right,
-         .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus
+         .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus, .profile_content .panel .panel-heading
          { background-color: '.$color.'; }
 
          .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
          .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
          .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
          .disp_single #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_page #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_single #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_page #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_single #main-content .evo_post .evo_form .form_textarea_input:active, .disp_page #main-content .evo_post .evo_form .form_textarea_input:active,
-         .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus
+         .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus,
+
+			.disp_single #main-content .evo_post .evo_form .form_text_input:hover, .disp_page #main-content .evo_post .evo_form .form_text_input:hover, .disp_single #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_page #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_single #main-content .evo_post .evo_form .form_text_input:focus, .disp_page #main-content .evo_post .evo_form .form_text_input:focus, .disp_single #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_page #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_single #main-content .evo_post .evo_form .form_text_input:active, .disp_page #main-content .evo_post .evo_form .form_text_input:active, .disp_single #main-content .evo_post .evo_form .form_textarea_input:active, .disp_page #main-content .evo_post .evo_form .form_textarea_input:active, .profile_content .panel
          { border-color: '.$color.'; }
 
          .disp_single #main-content .evo_post > header .cat-links a, .disp_page #main-content .evo_post > header .cat-links a,
@@ -969,11 +981,15 @@ class business_Skin extends Skin
          { color: '.$color.'; }
 
          .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
+         .disp_search .search_result .search_result_score.dimmed,
+			.disp_search .widget_core_coll_search_form .compact_search_form .search_submit,
          .disp_search .search_result .search_result_score.dimmed
          { background-color: '.$color.'; }
 
          .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
-         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active
+         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active,
+			.disp_search .widget_core_coll_search_form .compact_search_form .search_field, .disp_search .widget_core_coll_search_form .compact_search_form .search_submit,
+         .disp_search .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .widget_core_coll_search_form .compact_search_form .search_field:active
          { border-color: '.$color.'; }
 
          .disp_search .search_result .search_content_wrap .search_info a

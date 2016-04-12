@@ -41,25 +41,20 @@ skin_include( '_body_header.inc.php' );
 <main id="main-content">
    <div class="container">
       <div class="row">
-
       	<div class="<?php echo $Skin->get_column_class(); ?>">
-
-      		<main><!-- This is were a link like "Jump to main content" would land -->
 
       		<!-- ================================= START OF MAIN AREA ================================== -->
       		<?php
-      		if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
-      		{ // Don't display the messages here because they are displayed inside wrapper to have the same width as form
-      			// ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
-      			messages( array(
-   					'block_start' => '<div class="action_messages">',
-   					'block_end'   => '</div>',
-   				) );
-      			// --------------------------------- END OF MESSAGES ---------------------------------
-      		}
-      		?>
+	      		if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
+	      		{ // Don't display the messages here because they are displayed inside wrapper to have the same width as form
+	      			// ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
+	      			messages( array(
+	   					'block_start' => '<div class="action_messages">',
+	   					'block_end'   => '</div>',
+	   				) );
+	      			// --------------------------------- END OF MESSAGES ---------------------------------
+      			}
 
-      		<?php
       			// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
       			item_prevnext_links( array(
    					'block_start' => '<nav><ul class="pager">',
@@ -70,9 +65,7 @@ skin_include( '_body_header.inc.php' );
    					'block_end'   => '</ul></nav>',
    				) );
       			// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
-      		?>
 
-      		<?php
       			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
       			request_title( array(
    					'title_before'      => '<h2 class="page_title">',
@@ -92,24 +85,20 @@ skin_include( '_body_header.inc.php' );
    					'display_edit_links'=> false,
    				) );
       			// ----------------------------- END OF REQUEST TITLE ----------------------------
-      		?>
 
-      		<?php
-      		// Go Grab the featured post:
-      		if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
-      		{ // We have a featured/intro post to display:
-      			// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
-      			skin_include( '_item_block.inc.php', array(
-   					'feature_block' => true,
-   					'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
-   					'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-   					'item_class'    => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post'),
-   				) );
-      			// ----------------------------END ITEM BLOCK  ----------------------------
-      		}
-      		?>
+	      		// Go Grab the featured post:
+	      		if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
+	      		{ // We have a featured/intro post to display:
+	      			// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
+	      			skin_include( '_item_block.inc.php', array(
+	   					'feature_block' => true,
+	   					'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
+	   					'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
+	   					'item_class'    => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post'),
+	   				) );
+	      			// ----------------------------END ITEM BLOCK  ----------------------------
+	      		}
 
-      		<?php
       			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
       			skin_include( '$disp$', array(
       					'author_link_text' => 'preferredname',
@@ -181,11 +170,7 @@ skin_include( '_body_header.inc.php' );
       			// copying the matching php file into your skin directory.
       			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
       		?>
-
-      		</main>
-
       	</div><!-- .col -->
-
          <?php
             // ------------------------- SIDEBAR INCLUDED HERE --------------------------
             skin_include( '_sidebar.inc.php' );
@@ -193,7 +178,6 @@ skin_include( '_body_header.inc.php' );
             // _sidebar.inc.php file into the current skin folder.
             // ----------------------------- END OF SIDEBAR -----------------------------
          ?>
-
       </div><!-- .row -->
    </div><!-- .container -->
 </main><!-- #main-content -->

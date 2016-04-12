@@ -54,11 +54,9 @@
 
            .cat-links {
              display: inline-block;
-
              a{
                 color: @b;
                 border-bottom: 1px dotted @primary;
-
                 &:hover, &:active, &:focus {
                    text-decoration: none;
                 }
@@ -77,7 +75,6 @@
                // font-size: 1.4rem;
                color: @c4;
                border-bottom: 1px dotted @primary;
-
                &:hover, &:active, &:focus {
                   color: @primary;
                   text-decoration: none;
@@ -109,111 +106,6 @@
             .alert {
                font-size: 1.4rem;
             }
-
-            // Evo_comment
-            // ======================================================================== /
-            .evo_comment {
-               position: relative;
-
-               .panel-heading {
-                  margin: 0;
-                  overflow: inherit;
-
-                  .evo_comment_title{
-                     font-size: 1.5rem;
-                     font-weight: normal;
-
-                     a{
-                        color: @primary;
-
-                        &:hover, &:focus, &:active {
-                           background-color: transparent;
-                        }
-                     }
-                  }
-
-               }
-
-               .evo_comment_avatar {
-                  position: absolute;
-                  left: 20px;
-                  margin-right: 10px;
-
-                  img {
-                     float: none;
-                     border-radius: 100%;
-                  }
-
-                  @media screen and ( max-width: @S ) {
-                     display: block;
-                     position: relative;
-                     left: 0;
-                     margin: 0 auto;
-                     text-align: center;
-                  }
-               }
-
-               .evo_comment_rating, .evo_comment_text {
-                  margin-left: 80px;
-
-                  @media screen and ( max-width: @S ) {
-                     margin-left: 0;
-                  }
-               }
-
-               .evo_comment_rating {
-                  margin-bottom: 10px;
-               }
-
-               .evo_comment_text {
-                  display: block;
-                  font-size: 1.4rem;
-                  min-height: 65px;
-
-                     img {
-                     max-width: 100%;
-                  }
-
-                  .evo_image_block {
-                     display: table;
-                     margin-right: auto;
-                     margin-left: auto;
-
-                     &:hover a {
-                        &::before {
-                           border-radius: 3px;
-                        }
-                     }
-                  }
-
-               }
-
-               .evo_comment_footer {
-                  margin-top: 15px;
-                  display: block;
-
-                  small {
-                     font-size: 100%;
-                     font-size: 1.3rem;
-                  }
-
-                  .permalink_right {
-                     background-color: @primary;
-                     padding: 2px 6px;
-                     color: @w;
-                     border-radius: 2px;
-                     margin-left: 0.5rem;
-                     font-size: 1.2rem;
-                     margin-top: -5px;
-
-                     &:hover, &:active, &:focus {
-                        text-decoration: none;
-                     }
-                  }
-               }
-
-            }
-
          }
 
          // Panel
@@ -243,6 +135,7 @@
                   display: inline-block;
                   font-size: 1.8rem;
                   font-weight: normal;
+                  color: @b;
                   background: @w;
                   padding-right: 10px;
                }
@@ -253,7 +146,113 @@
                padding: 20px;
                background-color: @w;
             }
+         }
 
+         // Evo_comment
+         // ======================================================================== /
+         .evo_comment, .evo_comment__preview {
+            position: relative;
+
+            // Panel Heading
+            // ======================================================================== /
+            .panel-heading {
+               margin: 0;
+               overflow: inherit;
+
+               .evo_comment_title{
+                  font-size: 1.5rem;
+                  font-weight: normal;
+                  a{
+                     color: @primary;
+                     &:hover, &:focus, &:active {
+                        background-color: transparent;
+                     }
+                  }
+               }
+            }
+
+            // Comment Avatar
+            // ======================================================================== /
+            .evo_comment_avatar {
+               position: absolute;
+               left: 20px;
+               margin-right: 10px;
+
+               img {
+                  float: none;
+                  border-radius: 100%;
+               }
+
+               @media screen and ( max-width: @S ) {
+                  display: block;
+                  position: relative;
+                  left: 0;
+                  margin: 0 auto;
+                  text-align: center;
+               }
+            }
+
+            .evo_comment_rating, .evo_comment_text {
+               margin-left: 80px;
+
+               @media screen and ( max-width: @S ) {
+                  margin-left: 0;
+               }
+            }
+
+            .evo_comment_rating {
+               margin-bottom: 10px;
+            }
+
+            .evo_comment_text {
+               display: block;
+               font-size: 1.4rem;
+               min-height: 65px;
+
+               img {
+                  max-width: 100%;
+               }
+
+               .evo_image_block {
+                  display: table;
+                  margin-right: auto;
+                  margin-left: auto;
+                  &:hover a {
+                     &::before {
+                        border-radius: 3px;
+                     }
+                  }
+               }
+            }
+
+            .evo_comment_footer {
+               margin-top: 15px;
+               display: block;
+
+               small {
+                  font-size: 100%;
+                  font-size: 1.3rem;
+               }
+
+               .permalink_right {
+                  background-color: @primary;
+                  padding: 2px 6px;
+                  color: @w;
+                  border-radius: 2px;
+                  margin-left: 0.5rem;
+                  font-size: 1.2rem;
+                  margin-top: -5px;
+                  &:hover, &:active, &:focus {
+                     text-decoration: none;
+                  }
+               }
+            }
+         }
+
+         .evo_comment__preview {
+            .panel-body {
+               background-color: @bg_post_regular;
+            }
          }
 
          // Form Single
@@ -271,6 +270,16 @@
                .panel-body {
                   padding: 10px 0;
                   border: 0;
+               }
+            }
+
+            .form_text_input, .form_textarea_input {
+               box-shadow: none;
+               border-radius: 3px;
+               border-color: @bdr_bg;
+
+               &:hover, &:focus, &:active {
+                  border-color: @primary;
                }
             }
 
@@ -298,7 +307,7 @@
 
                &:hover, &:focus, &:active {
                   outline: 0;
-                  box-shadow: @bx_post;
+                  box-shadow: 3px 3px 12px rgba(111, 111, 111, 0.27);
                }
             }
 
@@ -353,9 +362,7 @@
                }
             }
          }
-
       }
-
    }
 
    // ========================================================================
@@ -370,10 +377,8 @@
                   background-color: @w;
                }
             }
-
          }
       }
-
    }
 
 }// end disp_singe

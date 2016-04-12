@@ -25,18 +25,6 @@ if( version_compare( $app_version, '6.4' ) < 0 )
 // Do inits depending on current $disp:
 skin_init( $disp );
 
-/* Pagination Align
-   ========================================================================== */
-$align = '';
-$pagination_align = $Skin->get_setting( 'pagination_align' );
-
-if ( $pagination_align == 'left') {
-   $align = 'left';
-} else if ( $pagination_align == 'right') {
-   $align = 'right';
-} else {
-   $align = 'center';
-}
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array() );
@@ -50,62 +38,24 @@ skin_include( '_body_header.inc.php' );
 
 ?>
 
-<section class="search-box">
-   <div class="container">
-
-      <?php
-         // ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-         request_title( array(
-            'title_before'         => '<h2 class="title_search_box">',
-            'title_after'          => '</h2>',
-            'search_text'          => T_( $Skin->get_setting( 'search_title' ) ),
-            'title_none'           => '',
-            'glue'                 => ' - ',
-            'title_single_disp'    => false,
-            'title_page_disp'      => false,
-            'format'               => 'htmlbody',
-            'register_text'        => '',
-            'login_text'           => '',
-            'lostpassword_text'    => '',
-            'account_activation'   => '',
-            'msgform_text'         => '',
-            'user_text'            => 'test',
-            'users_text'           => '',
-            'display_edit_links'   => false,
-         ) );
-         // ----------------------------- END OF REQUEST TITLE ----------------------------
-      ?>
-
-<?php
-   if ( $Skin->get_setting( 'search_field' ) == 1 ) {
-      // ------------------------ START OF SEARCH FORM WIDGET ------------------------
-      skin_widget( array(
-         // CODE for the widget:
-         'widget'               => 'coll_search_form',
-         // Optional display params
-         'block_start'          => '<div class="evo_widget $wi_class$">',
-         'block_end'            => '</div>',
-         'block_display_title'  => false,
-         'disp_search_options'  => 0,
-         'search_class'         => 'compact_search_form',
-         'search_input_before'  => '',
-         'search_input_after'   => '',
-         'search_submit_before' => '',
-         'search_submit_after'  => '',
-         'use_search_disp'      => 1,
-         'button'               => T_( $Skin->get_setting( 'search_button_text' ) )
-      ) );
-      // ------------------------- END OF SEARCH FORM WIDGET -------------------------
-   }
-?>
-   </div>
-</section>
-
 <main id="main-content">
    <div class="container">
-      <div class="row">
 
+		<?php
+			$cover_image_url = $Item->get_cover_image_url();
+			if ( empty( $cover_image_url ) ) {  ?>
+			<div class="no_image_cover"></div>
+			<?php } else { ?>
+			<div class="row">
+				<div class="evo_cover_image <?php echo $Skin->get_column_cover_image(); ?>">
+					<img src="<?php echo $cover_image_url; ?>" alt="" class="img-responsive">
+				</div>
+			</div>
+		<?php } ?>
+
+      <div class="row">
       	<div class="<?php echo $Skin->get_column_class(); ?>">
+
       		<main><!-- This is were a link like "Jump to main content" would land -->
 
       		<!-- ================================= START OF MAIN AREA ================================== -->
@@ -135,6 +85,43 @@ skin_include( '_body_header.inc.php' );
       		?>
 
       		<?php
+      			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
+      			request_title( array(
+   					'title_before'       => '<h2>',
+   					'title_after'        => '</h2>',
+   					'title_none'         => '',
+   					'glue'               => ' - ',
+   					'title_single_disp'  => false,
+   					'title_page_disp'    => false,
+   					'format'             => 'htmlbody',
+   					'register_text'      => '',
+   					'login_text'         => '',
+   					'lostpassword_text'  => '',
+   					'account_activation' => '',
+   					'msgform_text'       => '',
+   					'user_text'          => '',
+   					'users_text'         => '',
+   					'display_edit_links' => false,
+   				) );
+      			// ----------------------------- END OF REQUEST TITLE ----------------------------
+      		?>
+
+      		<?php
+      		// Go Grab the featured post:
+      		if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
+      		{ // We have a featured/intro post to display:
+      			// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
+      			skin_include( '_item_block.inc.php', array(
+   					'feature_block' => true,
+   					'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
+   					'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
+   					'item_class'    => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post'),
+   				) );
+      			// ----------------------------END ITEM BLOCK  ----------------------------
+      		}
+      		?>
+
+      		<?php
       			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
       			skin_include( '$disp$', array(
    					'author_link_text' => 'preferredname',
@@ -149,15 +136,15 @@ skin_include( '_body_header.inc.php' );
    					),
    					// Pagination
    					'pagination' => array(
-   						'block_start'           => '<div class="'. $align .'"><ul class="pagination">',
+   						'block_start'           => '<div class="center"><ul class="pagination">',
    						'block_end'             => '</ul></div>',
    						'page_current_template' => '<span>$page_num$</span>',
    						'page_item_before'      => '<li>',
    						'page_item_after'       => '</li>',
    						'page_item_current_before' => '<li class="active">',
    						'page_item_current_after'  => '</li>',
-   						'prev_text'             => '<i class="fa fa-angle-left"></i>',
-   						'next_text'             => '<i class="fa fa-angle-right"></i>',
+   						'prev_text'             => '<i class="fa fa-angle-double-left"></i>',
+   						'next_text'             => '<i class="fa fa-angle-double-right"></i>',
    					),
    					// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
    					'skin_form_before'      => '<div class="panel panel-default skin-form">'
@@ -188,14 +175,14 @@ skin_include( '_body_header.inc.php' );
    					'register_disabled_page_before' => '<div class="evo_panel__register register-disabled">',
    					'register_disabled_page_after'  => '</div>',
    					// Activate form
-   					'activate_form_title'   => T_('Account activation'),
-   					'activate_page_before'  => '<div class="evo_panel__activation">',
-   					'activate_page_after'   => '</div>',
+   					'activate_form_title'  => T_('Account activation'),
+   					'activate_page_before' => '<div class="evo_panel__activation">',
+   					'activate_page_after'  => '</div>',
    					// Search
-   					'search_input_before'   => '<div class="input-group">',
-   					'search_input_after'    => '',
-   					'search_submit_before'  => '<span class="input-group-btn">',
-   					'search_submit_after'   => '</span></div>',
+   					'search_input_before'  => '<div class="input-group">',
+   					'search_input_after'   => '',
+   					'search_submit_before' => '<span class="input-group-btn">',
+   					'search_submit_after'  => '</span></div>',
    					// Front page
    					'featured_intro_before' => '<div class="jumbotron"><div class="intro_background_image"></div>',
    					'featured_intro_after'  => '</div>',
@@ -222,6 +209,7 @@ skin_include( '_body_header.inc.php' );
       </div><!-- .row -->
    </div><!-- .container -->
 </main><!-- #main-content -->
+
 
 
 <?php
