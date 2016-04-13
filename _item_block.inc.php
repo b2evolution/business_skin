@@ -250,18 +250,24 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		 // ---------------------- END OF WORKFLOW PROPERTIES ---------------------
 	}
 	?>
-
-	<?php
-	if( evo_version_compare( $app_version, '6.7' ) >= 0 )
-	{    // We are running at least b2evo 6.7, so we can include this file:
-		 // ------------------ META COMMENTS INCLUDED HERE ------------------
-		 skin_include( '_item_meta_comments.inc.php', array(
-				'comment_start'         => '<article class="evo_comment evo_comment__meta panel panel-default">',
-				'comment_end'           => '</article>',
-		  ) );
-		 // ---------------------- END OF META COMMENTS ---------------------
-	}
-	?>
+	
+	<div class="item_meta_comments">
+		<?php
+		if( evo_version_compare( $app_version, '6.7' ) >= 0 )
+		{    // We are running at least b2evo 6.7, so we can include this file:
+			 // ------------------ META COMMENTS INCLUDED HERE ------------------
+			 skin_include( '_item_meta_comments.inc.php', array(
+					'comment_start'         => '<article class="evo_comment evo_comment__meta panel panel-default">',
+					'comment_end'           => '</article>',
+					'comment_post_before'   => '<h3 class="evo_comment_post_title">',
+					'comment_post_after'    => '</h3>',
+					'comment_title_before'  => '<div class="panel-heading"><h4 class="evo_comment_title panel-title">',
+					'comment_title_after'   => '</h4></div><div class="panel-body">',
+			  ) );
+			 // ---------------------- END OF META COMMENTS ---------------------
+		}
+		?>
+	</div>
 
 	<?php
 		locale_restore_previous();	// Restore previous locale (Blog locale)

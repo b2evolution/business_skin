@@ -355,10 +355,11 @@ div.bSideItem {
 	}
 
 	.form_text_input {
-		padding: 20px 15px;
+		padding: 12px 15px;
 		border-radius: 2px;
 		border-color: @primary;
 		box-shadow: none;
+      height: auto;
 
 		&:focus {
 			border-color: @primary;
@@ -371,7 +372,7 @@ div.bSideItem {
 		font-size: 1.4rem;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 1px;
+		// letter-spacing: 0.5px;
 		transition: all 0.32s ease-in-out;
 
 		&:hover, &:active, &:focus {
@@ -455,6 +456,7 @@ div.bSideItem {
 
 	input.form-control[type=text], input.form-control[type=password] {
 		width: 100%;
+      height: auto;
 	}
 
 	.btn {

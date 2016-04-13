@@ -30,6 +30,7 @@ a:hover,
 a:focus,
 a:active {
   color: #1dc6df;
+  outline: none;
 }
 a[rel~=nofollow]:not([class~=btn]):hover {
   background-color: transparent;
@@ -770,6 +771,7 @@ blockquote p {
 #main-content .evo_post .evo_post_images .evo_image_block,
 #mini-blog .evo_post .evo_post_images .evo_image_block {
   display: inline-block;
+  width: 100%;
   margin-bottom: 20px;
 }
 #main-content .evo_post .evo_post_images .evo_image_block a::after,
@@ -1848,6 +1850,25 @@ blockquote p {
 }
 .bubbletip_user__buttons .btn-danger:hover {
   background-color: #c9302c !important;
+}
+.item_meta_comments .fieldset_wrapper .panel-heading {
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+.item_meta_comments .fieldset_wrapper .panel-heading::after {
+  margin-left: 10px;
+}
+.item_meta_comments .evo_comment__meta .panel-heading {
+  overflow: hidden !important;
+}
+.item_meta_comments .evo_comment__meta .panel-body {
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+.item_meta_comments .evo_comment__meta .panel-body:hover,
+.item_meta_comments .evo_comment__meta .panel-body:active,
+.item_meta_comments .evo_comment__meta .panel-body:focus {
+  box-shadow: 3px 6px 15px rgba(111, 111, 111, 0.15);
 }
 .disp_mediaidx #main-mediaidx {
   margin-top: 60px;
@@ -3174,10 +3195,11 @@ div.bSideItem h4 {
 .evo_panel__lostpass .form_text_input,
 .evo_panel__register .form_text_input,
 .evo_panel__activation .form_text_input {
-  padding: 20px 15px;
+  padding: 12px 15px;
   border-radius: 2px;
   border-color: #1dc6df;
   box-shadow: none;
+  height: auto;
 }
 .evo_panel__login .form_text_input:focus,
 .evo_panel__lostpass .form_text_input:focus,
@@ -3194,7 +3216,6 @@ div.bSideItem h4 {
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
@@ -3273,6 +3294,7 @@ div.bSideItem h4 {
 .evo_form__login input.form-control[type=text],
 .evo_form__login input.form-control[type=password] {
   width: 100%;
+  height: auto;
 }
 .evo_form__login .btn {
   margin-top: 5px;

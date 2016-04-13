@@ -412,3 +412,32 @@
    }
 
 }
+
+
+// Item Meta Comments
+// ======================================================================== /
+.item_meta_comments {
+   .fieldset_wrapper {
+      .panel-heading {
+         font-size: 1.6rem;
+         overflow: hidden;
+         &::after {
+            margin-left: 10px;
+         }
+      }
+   }
+
+   .evo_comment__meta {
+      .panel-heading {
+         overflow: hidden !important;
+      }
+
+      .panel-body {
+         transition: all 0.32s ease-in-out;
+         &:hover, &:active, &:focus {
+            box-shadow: 3px 6px 15px rgba(111, 111, 111, 0.15);
+         }
+      }
+   }
+
+}
