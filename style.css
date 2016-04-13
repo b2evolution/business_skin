@@ -69,6 +69,16 @@ blockquote {
 blockquote p {
   margin-bottom: 0 !important;
 }
+.btn {
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+.btn:hover,
+.btn:active,
+.btn:focus {
+  outline: 0 !important;
+  box-shadow: none;
+}
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .row {
     margin-right: 0;
@@ -141,7 +151,7 @@ blockquote p {
 #main-header {
   padding: 25px 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  z-index: 9999;
+  z-index: 1100;
 }
 @media screen and (max-width: 768px) {
   #main-header {
@@ -3145,7 +3155,7 @@ div.bSideItem h4 {
 }
 .evo_form .form_text_input,
 .evo_form .form_textarea_input {
-  padding: 10px 15px;
+  padding: 8px 12px;
   border-radius: 2px;
   border-color: #e4e4e4;
   box-shadow: none;
@@ -3328,6 +3338,139 @@ footer.row {
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+.disp_profile .main_content .profile_tabs,
+.disp_avatar .main_content .profile_tabs,
+.disp_pwdchange .main_content .profile_tabs,
+.disp_userprefs .main_content .profile_tabs,
+.disp_subs .main_content .profile_tabs {
+  margin: 0 0 30px;
+  border-bottom: 2px solid #1dc6df;
+}
+.disp_profile .main_content .profile_tabs li.active a,
+.disp_avatar .main_content .profile_tabs li.active a,
+.disp_pwdchange .main_content .profile_tabs li.active a,
+.disp_userprefs .main_content .profile_tabs li.active a,
+.disp_subs .main_content .profile_tabs li.active a {
+  color: #ffffff;
+  border-color: #1dc6df;
+  background-color: #1dc6df;
+}
+.disp_profile .main_content .profile_tabs li a,
+.disp_avatar .main_content .profile_tabs li a,
+.disp_pwdchange .main_content .profile_tabs li a,
+.disp_userprefs .main_content .profile_tabs li a,
+.disp_subs .main_content .profile_tabs li a {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  border-radius: 3px 3px 0 0;
+}
+.disp_profile .main_content .profile_tabs li a:hover,
+.disp_avatar .main_content .profile_tabs li a:hover,
+.disp_pwdchange .main_content .profile_tabs li a:hover,
+.disp_userprefs .main_content .profile_tabs li a:hover,
+.disp_subs .main_content .profile_tabs li a:hover,
+.disp_profile .main_content .profile_tabs li a:active,
+.disp_avatar .main_content .profile_tabs li a:active,
+.disp_pwdchange .main_content .profile_tabs li a:active,
+.disp_userprefs .main_content .profile_tabs li a:active,
+.disp_subs .main_content .profile_tabs li a:active,
+.disp_profile .main_content .profile_tabs li a:focus,
+.disp_avatar .main_content .profile_tabs li a:focus,
+.disp_pwdchange .main_content .profile_tabs li a:focus,
+.disp_userprefs .main_content .profile_tabs li a:focus,
+.disp_subs .main_content .profile_tabs li a:focus {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+  color: #ffffff;
+}
+.disp_profile .main_content .panel,
+.disp_avatar .main_content .panel,
+.disp_pwdchange .main_content .panel,
+.disp_userprefs .main_content .panel,
+.disp_subs .main_content .panel {
+  border-radius: 2px;
+  border-color: #1dc6df;
+}
+.disp_profile .main_content .panel-heading,
+.disp_avatar .main_content .panel-heading,
+.disp_pwdchange .main_content .panel-heading,
+.disp_userprefs .main_content .panel-heading,
+.disp_subs .main_content .panel-heading {
+  color: #ffffff;
+  background-color: #1dc6df;
+  border-bottom: 0;
+  border-radius: 0;
+}
+.disp_profile .main_content .panel-body,
+.disp_avatar .main_content .panel-body,
+.disp_pwdchange .main_content .panel-body,
+.disp_userprefs .main_content .panel-body,
+.disp_subs .main_content .panel-body {
+  padding: 20px;
+}
+.disp_profile .main_content .control-label .fa,
+.disp_avatar .main_content .control-label .fa,
+.disp_pwdchange .main_content .control-label .fa,
+.disp_userprefs .main_content .control-label .fa,
+.disp_subs .main_content .control-label .fa {
+  padding-right: 3px;
+}
+.disp_profile .main_content .controls .form_text_input,
+.disp_avatar .main_content .controls .form_text_input,
+.disp_pwdchange .main_content .controls .form_text_input,
+.disp_userprefs .main_content .controls .form_text_input,
+.disp_subs .main_content .controls .form_text_input {
+  max-width: 92%;
+}
+.disp_profile .main_content .btn,
+.disp_avatar .main_content .btn,
+.disp_pwdchange .main_content .btn,
+.disp_userprefs .main_content .btn,
+.disp_subs .main_content .btn {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 10px 15px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.disp_profile .main_content .btn-primary,
+.disp_avatar .main_content .btn-primary,
+.disp_pwdchange .main_content .btn-primary,
+.disp_userprefs .main_content .btn-primary,
+.disp_subs .main_content .btn-primary {
+  background-color: #1dc6df;
+  border-color: #1dc6df;
+}
+.disp_profile .main_content .btn-primary:hover,
+.disp_avatar .main_content .btn-primary:hover,
+.disp_pwdchange .main_content .btn-primary:hover,
+.disp_userprefs .main_content .btn-primary:hover,
+.disp_subs .main_content .btn-primary:hover,
+.disp_profile .main_content .btn-primary:active,
+.disp_avatar .main_content .btn-primary:active,
+.disp_pwdchange .main_content .btn-primary:active,
+.disp_userprefs .main_content .btn-primary:active,
+.disp_subs .main_content .btn-primary:active,
+.disp_profile .main_content .btn-primary:focus,
+.disp_avatar .main_content .btn-primary:focus,
+.disp_pwdchange .main_content .btn-primary:focus,
+.disp_userprefs .main_content .btn-primary:focus,
+.disp_subs .main_content .btn-primary:focus {
+  box-shadow: 3px 3px 12px rgba(111, 111, 111, 0.27);
+}
+.disp_profile .main_content #ffield_edited_user_email .help-inline .btn,
+.disp_avatar .main_content #ffield_edited_user_email .help-inline .btn,
+.disp_pwdchange .main_content #ffield_edited_user_email .help-inline .btn,
+.disp_userprefs .main_content #ffield_edited_user_email .help-inline .btn,
+.disp_subs .main_content #ffield_edited_user_email .help-inline .btn {
+  padding: 8px 12px;
+  color: #ffffff;
+  background-color: #1dc6df;
+  border-color: #1dc6df;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar
