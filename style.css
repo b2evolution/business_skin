@@ -3144,10 +3144,11 @@ div.bSideItem h4 {
 }
 .evo_form .form_text_input,
 .evo_form .form_textarea_input {
-  padding: 18px 15px;
+  padding: 10px 15px;
   border-radius: 2px;
   border-color: #e4e4e4;
   box-shadow: none;
+  height: auto;
 }
 .evo_form .form_text_input:focus,
 .evo_form .form_textarea_input:focus {
