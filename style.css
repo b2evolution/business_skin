@@ -1753,6 +1753,7 @@ blockquote p {
   border-radius: 2px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0;
   padding: 10px 18px;
   font-size: 1.3rem;
   box-shadow: none;
@@ -2713,7 +2714,7 @@ div.extended_search_form .search_options .search_option {
 .detail_contacts .form_add_contacts .SaveButton {
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   background-color: #1dc6df;
   border-color: #1dc6df;
 }
@@ -2766,7 +2767,7 @@ div.extended_search_form .search_options .search_option {
   padding: 10px 25px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
@@ -3250,6 +3251,7 @@ div.bSideItem h4 {
   border-color: #555555;
 }
 .evo_panel__login {
+  padding-top: 60px;
   max-width: 460px;
 }
 .evo_panel__lostpass {
@@ -3272,10 +3274,6 @@ div.bSideItem h4 {
 }
 .evo_panel__register.register-disabled {
   width: 350px;
-}
-.evo_panel__register .form-control#country,
-.evo_panel__register .form-control#u {
-  width: 100%;
 }
 .evo_form__login_links {
   padding: 0 5px;

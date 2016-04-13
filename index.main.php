@@ -42,7 +42,6 @@ skin_include( '_body_header.inc.php' );
    <div class="container">
       <div class="row">
       	<div class="<?php echo $Skin->get_column_class(); ?>">
-
       		<!-- ================================= START OF MAIN AREA ================================== -->
       		<?php
 	      		if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
