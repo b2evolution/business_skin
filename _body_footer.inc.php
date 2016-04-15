@@ -10,6 +10,7 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
+
 ?>
 
 <footer id="main-footer">

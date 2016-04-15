@@ -71,7 +71,7 @@ skin_include( '_body_header.inc.php' );
 			</div><!-- .col -->
 			<?php
 				// ------------------------- SIDEBAR INCLUDED HERE --------------------------
-				// skin_include( '_sidebar.inc.php' );
+				skin_include( '_sidebar.inc.php' );
 				// Note: You can customize the sidebar by copying the
 				// _sidebar.inc.php file into the current skin folder.
 				// ----------------------------- END OF SIDEBAR -----------------------------
@@ -84,7 +84,7 @@ skin_include( '_body_header.inc.php' );
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:
-skin_include( '_body_footer.inc.php' );
+// skin_include( '_body_footer.inc.php' );
 // ------------------------------- END OF SITE FOOTER --------------------------------
 
 

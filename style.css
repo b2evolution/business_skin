@@ -3261,7 +3261,6 @@ div.bSideItem h4 {
   border-color: #555555;
 }
 .evo_panel__login {
-  padding-top: 60px;
   max-width: 460px;
 }
 .evo_panel__lostpass {
@@ -3471,6 +3470,10 @@ footer.row {
   color: #ffffff;
   background-color: #1dc6df;
   border-color: #1dc6df;
+}
+.disp_access_requires_login #main-content,
+.disp_login #main-content {
+  min-height: 80vh;
 }
 /* ----------------------------------------------------------------------------
  * Main Sidebar

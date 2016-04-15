@@ -749,13 +749,11 @@ class business_Skin extends Skin
 						'note'    => '',
 						'type'    => 'checklist',
 						'options' => array(
-							array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
-							array( 'page_top', sprintf( T_('"%s" container'), NT_('Page Top') ),  1 ),
-							array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      0 ),
-							array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),   0 ),
-							array( 'sidebar2', sprintf( T_('"%s" container'), NT_('Sidebar 2') ), 0 ),
-							array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    1 ) ),
+							array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),   1 ),
+							array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),  0 ),
+							array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),   1 ),
 						),
+					),
 				'section_access_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -1678,7 +1676,7 @@ class business_Skin extends Skin
 	/**
 	 * Check if we can display a widget container
 	 *
-	 * @param string Widget container key: 'header', 'page_top', 'menu', 'sidebar', 'sidebar2', 'footer'
+	 * @param string Widget container key: 'header', 'menu', 'sidebar', 'footer'
 	 * @param string Skin setting name
 	 * @return boolean TRUE to display
 	 */
