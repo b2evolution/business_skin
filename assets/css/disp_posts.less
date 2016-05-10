@@ -217,25 +217,41 @@
 
       }
 
-      // Timeline Style
-      // ======================================================================== /
-      .timeline{
-         position: absolute;
-         left: 30px;
-         top: 0;
-         width: 2px;
-         height: 100%;
-         background-color: @primary;
-         // box-shadow: @bx_post;
-         z-index: 0;
+    // Timeline Style
+    // ======================================================================== /
+    .timeline{
+        position: absolute;
+        left: 30px;
+        //  top: 0;
+        top: -49px;
 
-         &.evo_intro_post{
+        width: 2px;
+        height: 100%;
+        background-color: @primary;
+        z-index: 0;
+
+        @media screen and( max-width: @S ){
+          top: -30px;
+        }
+
+        &.evo_intro_post{
             display: none;
-         }
-      }
+        }
+    }
 
    }
 
+}
+
+
+// Posts
+// ======================================================================== /
+#posts {
+    .evo_content_block:first-child {
+        .timeline {
+            top: 0;
+        }
+    }
 }
 
 
@@ -371,7 +387,6 @@
       }
 
    }
-
 
 }
 

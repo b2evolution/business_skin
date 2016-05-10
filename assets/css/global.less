@@ -33,11 +33,12 @@ body{
 
 a{
    color: @primary;
-   transition: all 0.2s ease-in-out;
 
    &:hover, &:focus, &:active {
       color: @primary;
       outline: none;
+
+      transition: all 0.2s ease-out;
    }
 }
 
@@ -86,7 +87,7 @@ blockquote {
    // letter-spacing: 0.2px;
    // text-transform: uppercase;
    // border-radius: 2px;
-   transition: all 0.32s ease-in-out;
+   transition: all 0.2s ease-out;
 
    &:hover, &:active, &:focus {
       outline: 0 !important;

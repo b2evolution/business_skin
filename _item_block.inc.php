@@ -43,28 +43,24 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 ?>
 
 <?php if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'regular' ) : ?>
-<div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
-<?php
-   if( $Item->status != 'published' )
-   {
-      $Item->format_status( array(
-         'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
-      ) );
-   }
-   // Permalink:
-   $Item->permanent_link( array(
-      // 'text' => '#icon#',
-      'text' => '', // without icon
-   ) );
+<!-- <div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
+	<?php
+	   if( $Item->status != 'published' )
+	   {
+	      $Item->format_status( array(
+	         'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
+	      ) );
+	   }
 
-   // We want to display the post time:
-   $Item->issue_time( array(
-      'before'      => '',
-      'after'       => '',
-      'time_format' => 'F j, Y',
-   ) );
-?>
-</div>
+	   // We want to display the post time:
+	   $Item->issue_time( array(
+	      'before'      => '',
+	      'after'       => '',
+	      'time_format' => 'F j, Y',
+	   ) );
+
+	?>
+</div> -->
 <div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
 <?php endif; ?>
 
@@ -232,10 +228,10 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		skin_include( '_item_feedback.inc.php', array_merge( array(
 			'before_section_title' => '<div class="clearfix"></div><h3 class="evo_comment__list_title">',
 			'after_section_title'  => '</h3>',
-         'before_images'        => '<div class="evo_post_images">',
-         'before_image'         => '<figure class="evo_image_block">',
-         'after_image'          => '</figure>',
-         'after_images'         => '</div>',
+			'before_images'        => '<div class="evo_post_images">',
+			'before_image'         => '<figure class="evo_image_block">',
+			'after_image'          => '</figure>',
+			'after_images'         => '</div>',
 		), $params ) );
 		// Note: You can customize the default item feedback by copying the generic
 		// /skins/_item_feedback.inc.php file into the current skin folder.
@@ -250,24 +246,26 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 		 // ---------------------- END OF WORKFLOW PROPERTIES ---------------------
 	}
 	?>
-	
-	<div class="item_meta_comments">
-		<?php
-		if( evo_version_compare( $app_version, '6.7' ) >= 0 )
-		{    // We are running at least b2evo 6.7, so we can include this file:
-			 // ------------------ META COMMENTS INCLUDED HERE ------------------
-			 skin_include( '_item_meta_comments.inc.php', array(
+
+	<?php if ( $disp == 'single' || $disp == 'page' ) { ?>
+		<div class="item_meta_comments">
+			<?php
+			if( evo_version_compare( $app_version, '6.7' ) >= 0 )
+			{    // We are running at least b2evo 6.7, so we can include this file:
+				// ------------------ META COMMENTS INCLUDED HERE ------------------
+				skin_include( '_item_meta_comments.inc.php', array(
 					'comment_start'         => '<article class="evo_comment evo_comment__meta panel panel-default">',
 					'comment_end'           => '</article>',
 					'comment_post_before'   => '<h3 class="evo_comment_post_title">',
 					'comment_post_after'    => '</h3>',
 					'comment_title_before'  => '<div class="panel-heading"><h4 class="evo_comment_title panel-title">',
 					'comment_title_after'   => '</h4></div><div class="panel-body">',
-			  ) );
-			 // ---------------------- END OF META COMMENTS ---------------------
-		}
-		?>
-	</div>
+				) );
+				// ---------------------- END OF META COMMENTS ---------------------
+			}
+			?>
+		</div>
+	<?php } ?>
 
 	<?php
 		locale_restore_previous();	// Restore previous locale (Blog locale)

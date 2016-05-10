@@ -2,7 +2,9 @@ jQuery( document ).ready( function($) {
 
    // Sticky Header
    // ======================================================================== /
-   $( '#main-header' ).sticky( {topSpacing: 0} );
+   $( '#main-header' ).sticky( {
+       topSpacing: 0,
+   });
 
    // Back to Top
    // ======================================================================== /
@@ -28,7 +30,7 @@ jQuery( document ).ready( function($) {
          event.preventDefault();
          $( 'body, html' ).animate({
             scrollTop: 0,
-            }, scroll_top_duration 
+            }, scroll_top_duration
          );
       });
 

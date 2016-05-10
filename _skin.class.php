@@ -239,8 +239,8 @@ class business_Skin extends Skin
                ),
                'ht_contact_info' => array(
                   'label'         => T_('Header Top Contact Info'),
-                  'defaultvalue'  => 'Contact Us on 0800 123 4567 or info@b2evolution.net',
-                  'note'          => T_('Add your contact Info'),
+                  'defaultvalue'  => 'Contact Us on 0800 123 4567 or info@example.com',
+                  'note'          => T_('<br />Add your contact Info'),
                   'type'          => 'text',
                   'size'          => '60'
                ),
