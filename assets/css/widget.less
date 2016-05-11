@@ -376,6 +376,19 @@
             &.user::after {
                opacity: 1;
             }
+
+            .user {
+                &::before {
+                    position: absolute;
+                    right: 0;
+                    vertical-align: middle;
+                    display: inline-block;
+                    content: "\f105";
+                    font-family: FontAwesome;
+                    font-weight: normal;
+                    font-style: normal;
+                }
+            }
          }
 
          &:hover {
