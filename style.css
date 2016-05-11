@@ -4026,6 +4026,16 @@ footer.row {
   font-weight: normal;
   font-style: normal;
 }
+.widget_core_coll_comment_list ul li span.login.user::before {
+  position: absolute;
+  right: 0;
+  vertical-align: middle;
+  display: inline-block;
+  content: "\f105";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+}
 .widget_core_coll_comment_list ul li:hover a::after {
   color: #1dc6df;
 }
