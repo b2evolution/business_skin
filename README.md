@@ -8,19 +8,26 @@ It is highly customizable so it can match your personal taste. Enjoy wellow’s 
 
 ====
 
-![preview](Preview.jpg)
+### Front Page
+
+![disp=front](skinshot_front.png)
+
+### Posts Page
+
+![disp=posts](skinshot_posts.jpg)
 
 ### Posts Mini Blog
 
 ![disp=posts](skinshot_posts_mini_blog.png)
 
+### Single Page
+
+![disp=search](skinshot_single.jpg)
+
+
 ### Search Page
 
 ![disp=search](skinshot_search.png)
-
-### Media Page
-
-![disp=search](skinshot_media.png)
 
 ====
 
@@ -57,25 +64,3 @@ It is highly customizable so it can match your personal taste. Enjoy wellow’s 
 ### Need Assistance? Get In Touch!
 
 If you ever get stuck with setting up Business with your B2evolution installation, you can get in touch with our friendly and dedicated support via our [Support Forum](http://forums.b2evolution.net/).
-
-===
-
-### Changes & Updates
-
-```
-Version 0.5
-– Fix overflow the avatar pop up on comment
-- Fix z-index for back to top button
-- Fix Responsive logo and menu
-- Some Icon hover Image and Gallery
-- Fix responsive Logo and menu on max-width 991px
-- Make variable for media screen width
-- Change style on comment
-- Fix style pop up comment user
-- Add style caption when image hover
-- Change tags style
-- Add Title Hover on Mediaidx
-
-Version 0.1
-– Initial Version – 05 January, 2016
-```
