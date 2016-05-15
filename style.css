@@ -2441,6 +2441,58 @@ div.extended_search_form .search_options .search_option {
 .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_register .input_text:focus {
   box-shadow: none;
 }
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li {
+  width: 25%;
+  float: left;
+  padding: 12px;
+  overflow: hidden;
+  border: none;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li::before,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li::before,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li::after,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li a,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li a {
+  padding: 0;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li a::after,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li a::after {
+  content: '';
+  display: none;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li .item_first_image img,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li .item_first_image img {
+  max-width: 100%;
+  height: auto;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li .item_title,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li .item_title {
+  padding: 10px 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li .item_excerpt,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li .item_excerpt {
+  color: #777777;
+}
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list ul li .item_content,
+.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list ul li .item_content {
+  color: #777777;
+}
 .disp_comments .evo_comment {
   margin-bottom: 30px;
   border-color: #eeeeee;
