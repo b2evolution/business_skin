@@ -44,6 +44,31 @@
 // Import Widget Style
 // ======================================================================== /
 @import "assets/css/widget";
+// --------- Universal item list widget & Recent posts widget --------- 
+@import "../../rsc/less/_universal_item_list_widget.module.less";
+// Skin custom layout overrides
+div.widget_core_coll_item_list,
+div.widget_core_coll_featured_posts,
+div.widget_core_coll_post_list,
+div.widget_core_coll_page_list,
+div.widget_core_coll_related_post_list {
+	// Removing border-radius on images
+	img {
+		border-radius: 0;
+	}
+	// Removing background-color on RWD blocks
+	&.evo_layout_rwd .widget_rwd_content {
+		background-color: transparent;
+		border-radius: 0;
+		padding: 0;
+		margin: 0 0 30px 0;
+		// Editing post title font-size on RWD blocks
+		.item_title {
+			font-size: 17px;
+		}
+	}
+}
+
 
 // Import Footer Style
 // ======================================================================== /
