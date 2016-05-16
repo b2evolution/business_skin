@@ -64,3 +64,11 @@ It is highly customizable so it can match your personal taste. Enjoy plenty of a
 ### Need Assistance? Get In Touch!
 
 If you ever get stuck with setting up Business with your b2evolution installation, please head over to the [Support Forum](http://forums.b2evolution.net/).
+
+
+====
+
+### Update Log:
+
+## v1.1.0
+- New layout system for widgets. Users can now apply different layouts for various widgets, with a small use of Bootstrap's grid system.
