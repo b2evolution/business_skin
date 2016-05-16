@@ -70,5 +70,5 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ### Update Log:
 
-## v1.1.0
+## v1.1.0-beta
 - New layout system for widgets. Users can now apply different layouts for various widgets, with a small use of Bootstrap's grid system.
