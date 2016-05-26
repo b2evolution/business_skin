@@ -57,22 +57,25 @@ div.widget_core_coll_related_post_list {
 	img {
 		border-radius: 0;
 	}
-	// Removing background-color on RWD blocks
-	&.evo_layout_rwd .widget_rwd_content {
-		background-color: transparent;
-		border-radius: 0;
-		padding: 0;
-		margin: 0 0 30px 0;
-		// Editing post title font-size on RWD blocks
-		.item_title {
-			font-size: 17px;
-		}
-	}
 
-	&.evo_1pic__special.evo_noexcerpt.evo_noteaser.evo_layout_rwd .widget_rwd_content .item_title a {
-		font-size: 17px;
-		font-weight: 700;
-	}
+    // Removing background-color on RWD blocks
+    &.evo_layout_rwd .widget_rwd_content {
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        margin: 0 0 30px 0;
+        // Editing post title font-size on RWD blocks
+        .item_title {
+            font-family: @font_title;
+            font-size: 17px;
+        }
+    }
+
+    &.evo_1pic__special.evo_noexcerpt.evo_noteaser.evo_layout_rwd .widget_rwd_content .item_title a {
+        font-size: 17px;
+        font-weight: 700;
+    }
+
 }
 
 // Import Footer Style
