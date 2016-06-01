@@ -531,3 +531,104 @@
    }
 
 }
+
+
+// POSTS MASONRY STYLE
+// ======================================================================== /
+#posts {
+
+    .post_masonry {
+        padding: 10px 0;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-bottom: 20px;
+    }
+
+    .post_items {
+        padding: 15px;
+
+        .posts_date {
+            margin-bottom: 20px;
+        }
+
+        .timeline,
+        &:first-child.timeline {
+            top: 22px !important;
+            height: 80%;
+        }
+
+        .evo_post {
+            margin-bottom: 0;
+
+            .evo_post_title {
+                h3 {
+                    font-size: 2.8rem;
+
+                    @media screen and ( max-width: @M ) {
+                        font-size: 2.6rem;
+                    }
+                }
+            }
+
+            header,
+            .evo_post__full_text,
+            .evo_post__excerpt_text,
+            .evo_post_gallery {
+                padding: 0 25px;
+            }
+
+            .evo_post__full,
+            .evo_post__excerpt {
+                margin-bottom: 25px;
+            }
+
+            .evo_post__full_text,
+            .evo_post__excerpt_text {
+                iframe {
+                    height: 320px;
+                }
+            }
+
+            .evo_post_gallery {
+                margin-top: -3px;
+            }
+
+            .videoblock {
+                margin-right: -25px;
+                margin-left: -25px;
+            }
+
+            .evo_image_block {
+                margin-bottom: 8px;
+            }
+
+            footer {
+                padding: 0 25px 10px;
+            }
+
+            .evo_post__excerpt_text .evo_post__excerpt_more_link {
+                margin-top: 20px;
+            }
+
+            .post_tags {
+                margin-bottom: 15px;
+            }
+
+        }
+
+        &.three_columns {
+            .evo_post_title {
+                h3 {
+                    font-size: 2.5rem;
+                    line-height: 28px;
+
+                    @media screen and ( min-width: @MM ){
+                        font-size: 2.7rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

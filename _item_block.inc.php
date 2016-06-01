@@ -38,30 +38,38 @@ $params = array_merge( array(
 	'author_link_text'           => 'preferredname',
 ), $params );
 
-echo '<div class="evo_content_block">'; // Beginning of post display
+$column = '';
+$post_item = '';
+if( $Skin->get_setting( 'layout_posts' ) == 'masonry' && $disp == 'posts' ) {
+	$column = $Skin->change_class( 'posts_masonry_column' );
+	$post_item = 'post_items';
+}
+
+echo '<div class="evo_content_block  '.$post_item.' '.$column.'">'; // Beginning of post display
 
 ?>
 
-<?php if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'regular' ) : ?>
-<!-- <div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
-	<?php
-	   if( $Item->status != 'published' )
-	   {
-	      $Item->format_status( array(
-	         'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
-	      ) );
-	   }
+<?php if ( $Skin->get_setting( 'layout_posts' ) == 'masonry' ) : ?>
+	<div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
+		<?php
+		   if( $Item->status != 'published' )
+		   {
+		      $Item->format_status( array(
+		         'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
+		      ) );
+		   }
+		   // We want to display the post time:
+		   $Item->issue_time( array(
+		      'before'      => '',
+		      'after'       => '',
+		      'time_format' => 'F j, Y',
+		   ) );
+		?>
+	</div>
+<?php endif; ?>
 
-	   // We want to display the post time:
-	   $Item->issue_time( array(
-	      'before'      => '',
-	      'after'       => '',
-	      'time_format' => 'F j, Y',
-	   ) );
-
-	?>
-</div> -->
-<div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
+<?php if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'regular' || $Skin->get_setting( 'layout_posts' ) == 'masonry' ) : ?>
+	<div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
 <?php endif; ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">

@@ -1,8 +1,8 @@
 // ========================================================================
-// Font Include
+// FONT INCLUDE
 // ======================================================================== /
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,700italic);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,700italic");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700");
 
 /* ----------------------------------------------------------------------------
  * Globall Style
@@ -46,7 +46,7 @@ a[rel~=nofollow]:not([class~=btn]):hover {
    background-color: transparent;
 }
 
-// Typograpy
+// TYPOGRAPY
 // ======================================================================== /
 h1, h2, h3, h4, h5, h6 {
    font-family: @font_title;
@@ -73,7 +73,6 @@ ul {
 }
 
 blockquote {
-   // border-left: 4px solid @primary;
    font-style: italic;
    font-size: 1.6rem;
    line-height: 1.4;
@@ -86,12 +85,6 @@ blockquote {
 }
 
 .btn {
-   // font-size: 1.3rem;
-   // font-weight: 700;
-   // padding: 10px 15px;
-   // letter-spacing: 0.2px;
-   // text-transform: uppercase;
-   // border-radius: 2px;
    transition: all 0.2s ease-out;
 
    &:hover, &:active, &:focus {
@@ -124,4 +117,40 @@ and ( max-width: @M ) {
 .alert-dismissable .close,
 .alert-dismissible .close {
    top: 1px;
+}
+
+
+// COLUMNS CLASS
+// ======================================================================== /
+.one_column {
+    max-width: 100%;
+}
+
+.two_columns {
+    max-width: 100% / 2;
+    float: left;
+
+    @media screen and ( max-width: @MX ) {
+        max-width: 100%;
+        float: none;
+    }
+}
+
+.three_columns {
+    max-width: 33.32%;
+    float: left;
+
+    @media screen and ( max-width: @M ) {
+        max-width: 50%;
+    }
+
+    @media screen and ( max-width: @MX ) {
+        max-width: 100%;
+        float: none;
+    }
+}
+
+.four_columns {
+    max-width: 25%;
+    float: left;
 }

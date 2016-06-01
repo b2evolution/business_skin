@@ -107,27 +107,26 @@ skin_include( '_body_header.inc.php' );
 						// ----------------------------END ITEM BLOCK  ----------------------------
 					}
 				?>
-
 				<?php
-
 					// --------------------------------- START OF POSTS -------------------------------------
 					// Display message if no post:
-					display_if_empty();
-					while( $Item = & mainlist_get_item() )
-					{	// For each blog post, do everything below up to the closing curly brace "}"
-					// ------------------------------ DATE SEPARATOR ------------------------------
+					if ( $Skin->get_setting( 'layout_posts' ) !== 'masonry' ) {
+						display_if_empty();
+						while( $Item = & mainlist_get_item() )
+						{	// For each blog post, do everything below up to the closing curly brace "}"
+							// ------------------------------ DATE SEPARATOR ------------------------------
+							$MainList->date_if_changed( array(
+								'before'      => '<div class="posts_date">',
+								'after'       => '</div>',
+								'date_format' => 'F j, Y',
+							) );
 
-						$MainList->date_if_changed( array(
-							'before'      => '<div class="posts_date">',
-							'after'       => '</div>',
-							'date_format' => 'F j, Y',
-						) );
+							skin_include( '_item_block.inc.php', array(
+								'content_mode'     => 'auto', // 'auto' will auto select depending on $disp-detail
+							) );
+						} // ---------------------------------- END OF POSTS ------------------------------------
 
-						skin_include( '_item_block.inc.php', array(
-							'content_mode'     => 'auto', // 'auto' will auto select depending on $disp-detail
-						) );
-
-					} // ---------------------------------- END OF POSTS ------------------------------------
+					}
 
 				 ?>
 

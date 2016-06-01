@@ -2,47 +2,53 @@
  * Main Footer Styling
  * -------------------------------------------------------------------------- */
 #main-footer {
-   background-color: @c2;
-   color: @w;
-   margin-top: 50px;
+    background-color: @c2;
+    color: @w;
+    margin-top: 50px;
 
-   font-size: 1.4rem;
+    font-size: 1.4rem;
 
-   // Widget Footer Styling
-   // ======================================================================== /
-   .widget_footer {
-      padding: 40px 0;
+    // Widget Footer Styling
+    // ======================================================================== /
+    .widget_footer {
+        padding: 40px 0;
 
-      .evo_widget {
+        .evo_widget {
 
-         .widget_title {
-            font-family: @font_body;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: @w;
-            opacity: 0.8;
-            text-transform: uppercase;
-            letter-spacing: 1.8px;
-            margin-bottom: 25px;
-         }
-
-         ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-         }
-
-         a {
-            color: @w;
-            opacity: 0.8;
-
-            &:hover, &:active, &:focus {
-               color: @primary;
-               opacity: 1;
+            .widget_title {
+                font-family: @font_body;
+                font-size: 1.2rem;
+                font-weight: 700;
+                color: @w;
+                opacity: 0.8;
+                text-transform: uppercase;
+                letter-spacing: 1.8px;
+                margin-bottom: 25px;
             }
-         }
 
-      }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            a {
+                color: @w;
+                opacity: 0.8;
+
+                &:hover, &:active, &:focus {
+                    color: @primary;
+                    opacity: 1;
+                }
+            }
+
+            .item_title {
+                a {
+                    opacity: 1;
+                }
+            }
+
+        }
 
       // Pannel and Form
       // ======================================================================== /
@@ -356,4 +362,11 @@
 
 .no-touch .cd-hover {
    opacity: 1;
+}
+
+
+// SITEWIDE STYLE
+// ======================================================================== /
+.sitewide_footer {
+    box-shadow: none !important;
 }

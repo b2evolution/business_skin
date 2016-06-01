@@ -299,82 +299,87 @@ class business_Skin extends Skin
 				),
             // End Section Main Header Options
 
-            /**
-             * ============================================================================
-             * Options Disp Posts
-             * ============================================================================
-             */
-            'section_disp_post_start' => array(
-               'layout' => 'begin_fieldset',
-               'label'  => T_('Disp Posts Options')
-            ),
-               'layout_posts' => array(
-                  'label'    => T_('Layout Posts'),
-                  // 'note'     => T_('Select Layout for Posts'),
-                  // 'type'     => 'select',
-                  // 'options'  => array(
-                  //    'regular'      => T_('Regular Layout'),
-                  //    'mini_blog'    => T_('Mini Blog Layout'),
-                  // ),
-                  'note'     => '',
-                  'type'     => 'radio',
-                  'options'  => array(
-							array( 'regular', T_('Regular') ),
-							array( 'mini_blog', T_('Mini Blog Layout') ),
-						),
-                  'defaultvalue' => 'regular',
-               ),
-               'regular_post_bg' => array(
-                  'label'         => T_('Background Regular Layout'),
-                  'note'          => T_('Default background color is #F7F7F7. Example another background color #F9F9F9'),
-                  'defaultvalue'  => '#F7F7F7',
-                  'type'          => 'color',
-               ),
-               'mini_blog_bg' => array(
-                  'label'         => T_('Background Mini Blog'),
-                  'note'          => T_('Default background color is #FFFFFF.'),
-                  'defaultvalue'  => '#FFFFFF',
-                  'type'          => 'color',
-               ),
-               'post_info_color' => array(
-                  'label'         => T_('Post Info Content Color'),
-                  'note'          => T_('Default background color is #999999.'),
-                  'defaultvalue'  => '#999999',
-                  'type'          => 'color',
-               ),
-               'post_info_link' => array(
-                  'label'         => T_('Post Info Link Color'),
-                  'note'          => T_('Default background color is #333333.'),
-                  'defaultvalue'  => '#333333',
-                  'type'          => 'color',
-               ),
-               'pagination_top_show' => array(
-                  'label'        => T_('Show Pagination Top'),
-                  'note'         => T_('Check to display Pagination top'),
-                  'defaultvalue' => 0,
-                  'type'         => 'checkbox',
-               ),
-               'pagination_bottom_show' => array(
-                  'label'        => T_('Show Pagination Bottom'),
-                  'note'         => T_('Check to display Pagination Bottom'),
-                  'defaultvalue' => 1,
-                  'type'         => 'checkbox',
-               ),
-               'pagination_align' => array(
-                  'label'        => T_('Pagination Alignment'),
-                  'note'         => T_('Select left, right, or centered alignment of the pagination.'),
-                  'defaultvalue' => 'center',
-                  'type'         => 'select',
-                  'options' => array(
-                     'left'     => T_('Left'),
-                     'center'   => T_('Center'),
-                     'right'    => T_('Right'),
-                  ),
-               ),
-            'section_disp_post_end' => array(
-               'layout' => 'end_fieldset',
-            ),
-            // End Options Disp Posts
+			/**
+			* ============================================================================
+			* Options Disp Posts
+			* ============================================================================
+			*/
+			'section_disp_post_start' => array(
+				'layout' => 'begin_fieldset',
+				'label'  => T_('Disp Posts Options')
+			),
+				'layout_posts' => array(
+					'label'    => T_('Layout Posts'),
+					'note'     => '',
+					'type'     => 'radio',
+					'options'  => array(
+						array( 'regular', T_('Regular') ),
+						array( 'mini_blog', T_('Mini Blog Layout') ),
+						array( 'masonry', T_( 'Masonry Layout' ) )
+					),
+					'defaultvalue' => 'regular',
+				),
+				'posts_masonry_column' => array(
+					'label'			=> T_( 'Columns Posts Masonry' ),
+					'note'			=> T_( 'Select the Column for Posts Masonry.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'two_columns'	=> T_( '2 Columns' ),
+						'three_columns'	=> T_( '3 Columns' ),
+					),
+					'defaultvalue'	=> 'three_column'
+				),
+				'regular_post_bg' => array(
+					'label'         => T_('Background Regular Layout'),
+					'note'          => T_('Default background color is #F7F7F7. Example another background color #F9F9F9'),
+					'defaultvalue'  => '#F7F7F7',
+					'type'          => 'color',
+				),
+				'mini_blog_bg' => array(
+					'label'         => T_('Background Mini Blog'),
+					'note'          => T_('Default background color is #FFFFFF.'),
+					'defaultvalue'  => '#FFFFFF',
+					'type'          => 'color',
+				),
+				'post_info_color' => array(
+					'label'         => T_('Post Info Content Color'),
+					'note'          => T_('Default background color is #999999.'),
+					'defaultvalue'  => '#999999',
+					'type'          => 'color',
+				),
+				'post_info_link' => array(
+					'label'         => T_('Post Info Link Color'),
+					'note'          => T_('Default background color is #333333.'),
+					'defaultvalue'  => '#333333',
+					'type'          => 'color',
+				),
+				'pagination_top_show' => array(
+					'label'        => T_('Show Pagination Top'),
+					'note'         => T_('Check to display Pagination top'),
+					'defaultvalue' => 0,
+					'type'         => 'checkbox',
+				),
+				'pagination_bottom_show' => array(
+					'label'        => T_('Show Pagination Bottom'),
+					'note'         => T_('Check to display Pagination Bottom'),
+					'defaultvalue' => 1,
+					'type'         => 'checkbox',
+				),
+				'pagination_align' => array(
+					'label'        => T_('Pagination Alignment'),
+					'note'         => T_('Select left, right, or centered alignment of the pagination.'),
+					'defaultvalue' => 'center',
+					'type'         => 'select',
+					'options' => array(
+						'left'     => T_('Left'),
+						'center'   => T_('Center'),
+						'right'    => T_('Right'),
+					),
+				),
+			'section_disp_post_end' => array(
+				'layout' => 'end_fieldset',
+			),
+			// End Options Disp Posts
 
             /**
              * ============================================================================
@@ -786,138 +791,141 @@ class business_Skin extends Skin
 			'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
 		) );
 
-      //Include script and styles for Sticky Menu
+		//Include script and styles for Sticky Menu
 		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
 
-      // Include Masonry Grind for MediaIdx
-      if ( $disp == 'mediaidx' ) {
-         require_js( $this->get_url() . 'assets/js/masonry.pkgd.min.js' );
-         require_js( $this->get_url() . 'assets/js/imagesloaded.pkgd.min.js' );
-         add_js_headline("
+		if ( $disp == 'mediadix' || $this->get_setting( 'layout_posts' ) == 'masonry' ) {
+			require_js( $this->get_url() . 'assets/js/masonry.pkgd.min.js' );
+			require_js( $this->get_url() . 'assets/js/imagesloaded.pkgd.min.js' );
+		}
+
+		// Include Masonry Grind for MediaIdx
+		if ( $disp == 'mediaidx' ) {
+			add_js_headline("
 				jQuery( document ).ready( function($) {
-               $('.evo_image_index').imagesLoaded().done( function( instance ) {
-                  $('.evo_image_index').masonry({
-                   // options
-                    itemSelector: '.grid-item',
-                 });
-               });
+					$('.evo_image_index').imagesLoaded().done( function( instance ) {
+						$('.evo_image_index').masonry({
+							// options
+							itemSelector: '.grid-item',
+						});
+					});
 				});
 			");
-      }
+		}
 
-      require_js( $this->get_url() . 'assets/js/scripts.js' );
+		require_js( $this->get_url() . 'assets/js/scripts.js' );
 
 		// Skin specific initializations:
-      // Add Custome CSS
-      $custom_css = '';
+		// Add Custome CSS
+		$custom_css = '';
 
-      /**
-      * ============================================================================
-      * This is Title
-      * ============================================================================
-      */
-      if ( $bg_color = $this->get_setting( 'background_disp' ) ) {
-         $custom_css .= '
-         html, body
-         { background-color: '. $bg_color .' }
-         ';
-      }
+		/**
+		* ============================================================================
+		* This is Title
+		* ============================================================================
+		*/
+		if ( $bg_color = $this->get_setting( 'background_disp' ) ) {
+			$custom_css .= '
+			html, body
+			{ background-color: '. $bg_color .' }
+			';
+		}
 
-      /**
-       * ============================================================================
-       * General Settings
-       * ============================================================================
-       */
-      if ( $color = $this->get_setting( 'color_schemes' ) ) {
-         // Disp Posts
-         $custom_css .= '
-         a, a:hover, a:focus, a:active,
-         #main-header .primary-nav .nav a:hover, #main-header .primary-nav .nav a:active, #main-header .primary-nav .nav a:focus,
-         #main-header .primary-nav .nav > li.active a,
-         #main-content .evo_post_title h1 a:hover, #mini-blog .evo_post_title h1 a:hover, #main-content .evo_post_title h2 a:hover, #mini-blog .evo_post_title h2 a:hover, #main-content .evo_post_title h3 a:hover, #mini-blog .evo_post_title h3 a:hover, #main-content .evo_post_title h1 a:active, #mini-blog .evo_post_title h1 a:active, #main-content .evo_post_title h2 a:active, #mini-blog .evo_post_title h2 a:active, #main-content .evo_post_title h3 a:active, #mini-blog .evo_post_title h3 a:active, #main-content .evo_post_title h1 a:focus, #mini-blog .evo_post_title h1 a:focus, #main-content .evo_post_title h2 a:focus, #mini-blog .evo_post_title h2 a:focus, #main-content .evo_post_title h3 a:focus, #mini-blog .evo_post_title h3 a:focus,
-         #main-content .evo_post .small.text-muted a:hover, #mini-blog .evo_post .small.text-muted a:hover, #main-content .evo_post .small.text-muted a .glyphicon:hover, #mini-blog .evo_post .small.text-muted a .glyphicon:hover,
-         .pagination li a,
+		/**
+		* ============================================================================
+		* General Settings
+		* ============================================================================
+		*/
+		if ( $color = $this->get_setting( 'color_schemes' ) ) {
+			// Disp Posts
+			$custom_css .= '
+			a, a:hover, a:focus, a:active,
+			#main-header .primary-nav .nav a:hover, #main-header .primary-nav .nav a:active, #main-header .primary-nav .nav a:focus,
+			#main-header .primary-nav .nav > li.active a,
+			#main-content .evo_post_title h1 a:hover, #mini-blog .evo_post_title h1 a:hover, #main-content .evo_post_title h2 a:hover, #mini-blog .evo_post_title h2 a:hover, #main-content .evo_post_title h3 a:hover, #mini-blog .evo_post_title h3 a:hover, #main-content .evo_post_title h1 a:active, #mini-blog .evo_post_title h1 a:active, #main-content .evo_post_title h2 a:active, #mini-blog .evo_post_title h2 a:active, #main-content .evo_post_title h3 a:active, #mini-blog .evo_post_title h3 a:active, #main-content .evo_post_title h1 a:focus, #mini-blog .evo_post_title h1 a:focus, #main-content .evo_post_title h2 a:focus, #mini-blog .evo_post_title h2 a:focus, #main-content .evo_post_title h3 a:focus, #mini-blog .evo_post_title h3 a:focus,
+			#main-content .evo_post .small.text-muted a:hover, #mini-blog .evo_post .small.text-muted a:hover, #main-content .evo_post .small.text-muted a .glyphicon:hover, #mini-blog .evo_post .small.text-muted a .glyphicon:hover,
+			.pagination li a,
 
-         #main-sidebar .evo_widget a:hover, #main-sidebar .evo_widget a:active, #main-sidebar .evo_widget a:focus,
-         #main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a,
+			#main-sidebar .evo_widget a:hover, #main-sidebar .evo_widget a:active, #main-sidebar .evo_widget a:focus,
+			#main-sidebar .widget_plugin_evo_Calr .bCalendarTable td a,
 
-         #main-footer .widget_footer .evo_widget a:hover, #main-footer .widget_footer .evo_widget a:active, #main-footer .widget_footer .evo_widget a:focus,
-         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a, #main-footer .widget_footer .widget_plugin_evo_Calr tfoot a,
+			#main-footer .widget_footer .evo_widget a:hover, #main-footer .widget_footer .evo_widget a:active, #main-footer .widget_footer .evo_widget a:focus,
+			#main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable tbody a, #main-footer .widget_footer .widget_plugin_evo_Calr tfoot a,
 
-         .disp_catdir #main-content .widget_core_coll_category_list a:hover, .disp_catdir #main-content .widget_core_coll_category_list a:active, .disp_catdir #main-content .widget_core_coll_category_list a:focus,
-         .disp_arcdir #main-content .widget_plugin_achive a:hover, .disp_arcdir #main-content .widget_plugin_achive a:focus, .disp_arcdir #main-content .widget_plugin_achive a:active,
-         .disp_postidx #main-content .widget_core_coll_post_list a:hover, .disp_postidx #main-content .widget_core_coll_post_list a:focus, .disp_postidx #main-content .widget_core_coll_post_list a:active,
+			.disp_catdir #main-content .widget_core_coll_category_list a:hover, .disp_catdir #main-content .widget_core_coll_category_list a:active, .disp_catdir #main-content .widget_core_coll_category_list a:focus,
+			.disp_arcdir #main-content .widget_plugin_achive a:hover, .disp_arcdir #main-content .widget_plugin_achive a:focus, .disp_arcdir #main-content .widget_plugin_achive a:active,
+			.disp_postidx #main-content .widget_core_coll_post_list a:hover, .disp_postidx #main-content .widget_core_coll_post_list a:focus, .disp_postidx #main-content .widget_core_coll_post_list a:active,
 
-         .disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
+			.disp_sitemap .content_sitemap .evo_widget a:hover, .disp_sitemap .content_sitemap .evo_widget a:active, .disp_sitemap .content_sitemap .evo_widget a:focus,
 
-         .disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus,
-         .widget_core_coll_comment_list ul li:hover a::after
-         { color: '.$color.' }
+			.disp_posts .evo_featured_post header .small.text-muted a:hover, .disp_posts .evo_featured_post header .small.text-muted a:active, .disp_posts .evo_featured_post header .small.text-muted a:focus,
+			.widget_core_coll_comment_list ul li:hover a::after
+			{ color: '.$color.' }
 
-         #main-header .primary-nav .nav a::after,
-         .disp_posts .evo_intro_post,
-         .disp_posts #main-content .posts_date,
-         .disp_posts #main-content .timeline,
-         #main-content .evo_post .evo_image_block a::before, #mini-blog .evo_post .evo_image_block a::before, #main-content .evo_post .evo_post_gallery__image a::before, #mini-blog .evo_post .evo_post_gallery__image a::before,
-         #main-content .evo_post .evo_post__full_text .evo_post_more_link a:hover, #mini-blog .evo_post .evo_post__full_text .evo_post_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover,
-         .pagination .active span, .pagination .active span:hover,
-         .pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
-         #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+			#main-header .primary-nav .nav a::after,
+			.disp_posts .evo_intro_post,
+			.disp_posts #main-content .posts_date,
+			.disp_posts #main-content .timeline,
+			#main-content .evo_post .evo_image_block a::before, #mini-blog .evo_post .evo_image_block a::before, #main-content .evo_post .evo_post_gallery__image a::before, #mini-blog .evo_post .evo_post_gallery__image a::before,
+			#main-content .evo_post .evo_post__full_text .evo_post_more_link a:hover, #mini-blog .evo_post .evo_post__full_text .evo_post_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post_more_link a:hover,
+			.pagination .active span, .pagination .active span:hover,
+			.pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
+			#main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
-         #main-sidebar .widget_core_coll_media_index .widget_flow_blocks > div a::before,
-         #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
-         #main-sidebar .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
+			#main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
+			#main-sidebar .widget_core_coll_media_index .widget_flow_blocks > div a::before,
+			#main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
+			#main-sidebar .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
 
-         #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:active, #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:focus,
-         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
-         .widget_core_coll_search_form .compact_search_form .search_submit,
+			#main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:active, #main-footer .widget_footer .widget_core_coll_tag_cloud .tag_cloud a:focus,
+			#main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
+			.widget_core_coll_search_form .compact_search_form .search_submit,
 
-         .widget_core_coll_media_index .widget_flow_blocks > div a::before,
+			.widget_core_coll_media_index .widget_flow_blocks > div a::before,
 
-         .close-menu, .cd-top,
+			.close-menu, .cd-top,
 
-         .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
-         .disp_sitemap .content_sitemap .title_widgets::after,
+			.disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
+			.disp_sitemap .content_sitemap .title_widgets::after,
 
-         .posts_mini_layout #mini-blog .msg_nothing,
+			.posts_mini_layout #mini-blog .msg_nothing,
 
-         .disp_front #main-content .widget_core_coll_featured_intro .jumbotron,
-         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+			.disp_front #main-content .widget_core_coll_featured_intro .jumbotron,
+			.disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
+			#main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
 
-         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box.title.title_overlay .note,
-         .disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .title_overlay .note,
+			.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index li figure.box.title.title_overlay .note,
+			.disp_mediaidx #main-mediaidx .widget_core_coll_media_index .evo_image_index .title_overlay .note,
 
-         .disp_posts .evo_featured_post,
-         .posts_mini_layout #mini-blog .evo_featured_post .post_tags a:hover,
-         .posts_mini_layout #mini-blog .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover,
+			.disp_posts .evo_featured_post,
+			.posts_mini_layout #mini-blog .evo_featured_post .post_tags a:hover,
+			.posts_mini_layout #mini-blog .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover,
 
 			.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover, .evo_form__thread .control-buttons .btn-primary,
 
 			.skin-form .panel-heading, .evo_panel__login .btn.btn-success, .evo_panel__lostpass .btn.btn-success, .evo_panel__register .btn.btn-success, .evo_panel__activation .btn.btn-success,
 			.evo_form .submit, .detail_threads .results .panel-heading, .detail_messages .evo_private_messages_list .panel .panel-heading, .detail_messages .evo_private_messages_list .panel .SaveButton.btn-primary, .detail_contacts .results .panel-heading, .detail_contacts .form_send_contacts .btn-default:hover, .detail_contacts .form_send_contacts .btn-default:active, .detail_contacts .form_send_contacts .btn-default:focus, .detail_contacts .form_add_contacts .SaveButton
-         { background-color: '.$color.'; }
+			{ background-color: '.$color.'; }
 
-         .pagination .active span, .pagination .active span:hover,
-         .pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
-         .posts_mini_layout #mini-blog .pagination li a, .posts_mini_layout #mini-blog .pagination li span,
-         #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+			.pagination .active span, .pagination .active span:hover,
+			.pagination li a:hover, .pagination li span:hover, .pagination li a:focus, .pagination li span:focus,
+			.posts_mini_layout #mini-blog .pagination li a, .posts_mini_layout #mini-blog .pagination li span,
+			#main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, #main-content .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus, #mini-blog .evo_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         #main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
-         #main-sidebar .widget_core_coll_search_form .compact_search_form .search_field,
-         #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
+			#main-sidebar .widget_core_coll_search_form .compact_search_form .search_submit,
+			#main-sidebar .widget_core_coll_search_form .compact_search_form .search_field,
+			#main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:hover, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:active, #main-sidebar .widget_core_coll_tag_cloud .tag_cloud a:focus,
 
-         #main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
-         .widget_core_coll_search_form .compact_search_form .search_submit,
-         #main-sidebar input[type="email"]:focus, #main-sidebar input[type="number"]:focus, #main-sidebar input[type="password"]:focus, #main-sidebar input[type="tel"]:focus, #main-sidebar input[type="url"]:focus, #main-sidebar input[type="text"]:focus,
+			#main-footer .widget_footer .widget_plugin_evo_Calr .bCalendarTable #bCalendarToday,
+			.widget_core_coll_search_form .compact_search_form .search_submit,
+			#main-sidebar input[type="email"]:focus, #main-sidebar input[type="number"]:focus, #main-sidebar input[type="password"]:focus, #main-sidebar input[type="tel"]:focus, #main-sidebar input[type="url"]:focus, #main-sidebar input[type="text"]:focus,
 
-         .disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
+			.disp_tags #main-content .tag_cloud a:hover, .disp_tags #main-content .tag_cloud a:active, .disp_tags #main-content .tag_cloud a:focus,
 
-         .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
+			.disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:hover, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:active, .disp_posts .evo_featured_post .evo_post__excerpt_text .evo_post__excerpt_more_link a:focus,
 
-         #main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
+			#main-content .post_tags a:hover, #mini-blog .post_tags a:hover, #main-content .post_tags a:active, #mini-blog .post_tags a:active, #main-content .post_tags a:focus, #mini-blog .post_tags a:focus,
 
 			.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover,
 			.skin-form, .evo_panel__login .form_text_input, .evo_panel__lostpass .form_text_input, .evo_panel__register .form_text_input, .evo_panel__activation .form_text_input, .evo_panel__login .btn.btn-success, .evo_panel__lostpass .btn.btn-success, .evo_panel__register .btn.btn-success, .evo_panel__activation .btn.btn-success,
@@ -929,173 +937,173 @@ class business_Skin extends Skin
 			.evo_form .submit,
 			.evo_form__thread .form-control:hover, .evo_form__thread .token-input-list-facebook:hover, .evo_form__thread .form-control:focus, .evo_form__thread .token-input-list-facebook:focus, .evo_form__thread .form-control:active, .evo_form__thread .token-input-list-facebook:active, .detail_threads .results,
 			.detail_threads .results .form_text_input:hover, .detail_threads .results .form_text_input:active, .detail_threads .results .form_text_input:focus, .detail_messages .evo_private_messages_list .panel, .detail_messages .evo_private_messages_list .panel .SaveButton.btn-primary, .detail_messages .evo_private_messages_list .results .form_text_input:focus, .detail_messages .evo_private_messages_list .results .form_text_input:hover, .detail_messages .evo_private_messages_list .results .form_text_input:active, .detail_contacts .results, .detail_contacts .results .form_text_input:hover, .detail_contacts .results .form_text_input:active, .detail_contacts .results .form_text_input:focus, .detail_contacts .form_send_contacts .btn-default, .detail_contacts .form_add_contacts .input-sm, .detail_contacts .form_add_contacts .SaveButton
-         { border-color: '.$color.'; }
+			{ border-color: '.$color.'; }
 
-         .page_title,
-         .disp_sitemap .content_sitemap .title_widgets
-         { border-bottom-color: '.$color.'; }
-         ';
+			.page_title,
+			.disp_sitemap .content_sitemap .title_widgets
+			{ border-bottom-color: '.$color.'; }
+			';
 
-         // Disp Single
-         $custom_css .= '
-         .disp_single #main-content .pager .previous a:hover, .disp_page #main-content .pager .previous a:hover, .disp_single #main-content .pager .next a:hover, .disp_page #main-content .pager .next a:hover, .disp_single #main-content .pager .previous a:active, .disp_page #main-content .pager .previous a:active, .disp_single #main-content .pager .next a:active, .disp_page #main-content .pager .next a:active, .disp_single #main-content .pager .previous a:focus, .disp_page #main-content .pager .previous a:focus, .disp_single #main-content .pager .next a:focus, .disp_page #main-content .pager .next a:focus,
-         .disp_single #main-content .evo_post .single_tags a:hover, .disp_page #main-content .evo_post .single_tags a:hover, .disp_single #main-content .evo_post .single_tags a:active, .disp_page #main-content .evo_post .single_tags a:active, .disp_single #main-content .evo_post .single_tags a:focus, .disp_page #main-content .evo_post .single_tags a:focus,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a,
-         .disp_single #main-content .evo_post .evo_post_comment_notification a:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a:active, .disp_page #main-content .evo_post .evo_post_comment_notification a:active, .disp_single #main-content .evo_post .evo_post_comment_notification a:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a:focus,
+			// Disp Single
+			$custom_css .= '
+			.disp_single #main-content .pager .previous a:hover, .disp_page #main-content .pager .previous a:hover, .disp_single #main-content .pager .next a:hover, .disp_page #main-content .pager .next a:hover, .disp_single #main-content .pager .previous a:active, .disp_page #main-content .pager .previous a:active, .disp_single #main-content .pager .next a:active, .disp_page #main-content .pager .next a:active, .disp_single #main-content .pager .previous a:focus, .disp_page #main-content .pager .previous a:focus, .disp_single #main-content .pager .next a:focus, .disp_page #main-content .pager .next a:focus,
+			.disp_single #main-content .evo_post .single_tags a:hover, .disp_page #main-content .evo_post .single_tags a:hover, .disp_single #main-content .evo_post .single_tags a:active, .disp_page #main-content .evo_post .single_tags a:active, .disp_single #main-content .evo_post .single_tags a:focus, .disp_page #main-content .evo_post .single_tags a:focus,
+			.disp_single #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post #feedbacks .evo_comment .panel-heading .evo_comment_title a,
+			.disp_single #main-content .evo_post .evo_post_comment_notification a:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a:active, .disp_page #main-content .evo_post .evo_post_comment_notification a:active, .disp_single #main-content .evo_post .evo_post_comment_notification a:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a:focus,
 			.disp_single #main-content .evo_post .evo_comment .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post .evo_comment .panel-heading .evo_comment_title a, .disp_single #main-content .evo_post .evo_comment__preview .panel-heading .evo_comment_title a, .disp_page #main-content .evo_post .evo_comment__preview .panel-heading .evo_comment_title a
-         { color: '.$color.'; }
+			{ color: '.$color.'; }
 
-         .disp_single #main-content .evo_post .evo_image_block a::before, .disp_page #main-content .evo_post .evo_image_block a::before, .disp_single #main-content .evo_post .evo_post_gallery__image a::before, .disp_page #main-content .evo_post .evo_post_gallery__image a::before,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
-         .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
-         .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right,
-         .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus, .profile_content .panel .panel-heading,
+			.disp_single #main-content .evo_post .evo_image_block a::before, .disp_page #main-content .evo_post .evo_image_block a::before, .disp_single #main-content .evo_post .evo_post_gallery__image a::before, .disp_page #main-content .evo_post .evo_post_gallery__image a::before,
+			.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
+			.disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
+			.disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
+			.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer .permalink_right,
+			.disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus, .profile_content .panel .panel-heading,
 
 			.disp_profile .main_content .profile_tabs li.active a, .disp_avatar .main_content .profile_tabs li.active a, .disp_pwdchange .main_content .profile_tabs li.active a, .disp_userprefs .main_content .profile_tabs li.active a, .disp_subs .main_content .profile_tabs li.active a,
 			.disp_profile .main_content .profile_tabs li a:hover, .disp_avatar .main_content .profile_tabs li a:hover, .disp_pwdchange .main_content .profile_tabs li a:hover, .disp_userprefs .main_content .profile_tabs li a:hover, .disp_subs .main_content .profile_tabs li a:hover, .disp_profile .main_content .profile_tabs li a:active, .disp_avatar .main_content .profile_tabs li a:active, .disp_pwdchange .main_content .profile_tabs li a:active, .disp_userprefs .main_content .profile_tabs li a:active, .disp_subs .main_content .profile_tabs li a:active, .disp_profile .main_content .profile_tabs li a:focus, .disp_avatar .main_content .profile_tabs li a:focus, .disp_pwdchange .main_content .profile_tabs li a:focus, .disp_userprefs .main_content .profile_tabs li a:focus, .disp_subs .main_content .profile_tabs li a:focus,
 			.disp_profile .main_content .panel-heading, .disp_avatar .main_content .panel-heading, .disp_pwdchange .main_content .panel-heading, .disp_userprefs .main_content .panel-heading, .disp_subs .main_content .panel-heading, .disp_profile .main_content .btn-primary, .disp_avatar .main_content .btn-primary, .disp_pwdchange .main_content .btn-primary, .disp_userprefs .main_content .btn-primary, .disp_subs .main_content .btn-primary, .disp_profile .main_content #ffield_edited_user_email .help-inline .btn, .disp_avatar .main_content #ffield_edited_user_email .help-inline .btn, .disp_pwdchange .main_content #ffield_edited_user_email .help-inline .btn, .disp_userprefs .main_content #ffield_edited_user_email .help-inline .btn, .disp_subs .main_content #ffield_edited_user_email .help-inline .btn
-         { background-color: '.$color.'; }
+			{ background-color: '.$color.'; }
 
-         .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
-         .disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
-         .disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
-         .disp_single #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_page #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_single #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_page #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_single #main-content .evo_post .evo_form .form_textarea_input:active, .disp_page #main-content .evo_post .evo_form .form_textarea_input:active,
-         .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus,
+			.disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:hover, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:focus, .disp_single #main-content .evo_post #feedbacks .evo_comment__meta_info a:active, .disp_page #main-content .evo_post #feedbacks .evo_comment__meta_info a:active,
+			.disp_single #main-content .evo_post .evo_form .submit, .disp_page #main-content .evo_post .evo_form .submit,
+			.disp_single #main-content .evo_post .evo_form .submit:hover, .disp_page #main-content .evo_post .evo_form .submit:hover, .disp_single #main-content .evo_post .evo_form .submit:focus, .disp_page #main-content .evo_post .evo_form .submit:focus, .disp_single #main-content .evo_post .evo_form .submit:active, .disp_page #main-content .evo_post .evo_form .submit:active,
+			.disp_single #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_page #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_single #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_page #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_single #main-content .evo_post .evo_form .form_textarea_input:active, .disp_page #main-content .evo_post .evo_form .form_textarea_input:active,
+			.disp_single #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:hover, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:active, .disp_single #main-content .evo_post .evo_post_comment_notification a.btn:focus, .disp_page #main-content .evo_post .evo_post_comment_notification a.btn:focus,
 
 			.disp_single #main-content .evo_post .evo_form .form_text_input:hover, .disp_page #main-content .evo_post .evo_form .form_text_input:hover, .disp_single #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_page #main-content .evo_post .evo_form .form_textarea_input:hover, .disp_single #main-content .evo_post .evo_form .form_text_input:focus, .disp_page #main-content .evo_post .evo_form .form_text_input:focus, .disp_single #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_page #main-content .evo_post .evo_form .form_textarea_input:focus, .disp_single #main-content .evo_post .evo_form .form_text_input:active, .disp_page #main-content .evo_post .evo_form .form_text_input:active, .disp_single #main-content .evo_post .evo_form .form_textarea_input:active, .disp_page #main-content .evo_post .evo_form .form_textarea_input:active, .profile_content .panel,
 
 			.disp_profile .main_content .profile_tabs li.active a, .disp_avatar .main_content .profile_tabs li.active a, .disp_pwdchange .main_content .profile_tabs li.active a, .disp_userprefs .main_content .profile_tabs li.active a, .disp_subs .main_content .profile_tabs li.active a,
 			.disp_profile .main_content .profile_tabs li a:hover, .disp_avatar .main_content .profile_tabs li a:hover, .disp_pwdchange .main_content .profile_tabs li a:hover, .disp_userprefs .main_content .profile_tabs li a:hover, .disp_subs .main_content .profile_tabs li a:hover, .disp_profile .main_content .profile_tabs li a:active, .disp_avatar .main_content .profile_tabs li a:active, .disp_pwdchange .main_content .profile_tabs li a:active, .disp_userprefs .main_content .profile_tabs li a:active, .disp_subs .main_content .profile_tabs li a:active, .disp_profile .main_content .profile_tabs li a:focus, .disp_avatar .main_content .profile_tabs li a:focus, .disp_pwdchange .main_content .profile_tabs li a:focus, .disp_userprefs .main_content .profile_tabs li a:focus, .disp_subs .main_content .profile_tabs li a:focus,
 			.disp_profile .main_content .panel, .disp_avatar .main_content .panel, .disp_pwdchange .main_content .panel, .disp_userprefs .main_content .panel, .disp_subs .main_content .panel, .disp_profile .main_content .btn-primary, .disp_avatar .main_content .btn-primary, .disp_pwdchange .main_content .btn-primary, .disp_userprefs .main_content .btn-primary, .disp_subs .main_content .btn-primary, .disp_profile .main_content #ffield_edited_user_email .help-inline .btn, .disp_avatar .main_content #ffield_edited_user_email .help-inline .btn, .disp_pwdchange .main_content #ffield_edited_user_email .help-inline .btn, .disp_userprefs .main_content #ffield_edited_user_email .help-inline .btn, .disp_subs .main_content #ffield_edited_user_email .help-inline .btn
-         { border-color: '.$color.'; }
+			{ border-color: '.$color.'; }
 
-         .disp_single #main-content .evo_post > header .cat-links a, .disp_page #main-content .evo_post > header .cat-links a,
-         .disp_single #main-content .evo_post .single_tags a, .disp_page #main-content .evo_post .single_tags a,
+			.disp_single #main-content .evo_post > header .cat-links a, .disp_page #main-content .evo_post > header .cat-links a,
+			.disp_single #main-content .evo_post .single_tags a, .disp_page #main-content .evo_post .single_tags a,
 
-         .disp_mediaidx #main-mediaidx .title_mediaidx,
+			.disp_mediaidx #main-mediaidx .title_mediaidx,
 			.disp_profile .main_content .profile_tabs, .disp_avatar .main_content .profile_tabs, .disp_pwdchange .main_content .profile_tabs, .disp_userprefs .main_content .profile_tabs, .disp_subs .main_content .profile_tabs
-         { border-bottom-color: '.$color.'; }
+			{ border-bottom-color: '.$color.'; }
 
-         #main-content .evo_post .evo_post__full_text blockquote, .disp_page #main-content .evo_post .evo_post__full_text blockquote, blockquote
-         { border-left-color: '.$color.'; }
-         ';
+			#main-content .evo_post .evo_post__full_text blockquote, .disp_page #main-content .evo_post .evo_post__full_text blockquote, blockquote
+			{ border-left-color: '.$color.'; }
+			';
 
-         // Disp Search
-         $custom_css .= '
-         .disp_search .search_result .search_content_wrap .search_title a:hover, .disp_search .search_result .search_content_wrap .search_title a:active, .disp_search .search_result .search_content_wrap .search_title a:focus,
-         .disp_search .search_result .search_content_wrap .search_info a:hover, .disp_search .search_result .search_content_wrap .search_info a:active, .disp_search .search_result .search_content_wrap .search_info a:focus
-         { color: '.$color.'; }
+			// Disp Search
+			$custom_css .= '
+			.disp_search .search_result .search_content_wrap .search_title a:hover, .disp_search .search_result .search_content_wrap .search_title a:active, .disp_search .search_result .search_content_wrap .search_title a:focus,
+			.disp_search .search_result .search_content_wrap .search_info a:hover, .disp_search .search_result .search_content_wrap .search_info a:active, .disp_search .search_result .search_content_wrap .search_info a:focus
+			{ color: '.$color.'; }
 
-         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
-         .disp_search .search_result .search_result_score.dimmed,
+			.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
+			.disp_search .search_result .search_result_score.dimmed,
 			.disp_search .widget_core_coll_search_form .compact_search_form .search_submit,
-         .disp_search .search_result .search_result_score.dimmed
-         { background-color: '.$color.'; }
+			.disp_search .search_result .search_result_score.dimmed
+			{ background-color: '.$color.'; }
 
-         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
-         .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active,
+			.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_submit,
+			.disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .search-box .widget_core_coll_search_form .compact_search_form .search_field:active,
 			.disp_search .widget_core_coll_search_form .compact_search_form .search_field, .disp_search .widget_core_coll_search_form .compact_search_form .search_submit,
-         .disp_search .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .widget_core_coll_search_form .compact_search_form .search_field:active
-         { border-color: '.$color.'; }
+			.disp_search .widget_core_coll_search_form .compact_search_form .search_field:focus, .disp_search .widget_core_coll_search_form .compact_search_form .search_field:active
+			{ border-color: '.$color.'; }
 
-         .disp_search .search_result .search_content_wrap .search_info a
-         { border-bottom-color: '.$color.'; }
-         ';
+			.disp_search .search_result .search_content_wrap .search_info a
+			{ border-bottom-color: '.$color.'; }
+			';
 
-         // Disp Front
-         $custom_css .= '
-         .disp_front .evo_container__front_page_primary .evo_widget a:hover, .disp_front .evo_container__front_page_primary .evo_widget a:active, .disp_front .evo_container__front_page_primary .evo_widget a:focus,
-         .disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable td a
-         { color: '.$color.'; }
+			// Disp Front
+			$custom_css .= '
+			.disp_front .evo_container__front_page_primary .evo_widget a:hover, .disp_front .evo_container__front_page_primary .evo_widget a:active, .disp_front .evo_container__front_page_primary .evo_widget a:focus,
+			.disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable td a
+			{ color: '.$color.'; }
 
-         .disp_front .evo_container__front_page_primary .evo_widget h3::before,
-         .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
-         .disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday
-         { background-color: '.$color.'; }
+			.disp_front .evo_container__front_page_primary .evo_widget h3::before,
+			.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
+			.disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday
+			{ background-color: '.$color.'; }
 
-         .evo_container__front_page_primary .widget_core_coll_search_form .compact_search_form .search_field,
-         .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
-         .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_login .input_text:focus, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_register .input_text:focus
-         { border-color: '.$color.'; }
-         ';
+			.evo_container__front_page_primary .widget_core_coll_search_form .compact_search_form .search_field,
+			.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
+			.disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_login .input_text:focus, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_register .input_text:focus
+			{ border-color: '.$color.'; }
+			';
 
-         // Disp Comments
-         $custom_css .= '
-         .disp_comments .page_title
-         { border-bottom-color: '.$color.'; }
+			// Disp Comments
+			$custom_css .= '
+			.disp_comments .page_title
+			{ border-bottom-color: '.$color.'; }
 
-         .disp_comments .evo_comment .panel-heading .evo_comment_title a, .disp_comments .evo_comment .panel-heading .panel-title a,
-         .disp_comments .evo_comment a
-         { color: '.$color.'; }
+			.disp_comments .evo_comment .panel-heading .evo_comment_title a, .disp_comments .evo_comment .panel-heading .panel-title a,
+			.disp_comments .evo_comment a
+			{ color: '.$color.'; }
 
-         .disp_comments .evo_comment .evo_comment_info a:hover
-         { background-color: '.$color.'; }
-         ';
+			.disp_comments .evo_comment .evo_comment_info a:hover
+			{ background-color: '.$color.'; }
+			';
 
-      }
+		}
 
-      /**
-       * ============================================================================
-       * Color Content
-       * ============================================================================
-       */
-      if ( $color = $this->get_setting( 'color_content' ) ) {
-         $custom_css .= '
-         #main-content .evo_post_title h1 a, #mini-blog .evo_post_title h1 a, #main-content .evo_post_title h2 a, #mini-blog .evo_post_title h2 a, #main-content .evo_post_title h3 a, #mini-blog .evo_post_title h3 a,
-         #main-content .evo_post_title h3 a,
-         .evo_post__full_text, .evo_post__full_text a, .evo_post__excerpt_text, .evo_post__excerpt_text a,
-         .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment,
-         #main-content .post_tags h3, #mini-blog .post_tags h3, .evo_comment_text, .disp_posts .evo_intro_post a,
-         .disp_comments .evo_comment .evo_comment_text,
-         .disp_catdir #main-content .widget_core_coll_category_list a,
-         .disp_front .evo_container__front_page_primary .evo_widget a,
-         .disp_arcdir #main-content .widget_plugin_achive a,
+		/**
+		* ============================================================================
+		* Color Content
+		* ============================================================================
+		*/
+		if ( $color = $this->get_setting( 'color_content' ) ) {
+			$custom_css .= '
+			#main-content .evo_post_title h1 a, #mini-blog .evo_post_title h1 a, #main-content .evo_post_title h2 a, #mini-blog .evo_post_title h2 a, #main-content .evo_post_title h3 a, #mini-blog .evo_post_title h3 a,
+			#main-content .evo_post_title h3 a,
+			.evo_post__full_text, .evo_post__full_text a, .evo_post__excerpt_text, .evo_post__excerpt_text a,
+			.disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_text, .disp_page #main-content .evo_post #feedbacks .evo_comment,
+			#main-content .post_tags h3, #mini-blog .post_tags h3, .evo_comment_text, .disp_posts .evo_intro_post a,
+			.disp_comments .evo_comment .evo_comment_text,
+			.disp_catdir #main-content .widget_core_coll_category_list a,
+			.disp_front .evo_container__front_page_primary .evo_widget a,
+			.disp_arcdir #main-content .widget_plugin_achive a,
 
-         .evo_post__excerpt_text .evo_post__excerpt_more_link a,
-         .disp_comments .evo_comment .panel-heading .evo_comment_title, .disp_comments .evo_comment .panel-heading .panel-title,
-         .disp_postidx #main-content .widget_core_coll_post_list a,
-         .disp_sitemap .content_sitemap .evo_widget a,
+			.evo_post__excerpt_text .evo_post__excerpt_more_link a,
+			.disp_comments .evo_comment .panel-heading .evo_comment_title, .disp_comments .evo_comment .panel-heading .panel-title,
+			.disp_postidx #main-content .widget_core_coll_post_list a,
+			.disp_sitemap .content_sitemap .evo_widget a,
 
-         #main-content .evo_post .evo_post__full_text blockquote, #mini-blog .evo_post .evo_post__full_text blockquote,
-         #main-content .evo_post .evo_post__full_text pre, #mini-blog .evo_post .evo_post__full_text pre,
-         .disp_single #main-content .evo_post .panel .panel-heading .panel-title, .disp_page #main-content .evo_post .panel .panel-heading .panel-title,
-         .evo_comment_text pre, blockquote, .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small,
+			#main-content .evo_post .evo_post__full_text blockquote, #mini-blog .evo_post .evo_post__full_text blockquote,
+			#main-content .evo_post .evo_post__full_text pre, #mini-blog .evo_post .evo_post__full_text pre,
+			.disp_single #main-content .evo_post .panel .panel-heading .panel-title, .disp_page #main-content .evo_post .panel .panel-heading .panel-title,
+			.evo_comment_text pre, blockquote, .disp_single #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small, .disp_page #main-content .evo_post #feedbacks .evo_comment .evo_comment_footer small,
 
-         .disp_single #main-content .pager .previous a, .disp_page #main-content .pager .previous a, .disp_single #main-content .pager .next a, .disp_page #main-content .pager .next a, .btn-default,
+			.disp_single #main-content .pager .previous a, .disp_page #main-content .pager .previous a, .disp_single #main-content .pager .next a, .disp_page #main-content .pager .next a, .btn-default,
 
-         .disp_search .search_result .search_content_wrap .search_title,
-         .disp_search .search_result .search_content_wrap .search_title a,
-         .disp_search .search_result .search_content_wrap .search_info a
-         { color: '. $color .' }';
-         $custom_css .= 'body, main{ color: '.$color.' !important }';
-      }
+			.disp_search .search_result .search_content_wrap .search_title,
+			.disp_search .search_result .search_content_wrap .search_title a,
+			.disp_search .search_result .search_content_wrap .search_info a
+			{ color: '. $color .' }';
+			$custom_css .= 'body, main{ color: '.$color.' !important }';
+		}
 
-      /**
-       * ============================================================================
-       * Typograpy
-       * ============================================================================
-       */
-      $font_size = $this->get_setting( 'typograpy_fz' );
-      switch( $font_size ) {
-           case 'normal': // When regular layout is chosen, nothing happens, since regular is default
-           $custom_css .= 'html, body
-           { font-size: 11.42855px; }
+		/**
+		* ============================================================================
+		* Typograpy
+		* ============================================================================
+		*/
+		$font_size = $this->get_setting( 'typograpy_fz' );
+		switch( $font_size ) {
+			case 'normal': // When regular layout is chosen, nothing happens, since regular is default
+			$custom_css .= 'html, body
+			{ font-size: 11.42855px; }
 
-           @media screen and (max-width: 480px) {
-             html, body { font-size: 10.5px; }
-           }';
-           break;
+			@media screen and (max-width: 480px) {
+				html, body { font-size: 10.5px; }
+			}';
+			break;
 
-           case 'large':
-            $custom_css .= 'html, body
-            { font-size: 12.85715px; }
+			case 'large':
+			$custom_css .= 'html, body
+			{ font-size: 12.85715px; }
 
-            @media screen and (max-width: 480px) {
-              html, body { font-size: 11px; }
-            }';
-           break;
-       }
+			@media screen and (max-width: 480px) {
+				html, body { font-size: 11px; }
+			}';
+			break;
+		}
 
       /**
        * ============================================================================
@@ -1204,7 +1212,8 @@ class business_Skin extends Skin
       if ( $color = $this->get_setting( 'sidebar_title_widget' ) ) {
          $custom_css .= '
          #main-sidebar .panel-heading .panel-title,
-         .disp_front .evo_container__front_page_primary .evo_widget h3
+         .disp_front .evo_container__front_page_primary .evo_widget h3,
+		 .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list.evo_withexcerpt .item_title, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_related_post_list.evo_withexcerpt .item_title, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list.evo_withexcerpt .item_title
          { color: '.$color.'; }
          ';
       }
@@ -1820,26 +1829,35 @@ class business_Skin extends Skin
 
    }
 
-   /**
-    * ============================================================================
-    * Check if post have a Images and Attachment for Mini Blog Layout
-    * ============================================================================
-    */
-   function have_posts_image() {
-      global $Item;
+	/**
+	* ============================================================================
+	* Check if post have a Images and Attachment for Mini Blog Layout
+	* ============================================================================
+	*/
+	function have_posts_image() {
+		global $Item;
 
-      $have_image = '';
+		$have_image = '';
 
-      $item_first_image = $Item->get_images( array(
-         'restrict_to_image_position' => 'teaser,aftermore,inline',
-         'get_rendered_attachments'   => false,
-      ) );
+		$item_first_image = $Item->get_images( array(
+			'restrict_to_image_position' => 'teaser,aftermore,inline',
+			'get_rendered_attachments'   => false,
+		) );
 
-      if ( ! empty( $item_first_image ) ) {
-         $have_image = 'have_image';
-      }
+		if ( ! empty( $item_first_image ) ) {
+			$have_image = 'have_image';
+		}
 
-      return $have_image;
-   }
+		return $have_image;
+	}
+
+	/* CHANGE CLASS
+	 * ========================================================================== */
+	function change_class( $id ) {
+		$id = $this->get_setting( $id );
+		if( $id == $id ) {
+			return $id;
+		}
+	}
 
 }

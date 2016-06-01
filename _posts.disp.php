@@ -46,6 +46,9 @@ mainlist_page_links( array(
 endif;
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
 
+if( $Skin->get_setting( 'layout_posts' ) == 'masonry'  ) {
+    echo '<div class="post_masonry">';
+}
 // --------------------------------- START OF POSTS -------------------------------------
 // Display message if no post:
 display_if_empty();
@@ -53,11 +56,14 @@ while( mainlist_get_item() )
 { // For each blog post, do everything below up to the closing curly brace "}"
 	// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
 	skin_include( '_item_block.inc.php', array(
-			'content_mode' => 'auto', // 'auto' will auto select depending on $disp-detail
-		) );
+		'content_mode' => 'auto', // 'auto' will auto select depending on $disp-detail
+	) );
 	// ----------------------------END ITEM BLOCK  ----------------------------
 } // ---------------------------------- END OF POSTS ------------------------------------
 
+if( $Skin->get_setting( 'layout_posts' ) == 'masonry'  ) {
+    echo '</div>';
+}
 
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
 if ( $Skin->get_setting( 'pagination_bottom_show' ) == 1 ) :
