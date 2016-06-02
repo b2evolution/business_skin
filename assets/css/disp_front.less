@@ -234,10 +234,28 @@
 
         // LIST WIDGET
         // ======================================================================== /
-        .widget_core_coll_post_list,
-        .widget_core_coll_related_post_list,
-        .widget_core_coll_item_list,
-        .widget_core_coll_page_list {
+        div.widget_core_coll_post_list,
+        div.widget_core_coll_page_list,
+        div.widget_core_coll_related_post_list,
+        div.widget_core_coll_item_list,
+        div.widget_core_coll_featured_posts {
+
+            li {
+                &:after {
+                    content: '';
+                    clear: both;
+                    display: table;
+                }
+            }
+
+            &.evo_noexcerpt,
+            &.evo_noteaser {
+                div.item_title {
+                    a {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
 
             // WITHEXCERPT & WITHTEASER
             // ======================================================================== /
@@ -249,9 +267,13 @@
                     }
                 }
 
+                .item_first_image_placeholder {
+                    margin-bottom: 0;
+                }
+
                 .item_title {
                     font-family: @font_title;
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     margin-bottom: 5px;
 
                     a {
@@ -289,6 +311,12 @@
             // ======================================================================== /
             &.evo_withteaser {
 
+                .item_first_image {
+                    a {
+                        padding-bottom: 0;
+                    }
+                }
+
                 .item_title {
 
                     a {
@@ -303,11 +331,23 @@
             .item_first_image_placeholder {
                 float: left;
                 margin-right: 15px;
-                margin-top: 8px;
+                margin-top: 5px;
+
+                a {
+                    &:after {
+                        content: '';
+                    }
+                }
             }
 
             .item_images {
                 margin-top: 8px;
+            }
+
+            .item_first_image {
+                a {
+                    padding-top: 0;
+                }
             }
 
             .item_first_image_placeholder {
@@ -316,16 +356,25 @@
                 height: 80px;
                 width: 80px;
                 background: #f0f0f0;
-                border-radius: 3px;
+                border-radius: 0;
+                margin-bottom: 10px;
 
                 &:before {
                     font-family: FontAwesome;
                     display: block;
                     content: '\f0f6';
                     color: #dcdcdc;
-                    font-size: 40px;
-                    margin-top: 12px;
-                    margin-left: 23px;
+                    font-size: 32px;
+                    margin-top: 16px;
+                    margin-left: 26px;
+                }
+            }
+
+            .item_title {
+                font-family: @font_title;
+
+                a {
+                    font-size: 1.6rem;
                 }
             }
 
@@ -372,6 +421,7 @@
                         text-align: center;
                         height: 100%;
                     }
+
                 }
 
             }
@@ -379,4 +429,48 @@
         }
 
     }
+
+    // ITEM FIRST IMAGE PLACEHOLDER
+    // ======================================================================== /
+    .main_content.col-md-12 {
+        .widget_core_coll_post_list,
+        .widget_core_coll_page_list,
+        .widget_core_coll_related_post_list,
+        .widget_core_coll_item_list,
+        .widget_core_coll_featured_posts {
+
+            .widget_rwd_blocks {
+                .col-lg-3 {
+                    .item_first_image_placeholder {
+                        min-height: 175px;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .main_content.col-md-8 {
+        .widget_core_coll_post_list,
+        .widget_core_coll_page_list,
+        .widget_core_coll_related_post_list,
+        .widget_core_coll_item_list,
+        .widget_core_coll_featured_posts {
+
+            .widget_rwd_blocks {
+                .col-lg-3 {
+                    .item_first_image_placeholder {
+                        min-height: 110px;
+
+                        &:before {
+                            top: 28%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
 }

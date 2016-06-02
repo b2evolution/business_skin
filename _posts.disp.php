@@ -31,19 +31,19 @@ if ( $pagination_align == 'left') {
 }
 
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
-if ( $Skin->get_setting( 'pagination_top_show' ) == 1 ) :
-mainlist_page_links( array(
-	'block_start'              => '<div class="'. $align .'"><ul class="pagination">',
-	'block_end'                => '</ul></div>',
-	'page_item_before'         => '<li>',
-	'page_item_after'          => '</li>',
-	'page_item_current_before' => '<li class="active">',
-	'page_item_current_after'  => '</li>',
-	'page_current_template'    => '<span>$page_num$</span>',
-	'prev_text'                => '<i class="fa fa-angle-left"></i>',
-	'next_text'                => '<i class="fa fa-angle-right"></i>',
-) );
-endif;
+// if ( $Skin->get_setting( 'pagination_top_show' ) == 1 ) :
+//     mainlist_page_links( array(
+//     	'block_start'              => '<div class="'. $align .' top_pagin"><ul class="pagination">',
+//     	'block_end'                => '</ul></div>',
+//     	'page_item_before'         => '<li>',
+//     	'page_item_after'          => '</li>',
+//     	'page_item_current_before' => '<li class="active">',
+//     	'page_item_current_after'  => '</li>',
+//     	'page_current_template'    => '<span>$page_num$</span>',
+//     	'prev_text'                => '<i class="fa fa-angle-left"></i>',
+//     	'next_text'                => '<i class="fa fa-angle-right"></i>',
+//     ) );
+// endif;
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
 
 if( $Skin->get_setting( 'layout_posts' ) == 'masonry'  ) {
@@ -67,16 +67,16 @@ if( $Skin->get_setting( 'layout_posts' ) == 'masonry'  ) {
 
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
 if ( $Skin->get_setting( 'pagination_bottom_show' ) == 1 ) :
-mainlist_page_links( array(
-	'block_start'              => '<div class="'. $align .'"><ul class="pagination">',
-	'block_end'                => '</ul></div>',
-	'page_current_template'    => '<span>$page_num$</span>',
-	'page_item_before'         => '<li>',
-	'page_item_after'          => '</li>',
-	'page_item_current_before' => '<li class="active">',
-	'page_item_current_after'  => '</li>',
-	'prev_text'                => '<i class="fa fa-angle-left"></i>',
-	'next_text'                => '<i class="fa fa-angle-right"></i>',
-) );
+    mainlist_page_links( array(
+    	'block_start'              => '<div class="'. $align .' bottom_pagin"><ul class="pagination">',
+    	'block_end'                => '</ul></div>',
+    	'page_current_template'    => '<span>$page_num$</span>',
+    	'page_item_before'         => '<li>',
+    	'page_item_after'          => '</li>',
+    	'page_item_current_before' => '<li class="active">',
+    	'page_item_current_after'  => '</li>',
+    	'prev_text'                => '<i class="fa fa-angle-left"></i>',
+    	'next_text'                => '<i class="fa fa-angle-right"></i>',
+    ) );
 endif;
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------

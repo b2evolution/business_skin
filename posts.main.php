@@ -97,12 +97,16 @@ skin_include( '_body_header.inc.php' );
 					// Go Grab the featured post:
 					if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
 					{ // We have a featured/intro post to display:
+						$masonry = '';
+						if ( $Skin->get_setting( 'layout_posts' ) == 'masonry' ) {
+							$masonry = 'masonry_intro';
+						}
 						// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
 						skin_include( '_item_block.inc.php', array(
 							'feature_block' => true,
 							'content_mode'  => 'excerpt', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
 							'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-							'item_class'    => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post'),
+							'item_class'    => ($Item->is_intro() ? 'well evo_intro_post '.$masonry : 'well evo_featured_post '.$masonry ),
 						) );
 						// ----------------------------END ITEM BLOCK  ----------------------------
 					}
@@ -110,7 +114,7 @@ skin_include( '_body_header.inc.php' );
 				<?php
 					// --------------------------------- START OF POSTS -------------------------------------
 					// Display message if no post:
-					if ( $Skin->get_setting( 'layout_posts' ) !== 'masonry' ) {
+					if ( $Skin->get_setting( 'layout_posts' ) !== 'masonry' && $disp == 'posts' ) {
 						display_if_empty();
 						while( $Item = & mainlist_get_item() )
 						{	// For each blog post, do everything below up to the closing curly brace "}"
@@ -135,6 +139,7 @@ skin_include( '_body_header.inc.php' );
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
 						'author_link_text' => 'preferredname',
+						'image_size' 	   => 'original',
 						// Profile tabs to switch between user edit forms
 						'profile_tabs' => array(
 							'block_start'         => '<nav><ul class="nav nav-tabs profile_tabs">',

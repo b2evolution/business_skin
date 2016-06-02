@@ -353,12 +353,12 @@ class business_Skin extends Skin
 					'defaultvalue'  => '#333333',
 					'type'          => 'color',
 				),
-				'pagination_top_show' => array(
-					'label'        => T_('Show Pagination Top'),
-					'note'         => T_('Check to display Pagination top'),
-					'defaultvalue' => 0,
-					'type'         => 'checkbox',
-				),
+				// 'pagination_top_show' => array(
+				// 	'label'        => T_('Show Pagination Top'),
+				// 	'note'         => T_('Check to display Pagination top'),
+				// 	'defaultvalue' => 0,
+				// 	'type'         => 'checkbox',
+				// ),
 				'pagination_bottom_show' => array(
 					'label'        => T_('Show Pagination Bottom'),
 					'note'         => T_('Check to display Pagination Bottom'),

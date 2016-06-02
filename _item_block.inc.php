@@ -40,16 +40,16 @@ $params = array_merge( array(
 
 $column = '';
 $post_item = '';
-if( $Skin->get_setting( 'layout_posts' ) == 'masonry' && $disp == 'posts' ) {
-	$column = $Skin->change_class( 'posts_masonry_column' );
+if( $Skin->get_setting( 'layout_posts' ) == 'masonry' && $disp == 'posts' && !$Item->is_intro() ) {
+	$column = ' '.$Skin->change_class( 'posts_masonry_column' );
 	$post_item = 'post_items';
 }
 
-echo '<div class="evo_content_block  '.$post_item.' '.$column.'">'; // Beginning of post display
+echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of post display
 
 ?>
 
-<?php if ( $Skin->get_setting( 'layout_posts' ) == 'masonry' ) : ?>
+<?php if ( $Skin->get_setting( 'layout_posts' ) == 'masonry' && $disp == 'posts' ) : ?>
 	<div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
 		<?php
 		   if( $Item->status != 'published' )

@@ -124,28 +124,34 @@ and ( max-width: @M ) {
 // ======================================================================== /
 .one_column {
     max-width: 100%;
+    width: 100%;
 }
 
 .two_columns {
     max-width: 100% / 2;
+    width: 50%;
     float: left;
 
     @media screen and ( max-width: @MX ) {
         max-width: 100%;
+        width: 100%;
         float: none;
     }
 }
 
 .three_columns {
     max-width: 33.32%;
+    width: 100% / 3;
     float: left;
 
     @media screen and ( max-width: @M ) {
         max-width: 50%;
+        width: 50%;
     }
 
     @media screen and ( max-width: @MX ) {
         max-width: 100%;
+        width: 100%;
         float: none;
     }
 }
