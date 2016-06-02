@@ -128,6 +128,7 @@ skin_include( '_body_header.inc.php' );
 							skin_include( '_item_block.inc.php', array(
 								'content_mode'     => 'auto', // 'auto' will auto select depending on $disp-detail
 							) );
+
 						} // ---------------------------------- END OF POSTS ------------------------------------
 
 					}
@@ -135,7 +136,6 @@ skin_include( '_body_header.inc.php' );
 				 ?>
 
 				<?php
-
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
 						'author_link_text' => 'preferredname',

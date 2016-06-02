@@ -15,7 +15,6 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 global $Item, $Skin, $app_version;
 
-
 // Default params:
 $params = array_merge( array(
 	'feature_block'              => false,			// fp>yura: what is this for??

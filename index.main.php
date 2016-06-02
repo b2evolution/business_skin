@@ -93,9 +93,9 @@ skin_include( '_body_header.inc.php' );
 						'feature_block' => true,
 						'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
 						'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-						'item_class'    => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post'),
+						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post' ),
 					) );
-						// ----------------------------END ITEM BLOCK  ----------------------------
+					// ----------------------------END ITEM BLOCK  ----------------------------
 				}
 
 				// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
