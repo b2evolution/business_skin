@@ -3964,6 +3964,13 @@ div.extended_search_form .search_options .search_option {
 .disp_front .main_content.col-md-8 .widget_core_coll_featured_posts .widget_rwd_blocks .col-lg-3 .item_first_image_placeholder:before {
   top: 28%;
 }
+.disp_front .main_content.col-lg-offset-1 .widget_core_coll_post_list .widget_rwd_blocks .col-lg-3 .item_first_image_placeholder,
+.disp_front .main_content.col-lg-offset-1 .widget_core_coll_page_list .widget_rwd_blocks .col-lg-3 .item_first_image_placeholder,
+.disp_front .main_content.col-lg-offset-1 .widget_core_coll_related_post_list .widget_rwd_blocks .col-lg-3 .item_first_image_placeholder,
+.disp_front .main_content.col-lg-offset-1 .widget_core_coll_item_list .widget_rwd_blocks .col-lg-3 .item_first_image_placeholder,
+.disp_front .main_content.col-lg-offset-1 .widget_core_coll_featured_posts .widget_rwd_blocks .col-lg-3 .item_first_image_placeholder {
+  min-height: 142px;
+}
 .disp_comments .evo_comment {
   margin-bottom: 30px;
   border-color: #eeeeee;

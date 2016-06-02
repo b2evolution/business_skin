@@ -27,7 +27,7 @@ $params = array_merge( array(
 // Display container and contents:
 ?>
 <div class="evo_container evo_container__front_page_primary">
-   <?php
+<?php
    skin_container( NT_('Front Page Main Area'), array(
 	   // The following params will be used as defaults for widgets included in this container:
 	   'author_link_text'        => $params['author_link_text'],
@@ -47,5 +47,5 @@ $params = array_merge( array(
 	   'search_submit_after'     => '</span></div>',
    ) );
    // --------------------- END OF "Front Page Main Area" CONTAINER -----------------------
-   ?>
+?>
 </div>
