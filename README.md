@@ -70,5 +70,9 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ### Update Log:
 
+## v1.2.1-stable
+- New Masonry layout on Posts page
+- List layout fix for all list-type widgets
+
 ## v1.1.0-beta
 - New layout system for widgets. Users can now apply different layouts for various widgets, with a small use of Bootstrap's grid system.
