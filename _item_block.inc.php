@@ -73,6 +73,31 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
+	<?php
+		if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'masonry' )
+		{	// Display images that are linked to this post:
+			$Item->images( array(
+				'before_images'            => '<div class="evo_post_images">',
+				'before_image'             => '<div class="evo_post_images"><figure class="evo_image_block special_cover_image_masonry">',
+				'before_image_legend'      => '<figcaption class="evo_image_legend">',
+				'after_image_legend'       => '</figcaption>',
+				'after_image'              => '</figure></div>',
+				'after_images'             => '</div>',
+				'image_class'              => 'img-responsive',
+				'image_size'               => 'fit-1280x720',
+				'image_limit'              =>  1,
+				'image_link_to'            => 'original', // Can be 'original', 'single' or empty
+
+				// We DO NOT want to display galleries here, only one cover image
+				'gallery_image_limit'      => 0,
+				'gallery_colls'            => 0,
+
+				// We want ONLY cover image to display here
+				'restrict_to_image_position' => 'cover',
+			) );
+		}
+	?>
+	
 	<header>
 		<?php
 		$Item->locale_temp_switch(); // Temporarily switch to post locale (useful for multilingual blogs)
