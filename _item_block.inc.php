@@ -48,25 +48,6 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 
 ?>
 
-<?php if ( $Skin->get_setting( 'layout_posts' ) == 'masonry' && $disp == 'posts' ) : ?>
-	<div class="<?php echo $Item->is_intro() ? 'posts_date evo_intro_post': 'posts_date'; ?>" >
-		<?php
-		   if( $Item->status != 'published' )
-		   {
-		      $Item->format_status( array(
-		         'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
-		      ) );
-		   }
-		   // We want to display the post time:
-		   $Item->issue_time( array(
-		      'before'      => '',
-		      'after'       => '',
-		      'time_format' => 'F j, Y',
-		   ) );
-		?>
-	</div>
-<?php endif; ?>
-
 <?php if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'regular' || $Skin->get_setting( 'layout_posts' ) == 'masonry' ) : ?>
 	<div class="<?php echo $Item->is_intro() ? 'timeline evo_intro_post': 'timeline'; ?>"></div>
 <?php endif; ?>
