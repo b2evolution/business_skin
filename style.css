@@ -135,6 +135,25 @@ blockquote p {
   max-width: 25%;
   float: left;
 }
+@media screen and (max-width: 1170px) {
+  .four_columns {
+    max-width: 33.32%;
+    width: 33.33333333%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .four_columns {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .four_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
 div.widget_core_coll_item_list.evo_layout_rwd .widget_rwd_content,
 div.widget_core_coll_featured_posts.evo_layout_rwd .widget_rwd_content,
 div.widget_core_coll_post_list.evo_layout_rwd .widget_rwd_content,

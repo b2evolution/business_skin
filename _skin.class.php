@@ -326,6 +326,7 @@ class business_Skin extends Skin
 					'options'		=> array(
 						'two_columns'	=> T_( '2 Columns' ),
 						'three_columns'	=> T_( '3 Columns' ),
+						'four_columns'	=> T_( '4 Columns' ),
 					),
 					'defaultvalue'	=> 'three_column'
 				),

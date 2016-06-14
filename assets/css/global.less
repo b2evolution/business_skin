@@ -159,4 +159,20 @@ and ( max-width: @M ) {
 .four_columns {
     max-width: 25%;
     float: left;
+
+    @media screen and ( max-width: @L ) {
+		max-width: 33.32%;
+		width: 100% / 3;
+    }
+	
+    @media screen and ( max-width: @MM ) {
+        max-width: 50%;
+        width: 50%;
+    }
+
+    @media screen and ( max-width: @MX ) {
+        max-width: 100%;
+        width: 100%;
+        float: none;
+    }
 }
