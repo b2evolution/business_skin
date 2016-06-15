@@ -95,10 +95,10 @@ class business_Skin extends Skin
 		$r = array_merge( array(
 				'section_general_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('General Options (All disps)')
+					'label'  => T_('General Settings (All disps)')
 				),
 					'layout' => array(
-						'label'     => T_('Layout'),
+						'label'     => T_('Layout Settings'),
 						'note'      => '',
 						'type'      => 'select',
 						'options'   => array(
@@ -112,7 +112,7 @@ class business_Skin extends Skin
 						'defaultvalue' => 'right_sidebar',
 					),
 					'max_image_height' => array(
-						'label'        => T_( 'Max image height' ),
+						'label'        => T_( 'Max Image Height' ),
 						'note'         => 'px',
 						'defaultvalue' => '',
 						'type'         => 'integer',
@@ -131,43 +131,43 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'front_bg' => array(
-                  'label'         => T_('Background Front Disp'),
+                  'label'         => T_('Background color for front=disp'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
                'single_bg' => array(
-                  'label'         => T_('Background Single and Page Disp'),
+                  'label'         => T_('Background color for single=disp and Page=disp'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
                'comments_bg' => array(
-                  'label'         => T_('Background Comments Disp'),
+                  'label'         => T_('Background color for comments=disp'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'arcdir_bg' => array(
-                  'label'         => T_('Background Archive Disp'),
+                  'label'         => T_('Background color for archive=disp'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'catdir_bg' => array(
-                  'label'         => T_('Background Category Disp'),
+                  'label'         => T_('Background color for category=disp'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'postidx_bg' => array(
-                  'label'         => T_('Background Postidx Disp'),
+                  'label'         => T_('Background color for postidx=disp'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'tags_bg' => array(
-                  'label'         => T_('Background Tags Disp'),
+                  'label'         => T_('Background color for tags=disp'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
@@ -175,7 +175,7 @@ class business_Skin extends Skin
 
 					'favicon' => array(
 						'label'          => T_('Favicon'),
-						'note'           => T_('Change the default favicon'),
+						'note'           => T_('Change the Default Favicon'),
 						'defaultvalue'   => 'assets/img/favicon.png',
 						'type'           => 'text',
 						'size'           => '50'
@@ -187,19 +187,19 @@ class business_Skin extends Skin
                   'type'           => 'checkbox',
                ),
 					'bgimg_text_color' => array(
-						'label' => T_('Text color on background image'),
+						'label' => T_('Text Color on Background Image'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
 					'bgimg_link_color' => array(
-						'label' => T_('Link color on background image'),
+						'label' => T_('Link Color on Background Image'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
 					'bgimg_hover_link_color' => array(
-						'label' => T_('Hover link color on background image'),
+						'label' => T_('Hover Link Color on Background Image'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
@@ -215,7 +215,7 @@ class business_Skin extends Skin
              */
             'section_typograpy_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Typograpy (All disps)')
+               'label'  => T_('Typograpy Settings (All disps)')
             ),
                'typograpy_fz' => array(
                   'label'    => T_('Font Size'),
@@ -247,7 +247,7 @@ class business_Skin extends Skin
              */
             'section_header_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Header Top Options (All disps)')
+					'label'  => T_('Header Top Settings (All disps)')
 				),
                'ht_show' => array(
                   'label'         => T_('Display Header Top'),
@@ -269,7 +269,7 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'header_top_bg' => array(
-                  'label'         => T_('Header Top Background'),
+                  'label'         => T_('Header Top Background Color'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
@@ -286,7 +286,7 @@ class business_Skin extends Skin
              */
             'section_main_header_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Main Header Options (All disps)')
+					'label'  => T_('Main Header Settings (All disps)')
 				),
                'header_sticky' => array(
                   'label'         => T_('Activate Main Header Sticky'),
@@ -307,7 +307,7 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'main_header_bg' => array(
-                  'label'         => T_('Main Header Background'),
+                  'label'         => T_('Main Header Background Color'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
@@ -324,7 +324,7 @@ class business_Skin extends Skin
 			*/
 			'section_disp_post_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Post List Options (disp=posts)')
+				'label'  => T_('Post List Settings (disp=posts)')
 			),
 				'layout_posts' => array(
 					'label'    => T_('Post List Layout'),
@@ -407,22 +407,22 @@ class business_Skin extends Skin
              */
             'section_tags_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Tags Layout (All disps)')
+               'label'  => T_('Tags Settings (All disps)')
             ),
                'tags_color' => array(
-                  'label'         => T_('Tags Posts Color'),
+                  'label'         => T_('Post Tags Color'),
                   'note'          => T_('Default background color is #333333.'),
                   'defaultvalue'  => '#333333',
                   'type'          => 'color',
                ),
                'tags_bg_color' => array(
-                  'label'         => T_('Tags Posts Background Color'),
+                  'label'         => T_('Post Tags Background Color'),
                   'note'          => T_('Default background color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'tags_bdr_color' => array(
-                  'label'         => T_('Tags Posts Border Color'),
+                  'label'         => T_('Post Tags Border Color'),
                   'note'          => T_('Default border-color is #E4E4E4.'),
                   'defaultvalue'  => '#E4E4E4',
                   'type'          => 'color',
@@ -454,7 +454,7 @@ class business_Skin extends Skin
              */
             'section_sidebar_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Sidebar Widget (All disps)')
+               'label'  => T_('Sidebar Settings (All disps)')
             ),
                'sidebar_title_widget' => array(
                   'label'         => T_('Widget Title Color'),
@@ -492,7 +492,7 @@ class business_Skin extends Skin
              */
             'section_footer_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Footer (All disps)')
+               'label'  => T_('Footer Settings (All disps)')
             ),
                'footer_dispay' => array(
                   'label'         => T_('Display Footer Widget'),
@@ -507,7 +507,7 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'footer_text_content' => array(
-                  'label'         => T_('Footer Text Content'),
+                  'label'         => T_('Footer Content Color'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
@@ -519,19 +519,19 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'footer_border_widget' => array(
-                  'label'         => T_('Border Color Widget'),
+                  'label'         => T_('Footer Widgets Border Color'),
                   'note'          => T_('Default color is #333333.'),
                   'defaultvalue'  => '#333333',
                   'type'          => 'color',
                ),
                'copyright_color' => array(
-                  'label'         => T_('Copyright Color Content'),
+                  'label'         => T_('Copyright Content Color'),
                   'note'          => T_('Default color is #999999.'),
                   'defaultvalue'  => '#999999',
                   'type'          => 'color',
                ),
                'footer_bg' => array(
-                  'label'         => T_('Background Footer'),
+                  'label'         => T_('Footer Background Color'),
                   'note'          => T_('Default color is #222222.'),
                   'defaultvalue'  => '#222222',
                   'type'          => 'color',
@@ -548,17 +548,17 @@ class business_Skin extends Skin
              */
             'section_mediaidx_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Media Post Options (disp=mediaidx)')
+					'label'  => T_('Media Post Settings (disp=mediaidx)')
 				),
                'mediaidx_thumb_size' => array(
-   					'label'        => T_('Thumbnail size for media index'),
+   					'label'        => T_('Thumbnail Size for Media Index'),
    					'note'         => '',
    					'defaultvalue' => 'fit-1280x720',
    					'options'      => get_available_thumb_sizes(),
    					'type'         => 'select',
    				),
                'mediaidx_grid' => array(
-						'label'        => T_('Column'),
+						'label'        => T_('Column Count'),
 						'note'         => '',
 						'defaultvalue' => 'two_column',
 						'type'         => 'select',
@@ -569,7 +569,7 @@ class business_Skin extends Skin
 							),
 					),
                'mediaidx_layout' => array(
-						'label'     => T_( 'Layout Mediaidx' ),
+						'label'     => T_( 'Layout for disp=mediaidx' ),
 						'note'      => '',
 						'type'      => 'select',
 						'options'   => array(
@@ -590,20 +590,20 @@ class business_Skin extends Skin
 						),
 					),
                'padding_column' => array(
-                  'label'          => T_('Padding Image Column'),
+                  'label'          => T_('Image Padding'),
                   'note'           => T_('px ( default padding 15px )'),
                   'defaultvalue'   => '15',
                   'type'           => 'integer',
                   'allow_empty'    => true,
                ),
                'mediaidx_title' => array(
-						'label'          => T_('Display Title'),
+						'label'          => T_('Display Image Title'),
 						'note'           => T_('Check to display title post image'),
 						'defaultvalue'   => 1,
 						'type'           => 'checkbox',
 					),
                'mediaidx_title_style' => array(
-                  'label'          => T_('Mediaidx Title Style'),
+                  'label'          => T_('Title Style'),
                   'note'           => T_('Select the title style for Photo Index and reinput padding column (10px).'),
                   'defaultvalue'   => 'default',
                   'type'           => 'select',
@@ -613,13 +613,13 @@ class business_Skin extends Skin
                   ),
                ),
                'mediaidx_bg' => array(
-                   'label'         => T_('Background Mediaidx'),
-                   'note'          => T_('Default color is #FFFFFF. Suggest Background Color (#F7F7F7)'),
+                   'label'         => T_('Background Color for disp=mediaidx'),
+                   'note'          => T_('Default color is #FFFFFF. Suggested Background Color (#F7F7F7)'),
                    'defaultvalue'  => '#FFFFFF',
                    'type'          => 'color',
                ),
                'mediaidx_bg_content' => array(
-                   'label'         => T_('Background Mediaidx Content'),
+                   'label'         => T_('Background Color for Mediaidx Content'),
                    'note'          => T_('Default color is #FFFFFF. Activated when you use box style'),
                    'defaultvalue'  => '#FFFFFF',
                    'type'          => 'color',
@@ -642,7 +642,7 @@ class business_Skin extends Skin
              */
             'section_search_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Search Disp Options (disp=search)')
+               'label'  => T_('Search Disp Settings (disp=search)')
             ),
                'search_title' => array(
                   'label'        => T_('Search Box Title'),
@@ -671,7 +671,7 @@ class business_Skin extends Skin
                   'type'         => 'color',
                ),
                'search_bg' => array(
-                  'label'        => T_('Background Body'),
+                  'label'        => T_('Body Background Color'),
                   'note'         => T_('Default color is #F7F7F7.'),
                   'defaultvalue' => '#F7F7F7',
                   'type'         => 'color',
@@ -744,7 +744,7 @@ class business_Skin extends Skin
              */
 				'section_username_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Username options')
+					'label'  => T_('Username Settings (All disps)')
 				),
 					'bubbletip' => array(
 						'label'        => T_('Username bubble tips'),
@@ -766,7 +766,7 @@ class business_Skin extends Skin
 
 				'section_access_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('When access is denied or requires login...')
+					'label'  => T_('When access is denied or requires login... (disp=access_denied and disp=access_requires_login)')
 				),
 					'access_login_containers' => array(
 						'label'   => T_('Display on login screen'),
