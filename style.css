@@ -45,6 +45,9 @@ a[rel~=nofollow]:not([class~=btn]):hover {
 .special_cover_image_masonry a:after {
   display: none !important;
 }
+.jumbotron .evo_post_title h3:before {
+  display: none;
+}
 h1,
 h2,
 h3,

@@ -52,6 +52,7 @@ a[rel~=nofollow]:not([class~=btn]):hover {
 	background-position: center;
 }
 
+// Removing hover options from specially positioned cover images of the posts
 .special_cover_image_masonry {
 	a:before {
 		background-color: transparent !important;
@@ -59,6 +60,11 @@ a[rel~=nofollow]:not([class~=btn]):hover {
 	a:after {
 		display: none !important;
 	}
+}
+
+// Removing border from dips=Front feature post widget
+.jumbotron .evo_post_title h3:before {
+	display: none;
 }
 
 // TYPOGRAPY
