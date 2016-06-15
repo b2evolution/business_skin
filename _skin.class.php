@@ -306,7 +306,7 @@ class business_Skin extends Skin
 			*/
 			'section_disp_post_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Disp Posts Options')
+				'label'  => T_('Post List Options').' (disp=posts)'
 			),
 				'layout_posts' => array(
 					'label'    => T_('Post List Layout'),
