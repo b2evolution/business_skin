@@ -202,8 +202,8 @@ class business_Skin extends Skin
 						'label' => T_('Hover Link Color on Background Image'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
-						'type' => 'color',*/
-					),
+						'type' => 'color',
+					),*/
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
 				),
