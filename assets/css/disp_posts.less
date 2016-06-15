@@ -113,6 +113,10 @@
         .evo_content_block{
             position: relative;
             z-index: 1;
+			
+			// Preventing long words to overflow the parent container, but first it will inherit break-word
+			word-wrap: break-word;
+			overflow: hidden;
         }
 
         // Article Post Styling
