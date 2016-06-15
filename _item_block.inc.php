@@ -55,7 +55,7 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
 	<?php
-		if( $disp == 'posts' && $Skin->get_setting('layout_posts') == 'masonry' )
+		if( $disp == 'posts' )
 		{	// Display images that are linked to this post:
 			$Item->images( array(
 				'before_images'            => '<div class="evo_post_images">',

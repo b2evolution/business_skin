@@ -39,6 +39,12 @@ a[rel~=nofollow]:not([class~=btn]):hover {
   background-size: cover;
   background-position: center;
 }
+.special_cover_image_masonry a:before {
+  background-color: transparent !important;
+}
+.special_cover_image_masonry a:after {
+  display: none !important;
+}
 h1,
 h2,
 h3,

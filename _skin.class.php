@@ -1404,6 +1404,11 @@ class business_Skin extends Skin
          $custom_css .= '#main-footer .copyright p{ color: '.$color.' }';
       }
 
+	  if( $disp == 'posts' ) {
+		 $custom_css .= ".disp_posts .well { padding: 0; }\n";
+		 $custom_css .= ".disp_posts .well header, .disp_posts .well section, .disp_posts .well footer { padding: 0 30px; }\n";
+		 $custom_css .= ".disp_posts .well footer { padding-bottom: 20px; }\n";
+	  }
 
       // Custom CSS Output
       if ( ! empty( $custom_css ) ) {
