@@ -95,7 +95,7 @@ class business_Skin extends Skin
 		$r = array_merge( array(
 				'section_general_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('General Options')
+					'label'  => T_('General Options').' (All disps)'
 				),
 					'layout' => array(
 						'label'     => T_('Layout'),
@@ -530,7 +530,7 @@ class business_Skin extends Skin
              */
             'section_mediaidx_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Media Post Options')
+					'label'  => T_('Media Post Options').' (disp=mediaidx)'
 				),
                'mediaidx_thumb_size' => array(
    					'label'        => T_('Thumbnail size for media index'),
@@ -624,7 +624,7 @@ class business_Skin extends Skin
              */
             'section_search_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Search Disp Options')
+               'label'  => T_('Search Disp Options').' (disp=search)'
             ),
                'search_title' => array(
                   'label'        => T_('Search Box Title'),
