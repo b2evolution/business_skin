@@ -1401,6 +1401,10 @@ class business_Skin extends Skin
 		 $custom_css .= ".disp_posts .well header, .disp_posts .well section, .disp_posts .well footer { padding: 0 30px; }\n";
 		 $custom_css .= ".disp_posts .well footer { padding-bottom: 20px; }\n";
 	  }
+	  
+	  if( $this->get_setting('ht_show' ) == 1 ) {
+			$custom_css .= ".sitewide_header { margin-bottom: 0 !important; }";
+	  }
 
       // Custom CSS Output
       if ( ! empty( $custom_css ) ) {
