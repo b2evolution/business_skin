@@ -70,6 +70,15 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ### Update Log:
 
+## v1.3.0-stable
+- New fonts
+- New cover image positions on posts
+- Masonry layout improved/simplified - removed unnecessary sections
+- Added four columns option for Masonry layout
+- Fixed word wrapping on narrow sections
+- More user-friendly background customizaiton options of the skin
+- Additional small skin fixes
+
 ## v1.2.1-stable
 - New Masonry layout on Posts page
 - List layout fix for all list-type widgets
