@@ -200,7 +200,6 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 				'separator' => '',
 				'text'      => ''
 			) );
-		}
 		?>
 
 		<nav class="post_comments_link">
@@ -228,6 +227,8 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 				'link_text_more'  => '#',
 				'link_title'      => '#',
 			) );
+		
+		}
 			?>
 		</nav>
 	</footer>
