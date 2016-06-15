@@ -95,7 +95,7 @@ class business_Skin extends Skin
 		$r = array_merge( array(
 				'section_general_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('General Options').' (All disps)'
+					'label'  => T_('General Options (All disps)')
 				),
 					'layout' => array(
 						'label'     => T_('Layout'),
@@ -215,7 +215,7 @@ class business_Skin extends Skin
              */
             'section_typograpy_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Typograpy')
+               'label'  => T_('Typograpy (All disps)')
             ),
                'typograpy_fz' => array(
                   'label'    => T_('Font Size'),
@@ -247,7 +247,7 @@ class business_Skin extends Skin
              */
             'section_header_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Header Top Options')
+					'label'  => T_('Header Top Options (All disps)')
 				),
                'ht_show' => array(
                   'label'         => T_('Display Header Top'),
@@ -286,7 +286,7 @@ class business_Skin extends Skin
              */
             'section_main_header_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Main Header Options')
+					'label'  => T_('Main Header Options (All disps)')
 				),
                'header_sticky' => array(
                   'label'         => T_('Activate Main Header Sticky'),
@@ -324,7 +324,7 @@ class business_Skin extends Skin
 			*/
 			'section_disp_post_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Post List Options').' (disp=posts)'
+				'label'  => T_('Post List Options (disp=posts)')
 			),
 				'layout_posts' => array(
 					'label'    => T_('Post List Layout'),
@@ -407,7 +407,7 @@ class business_Skin extends Skin
              */
             'section_tags_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Tags Layout')
+               'label'  => T_('Tags Layout (All disps)')
             ),
                'tags_color' => array(
                   'label'         => T_('Tags Posts Color'),
@@ -454,7 +454,7 @@ class business_Skin extends Skin
              */
             'section_sidebar_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Sidebar Widget')
+               'label'  => T_('Sidebar Widget (All disps)')
             ),
                'sidebar_title_widget' => array(
                   'label'         => T_('Widget Title Color'),
@@ -492,7 +492,7 @@ class business_Skin extends Skin
              */
             'section_footer_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Footer')
+               'label'  => T_('Footer (All disps)')
             ),
                'footer_dispay' => array(
                   'label'         => T_('Display Footer Widget'),
@@ -548,7 +548,7 @@ class business_Skin extends Skin
              */
             'section_mediaidx_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Media Post Options').' (disp=mediaidx)'
+					'label'  => T_('Media Post Options (disp=mediaidx)')
 				),
                'mediaidx_thumb_size' => array(
    					'label'        => T_('Thumbnail size for media index'),
@@ -642,7 +642,7 @@ class business_Skin extends Skin
              */
             'section_search_start' => array(
                'layout' => 'begin_fieldset',
-               'label'  => T_('Search Disp Options').' (disp=search)'
+               'label'  => T_('Search Disp Options (disp=search)')
             ),
                'search_title' => array(
                   'label'        => T_('Search Box Title'),
@@ -688,7 +688,7 @@ class business_Skin extends Skin
              */
 				'section_colorbox_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Colorbox Image Zoom')
+					'label'  => T_('Colorbox Image Zoom (All disps)')
 				),
 					'colorbox' => array(
 						'label'        => T_('Colorbox Image Zoom'),
