@@ -88,12 +88,24 @@ skin_include( '_body_header.inc.php' );
 				// Go Grab the featured post:
 				if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
 				{ // We have a featured/intro post to display:
+					$intro_item_style = '';
+					$LinkOwner = new LinkItem( $Item );
+					$LinkList = $LinkOwner->get_attachment_LinkList( 1, 'cover' );
+					if( ! empty( $LinkList ) &&
+							$Link = & $LinkList->get_next() &&
+							$File = & $Link->get_File() &&
+							$File->exists() &&
+							$File->is_image() )
+					{	// Use cover image of intro-post as background:
+						$intro_item_style = 'background-image: url("'.$File->get_url().'")';
+					}
 					// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
 					skin_include( '_item_block.inc.php', array(
 						'feature_block' => true,
 						'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
 						'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post' ),
+						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post' ).( empty( $intro_item_style ) ? '' : ' evo_hasbgimg' ),
+						'item_style'   => $intro_item_style
 					) );
 					// ----------------------------END ITEM BLOCK  ----------------------------
 				}
@@ -122,6 +134,8 @@ skin_include( '_body_header.inc.php' );
 						'prev_text'             => '<i class="fa fa-angle-left"></i>',
 						'next_text'             => '<i class="fa fa-angle-right"></i>',
 					),
+					// Item content:
+					'url_link_position'     => 'top',
 					// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
 					'skin_form_before'      => '<div class="panel panel-default skin-form">'
 					.'<div class="panel-heading">'
@@ -160,7 +174,7 @@ skin_include( '_body_header.inc.php' );
 					'search_submit_before' => '<span class="input-group-btn">',
 					'search_submit_after'  => '</span></div>',
 					// Front page
-					'featured_intro_before' => '<div class="jumbotron"><div class="intro_background_image"></div>',
+					'featured_intro_before' => '<div class="jumbotron">',
 					'featured_intro_after'  => '</div>',
 					// Form "Sending a message"
 					'msgform_form_title' => T_('Sending a message'),

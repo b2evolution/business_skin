@@ -34,6 +34,11 @@ a:active {
 a[rel~=nofollow]:not([class~=btn]):hover {
   background-color: transparent;
 }
+.evo_hasbgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 h1,
 h2,
 h3,
