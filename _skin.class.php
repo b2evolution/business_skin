@@ -131,55 +131,47 @@ class business_Skin extends Skin
                   'type'          => 'color',
                ),
                'front_bg' => array(
-                  'label'         => T_('Background color for front=disp'),
+                  'label'         => T_('Background color for disp=front'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
                'single_bg' => array(
-                  'label'         => T_('Background color for single=disp and Page=disp'),
+                  'label'         => T_('Background color for disp=single and disp=page'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
                ),
                'comments_bg' => array(
-                  'label'         => T_('Background color for comments=disp'),
+                  'label'         => T_('Background color for disp=comments'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'arcdir_bg' => array(
-                  'label'         => T_('Background color for archive=disp'),
+                  'label'         => T_('Background color for disp=archive'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'catdir_bg' => array(
-                  'label'         => T_('Background color for category=disp'),
+                  'label'         => T_('Background color for disp=category'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'postidx_bg' => array(
-                  'label'         => T_('Background color for postidx=disp'),
+                  'label'         => T_('Background color for disp=postidx'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
                'tags_bg' => array(
-                  'label'         => T_('Background color for tags=disp'),
+                  'label'         => T_('Background color for disp=tags'),
                   'note'          => T_('Default color is #F7F7F7.'),
                   'defaultvalue'  => '#F7F7F7',
                   'type'          => 'color',
                ),
-
-					'favicon' => array(
-						'label'          => T_('Favicon'),
-						'note'           => T_('Change the Default Favicon'),
-						'defaultvalue'   => 'assets/img/favicon.png',
-						'type'           => 'text',
-						'size'           => '50'
-					),
                'back_to_top' => array(
                   'label'          => T_('Display Back To Top'),
                   'note'           => T_('Check to display back top top button'),
@@ -1421,9 +1413,6 @@ class business_Skin extends Skin
 		{
 			add_css_headline( '.evo_image_block img { max-height: '.$max_image_height.'px; width: auto; }' );
 		}
-      // Add Favicon
-      $favicon = $this->get_setting( 'favicon' );
-      add_headline( '<link rel="shortcut icon" href="'. $favicon .'"/>' );
 	}
 
 
