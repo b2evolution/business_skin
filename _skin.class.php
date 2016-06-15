@@ -186,7 +186,7 @@ class business_Skin extends Skin
                   'defaultvalue'   => 1,
                   'type'           => 'checkbox',
                ),
-					'bgimg_text_color' => array(
+					/*'bgimg_text_color' => array(
 						'label' => T_('Text Color on Background Image'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
@@ -202,7 +202,7 @@ class business_Skin extends Skin
 						'label' => T_('Hover Link Color on Background Image'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
-						'type' => 'color',
+						'type' => 'color',*/
 					),
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
@@ -1147,7 +1147,7 @@ class business_Skin extends Skin
           * Special cover image position on intro posts
           * ============================================================================
           */			
-		if( $color = $this->get_setting( 'bgimg_text_color' ) )
+		/*if( $color = $this->get_setting( 'bgimg_text_color' ) )
 		{	// Custom text color on background image:
 			$custom_css .= '.widget_core_coll_featured_intro div.jumbotron.evo_hasbgimg { color: '.$color." }\n";
 		}
@@ -1158,7 +1158,7 @@ class business_Skin extends Skin
 		if( $color = $this->get_setting( 'bgimg_hover_link_color' ) )
 		{	// Custom link hover color on background image:
 			$custom_css .= '.widget_core_coll_featured_intro div.jumbotron.evo_hasbgimg a:hover { color: '.$color." !important }\n";
-		}
+		}*/
 
 
       /**
