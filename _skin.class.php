@@ -309,13 +309,13 @@ class business_Skin extends Skin
 				'label'  => T_('Disp Posts Options')
 			),
 				'layout_posts' => array(
-					'label'    => T_('Layout Posts'),
+					'label'    => T_('Post List Layout'),
 					'note'     => '',
-					'type'     => 'radio',
+					'type'     => 'select',
 					'options'  => array(
-						array( 'regular', T_('Regular') ),
-						array( 'mini_blog', T_('Mini Blog Layout') ),
-						array( 'masonry', T_( 'Masonry Layout' ) )
+						'regular'	=> T_( 'Regular' ),
+						'mini_blog'	=> T_( 'Mini Blog Layout' ),
+						'masonry'	=> T_( 'Masonry Layout' ),
 					),
 					'defaultvalue' => 'regular',
 				),
@@ -543,9 +543,9 @@ class business_Skin extends Skin
 						'label'        => T_('Column'),
 						'note'         => '',
 						'defaultvalue' => 'two_column',
-                  'type'         => 'select',
+						'type'         => 'select',
 						'options'      => array(
-                        'one_column'     => T_('1 Column'),
+								'one_column'     => T_('1 Column'),
 								'two_column'     => T_('2 Column'),
 								'three_column'   => T_('3 Column'),
 							),
