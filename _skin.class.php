@@ -186,10 +186,28 @@ class business_Skin extends Skin
                   'defaultvalue'   => 1,
                   'type'           => 'checkbox',
                ),
+					'bgimg_text_color' => array(
+						'label' => T_('Text color on background image'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'bgimg_link_color' => array(
+						'label' => T_('Link color on background image'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'bgimg_hover_link_color' => array(
+						'label' => T_('Hover link color on background image'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
 				),
-
+				
             /**
              * ============================================================================
              * Section Typograpy
@@ -1112,16 +1130,35 @@ class business_Skin extends Skin
        * ============================================================================
        */
       if ( $color = $this->get_setting( 'tags_color' ) ) {
-         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { color: $color; }";
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { color: $color; }\n";
       }
 
       if ( $bg_color = $this->get_setting( 'tags_bg_color' ) ) {
-         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { background-color: $bg_color; }";
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { background-color: $bg_color; }\n";
       }
 
       if( $bdr_color = $this->get_setting( 'tags_bdr_color' ) ) {
-         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { border-color: $bdr_color; }";
+         $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { border-color: $bdr_color; }\n";
       }
+	  
+	  
+		/**
+          * ============================================================================
+          * Special cover image position on intro posts
+          * ============================================================================
+          */			
+		if( $color = $this->get_setting( 'bgimg_text_color' ) )
+		{	// Custom text color on background image:
+			$custom_css .= '.widget_core_coll_featured_intro div.jumbotron.evo_hasbgimg { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'bgimg_link_color' ) )
+		{	// Custom link color on background image:
+			$custom_css .= '.widget_core_coll_featured_intro div.jumbotron.evo_hasbgimg a { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'bgimg_hover_link_color' ) )
+		{	// Custom link hover color on background image:
+			$custom_css .= '.widget_core_coll_featured_intro div.jumbotron.evo_hasbgimg a:hover { color: '.$color." !important }\n";
+		}
 
 
       /**
