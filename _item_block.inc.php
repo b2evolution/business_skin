@@ -137,7 +137,7 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 		if ( $disp == 'posts' ) {
 			// Author
 			$Item->author( array(
-				'before'    => ' '.T_('By').' ',
+				'before'    => /* TRANS: by is followed by an Author's name here */ ' '.T_('By').' ',
 				'after'     => ' ',
 				'link_text' => $params['author_link_text'],
 			) );
@@ -152,7 +152,7 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 
 			// We want to display the post time:
 			$Item->issue_time( array(
-				'before'      => ' '.T_('on').' ',
+				'before'      => /* TRANS: on is followed by a date here */ ' '.T_('on').' ',
 				'after'       => ' ',
 				'time_format' => 'F j, Y',
 			) );
@@ -160,7 +160,7 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 
 		// Categories
 		$Item->categories( array(
-			'before'          => T_(' in ').'<div class="cat-links"> ',
+			'before'          => /* TRANS: in is followed by post categories here */ T_(' in ').'<div class="cat-links"> ',
 			'after'           => ' </div>',
 			'include_main'    => true,
 			'include_other'   => true,
