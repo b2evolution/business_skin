@@ -17,7 +17,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  */
 class business_Skin extends Skin
 {
-	var $version = '1.3.0';
+	var $version = '1.3.1';
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
 	 */
@@ -126,12 +126,6 @@ class business_Skin extends Skin
                ),
                'background_disp' => array(
                   'label'         => T_('Background Color'),
-                  'note'          => T_('Default color is #FFFFFF.'),
-                  'defaultvalue'  => '#FFFFFF',
-                  'type'          => 'color',
-               ),
-               'front_bg' => array(
-                  'label'         => T_('Background color for disp=front'),
                   'note'          => T_('Default color is #FFFFFF.'),
                   'defaultvalue'  => '#FFFFFF',
                   'type'          => 'color',
@@ -308,6 +302,40 @@ class business_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
             // End Section Main Header Options
+			
+          /**
+             * ============================================================================
+             * Options Disp Front
+             * ============================================================================
+             */
+            'section_disp_front_start' => array(
+               'layout' => 'begin_fieldset',
+               'label'  => T_(' Front Page Settings (disp=front)')
+            ),
+				'layout_front' => array(
+					'label'     => T_('Layout Settings'),
+					'note'      => '',
+					'type'      => 'select',
+					'options'   => array(
+						'single_column'              => T_('Single Column Large'),
+						'single_column_normal'       => T_('Single Column'),
+						'single_column_narrow'       => T_('Single Column Narrow'),
+						'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
+						'left_sidebar'               => T_('Left Sidebar'),
+						'right_sidebar'              => T_('Right Sidebar'),
+					),
+					'defaultvalue' => 'single_column',
+				),
+               'front_bg' => array(
+                  'label'         => T_('Background color for disp=front'),
+                  'note'          => T_('Default color is #FFFFFF.'),
+                  'defaultvalue'  => '#FFFFFF',
+                  'type'          => 'color',
+               ),
+            'section_disp_front_end' => array(
+               'layout' => 'end_fieldset',
+            ),
+            // End Section Typograpy
 
 			/**
 			* ============================================================================
@@ -1757,6 +1785,25 @@ class business_Skin extends Skin
 			return true;
 		}
 	}
+	
+	function is_visible_sidebar_front( $check_containers = false )
+	{
+		$layout = $this->get_setting( 'layout_front' );
+
+		if( $layout != 'left_sidebar' && $layout != 'right_sidebar' )
+		{ // Sidebar is not displayed for selected skin layout
+			return false;
+		}
+
+		if( $check_containers )
+		{ // Check if at least one sidebar container is visible
+			return ( $this->is_visible_container( 'sidebar' ) ||  $this->is_visible_container( 'sidebar2' ) );
+		}
+		else
+		{ // We should not check the visibility of the sidebar containers for this case
+			return true;
+		}
+	}
 
 
 	/**
@@ -1768,6 +1815,36 @@ class business_Skin extends Skin
 	function get_column_class() {
 
 		switch( $this->get_setting( 'layout' ) ) {
+			case 'single_column':
+				// Single Column Large
+				return 'col-md-12';
+
+			case 'single_column_normal':
+				// Single Column
+				return 'col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1';
+
+			case 'single_column_narrow':
+				// Single Column Narrow
+				return 'col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2';
+
+			case 'single_column_extra_narrow':
+				// Single Column Extra Narrow
+				return 'col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3';
+
+			case 'left_sidebar':
+				// Left Sidebar
+				return 'col-xs-12 col-sm-12 col-md-8 pull-right';
+
+			case 'right_sidebar':
+				// Right Sidebar
+			default:
+				return 'col-xs-12 col-sm-12 col-md-8';
+		}
+	}
+	
+	function get_column_class_front() {
+
+		switch( $this->get_setting( 'layout_front' ) ) {
 			case 'single_column':
 				// Single Column Large
 				return 'col-md-12';
