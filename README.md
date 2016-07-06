@@ -70,6 +70,11 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ### Update Log:
 
+## v1.3.1-stable
+- Item Single widget enabled for additional back-office customization on disp=single
+- Modified back-office customization titles for easier use
+- Added translation notes for easier skin translation (multilanguage compatibility)
+
 ## v1.3.0-stable
 - New fonts
 - New cover image positions on posts
