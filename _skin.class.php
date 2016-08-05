@@ -17,7 +17,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  */
 class business_Skin extends Skin
 {
-	var $version = '1.3.1';
+	var $version = '1.3.2';
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
 	 */
@@ -831,11 +831,11 @@ class business_Skin extends Skin
 		) );
 
 		//Include script and styles for Sticky Menu
-		require_js( $this->get_url().'assets/js/jquery.sticky.js' );
+		require_js( 'assets/js/jquery.sticky.js', 'relative' );
 
 		if ( $disp == 'mediadix' || $this->get_setting( 'layout_posts' ) == 'masonry' ) {
-			require_js( $this->get_url() . 'assets/js/masonry.pkgd.min.js' );
-			require_js( $this->get_url() . 'assets/js/imagesloaded.pkgd.min.js' );
+			require_js( 'assets/js/masonry.pkgd.min.js', 'relative' );
+			require_js( 'assets/js/imagesloaded.pkgd.min.js', 'relative' );
 		}
 
 		// Include Masonry Grind for MediaIdx
@@ -852,7 +852,7 @@ class business_Skin extends Skin
 			");
 		}
 
-		require_js( $this->get_url() . 'assets/js/scripts.js' );
+		require_js( 'assets/js/scripts.js', 'relative' );
 
 		// Skin specific initializations:
 		// Add Custome CSS

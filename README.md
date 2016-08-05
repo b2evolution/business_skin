@@ -70,6 +70,9 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ### Update Log:
 
+## v1.3.2-stable
+- Updated CSS and JS thumbprints for this skin's plugins and libraries
+
 ## v1.3.1-stable
 - Item Single widget enabled for additional back-office customization on disp=single
 - Modified back-office customization titles for easier use
