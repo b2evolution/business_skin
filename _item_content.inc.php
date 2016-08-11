@@ -51,7 +51,7 @@ $params = array_merge( array(
 	'excerpt_more_text'        => T_( 'Read More' ). $icon_mexpt_mb,
 
 	// In case we display a full version of the post:
-	'content_start_full_text'  => '<div class="evo_post__full_text">',
+	'content_start_full_text'  => '<div class="evo_post__full_text clearfix">',
 	'content_end_full_text'    => '</div>',
 
 	'before_content_teaser'    => '',
