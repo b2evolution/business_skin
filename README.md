@@ -72,6 +72,8 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ## v1.3.2-stable
 - Updated CSS and JS thumbprints for this skin's plugins and libraries
+- Fix for floated images in content
+- Improved default style for "About Author" widget
 
 ## v1.3.1-stable
 - Item Single widget enabled for additional back-office customization on disp=single
