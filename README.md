@@ -70,6 +70,9 @@ If you ever get stuck with setting up Business with your b2evolution installatio
 
 ### Update Log:
 
+## v1.3.2-stable
+- Cleanup of translation strings in back-office skin customization
+
 ## v1.3.1-stable
 - Updated CSS and JS thumbprints for this skin's plugins and libraries
 - Fix for floated images in content
