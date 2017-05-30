@@ -17,7 +17,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  */
 class business_Skin extends Skin
 {
-	var $version = '1.3.2';
+	var $version = '1.3.3';
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
 	 */
@@ -193,7 +193,7 @@ class business_Skin extends Skin
 				'section_general_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
+
             /**
              * ============================================================================
              * Section Typograpy
@@ -302,7 +302,7 @@ class business_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
             // End Section Main Header Options
-			
+
           /**
              * ============================================================================
              * Options Disp Front
@@ -865,7 +865,7 @@ class business_Skin extends Skin
 		*/
 		if ( $bg_color = $this->get_setting( 'background_disp' ) ) {
 			$custom_css .= '
-			html, body
+			#skin_wrapper
 			{ background-color: '. $bg_color .' }
 			';
 		}
@@ -1115,7 +1115,7 @@ class business_Skin extends Skin
 			.disp_search .search_result .search_content_wrap .search_title a,
 			.disp_search .search_result .search_content_wrap .search_info a
 			{ color: '. $color .' }';
-			$custom_css .= 'body, main{ color: '.$color.' !important }';
+			$custom_css .= '#skin_wrapper, main{ color: '.$color.' !important }';
 		}
 
 		/**
@@ -1126,20 +1126,20 @@ class business_Skin extends Skin
 		$font_size = $this->get_setting( 'typograpy_fz' );
 		switch( $font_size ) {
 			case 'normal': // When regular layout is chosen, nothing happens, since regular is default
-			$custom_css .= 'html, body
+			$custom_css .= '#skin_wrapper
 			{ font-size: 11.42855px; }
 
 			@media screen and (max-width: 480px) {
-				html, body { font-size: 10.5px; }
+				#skin_wrapper { font-size: 10.5px; }
 			}';
 			break;
 
 			case 'large':
-			$custom_css .= 'html, body
+			$custom_css .= '#skin_wrapper
 			{ font-size: 12.85715px; }
 
 			@media screen and (max-width: 480px) {
-				html, body { font-size: 11px; }
+				#skin_wrapper { font-size: 11px; }
 			}';
 			break;
 		}
@@ -1160,13 +1160,13 @@ class business_Skin extends Skin
       if( $bdr_color = $this->get_setting( 'tags_bdr_color' ) ) {
          $custom_css .= "#main-content .post_tags a, #mini-blog .post_tags a, .widget_core_coll_tag_cloud .tag_cloud a { border-color: $bdr_color; }\n";
       }
-	  
-	  
+
+
 		/**
           * ============================================================================
           * Special cover image position on intro posts
           * ============================================================================
-          */			
+          */
 		/*if( $color = $this->get_setting( 'bgimg_text_color' ) )
 		{	// Custom text color on background image:
 			$custom_css .= '.widget_core_coll_featured_intro div.jumbotron.evo_hasbgimg { color: '.$color." }\n";
@@ -1194,7 +1194,7 @@ class business_Skin extends Skin
       }
 
       if ( $this->get_setting( 'header_sticky' ) == 0 ) {
-         $custom_css .= '#main-header{ position: relative !important;} body.loggedin #main-header{ top: 0 !important; }';
+         $custom_css .= '#main-header{ position: relative !important;} #skin_wrapper.loggedin #main-header{ top: 0 !important; }';
       }
       if ( $color = $this->get_setting( 'site_tite_color' ) ) {
          $custom_css .= '#main-header .widget_core_coll_title h1 a, #main-header .widget_core_coll_logo h1 a,
@@ -1429,7 +1429,7 @@ class business_Skin extends Skin
 		 $custom_css .= ".disp_posts .well header, .disp_posts .well section, .disp_posts .well footer { padding: 0 30px; }\n";
 		 $custom_css .= ".disp_posts .well footer { padding-bottom: 20px; }\n";
 	  }
-	  
+
 	  if( $this->get_setting('ht_show' ) == 1 ) {
 			$custom_css .= ".sitewide_header { margin-bottom: 0 !important; }";
 	  }
@@ -1785,7 +1785,7 @@ class business_Skin extends Skin
 			return true;
 		}
 	}
-	
+
 	function is_visible_sidebar_front( $check_containers = false )
 	{
 		$layout = $this->get_setting( 'layout_front' );
@@ -1841,7 +1841,7 @@ class business_Skin extends Skin
 				return 'col-xs-12 col-sm-12 col-md-8';
 		}
 	}
-	
+
 	function get_column_class_front() {
 
 		switch( $this->get_setting( 'layout_front' ) ) {
