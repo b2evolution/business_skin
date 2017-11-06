@@ -16,14 +16,13 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 <footer id="main-footer">
 
 	<!-- =================================== START OF FOOTER =================================== -->
-    <?php if ( $Skin->get_setting( 'footer_dispay' ) == 1 ) { ?>
-        <div class="widget_footer">
-            <div class="container">
-                <div class="row">
-                    <?php
-                    // Display container and contents:
-                    skin_container( NT_("Footer"), array(
+    <?php if ( $Skin->get_setting( 'footer_dispay' ) == 1 ) {
+                    // ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
+                    widget_container( 'footer', array(
                         // The following params will be used as defaults for widgets included in this container:
+                        'container_display_if_empty' => false, // If no widget, don't display container at all
+                        'container_start'   => '<div class="widget_footer"><div class="container"><div class="row evo_container $wico_class$">',
+                        'container_end'     => '</div></div></div>',
                         'block_start'       => '<div class="evo_widget $wi_class$ col-xs-12 col-sm-6 col-md-3">',
                         'block_end'         => '</div>',
                         'block_title_start' => '<h4 class="widget_title">',
@@ -34,12 +33,8 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
                         'search_submit_before' => '<span class="input-group-btn">',
                         'search_submit_after'  => '</span></div>',
                     ) );
-                    // Note: Double quotes have been used around "Footer" only for test purposes.
-                    ?>
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .widget_footer -->
-    <?php } ?>
+                    // ----------------------------- END OF "Footer" CONTAINER -----------------------------
+    } ?>
 
     <div class="copyright">
         <div class="container">

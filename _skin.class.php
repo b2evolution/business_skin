@@ -39,7 +39,7 @@ class business_Skin extends Skin
 	 */
 	function get_default_type()
 	{
-		return 'normal';
+		return 'rwd';
 	}
 
 	/**
@@ -78,6 +78,36 @@ class business_Skin extends Skin
          );
       return $supported_kinds;
    }
+
+
+	/**
+	 * Get the container codes of the skin main containers
+	 *
+	 * This should NOT be protected. It should be used INSTEAD of file parsing.
+	 * File parsing should only be used if this function is not defined
+	 *
+	 * @return array
+	 */
+	function get_declared_containers()
+	{
+		// Note: second param below is the ORDER
+		return array(
+				'page_top'                  => array( NT_('Page Top'), 2 ),
+				'header'                    => array( NT_('Header'), 10 ),
+				'menu'                      => array( NT_('Menu'), 15 ),
+				'front_page_main_area'      => array( NT_('Front Page Main Area'), 40 ),
+				'item_single_header'        => array( NT_('Item Single Header'), 50 ),
+				'item_single'               => array( NT_('Item Single'), 51 ),
+				'item_page'                 => array( NT_('Item Page'), 55 ),
+				'contact_page_main_area'    => array( NT_('Contact Page Main Area'), 60 ),
+				'sidebar'                   => array( NT_('Sidebar'), 80 ),
+				'sidebar_2'                 => array( NT_('Sidebar_2'), 81 ),
+				'footer'                    => array( NT_('Footer'), 100 ),
+				'user_profile_left'         => array( NT_('User Profile - Left'), 110 ),
+				'user_profile_right'        => array( NT_('User Profile - Right'), 120 ),
+				'404_page'                  => array( NT_('404 Page'), 130 ),
+			);
+	}
 
 
 	/**
@@ -1052,18 +1082,18 @@ class business_Skin extends Skin
 
 			// Disp Front
 			$custom_css .= '
-			.disp_front .evo_container__front_page_primary .evo_widget a:hover, .disp_front .evo_container__front_page_primary .evo_widget a:active, .disp_front .evo_container__front_page_primary .evo_widget a:focus,
-			.disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable td a
+			.disp_front .evo_container__front_page_main_area .evo_widget a:hover, .disp_front .evo_container__front_page_main_area .evo_widget a:active, .disp_front .evo_container__front_page_main_area .evo_widget a:focus,
+			.disp_front .evo_container__front_page_main_area .evo_widget.widget_plugin_evo_Calr .bCalendarTable td a
 			{ color: '.$color.'; }
 
-			.disp_front .evo_container__front_page_primary .evo_widget h3::before,
-			.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
-			.disp_front .evo_container__front_page_primary .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday
+			.disp_front .evo_container__front_page_main_area .evo_widget h3::before,
+			.disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
+			.disp_front .evo_container__front_page_main_area .evo_widget.widget_plugin_evo_Calr .bCalendarTable #bCalendarToday
 			{ background-color: '.$color.'; }
 
-			.evo_container__front_page_primary .widget_core_coll_search_form .compact_search_form .search_field,
-			.disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
-			.disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_login .input_text:focus, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_user_register .input_text:focus
+			.evo_container__front_page_main_area .widget_core_coll_search_form .compact_search_form .search_field,
+			.disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus,
+			.disp_front .evo_container__front_page_main_area .evo_widget.widget_core_user_login .input_text:focus, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_user_register .input_text:focus
 			{ border-color: '.$color.'; }
 			';
 
@@ -1096,7 +1126,7 @@ class business_Skin extends Skin
 			#main-content .post_tags h3, #mini-blog .post_tags h3, .evo_comment_text, .disp_posts .evo_intro_post a,
 			.disp_comments .evo_comment .evo_comment_text,
 			.disp_catdir #main-content .widget_core_coll_category_list a,
-			.disp_front .evo_container__front_page_primary .evo_widget a,
+			.disp_front .evo_container__front_page_main_area .evo_widget a,
 			.disp_arcdir #main-content .widget_plugin_achive a,
 
 			.evo_post__excerpt_text .evo_post__excerpt_more_link a,
@@ -1270,8 +1300,8 @@ class business_Skin extends Skin
       if ( $color = $this->get_setting( 'sidebar_title_widget' ) ) {
          $custom_css .= '
          #main-sidebar .panel-heading .panel-title,
-         .disp_front .evo_container__front_page_primary .evo_widget h3,
-		 .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_post_list.evo_withexcerpt .item_title, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_related_post_list.evo_withexcerpt .item_title, .disp_front .evo_container__front_page_primary .evo_widget.widget_core_coll_item_list.evo_withexcerpt .item_title
+         .disp_front .evo_container__front_page_main_area .evo_widget h3,
+		 .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_post_list.evo_withexcerpt .item_title, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_related_post_list.evo_withexcerpt .item_title, .disp_front .evo_container__front_page_main_area .evo_widget.widget_core_coll_item_list.evo_withexcerpt .item_title
          { color: '.$color.'; }
          ';
       }
@@ -1297,7 +1327,7 @@ class business_Skin extends Skin
       if ( $bg_color = $this->get_setting( 'front_bg' ) ) {
          $custom_css .= '
          .disp_front #skin_wrapper,
-         .disp_front .evo_container__front_page_primary .widget_core_user_login
+         .disp_front .evo_container__front_page_main_area .widget_core_user_login
          { background-color: '.$bg_color.'; }
          ';
       }

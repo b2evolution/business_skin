@@ -191,12 +191,13 @@ skin_include( '_body_header.inc.php' );
 				?>
 				<aside id="main-sidebar" class="col-xs-12 col-sm-12 col-md-4<?php echo ( $Skin->get_setting( 'layout_front' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
 				   <!-- =================================== START OF SIDEBAR =================================== -->
-				   <div class="evo_container evo_container__sidebar">
 				   <?php
 					  // ------------------------- "Sidebar" CONTAINER EMBEDDED HERE --------------------------
-					  // Display container contents:
-					  skin_container( NT_('Sidebar'), array(
+					widget_container( 'sidebar', array(
 						 // The following (optional) params will be used as defaults for widgets included in this container:
+						 'container_display_if_empty' => false, // If no widget, don't display container at all
+						 'container_start'      => '<div class="evo_container $wico_class$">',
+						 'container_end'        => '</div>',
 						 // This will enclose each widget in a block:
 						 'block_start'          => '<div class="panel panel-default evo_widget $wi_class$">',
 						 'block_end'            => '</div>',
@@ -227,14 +228,14 @@ skin_include( '_body_header.inc.php' );
 					  ) );
 					  // ----------------------------- END OF "Sidebar" CONTAINER -----------------------------
 				   ?>
-				   </div>
 
-				   <div class="evo_container evo_container__sidebar2">
 				   <?php
 					  // ------------------------- "Sidebar" CONTAINER EMBEDDED HERE --------------------------
-					  // Display container contents:
-					  skin_container( NT_('Sidebar 2'), array(
+					widget_container( 'sidebar_2', array(
 						 // The following (optional) params will be used as defaults for widgets included in this container:
+						 'container_display_if_empty' => false, // If no widget, don't display container at all
+						 'container_start'      => '<div class="evo_container $wico_class$">',
+						 'container_end'        => '</div>',
 						 // This will enclose each widget in a block:
 						 'block_start'          => '<div class="panel panel-default evo_widget $wi_class$">',
 						 'block_end'            => '</div>',
@@ -265,7 +266,6 @@ skin_include( '_body_header.inc.php' );
 					  ) );
 					  // ----------------------------- END OF "Sidebar" CONTAINER -----------------------------
 				   ?>
-				   </div>
 				</aside><!-- .col -->
 				<?php } // ----------------------------- END OF SIDEBAR -----------------------------
 			?>
