@@ -581,9 +581,9 @@ div.widget_core_coll_related_post_list div.item_first_image {
   text-align: center;
 }
 div.evo_container__sidebar div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
-div.evo_container__sidebar_2 div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
+div.evo_container__sidebar2 div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
 div.evo_container__sidebar div.widget_core_coll_post_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
-div.evo_container__sidebar_2 div.widget_core_coll_post_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a {
+div.evo_container__sidebar2 div.widget_core_coll_post_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a {
   font-size: 16px;
 }
 @media (max-width: 1599px) {
@@ -1057,7 +1057,6 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
 @media screen and (max-width: 1170px) and (min-width: 768px) {
   #main-header .primary-nav .navbar-collapse {
     margin-top: 2px;
-    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
   }
@@ -1104,27 +1103,22 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
   width: 20px;
   height: 2px;
   background-color: #ffffff;
-  transition-property: -webkit-transform;
   transition-property: transform;
   transition-duration: .3s;
 }
 .close-menu::before {
-  -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .close-menu::after {
-  -webkit-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 .no-touch .close-menu:hover::before {
-  -webkit-transform: rotate(225deg);
   -ms-transform: rotate(225deg);
   transform: rotate(225deg);
 }
 .no-touch .close-menu:hover::after {
-  -webkit-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
   transform: rotate(315deg);
 }
@@ -1264,12 +1258,10 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
     /* Force Hardware Acceleration in WebKit */
     -webkit-backface-visibility: hidden;
     transition: all 0.32s ease-in-out;
-    -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0);
   }
   #main-header .navbar-collapse.in {
-    -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
   }
@@ -2472,6 +2464,21 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
 .pagination li a {
   color: #1dc6df;
 }
+.evo_comment .panel-title .evo_status {
+  margin-left: 5px;
+}
+@media screen and (max-width: 575.98px) {
+  .evo_comment .panel-title .evo_status {
+    float: none !important;
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .evo_comment .panel-title .evo_status:before {
+    display: block;
+    content: " ";
+  }
+}
 .disp_posts {
   /* ----------------------------------------------------------------------------
     * Main Content Style Regular Layout
@@ -3184,6 +3191,12 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
 .disp_page #main-content .evo_post .evo_comment__preview .evo_comment_footer small {
   font-size: 100%;
   font-size: 1.3rem;
+}
+.disp_single #main-content .evo_post .evo_comment .evo_comment_footer .action_btn_group,
+.disp_page #main-content .evo_post .evo_comment .evo_comment_footer .action_btn_group,
+.disp_single #main-content .evo_post .evo_comment__preview .evo_comment_footer .action_btn_group,
+.disp_page #main-content .evo_post .evo_comment__preview .evo_comment_footer .action_btn_group {
+  float: right;
 }
 .disp_single #main-content .evo_post .evo_comment .evo_comment_footer .permalink_right,
 .disp_page #main-content .evo_post .evo_comment .evo_comment_footer .permalink_right,
@@ -4293,6 +4306,9 @@ div.extended_search_form .search_options .search_option {
   background-color: #1dc6df;
   color: #ffffff;
 }
+.disp_comments .evo_comment .evo_comment_info .action_btn_group {
+  float: right;
+}
 .disp_comments .evo_comment .evo_comment_avatar img {
   margin-right: 20px;
 }
@@ -4341,6 +4357,9 @@ div.extended_search_form .search_options .search_option {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.disp_catdir #main-content .widget_core_coll_category_list ul ul {
+  padding-left: 30px;
 }
 .disp_catdir #main-content .widget_core_coll_category_list a {
   color: #444444;

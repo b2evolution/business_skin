@@ -118,65 +118,42 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 		}
 	?>
 
-   	<?php	if( ! $Item->is_intro() ){ // Don't display the following for intro posts ?>
+	<?php
+	if( ! $Item->is_intro() )
+	{ // Don't display the following for intro posts
+	?>
 	<div class="small text-muted">
 		<?php
-		if( $Item->status != 'published' ) {
+		if( $Item->status != 'published' )
+		{
 			$Item->format_status( array(
-				'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
+					'template' => '<div class="evo_status evo_status__$status$ badge pull-right" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div>',
 			) );
 		}
 
-		// Permalink:
-		$Item->permanent_link( array(
-			// 'text' => '#icon#',
-			'text' => '', // without icon
-		) );
+		if( $disp != 'page' )
+		{
+			// ------------------------- "Item Single - Header" CONTAINER EMBEDDED HERE --------------------------
+			// Display container contents:
+			skin_container( /* TRANS: Widget container name */ NT_('Item Single Header'), array(
+				'widget_context' => 'item',	// Signal that we are displaying within an Item
+				// The following (optional) params will be used as defaults for widgets included in this container:
+				// This will enclose each widget in a block:
+				'block_start' => '<div class="evo_widget $wi_class$">',
+				'block_end' => '</div>',
+				// This will enclose the title of each widget:
+				'block_title_start' => '<h3>',
+				'block_title_end' => '</h3>',
 
-		// Show Author If on disp posts
-		if ( $disp == 'posts' ) {
-			// Author
-			$Item->author( array(
-				'before'    => /* TRANS: "by" is followed by an Author's name here */ ' '.T_('By').' ',
-				'after'     => ' ',
-				'link_text' => $params['author_link_text'],
+				'author_link_text' => $params['author_link_text'],
 			) );
-
-		} else if ( $disp == 'single' ) {
-			// Author
-			$Item->author( array(
-				'before'    => ' '.T_('Posted by').' ',
-				'after'     => ' ',
-				'link_text' => $params['author_link_text'],
-			) );
-
-			// We want to display the post time:
-			$Item->issue_time( array(
-				'before'      => /* TRANS: "on" is followed by a date here */ ' '.T_('on').' ',
-				'after'       => ' ',
-				'time_format' => 'F j, Y',
-			) );
+			// ----------------------------- END OF "Item Single - Header" CONTAINER -----------------------------
 		}
-
-		// Categories
-		$Item->categories( array(
-			'before'          => /* TRANS: "in" is followed by post categories here */ T_(' in ').'<div class="cat-links"> ',
-			'after'           => ' </div>',
-			'include_main'    => true,
-			'include_other'   => true,
-			'include_external'=> true,
-			'link_categories' => true,
-		) );
-
-		// Link for editing
-		$Item->edit_link( array(
-			'before'    => ' &bull; ',
-			'after'     => '',
-		) );
-
 		?>
 	</div>
-	<?php } ?>
+	<?php
+	}
+	?>
 	</header>
 
 	<?php
@@ -195,8 +172,11 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 			// This will enclose the title of each widget:
 			'block_title_start' => '<h3>',
 			'block_title_end' => '</h3>',
+			// Template params for "Item Link" widget
+			'widget_item_link_before'    => '<p class="evo_post_link">',
+			'widget_item_link_after'     => '</p>',
 			// Template params for "Item Tags" widget
-			'widget_item_tags_before'    => '<div class="post_tags"><h3>'.T_('Tags').'</h3>: ',
+			'widget_item_tags_before'    => '<div class="post_tags">',
 			'widget_item_tags_after'     => '</div>',
 			'widget_item_tags_separator' => '',
 			// Params for skin file "_item_content.inc.php"
@@ -214,6 +194,47 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 		) );
 		// ----------------------------- END OF "Item Single" CONTAINER -----------------------------
 	}
+	elseif( $disp == 'page' )
+	{
+		?>
+		<div class="evo_container evo_container__item_page">
+		<?php
+		// ------------------------- "Item Page" CONTAINER EMBEDDED HERE --------------------------
+		// Display container contents:
+		skin_container( /* TRANS: Widget container name */ NT_('Item Page'), array(
+			'widget_context' => 'item',	// Signal that we are displaying within an Item
+			// The following (optional) params will be used as defaults for widgets included in this container:
+			// This will enclose each widget in a block:
+			'block_start' => '<div class="evo_widget $wi_class$">',
+			'block_end' => '</div>',
+			// This will enclose the title of each widget:
+			'block_title_start' => '<h3>',
+			'block_title_end' => '</h3>',
+			// Template params for "Item Link" widget
+			'widget_item_link_before'    => '<p class="evo_post_link">',
+			'widget_item_link_after'     => '</p>',
+			// Template params for "Item Tags" widget
+			'widget_item_tags_before'    => '<div class="post_tags">',
+			'widget_item_tags_after'     => '</div>',
+			'widget_item_tags_separator' => '',
+			// Params for skin file "_item_content.inc.php"
+			'widget_item_content_params' => $params,
+			// Template params for "Item Attachments" widget:
+			'widget_item_attachments_params' => array(
+					'limit_attach'       => 1000,
+					'before'             => '<div class="evo_post_attachments"><h3>'.T_('Attachments').':</h3><ul class="evo_files">',
+					'after'              => '</ul></div>',
+					'before_attach'      => '<li class="evo_file">',
+					'after_attach'       => '</li>',
+					'before_attach_size' => ' <span class="evo_file_size">(',
+					'after_attach_size'  => ')</span>',
+				),
+		) );
+		// ----------------------------- END OF "Item Page" CONTAINER -----------------------------
+		?>
+		</div>
+		<?php
+	}
 	else
 	{
 	// this will create a <section>
@@ -227,16 +248,10 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 	?>
 
 	<footer>
-		<?php
 
-		if( ! $Item->is_intro() && $disp != 'single' )
-		{ // List all tags attached to this post:
-			$Item->tags( array(
-				'before'    => '<div class="post_tags"><h3>'.T_( 'Tags :' ).'</h3>',
-				'after'     => '</div>',
-				'separator' => '',
-				'text'      => ''
-			) );
+		<?php
+			if( ! $Item->is_intro() ) // Do NOT apply tags, comments and feedback on intro posts
+			{
 		?>
 
 		<nav class="post_comments_link">
@@ -264,10 +279,9 @@ echo '<div class="evo_content_block '.$post_item.$column.'">'; // Beginning of p
 				'link_text_more'  => '#',
 				'link_title'      => '#',
 			) );
-		
-		}
 			?>
 		</nav>
+		<?php } ?>
 	</footer>
 
 	<?php
