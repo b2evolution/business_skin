@@ -581,9 +581,9 @@ div.widget_core_coll_related_post_list div.item_first_image {
   text-align: center;
 }
 div.evo_container__sidebar div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
-div.evo_container__sidebar2 div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
+div.evo_container__sidebar_2 div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
 div.evo_container__sidebar div.widget_core_coll_post_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
-div.evo_container__sidebar2 div.widget_core_coll_post_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a {
+div.evo_container__sidebar_2 div.widget_core_coll_post_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a {
   font-size: 16px;
 }
 @media (max-width: 1599px) {
@@ -1308,6 +1308,9 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+#main-sidebar .evo_widget ul ul {
+  padding-left: 30px;
 }
 #main-sidebar .evo_widget ul li strong a {
   color: #555555;
@@ -2466,6 +2469,7 @@ div.widget_core_user_avatars.evo_layout_flow .widget_flow_blocks > div img {
 }
 .evo_comment .panel-title .evo_status {
   margin-left: 5px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 575.98px) {
   .evo_comment .panel-title .evo_status {
