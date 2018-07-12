@@ -17,7 +17,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
  */
 class business_Skin extends Skin
 {
-	var $version = '1.3.5';
+	var $version = '6.3.5';
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
 	 */
